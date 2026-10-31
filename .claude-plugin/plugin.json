@@ -1,0 +1,12 @@
+{
+  "name": "founder-skills",
+  "version": "1.0.0",
+  "description": "AI employees for any business - one skill per role, each carrying the craft, the standards and the guardrails of a specialist.",
+  "author": {
+    "name": "Pawan Sharma"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/manikant-sharma-ai/founder-skills",
+  "skills": "./skills/",
+  "repository": "https://github.com/manikant-sharma-ai/founder-skills"
+}
