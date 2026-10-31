@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-"""Validate the whole founder-skills repo.
+"""Validate the whole employee-hub repo.
 
-Checks: registry parses and matches the folders on disk, every skill passes
-validate_skill.py, every skill has a changelog mention, backlog has no
-duplicate names, and no obvious secrets are committed.
+Checks: core standard present, registry parses and matches folders, every skill
+passes validate_skill.py, changelog coverage, backlog runway for the daily
+cadence, and no obvious secrets committed.
 
 Usage: python3 scripts/validate_repo.py
 Exit 0 = pass.
@@ -15,7 +15,19 @@ import subprocess
 import sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-errors, warnings = [], []
+errors = []
+warnings = []
+
+CORE_FILES = [
+    "core/employee-standard.md",
+    "core/connector-preflight.md",
+    "core/connector-catalog.md",
+    "core/memory-and-notes.md",
+    "core/performance-tracking.md",
+]
+for c in CORE_FILES:
+    if not os.path.isfile(os.path.join(ROOT, c)):
+        errors.append("core standard incomplete: missing %s" % c)
 
 reg_path = os.path.join(ROOT, "registry.json")
 if not os.path.isfile(reg_path):
@@ -24,7 +36,6 @@ if not os.path.isfile(reg_path):
 registry = json.load(open(reg_path, encoding="utf-8"))
 employees = registry.get("employees", [])
 names = [e.get("name") for e in employees]
-
 if len(names) != len(set(names)):
     errors.append("duplicate names in registry")
 
@@ -61,6 +72,10 @@ for n in names:
     if "`%s`" % n not in backlog:
         warnings.append("skill %r not listed in BACKLOG.md" % n)
 
+queued = backlog.count("| queued |")
+if queued < 50:
+    warnings.append("only %d queued roles - under 10 days of runway at 5 per day" % queued)
+
 SECRET_PATTERNS = [
     (r"sk-[A-Za-z0-9]{20,}", "possible API key"),
     (r"AKIA[0-9A-Z]{16}", "possible AWS key"),
@@ -80,7 +95,8 @@ for dirpath, dirnames, filenames in os.walk(ROOT):
                 if re.search(pat, body):
                     errors.append("%s: %s" % (os.path.relpath(p, ROOT), label))
 
-print("repo: %s | employees: %d | folders: %d" % (registry.get("name"), len(names), len(on_disk)))
+print("repo: %s | employees: %d | folders: %d | queued in backlog: %d" % (
+    registry.get("name"), len(names), len(on_disk), queued))
 print("employees: " + ", ".join(names))
 for e in errors:
     print("  ERROR   " + e)
