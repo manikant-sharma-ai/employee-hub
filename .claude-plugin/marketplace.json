@@ -1,19 +1,19 @@
 {
-  "name": "founder-skills",
+  "name": "employee-hub",
   "owner": {
     "name": "Manikant Sharma",
     "url": "https://github.com/manikant-sharma-ai"
   },
   "metadata": {
-    "description": "A growing set of AI employees. One new role added every day at 06:00 IST.",
-    "version": "1.0.0"
+    "description": "AI employees for any business. Five new roles every morning at 06:00 IST.",
+    "version": "1.1.0"
   },
   "plugins": [
     {
-      "name": "founder-skills",
+      "name": "employee-hub",
       "source": "./",
-      "description": "AI employees for any business - prompts, design, research, sales, support, finance and more, each packaged as a skill.",
-      "version": "1.0.0",
+      "description": "AI employees for any business - prompts, design, research, sales, support, finance and more. Each follows the Employee Standard: check connectors first, keep notes, track itself.",
+      "version": "1.1.0",
       "category": "productivity"
     }
   ]
