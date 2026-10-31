@@ -1,0 +1,20 @@
+{
+  "name": "founder-skills",
+  "owner": {
+    "name": "Manikant Sharma",
+    "url": "https://github.com/manikant-sharma-ai"
+  },
+  "metadata": {
+    "description": "A growing set of AI employees. One new role added every day at 06:00 IST.",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "founder-skills",
+      "source": "./",
+      "description": "AI employees for any business - prompts, design, research, sales, support, finance and more, each packaged as a skill.",
+      "version": "1.0.0",
+      "category": "productivity"
+    }
+  ]
+}
