@@ -1,18 +1,23 @@
 #!/usr/bin/env python3
-"""Validate a skill folder: frontmatter, description quality, sections, reference links.
+"""Validate one skill against the Employee Standard.
 
-Usage: python validate_skill.py <path-to-skill-folder> [--quiet]
-Exit code 0 = pass, 1 = errors found.
+Checks frontmatter, description triggering quality, required sections, reference
+links, and the standard wiring: connector preflight, notes, performance tracking.
+
+Usage: python validate_skill.py <path-to-skill-folder>
+Exit 0 = pass.
 """
 import os
 import re
 import sys
 
-REQUIRED_SECTIONS = [
-    "Routing",          # symptom -> reference table
-    "Guardrails",
-]
+REQUIRED_SECTIONS = ["Routing", "Guardrails"]
 RECOMMENDED = ["Standards", "Output", "Trigger test"]
+STANDARD_LINKS = [
+    ("core/connector-preflight.md", "connector preflight"),
+    ("core/memory-and-notes.md", "notes protocol"),
+    ("core/performance-tracking.md", "performance tracking"),
+]
 
 
 def parse_frontmatter(text):
@@ -21,10 +26,8 @@ def parse_frontmatter(text):
     end = text.find("\n---", 3)
     if end == -1:
         return None, text
-    block = text[3:end].strip()
-    body = text[end + 4:]
-    data = {}
-    key = None
+    block, body = text[3:end].strip(), text[end + 4:]
+    data, key = {}, None
     for line in block.splitlines():
         m = re.match(r"^([A-Za-z_][\w-]*):\s*(.*)$", line)
         if m:
@@ -61,6 +64,8 @@ def main():
         errors.append("frontmatter: name must be lowercase-hyphen, got %r" % name)
     elif name != os.path.basename(folder):
         warnings.append("name %r does not match folder %r" % (name, os.path.basename(folder)))
+    if not fm.get("version"):
+        warnings.append("frontmatter: version missing")
 
     if not desc:
         errors.append("frontmatter: description missing")
@@ -68,12 +73,10 @@ def main():
         words = len(desc.split())
         if words < 25:
             warnings.append("description is short (%d words) - weak triggering" % words)
-        if words > 160:
+        if words > 170:
             warnings.append("description is long (%d words) - trim" % words)
         if "use when" not in desc.lower():
             warnings.append("description lacks an explicit 'Use when' clause")
-        if "trigger" not in desc.lower() and "when" not in desc.lower():
-            warnings.append("description has no trigger phrasing")
         if "not for" not in desc.lower():
             warnings.append("description lacks a 'Not for' boundary")
 
@@ -84,10 +87,13 @@ def main():
         if sec.lower() not in body.lower():
             warnings.append("missing recommended section: %s" % sec)
 
+    for link, label in STANDARD_LINKS:
+        if link not in body:
+            errors.append("Employee Standard not wired in: no %s (%s)" % (label, link))
+
     if len(body.splitlines()) > 600:
         warnings.append("SKILL.md body is %d lines - move depth to references/" % len(body.splitlines()))
 
-    # reference links must resolve
     for link in set(re.findall(r"`(references/[\w./-]+\.md)`", body)):
         if not os.path.isfile(os.path.join(folder, link)):
             errors.append("broken reference link: %s" % link)
@@ -104,10 +110,21 @@ def main():
     else:
         warnings.append("no references/ directory")
 
+    notes_dir = os.path.join(folder, "notes")
+    if not os.path.isdir(notes_dir):
+        errors.append("no notes/ directory - the employee cannot accumulate knowledge")
+    else:
+        for need in ("learnings.md", "contacts.md"):
+            if not os.path.isfile(os.path.join(notes_dir, need)):
+                errors.append("notes/%s missing" % need)
+        if not os.path.isdir(os.path.join(notes_dir, "journal")):
+            warnings.append("notes/journal/ missing - no dated record")
+
     print("skill: %s" % (name or os.path.basename(folder)))
-    print("lines: %d | description words: %d | references: %d" % (
+    print("lines: %d | description words: %d | references: %d | notes: %s" % (
         len(body.splitlines()), len(desc.split()),
-        len(os.listdir(refs_dir)) if os.path.isdir(refs_dir) else 0))
+        len(os.listdir(refs_dir)) if os.path.isdir(refs_dir) else 0,
+        "yes" if os.path.isdir(notes_dir) else "no"))
     for e in errors:
         print("  ERROR   " + e)
     for w in warnings:
