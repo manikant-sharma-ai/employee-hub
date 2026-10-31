@@ -1,12 +1,20 @@
 {
-  "name": "founder-skills",
-  "version": "1.0.0",
+  "name": "employee-hub",
+  "display_name": "Employee Hub",
+  "version": "1.1.0",
   "updated": "2026-10-31",
-  "cadence": "daily at 06:00 IST",
+  "cadence": "5 employees daily at 06:00 IST",
+  "standard": "core/employee-standard.md",
+  "obligations": [
+    "connector preflight before answering (core/connector-preflight.md)",
+    "notes and accumulated knowledge (core/memory-and-notes.md)",
+    "calendar-based self-tracking and monthly scorecard (core/performance-tracking.md)",
+    "never fake the part it cannot do"
+  ],
   "employees": [
     {
       "name": "ai-engineer",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "added": "2026-10-31",
       "status": "stable",
       "path": "skills/ai-engineer",
@@ -25,15 +33,19 @@
         "skill-authoring"
       ],
       "tools_required": [
-        "any MCP server the task touches; none to start"
+        "GitHub or your repo host",
+        "the connector the task touches - it will ask"
       ],
+      "follows_standard": true,
+      "keeps_notes": true,
+      "tracks_performance": true,
       "outputs": [
         "design note",
         "working prompt / agent / automation",
         "eval table"
       ],
       "best_for": [
-        "founders building their first AI feature",
+        "a founder building their first AI feature",
         "fixing an agent that misbehaves",
         "automating a recurring workflow"
       ]
