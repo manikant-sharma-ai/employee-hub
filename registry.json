@@ -1,0 +1,42 @@
+{
+  "name": "founder-skills",
+  "version": "1.0.0",
+  "updated": "2026-10-31",
+  "cadence": "daily at 06:00 IST",
+  "employees": [
+    {
+      "name": "ai-engineer",
+      "version": "1.0.0",
+      "added": "2026-10-31",
+      "status": "stable",
+      "path": "skills/ai-engineer",
+      "tagline": "Designs, builds and ships AI systems - prompts, context, loops, graphs, MCP tools, images, evals and automation.",
+      "skills_inside": [
+        "prompt-engineering",
+        "context-engineering",
+        "loop-engineering",
+        "graph-engineering",
+        "vibe-coding",
+        "mcp-and-tools",
+        "image-generation",
+        "scenario-design",
+        "automation-engineering",
+        "model-selection-and-evals",
+        "skill-authoring"
+      ],
+      "tools_required": [
+        "any MCP server the task touches; none to start"
+      ],
+      "outputs": [
+        "design note",
+        "working prompt / agent / automation",
+        "eval table"
+      ],
+      "best_for": [
+        "founders building their first AI feature",
+        "fixing an agent that misbehaves",
+        "automating a recurring workflow"
+      ]
+    }
+  ]
+}
