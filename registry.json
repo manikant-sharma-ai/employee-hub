@@ -1,8 +1,8 @@
 {
   "name": "employee-hub",
   "display_name": "Employee Hub",
-  "version": "1.1.0",
-  "updated": "2026-10-31",
+  "version": "1.2.0",
+  "updated": "2026-11-01",
   "cadence": "5 employees daily at 06:00 IST",
   "standard": "core/employee-standard.md",
   "obligations": [
@@ -48,6 +48,182 @@
         "a founder building their first AI feature",
         "fixing an agent that misbehaves",
         "automating a recurring workflow"
+      ]
+    },
+    {
+      "name": "graphic-designer",
+      "version": "1.0.0",
+      "added": "2026-11-01",
+      "status": "stable",
+      "path": "skills/graphic-designer",
+      "tagline": "Designs the visuals that carry the brand - social posts, thumbnails, carousels, ad creatives, deck slides, packaging labels and print-ready handoff files.",
+      "skills_inside": [
+        "brand-system-and-assets",
+        "layout-and-typography",
+        "social-and-thumbnail-craft",
+        "print-and-production",
+        "creative-brief-and-feedback",
+        "indian-market-visual-conventions"
+      ],
+      "tools_required": [
+        "Canva or Figma (production)",
+        "Google Drive or OneDrive (brand kit, product shots)",
+        "an image model connector - only for original illustration"
+      ],
+      "follows_standard": true,
+      "keeps_notes": true,
+      "tracks_performance": true,
+      "outputs": [
+        "creative brief",
+        "layout spec",
+        "production-ready files with correct colour mode and bleed",
+        "print handoff note"
+      ],
+      "best_for": [
+        "a feed that looks like five different companies",
+        "a thumbnail that is not getting clicks",
+        "a label or flyer that has to survive the printer"
+      ]
+    },
+    {
+      "name": "content-writer",
+      "version": "1.0.0",
+      "added": "2026-11-01",
+      "status": "stable",
+      "path": "skills/content-writer",
+      "tagline": "Writes long and short form content in the founder's own voice, with an editing and humanizer pass, and maps one piece into a two-week distribution plan.",
+      "skills_inside": [
+        "voice-and-tone",
+        "long-form-structure",
+        "short-form-and-hooks",
+        "humanizer-pass",
+        "editing-and-fact-check",
+        "distribution-and-repurposing"
+      ],
+      "tools_required": [
+        "Google Docs, Notion or Word",
+        "Google Drive (voice samples, past content)",
+        "the publishing connector for the channel - it will ask"
+      ],
+      "follows_standard": true,
+      "keeps_notes": true,
+      "tracks_performance": true,
+      "outputs": [
+        "publishable draft",
+        "proof table with a source per claim",
+        "two alternative openings",
+        "repurposing map"
+      ],
+      "best_for": [
+        "a blog post or landing page that has to convert",
+        "a draft that reads like AI",
+        "turning a call recording into an article"
+      ]
+    },
+    {
+      "name": "research-analyst",
+      "version": "1.0.0",
+      "added": "2026-11-01",
+      "status": "stable",
+      "path": "skills/research-analyst",
+      "tagline": "Turns an open question into evidence and then into a decision - market sizing, competitor mapping, vendor and founder diligence, with every claim labelled verified or assumed.",
+      "skills_inside": [
+        "research-design",
+        "source-quality-and-verification",
+        "competitor-and-market-mapping",
+        "company-and-people-diligence",
+        "synthesis-and-decision-memo",
+        "india-market-sources"
+      ],
+      "tools_required": [
+        "web access for public sources and registers",
+        "Google Drive or Sheets (their own data)",
+        "a calendar connector for interview scheduling"
+      ],
+      "follows_standard": true,
+      "keeps_notes": true,
+      "tracks_performance": true,
+      "outputs": [
+        "one-page decision memo",
+        "evidence table with confidence labels",
+        "counter-case and named gaps",
+        "next cheapest step"
+      ],
+      "best_for": [
+        "should we enter this market",
+        "is this vendor or partner legitimate",
+        "which of three options to pick"
+      ]
+    },
+    {
+      "name": "support-agent",
+      "version": "1.0.0",
+      "added": "2026-11-01",
+      "status": "stable",
+      "path": "skills/support-agent",
+      "tagline": "First-line support - triages a customer message, writes the actual reply in the brand's tone and the customer's language, and escalates anything it is not authorised to decide.",
+      "skills_inside": [
+        "tone-and-de-escalation",
+        "triage-and-priority",
+        "reply-patterns",
+        "escalation-and-refund-authority",
+        "knowledge-and-macros",
+        "indian-channel-norms"
+      ],
+      "tools_required": [
+        "Gmail or Outlook, or WhatsApp Business",
+        "the helpdesk or store connector for order status",
+        "Google Calendar for the follow-up record"
+      ],
+      "follows_standard": true,
+      "keeps_notes": true,
+      "tracks_performance": true,
+      "outputs": [
+        "triage line",
+        "ready-to-send reply",
+        "what the reply commits us to",
+        "escalation note with the facts gathered"
+      ],
+      "best_for": [
+        "an angry customer who has written three times",
+        "a refund or replacement that needs a straight answer",
+        "a WhatsApp inbox in Hinglish that nobody has cleared"
+      ]
+    },
+    {
+      "name": "data-analyst",
+      "version": "1.0.0",
+      "added": "2026-11-01",
+      "status": "stable",
+      "path": "skills/data-analyst",
+      "tagline": "Turns a spreadsheet or export into an answer - cleans it, writes the metric definition down, decomposes the change, and ends with a one-page readout that says what to do.",
+      "skills_inside": [
+        "data-cleaning",
+        "analysis-patterns",
+        "metric-definitions",
+        "charting-and-readout",
+        "spreadsheet-to-answer",
+        "statistical-honesty"
+      ],
+      "tools_required": [
+        "Google Sheets or Excel",
+        "Google Drive (the files)",
+        "a warehouse or store connector for live data"
+      ],
+      "follows_standard": true,
+      "keeps_notes": true,
+      "tracks_performance": true,
+      "outputs": [
+        "the answer with its comparison",
+        "metric definition in five lines",
+        "decomposition with contributions",
+        "chart or table",
+        "re-runnable script or sheet"
+      ],
+      "best_for": [
+        "why revenue dropped last month",
+        "which SKUs or customers are dying",
+        "two files that should agree but do not"
       ]
     }
   ]

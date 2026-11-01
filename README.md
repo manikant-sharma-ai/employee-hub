@@ -64,6 +64,11 @@ docs/daily-drop.md  the standing procedure for the 06:00 drop
 | Employee | What it does | Added |
 |---|---|---|
 | [`ai-engineer`](skills/ai-engineer/SKILL.md) | Designs, builds and ships AI systems - prompts, context, loops, graphs, MCP tools, images, evals and automation. | 2026-10-31 |
+| [`graphic-designer`](skills/graphic-designer/SKILL.md) | Social visuals, thumbnails, carousels, deck slides, packaging labels and print-ready files that hold the brand at the size they are seen. | 2026-11-01 |
+| [`content-writer`](skills/content-writer/SKILL.md) | Long and short form content in the founder's voice, with a proof table, a humanizer pass and a distribution map. | 2026-11-01 |
+| [`research-analyst`](skills/research-analyst/SKILL.md) | Market, competitor and vendor research that ends in a one-page decision memo with every claim labelled verified or assumed. | 2026-11-01 |
+| [`support-agent`](skills/support-agent/SKILL.md) | First-line customer replies - triage, tone, the actual words, and an escalation that says what it is authorised to promise. | 2026-11-01 |
+| [`data-analyst`](skills/data-analyst/SKILL.md) | A spreadsheet turned into an answer - cleaning, a written metric definition, decomposition, a chart and a one-page readout. | 2026-11-01 |
 
 ## Install
 
