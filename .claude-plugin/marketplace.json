@@ -6,16 +6,16 @@
   },
   "metadata": {
     "description": "AI employees for any business. Five new roles every morning at 06:00 IST.",
-    "version": "1.2.0"
+    "version": "1.3.0"
   },
   "plugins": [
     {
       "name": "employee-hub",
       "source": "./",
       "description": "AI employees for any business - prompts, design, research, sales, support, finance and more. Each follows the Employee Standard: check connectors first, keep notes, track itself.",
-      "version": "1.2.0",
+      "version": "1.3.0",
       "category": "productivity"
     }
   ],
-  "version": "1.2.0"
+  "version": "1.3.0"
 }

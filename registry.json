@@ -1,8 +1,8 @@
 {
   "name": "employee-hub",
   "display_name": "Employee Hub",
-  "version": "1.2.0",
-  "updated": "2026-11-01",
+  "version": "1.3.0",
+  "updated": "2026-11-02",
   "cadence": "5 employees daily at 06:00 IST",
   "standard": "core/employee-standard.md",
   "obligations": [
@@ -224,6 +224,201 @@
         "why revenue dropped last month",
         "which SKUs or customers are dying",
         "two files that should agree but do not"
+      ]
+    },
+    {
+      "name": "sales-outreach",
+      "version": "1.0.0",
+      "added": "2026-11-02",
+      "status": "stable",
+      "path": "skills/sales-outreach",
+      "tagline": "Outbound that gets replies - an ICP test, a named verified list, first touches written to one person, a cadence that adds something each time, objection answers and a pipeline worth forecasting from.",
+      "skills_inside": [
+        "icp-and-list-building",
+        "cold-email-craft",
+        "follow-up-sequences",
+        "objection-handling",
+        "crm-hygiene",
+        "india-outbound-norms"
+      ],
+      "tools_required": [
+        "Gmail or Outlook (sending)",
+        "HubSpot, Zoho CRM or a sheet used as one",
+        "LinkedIn / Sales Navigator or IndiaMART for prospect data",
+        "WhatsApp Business for Indian SMB outbound"
+      ],
+      "follows_standard": true,
+      "keeps_notes": true,
+      "tracks_performance": true,
+      "outputs": [
+        "offer line and ICP test",
+        "full sequence, every touch written out",
+        "list schema and 10 verified rows",
+        "objection sheet",
+        "CRM contract",
+        "send plan",
+        "what could not be verified"
+      ],
+      "best_for": [
+        "a reply rate under 2%",
+        "a new segment to open",
+        "a pipeline nobody trusts"
+      ]
+    },
+    {
+      "name": "video-editor",
+      "version": "1.0.0",
+      "added": "2026-11-02",
+      "status": "stable",
+      "path": "skills/video-editor",
+      "tagline": "Turns raw footage into cuts that hold attention past three seconds - hook, pacing, captions, sound and the correct export for each platform, delivered as a cut list anyone can execute.",
+      "skills_inside": [
+        "footage-intake-and-organising",
+        "short-form-structure",
+        "edit-and-cut-craft",
+        "captions-and-subtitles",
+        "audio-and-music",
+        "platform-delivery-specs"
+      ],
+      "tools_required": [
+        "Google Drive or OneDrive (footage)",
+        "CapCut, Premiere, Final Cut, DaVinci or Descript",
+        "ffmpeg for deterministic cuts, caption burn-in and transcode",
+        "a transcript source"
+      ],
+      "follows_standard": true,
+      "keeps_notes": true,
+      "tracks_performance": true,
+      "outputs": [
+        "the promise and the hook with a timecode",
+        "cut list with in/out points",
+        "caption file (SRT/VTT) plus style rules",
+        "audio plan with a loudness target",
+        "export matrix",
+        "what was not checked"
+      ],
+      "best_for": [
+        "one webinar into eight clips",
+        "reels dying at two seconds",
+        "captions nobody can read"
+      ]
+    },
+    {
+      "name": "finance-ops",
+      "version": "1.0.0",
+      "added": "2026-11-02",
+      "status": "stable",
+      "path": "skills/finance-ops",
+      "tagline": "Runs the money paperwork and the month-end - invoices that are compliant, bank and gateway reconciliation that ends at zero or a named difference, categorised expenses, and a close pack with an exception list the owner acts on.",
+      "skills_inside": [
+        "invoicing-and-billing",
+        "reconciliation",
+        "expense-categorisation",
+        "monthly-close",
+        "gst-and-statutory-readiness",
+        "controls-and-fraud-checks"
+      ],
+      "tools_required": [
+        "Zoho Books, Tally, QuickBooks or Xero",
+        "bank statements or a bank connector",
+        "Razorpay/PayU/Cashfree settlement reports",
+        "Google Sheets or Excel",
+        "Drive for bill images and the close pack"
+      ],
+      "follows_standard": true,
+      "keeps_notes": true,
+      "tracks_performance": true,
+      "outputs": [
+        "period and basis statement",
+        "reconciliation bridge",
+        "exception list with a question per item",
+        "categorisation summary",
+        "close checklist",
+        "working papers marked prepared-for-review"
+      ],
+      "best_for": [
+        "books that do not match the bank",
+        "a close that drifts later every month",
+        "expenses nobody has categorised"
+      ]
+    },
+    {
+      "name": "hr-recruiter",
+      "version": "1.0.0",
+      "added": "2026-11-02",
+      "status": "stable",
+      "path": "skills/hr-recruiter",
+      "tagline": "Hires on evidence - a scorecard before a JD, screening with a recorded reason per candidate, an interview kit where every question maps to a criterion, and candidate communication that keeps good people warm.",
+      "skills_inside": [
+        "role-scorecard",
+        "jd-writing",
+        "screening-and-shortlisting",
+        "interview-kit",
+        "candidate-comms-and-offers",
+        "india-hiring-norms"
+      ],
+      "tools_required": [
+        "an ATS or a spreadsheet export",
+        "Gmail or WhatsApp Business for candidate comms",
+        "Naukri, LinkedIn or Internshala for sourcing",
+        "Google Docs for the JD and kit",
+        "a calendar for scheduling"
+      ],
+      "follows_standard": true,
+      "keeps_notes": true,
+      "tracks_performance": true,
+      "outputs": [
+        "signed-off role scorecard",
+        "publishable JD",
+        "screening table with evidence per criterion",
+        "shortlist of six",
+        "interview kit with a rubric",
+        "communication pack",
+        "offer structure with take-home"
+      ],
+      "best_for": [
+        "200 applications to become six",
+        "interviewers asking different questions",
+        "a role open for four months"
+      ]
+    },
+    {
+      "name": "brand-strategist",
+      "version": "1.0.0",
+      "added": "2026-11-02",
+      "status": "stable",
+      "path": "skills/brand-strategist",
+      "tagline": "The founder-leverage role - decides what the business stands for and the words it uses: a position with a named alternative and an exclusion, the messaging hierarchy, naming that can be cleared, and a tone-of-voice guide with rules.",
+      "skills_inside": [
+        "positioning",
+        "messaging-hierarchy",
+        "naming",
+        "tone-of-voice",
+        "category-and-competitor-framing",
+        "brand-audit-and-testing"
+      ],
+      "tools_required": [
+        "Google Drive or Docs (call notes, current copy)",
+        "HubSpot or Zoho CRM for win/loss reasons",
+        "public web for competitor messaging",
+        "IP India search for naming"
+      ],
+      "follows_standard": true,
+      "keeps_notes": true,
+      "tracks_performance": true,
+      "outputs": [
+        "internal position statement",
+        "one-liner at three lengths",
+        "messaging hierarchy with proof per pillar",
+        "the exclusions",
+        "tone-of-voice guide with before/after",
+        "naming shortlist and the searches still to run",
+        "five-buyer test plan"
+      ],
+      "best_for": [
+        "a pitch that is not landing",
+        "every competitor sounding the same",
+        "a new product that needs a name and a story"
       ]
     }
   ]

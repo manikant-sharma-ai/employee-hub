@@ -69,6 +69,11 @@ docs/daily-drop.md  the standing procedure for the 06:00 drop
 | [`research-analyst`](skills/research-analyst/SKILL.md) | Market, competitor and vendor research that ends in a one-page decision memo with every claim labelled verified or assumed. | 2026-11-01 |
 | [`support-agent`](skills/support-agent/SKILL.md) | First-line customer replies - triage, tone, the actual words, and an escalation that says what it is authorised to promise. | 2026-11-01 |
 | [`data-analyst`](skills/data-analyst/SKILL.md) | A spreadsheet turned into an answer - cleaning, a written metric definition, decomposition, a chart and a one-page readout. | 2026-11-01 |
+| [`sales-outreach`](skills/sales-outreach/SKILL.md) | Outbound that gets replies - ICP test, verified list, first touches written to one person, a cadence that adds something each time, objection answers and a CRM contract. | 2026-11-02 |
+| [`video-editor`](skills/video-editor/SKILL.md) | Raw footage into cuts that hold past three seconds - hook, pacing, captions, sound and the right export per platform, as a cut list anyone can execute. | 2026-11-02 |
+| [`finance-ops`](skills/finance-ops/SKILL.md) | Invoices, bank and gateway reconciliation, expense categorisation and a month-end close whose exception list says exactly what is unexplained. | 2026-11-02 |
+| [`hr-recruiter`](skills/hr-recruiter/SKILL.md) | A scorecard before a JD, screening with a recorded reason per candidate, a structured interview kit and candidate comms that do not ghost anyone. | 2026-11-02 |
+| [`brand-strategist`](skills/brand-strategist/SKILL.md) | The position with a named alternative and an exclusion, the messaging hierarchy, naming that can be cleared, and a tone-of-voice guide with rules. | 2026-11-02 |
 
 ## Install
 

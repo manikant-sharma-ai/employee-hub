@@ -10,20 +10,20 @@ Nothing is removed without a note on why. A role that cannot clear the quality b
 | 2 | `graphic-designer` | Thumbnails, social visuals, decks and brand-consistent assets | shipped 2026-11-01 |
 | 3 | `content-writer` | Long and short form content in the founder's voice, with a humanizer pass | shipped 2026-11-01 |
 | 4 | `research-analyst` | Market, competitor and company research that ends in a decision | shipped 2026-11-01 |
-| 5 | `sales-outreach` | Cold email and follow-up sequences, objection handling, CRM hygiene | next |
+| 5 | `sales-outreach` | Cold email and follow-up sequences, objection handling, CRM hygiene | shipped 2026-11-02 |
 | 6 | `support-agent` | First-line customer replies with escalation rules and brand tone | shipped 2026-11-01 |
 | 7 | `data-analyst` | Turns a spreadsheet into an answer - cleaning, aggregation, charts, read-out | shipped 2026-11-01 |
-| 8 | `video-editor` | Short-form video assembly, captions, cuts and hooks from a raw recording | next |
-| 9 | `seo-specialist` | Keyword and intent mapping, on-page fixes, briefs that rank | queued |
-| 10 | `finance-ops` | Invoicing, reconciliation, expense categorisation, monthly close | next |
-| 11 | `hr-recruiter` | JD writing, screening against a scorecard, interview kits, candidate comms | next |
+| 8 | `video-editor` | Short-form video assembly, captions, cuts and hooks from a raw recording | shipped 2026-11-02 |
+| 9 | `seo-specialist` | Keyword and intent mapping, on-page fixes, briefs that rank | next |
+| 10 | `finance-ops` | Invoicing, reconciliation, expense categorisation, monthly close | shipped 2026-11-02 |
+| 11 | `hr-recruiter` | JD writing, screening against a scorecard, interview kits, candidate comms | shipped 2026-11-02 |
 | 12 | `product-manager` | PRDs, specs, prioritisation, story slicing, launch checklists | next |
-| 13 | `ops-automator` | Cross-tool workflows, scheduled jobs, failure alerting, run logs | queued |
-| 14 | `brand-strategist` | Positioning, messaging hierarchy, naming, tone-of-voice guide | queued |
-| 15 | `legal-drafter` | Contracts, NDAs, policies - drafts with a clear review boundary | queued |
+| 13 | `ops-automator` | Cross-tool workflows, scheduled jobs, failure alerting, run logs | next |
+| 14 | `brand-strategist` | Positioning, messaging hierarchy, naming, tone-of-voice guide | shipped 2026-11-02 |
+| 15 | `legal-drafter` | Contracts, NDAs, policies - drafts with a clear review boundary | next |
 | 16 | `bookkeeper` | Day-to-day entries, GST-ready records, vendor payment tracking | queued |
 | 17 | `community-manager` | Comment and DM triage, reply drafting, escalation of anything sensitive | queued |
-| 18 | `presentation-designer` | Investor, board and sales decks from a document or a transcript | queued |
+| 18 | `presentation-designer` | Investor, board and sales decks from a document or a transcript | next |
 | 19 | `email-marketer` | Newsletters, sequences, subject-line testing, list hygiene | queued |
 | 20 | `pr-writer` | Press notes, founder story pitches, journalist outreach lists | queued |
 | 21 | `qa-tester` | Test plans, edge-case matrices, bug reports a developer can act on | queued |
@@ -164,6 +164,10 @@ Kept so that a later drop does not have to re-derive why the order moved.
 - **2026-11-01 - `sales-outreach` held, not skipped.** It was #5 in the queue and the third revenue-facing role in the batch, which breaks the fixed 2-2-1 mix. `support-agent` (#6) and `data-analyst` (#7) were taken ahead of it. It sits at the top of the queue for the next drop.
 - **2026-11-01 - `seo-specialist` (#9) held for the following drop** for the same reason: with `sales-outreach` and `video-editor` both revenue-facing, a third would break the mix. It stays queued rather than promoted to `next`.
 - **2026-11-01 - `graphic-designer` and `ai-engineer` boundary written into both descriptions.** `ai-engineer` owns generating an image from a prompt; `graphic-designer` owns the layout, brand system and production file. Without the boundary both would fire on "make me a thumbnail".
+
+- **2026-11-02 - `seo-specialist` (#9) held a second time, deliberately.** With `sales-outreach` and `video-editor` both revenue-facing, it would have been the third revenue role in the batch and broken the 2-2-1 mix. It leads the queue for tomorrow's drop.
+- **2026-11-02 - `product-manager` (#12) and `ops-automator` (#13) held.** The operations quota was filled by `finance-ops` (#10) and `hr-recruiter` (#11), both of which cost a founder hours every week. The two held roles are promoted to `next` and lead the following drop.
+- **2026-11-02 - `brand-strategist` (#14) taken ahead of #12 and #13 as the founder-leverage role.** It is the role the founder otherwise does personally and badly, and `content-writer` already routes "not for deciding what the company stands for (use brand-strategist)" to it - leaving that promise unfulfilled would have been a dead reference in a shipped skill.
 
 ## The five-a-day mix
 
