@@ -74,6 +74,11 @@ docs/daily-drop.md  the standing procedure for the 06:00 drop
 | [`finance-ops`](skills/finance-ops/SKILL.md) | Invoices, bank and gateway reconciliation, expense categorisation and a month-end close whose exception list says exactly what is unexplained. | 2026-11-02 |
 | [`hr-recruiter`](skills/hr-recruiter/SKILL.md) | A scorecard before a JD, screening with a recorded reason per candidate, a structured interview kit and candidate comms that do not ghost anyone. | 2026-11-02 |
 | [`brand-strategist`](skills/brand-strategist/SKILL.md) | The position with a named alternative and an exclusion, the messaging hierarchy, naming that can be cleared, and a tone-of-voice guide with rules. | 2026-11-02 |
+| [`seo-specialist`](skills/seo-specialist/SKILL.md) | Which searches are winnable, intent read off the results page, on-page fixes as a copy-paste table, and a brief a writer can follow. | 2026-11-03 |
+| [`presentation-designer`](skills/presentation-designer/SKILL.md) | The deck that argues - an arc ending in a decision, one claim per title, numbers as evidence, speaker notes, sized to the slot. | 2026-11-03 |
+| [`bookkeeper`](skills/bookkeeper/SKILL.md) | Day-to-day entries from the bank statement, a document behind each one, an exception list instead of a suspense ledger, and a payment tracker. | 2026-11-03 |
+| [`legal-drafter`](skills/legal-drafter/SKILL.md) | First-draft contracts, NDAs and policies in plain language, with the review boundary and a five-item risk list attached. | 2026-11-03 |
+| [`product-manager`](skills/product-manager/SKILL.md) | What to build and what to cut - PRD with the problem first, a written prioritisation rule, sliced stories and a launch checklist. | 2026-11-03 |
 
 ## Install
 

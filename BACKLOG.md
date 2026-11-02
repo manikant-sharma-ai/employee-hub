@@ -14,21 +14,21 @@ Nothing is removed without a note on why. A role that cannot clear the quality b
 | 6 | `support-agent` | First-line customer replies with escalation rules and brand tone | shipped 2026-11-01 |
 | 7 | `data-analyst` | Turns a spreadsheet into an answer - cleaning, aggregation, charts, read-out | shipped 2026-11-01 |
 | 8 | `video-editor` | Short-form video assembly, captions, cuts and hooks from a raw recording | shipped 2026-11-02 |
-| 9 | `seo-specialist` | Keyword and intent mapping, on-page fixes, briefs that rank | next |
+| 9 | `seo-specialist` | Keyword and intent mapping, on-page fixes, briefs that rank | shipped 2026-11-03 |
 | 10 | `finance-ops` | Invoicing, reconciliation, expense categorisation, monthly close | shipped 2026-11-02 |
 | 11 | `hr-recruiter` | JD writing, screening against a scorecard, interview kits, candidate comms | shipped 2026-11-02 |
-| 12 | `product-manager` | PRDs, specs, prioritisation, story slicing, launch checklists | next |
-| 13 | `ops-automator` | Cross-tool workflows, scheduled jobs, failure alerting, run logs | next |
+| 12 | `product-manager` | PRDs, specs, prioritisation, story slicing, launch checklists | shipped 2026-11-03 |
+| 13 | `ops-automator` | Cross-tool workflows, scheduled jobs, failure alerting, run logs | held - collision with `ai-engineer`, see queue notes |
 | 14 | `brand-strategist` | Positioning, messaging hierarchy, naming, tone-of-voice guide | shipped 2026-11-02 |
-| 15 | `legal-drafter` | Contracts, NDAs, policies - drafts with a clear review boundary | next |
-| 16 | `bookkeeper` | Day-to-day entries, GST-ready records, vendor payment tracking | queued |
+| 15 | `legal-drafter` | Contracts, NDAs, policies - drafts with a clear review boundary | shipped 2026-11-03 |
+| 16 | `bookkeeper` | Day-to-day entries, GST-ready records, vendor payment tracking | shipped 2026-11-03 |
 | 17 | `community-manager` | Comment and DM triage, reply drafting, escalation of anything sensitive | queued |
-| 18 | `presentation-designer` | Investor, board and sales decks from a document or a transcript | next |
-| 19 | `email-marketer` | Newsletters, sequences, subject-line testing, list hygiene | queued |
-| 20 | `pr-writer` | Press notes, founder story pitches, journalist outreach lists | queued |
-| 21 | `qa-tester` | Test plans, edge-case matrices, bug reports a developer can act on | queued |
-| 22 | `translator-localiser` | Indian-language localisation with tone and idiom, not literal translation | queued |
-| 23 | `procurement` | Vendor comparison, quote analysis, negotiation prep, contract summaries | queued |
+| 18 | `presentation-designer` | Investor, board and sales decks from a document or a transcript | shipped 2026-11-03 |
+| 19 | `email-marketer` | Newsletters, sequences, subject-line testing, list hygiene | next |
+| 20 | `pr-writer` | Press notes, founder story pitches, journalist outreach lists | next |
+| 21 | `qa-tester` | Test plans, edge-case matrices, bug reports a developer can act on | next |
+| 22 | `translator-localiser` | Indian-language localisation with tone and idiom, not literal translation | next |
+| 23 | `procurement` | Vendor comparison, quote analysis, negotiation prep, contract summaries | next |
 | 24 | `analytics-instrumenter` | Event schemas, funnel definitions, dashboard specs | queued |
 | 25 | `pricing-analyst` | Willingness-to-pay research, plan design, margin modelling | queued |
 | 26 | `hiring-manager` | Onboarding plans, 30-60-90s, role scorecards, performance reviews | queued |
@@ -168,6 +168,11 @@ Kept so that a later drop does not have to re-derive why the order moved.
 - **2026-11-02 - `seo-specialist` (#9) held a second time, deliberately.** With `sales-outreach` and `video-editor` both revenue-facing, it would have been the third revenue role in the batch and broken the 2-2-1 mix. It leads the queue for tomorrow's drop.
 - **2026-11-02 - `product-manager` (#12) and `ops-automator` (#13) held.** The operations quota was filled by `finance-ops` (#10) and `hr-recruiter` (#11), both of which cost a founder hours every week. The two held roles are promoted to `next` and lead the following drop.
 - **2026-11-02 - `brand-strategist` (#14) taken ahead of #12 and #13 as the founder-leverage role.** It is the role the founder otherwise does personally and badly, and `content-writer` already routes "not for deciding what the company stands for (use brand-strategist)" to it - leaving that promise unfulfilled would have been a dead reference in a shipped skill.
+
+- **2026-11-03 - `ops-automator` (#13) skipped, not held for capacity.** Its trigger phrases collide with `ai-engineer` on the exact phrase that matters: "automate this for me" appears in `ai-engineer`'s description, which already ships `references/automation-engineering.md`. Two employees fighting over "automate this" is the failure the queue rule exists to prevent. It stays in the queue behind the promoted five and needs a boundary written before it can ship - the likely split is `ai-engineer` builds the automation and `ops-automator` owns the schedule, the alerting and the run log afterwards.
+- **2026-11-03 - `bookkeeper` (#16) promoted two places ahead of #13 and #14.** The operations quota needed a second role, and `finance-ops` has shipped since 2 November with "not for day-to-day voucher entry (use bookkeeper)" in its description - a dead reference inside a shipped skill, which is the same debt `brand-strategist` was built to clear.
+- **2026-11-03 - `presentation-designer` (#18) taken with a written boundary against `graphic-designer`.** `graphic-designer` already lists "deck slides" and "make this deck consistent" among its triggers. The split is argument versus visual system: `presentation-designer` owns the arc, the claim in each title and the numbers, and hands the template, typography and single-slide design to `graphic-designer`. Both descriptions now say so, which is what stops "make me a deck" firing twice.
+- **2026-11-03 - `product-manager` (#12) taken as the founder-leverage role, not as operations.** Deciding what not to build is the work a founder does personally and badly, and the four backlog roles ahead of it in the queue were all revenue or operations. It also closes the loop with `qa-tester` (#21, now promoted), which the PM's acceptance criteria route to.
 
 ## The five-a-day mix
 

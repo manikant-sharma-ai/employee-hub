@@ -1,8 +1,8 @@
 {
   "name": "employee-hub",
   "display_name": "Employee Hub",
-  "version": "1.3.0",
-  "updated": "2026-11-02",
+  "version": "1.4.0",
+  "updated": "2026-11-03",
   "cadence": "5 employees daily at 06:00 IST",
   "standard": "core/employee-standard.md",
   "obligations": [
@@ -419,6 +419,210 @@
         "a pitch that is not landing",
         "every competitor sounding the same",
         "a new product that needs a name and a story"
+      ]
+    },
+    {
+      "name": "seo-specialist",
+      "version": "1.0.0",
+      "added": "2026-11-03",
+      "status": "stable",
+      "path": "skills/seo-specialist",
+      "tagline": "Decides which searches the business can win and what each page must answer - intent mapped from the results page, on-page elements fixed, and a brief a writer can follow.",
+      "skills_inside": [
+        "keyword-and-intent-mapping",
+        "on-page-fixes",
+        "content-briefs-that-rank",
+        "serp-and-competitor-gap",
+        "india-search-behaviour",
+        "measuring-seo"
+      ],
+      "tools_required": [
+        "Google Search Console (the only honest source for current queries)",
+        "the CMS - WordPress, Shopify, Webflow or Wix - to apply on-page changes",
+        "Google Analytics for whether a visit did anything",
+        "a keyword source (optional - the SERP is free)",
+        "Google Sheets or Excel for the query map"
+      ],
+      "follows_standard": true,
+      "keeps_notes": true,
+      "tracks_performance": true,
+      "outputs": [
+        "target query set with intent, volume and winnability",
+        "on-page fix table, copy-pasteable",
+        "SEO brief for the writer",
+        "cannibalisation and duplication check",
+        "measurement plan with a review date",
+        "what could not be verified"
+      ],
+      "best_for": [
+        "traffic that stalled and nobody knows why",
+        "a new product that has to be findable",
+        "a page ranking on page three with no clicks",
+        "two pages quietly competing with each other"
+      ]
+    },
+    {
+      "name": "presentation-designer",
+      "version": "1.0.0",
+      "added": "2026-11-03",
+      "status": "stable",
+      "path": "skills/presentation-designer",
+      "tagline": "Builds the deck that argues something - an arc ending in a decision, one claim per slide, numbers shown as evidence, speaker notes, and a deck sized to the slot it is presented in.",
+      "skills_inside": [
+        "narrative-arc",
+        "slide-by-slide-craft",
+        "data-slides-and-charts",
+        "deck-types-and-standards",
+        "speaker-notes-and-delivery",
+        "reviewing-a-deck"
+      ],
+      "tools_required": [
+        "Google Slides, PowerPoint or Canva (where the deck is edited)",
+        "Google Drive or OneDrive for the source documents and the model",
+        "a transcript source - Otter, Zoom or Meet - when the deck comes from a call",
+        "Google Sheets or Excel so charts come from data, not memory",
+        "a calendar connector for the presentation date"
+      ],
+      "follows_standard": true,
+      "keeps_notes": true,
+      "tracks_performance": true,
+      "outputs": [
+        "decision sentence and time budget",
+        "the arc in six beats",
+        "slide-by-slide table with a claim per title",
+        "full speaker notes with skip-if-short markers",
+        "appendix list",
+        "build note for graphic-designer",
+        "what could not be verified"
+      ],
+      "best_for": [
+        "a board pack that has to be ready by Friday",
+        "a 60-slide pitch that keeps getting polite passes",
+        "a document that has to become slides",
+        "a sales deck that is read without a presenter"
+      ]
+    },
+    {
+      "name": "bookkeeper",
+      "version": "1.0.0",
+      "added": "2026-11-03",
+      "status": "stable",
+      "path": "skills/bookkeeper",
+      "tagline": "Keeps the day-to-day record - every bill, invoice and payment coded to the right ledger, a document behind each entry, a payment tracker, and a daybook the accountant can close from.",
+      "skills_inside": [
+        "double-entry-basics",
+        "voucher-entry",
+        "chart-of-accounts-and-coding",
+        "documents-and-supporting",
+        "vendor-and-payment-tracking",
+        "common-entry-errors"
+      ],
+      "tools_required": [
+        "Zoho Books, Tally, QuickBooks or Xero (where entries live)",
+        "bank statements or a bank connector",
+        "Google Drive or OneDrive for bill images",
+        "Google Sheets or Excel for the daybook and tracker",
+        "GST portal read access, held by the person responsible"
+      ],
+      "follows_standard": true,
+      "keeps_notes": true,
+      "tracks_performance": true,
+      "outputs": [
+        "period statement and entry count",
+        "entry schedule, one row per voucher",
+        "exception list with a question and an owner per item",
+        "payment tracker with ageing",
+        "tax notes marked confirm-with-CA",
+        "what could not be verified"
+      ],
+      "best_for": [
+        "books that are three months behind",
+        "a pile of bills nobody has entered",
+        "a payment that matches no single invoice",
+        "an accountant asking the same question every month"
+      ]
+    },
+    {
+      "name": "legal-drafter",
+      "version": "1.0.0",
+      "added": "2026-11-03",
+      "status": "stable",
+      "path": "skills/legal-drafter",
+      "tagline": "Drafts the first version of a contract, NDA or policy - complete, in plain language, with every clause that needs a lawyer flagged rather than guessed, and a summary sheet for the person who signs.",
+      "skills_inside": [
+        "contract-anatomy",
+        "nda-and-confidentiality",
+        "service-agreements",
+        "policy-drafting",
+        "india-contract-basics",
+        "review-boundary-and-risk-flags"
+      ],
+      "tools_required": [
+        "Google Docs or Word for the draft and the review round",
+        "Google Drive or OneDrive for the counterparty's paper and signed copies",
+        "Gmail or Outlook - the thread that contains the actual deal",
+        "a signature tool - DocuSign, Zoho Sign, or a printed copy",
+        "a lawyer or CA on call, named in every reply"
+      ],
+      "follows_standard": true,
+      "keeps_notes": true,
+      "tracks_performance": true,
+      "outputs": [
+        "five-line deal summary and document type",
+        "the full first draft with a review header",
+        "plain-language summary sheet",
+        "five-item risk list with questions for the lawyer",
+        "open commercial questions with owners",
+        "signing mechanics, stamp duty as a question",
+        "what could not be verified"
+      ],
+      "best_for": [
+        "a client engagement starting Monday",
+        "an NDA that has to go out today",
+        "terms and a privacy policy the site actually needs",
+        "a vendor MSA nobody has read before signing"
+      ]
+    },
+    {
+      "name": "product-manager",
+      "version": "1.0.0",
+      "added": "2026-11-03",
+      "status": "stable",
+      "path": "skills/product-manager",
+      "tagline": "The founder-leverage role - decides what gets built and what gets cut: a PRD with the problem first, a defensible prioritisation, stories small enough to ship, and a launch that is a checklist rather than a date.",
+      "skills_inside": [
+        "prd-and-specs",
+        "prioritisation",
+        "story-slicing",
+        "discovery-and-evidence",
+        "scope-and-saying-no",
+        "launch-and-after"
+      ],
+      "tools_required": [
+        "an issue tracker - Linear, Jira, GitHub Issues or a sheet",
+        "Google Docs or Notion for the PRD and the decision log",
+        "HubSpot or Zoho CRM plus the support inbox for who asked for what",
+        "product analytics - GA4, Mixpanel, Amplitude or the database",
+        "a calendar for the launch and the two read dates"
+      ],
+      "follows_standard": true,
+      "keeps_notes": true,
+      "tracks_performance": true,
+      "outputs": [
+        "problem paragraph and a goal stated as a number",
+        "build-or-not recommendation with the cheapest alternative",
+        "PRD with requirements and acceptance criteria",
+        "cut list with a trigger per deferral",
+        "sliced stories with estimates",
+        "prioritisation table with the rule applied",
+        "launch checklist and two read dates",
+        "what could not be verified"
+      ],
+      "best_for": [
+        "a feature that has to be specified before Monday",
+        "everything is urgent and there are two engineers",
+        "a launch that has slipped three times",
+        "feedback that has to become a decision"
       ]
     }
   ]
