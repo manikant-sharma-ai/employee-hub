@@ -1,0 +1,33 @@
+name: daily-drop
+
+# 00:30 UTC = 06:00 IST. The drop is opened as an issue, not written by a robot:
+# a scheduled job that silently commits five half-written skills is worse than
+# no automation at all. The issue is the standing job ticket for the day.
+on:
+  schedule:
+    - cron: "30 0 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  open-drop:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Build the drop brief from BACKLOG.md
+        run: python3 scripts/daily_drop.py > "$RUNNER_TEMP/drop.md"
+      - name: Open the issue
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh label create daily-drop --color FBCA04 --description "the 06:00 IST drop" 2>/dev/null || true
+          gh issue create \
+            --title "Daily drop $(TZ=Asia/Kolkata date +%Y-%m-%d)" \
+            --body-file "$RUNNER_TEMP/drop.md" \
+            --label daily-drop
