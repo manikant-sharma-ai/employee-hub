@@ -53,10 +53,13 @@ skills/<employee>/
   notes/            learnings, contacts, journal, decisions - the employee's memory
 core/               the Employee Standard every skill follows
 registry.json       machine-readable index: name, version, date added, connectors
+skills/employee-hub-router/  the dispatcher - which employee to hire for the job in front of you
 CHANGELOG.md        one dated block per drop
-BACKLOG.md          150 roles queued, five a day
+BACKLOG.md          128 roles queued, five a day
 .claude-plugin/     plugin manifest, so the hub installs as one unit
+.github/workflows/  CI validation on every push, and the 06:00 IST drop ticket
 docs/daily-drop.md  the standing procedure for the 06:00 drop
+docs/scheduling.md  how to put an employee on a cron, a webhook or an Action
 ```
 
 ## Employees
@@ -79,6 +82,12 @@ docs/daily-drop.md  the standing procedure for the 06:00 drop
 | [`bookkeeper`](skills/bookkeeper/SKILL.md) | Day-to-day entries from the bank statement, a document behind each one, an exception list instead of a suspense ledger, and a payment tracker. | 2026-11-03 |
 | [`legal-drafter`](skills/legal-drafter/SKILL.md) | First-draft contracts, NDAs and policies in plain language, with the review boundary and a five-item risk list attached. | 2026-11-03 |
 | [`product-manager`](skills/product-manager/SKILL.md) | What to build and what to cut - PRD with the problem first, a written prioritisation rule, sliced stories and a launch checklist. | 2026-11-03 |
+| [`social-media-manager`](skills/social-media-manager/SKILL.md) | Calendar, posting, repurposing and engagement across platforms - a week planned from one idea, with the reply rules written down. | 2026-11-03 |
+| [`ui-designer`](skills/ui-designer/SKILL.md) | Screens, states and component specs a developer can build - the flow, the empty and error states, the spacing scale, the handoff. | 2026-11-03 |
+| [`email-marketer`](skills/email-marketer/SKILL.md) | Newsletters and sequences that get opened - subject-line tests, a list that is clean and consented, and a send that respects deliverability. | 2026-11-03 |
+| [`qa-tester`](skills/qa-tester/SKILL.md) | Test plans, edge-case matrices and bug reports a developer can act on - reproduction, severity and the release call. | 2026-11-03 |
+| [`translator-localiser`](skills/translator-localiser/SKILL.md) | Indian-language localisation with tone and idiom - transliteration, formality, number and date formats, and a glossary that stays consistent. | 2026-11-03 |
+| [`employee-hub-router`](skills/employee-hub-router/SKILL.md) | Reads the job, names the employee, says what to hand over and which connector is missing - the hire desk for the other twenty-one. | 2026-11-03 |
 
 ## Install
 
@@ -91,11 +100,24 @@ docs/daily-drop.md  the standing procedure for the 06:00 drop
 
 **Manually:** copy the employee folder you want into your skills directory - `~/.claude/skills/` or `.claude/skills/` inside a project.
 
+**Not sure which employee to hire?** Start with `skills/employee-hub-router/`. Give it the job in one sentence; it names the right employee, what to hand over, and which connector is missing.
+
 **Connectors are separate, on purpose.** A skill tells the employee what to do; it does not grant access. Connect the connectors listed under each employee's *Tools it assumes* before expecting it to act. The same employee then works for a business with Gmail and one with Outlook - and it will tell you which connector it needs for the job in front of you.
 
 ## Using an employee
 
 Give it the five things in its *What you must be handed* section - the job, a definition of done, connector access, a budget, and what happens if it is wrong. Then let it work. The employees ask for what is missing rather than invent it, so a thin brief produces a question, not a confident wrong answer.
+
+## Putting an employee on a schedule
+
+A skill is the experience; the schedule is what makes it a colleague. `docs/scheduling.md`
+covers the four ways to fire a job - your own cron, a GitHub Actions schedule, a
+webhook from n8n or Make, or a platform cron - with the exact lines, plus the
+weekly and monthly reviews that make the notes and scorecards real.
+
+Two rules travel with every schedule: a schedule does not grant connector access,
+and no write action (send, publish, pay, delete) goes on a timer until the same
+job has run in draft mode for two weeks.
 
 ## The daily drop
 
@@ -104,10 +126,16 @@ Five new employees every morning at 06:00 IST, following `docs/daily-drop.md`. T
 ## Adding your own
 
 ```
-python3 scripts/validate_repo.py
+python3 scripts/validate_repo.py        # skills, standard, registry, backlog, secrets
+python3 scripts/validate_manifests.py   # plugin.json vs marketplace.json vs registry
 ```
 
-It checks the core standard, frontmatter, description quality, required sections, reference links, the standard wiring (preflight, notes, tracking), registry drift, backlog runway and accidental secrets.
+The first checks the core standard, frontmatter, description quality, required sections,
+reference links, the standard wiring (preflight, notes, tracking), registry drift,
+backlog runway and accidental secrets. The second catches version and publisher drift
+between the three manifest files. Both run on every push via `.github/workflows/validate.yml`.
+
+Read `CONTRIBUTING.md` before you write a skill - it is the contract the validator enforces.
 
 ## Licence
 
