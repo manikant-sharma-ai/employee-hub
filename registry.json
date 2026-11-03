@@ -1,7 +1,7 @@
 {
   "name": "employee-hub",
   "display_name": "Employee Hub",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "updated": "2026-11-03",
   "cadence": "5 employees daily at 06:00 IST",
   "standard": "core/employee-standard.md",
@@ -624,6 +624,398 @@
         "a launch that has slipped three times",
         "feedback that has to become a decision"
       ]
+    },
+    {
+      "name": "community-manager",
+      "version": "1.0.0",
+      "added": "2026-11-03",
+      "standard_version": 2,
+      "level": "L2",
+      "category": "revenue-facing",
+      "status": "probation",
+      "reliability": "unverified",
+      "path": "skills/community-manager",
+      "tagline": "Owns the public comment sections and DMs - triage, reply in the brand's register, moderate by policy, and hand buying signals to sales with the context attached.",
+      "skills_inside": [
+        "comment-and-dm-triage",
+        "reply-craft-in-indian-voices",
+        "moderation-and-escalation",
+        "community-to-revenue"
+      ],
+      "tools_required": [
+        "Instagram/Meta, LinkedIn or X (read the comments)",
+        "WhatsApp Business (DMs)",
+        "HubSpot or Zoho CRM (who the commenter is)",
+        "Zendesk or Freshdesk (a public complaint becomes a ticket)",
+        "Slack or Teams (reach the human on call)"
+      ],
+      "permissions": [
+        "read: public comments, mentions and DMs on connected platforms",
+        "draft: public replies and DMs, for approval",
+        "write: labels and notes in the tracker, with confirmation",
+        "never: post, hide or delete without explicit approval in the session"
+      ],
+      "cost": {
+        "tier": "medium",
+        "basis": "one model pass per batch of up to ~200 comments plus drafting; no paid API calls; the triage script is local and free"
+      },
+      "connectors": {
+        "required": [
+          "Instagram/Meta",
+          "LinkedIn",
+          "WhatsApp Business",
+          "HubSpot",
+          "Zendesk"
+        ],
+        "available_in_catalog": [
+          "Instagram/Meta",
+          "LinkedIn",
+          "X",
+          "YouTube",
+          "WhatsApp Business",
+          "HubSpot",
+          "Zoho CRM",
+          "Zendesk",
+          "Freshdesk",
+          "Slack",
+          "Google Sheets"
+        ],
+        "requires_paid": [],
+        "works_without": "yes - paste or export the comments as CSV and the triage, replies and moderation log run with no connector at all"
+      },
+      "follows_standard": true,
+      "keeps_notes": true,
+      "tracks_performance": true,
+      "outputs": [
+        "triage table with bucket, urgency, risk and decision per item",
+        "replies ready to paste, grouped by channel",
+        "escalation list with context",
+        "moderation log",
+        "buying signals handed over",
+        "what could not be verified"
+      ],
+      "best_for": [
+        "a comment section nobody has read in a week",
+        "one angry post spreading",
+        "turning engagement into enquiries"
+      ],
+      "evals": "skills/community-manager/evals.json",
+      "deterministic_script": "skills/community-manager/scripts/triage_inbox.py (--self-test)"
+    },
+    {
+      "name": "email-marketer",
+      "version": "1.0.0",
+      "added": "2026-11-03",
+      "standard_version": 2,
+      "level": "L3",
+      "category": "revenue-facing",
+      "status": "probation",
+      "reliability": "unverified",
+      "path": "skills/email-marketer",
+      "tagline": "Owns the opted-in list - newsletters, welcome and nurture sequences, subject and preview pairs, list hygiene, and reporting with its caveats attached.",
+      "skills_inside": [
+        "list-hygiene-and-consent",
+        "sequence-architecture",
+        "subject-lines-and-previews",
+        "deliverability-and-measurement"
+      ],
+      "tools_required": [
+        "an email platform - Mailchimp, Brevo, Klaviyo or HubSpot Marketing",
+        "the website or store the email points at",
+        "Google Docs or Notion for drafts",
+        "GA4 or the ESP reporting",
+        "HubSpot or Zoho CRM for segments"
+      ],
+      "permissions": [
+        "read: list size, segment definitions and past campaign results",
+        "draft: subject, preview, body, plain text and footer",
+        "write: create drafts and schedules in the platform, with confirmation",
+        "never: send a campaign without an explicit instruction in the session"
+      ],
+      "cost": {
+        "tier": "low",
+        "basis": "one model pass per sequence of up to five emails plus one lint run; the linter is local"
+      },
+      "connectors": {
+        "required": [
+          "Mailchimp",
+          "Google Docs",
+          "Shopify",
+          "GA4",
+          "HubSpot"
+        ],
+        "available_in_catalog": [
+          "Mailchimp",
+          "Brevo",
+          "Klaviyo",
+          "HubSpot",
+          "Google Docs",
+          "Notion",
+          "Google Drive",
+          "Shopify",
+          "Wix",
+          "GA4",
+          "Zoho CRM",
+          "Google Sheets"
+        ],
+        "requires_paid": [
+          "Mailchimp"
+        ],
+        "works_without": "yes - the copy, sequence JSON and lint result need no connector; only list size, past performance and sending do"
+      },
+      "follows_standard": true,
+      "keeps_notes": true,
+      "tracks_performance": true,
+      "outputs": [
+        "send brief with job, segment and exit",
+        "copy with subject, preview, body, CTA, plain text",
+        "linter output",
+        "consent note",
+        "measurement plan",
+        "what could not be verified"
+      ],
+      "best_for": [
+        "a welcome sequence that does not exist",
+        "open rates that have been falling for months",
+        "a list that has never been cleaned"
+      ],
+      "evals": "skills/email-marketer/evals.json",
+      "deterministic_script": "skills/email-marketer/scripts/sequence_linter.py (--self-test)"
+    },
+    {
+      "name": "qa-tester",
+      "version": "1.0.0",
+      "added": "2026-11-03",
+      "standard_version": 2,
+      "level": "L2",
+      "category": "operations",
+      "status": "probation",
+      "reliability": "unverified",
+      "path": "skills/qa-tester",
+      "tagline": "Turns a release into a risk-ranked test plan, a generated edge-case matrix and bug reports a developer can act on - plus the regression set and the go/no-go gate.",
+      "skills_inside": [
+        "test-plan-and-risk",
+        "edge-case-matrix",
+        "bug-reports-developers-can-act-on",
+        "regression-and-release-gate"
+      ],
+      "tools_required": [
+        "GitHub, Jira or Linear (the diff and where a defect goes)",
+        "a staging environment with test accounts",
+        "a real browser plus device emulation",
+        "Sentry or the log viewer",
+        "a sheet for the matrix when the tracker is the wrong place"
+      ],
+      "permissions": [
+        "read: the diff, the tracker, logs and the staging build",
+        "draft: test plans, matrices and bug reports",
+        "write: create issues in the tracker, with confirmation",
+        "never: deploy, merge, or mark a release passed"
+      ],
+      "cost": {
+        "tier": "medium",
+        "basis": "one model pass per release plus matrix generation; the generator is local and runs in under a second"
+      },
+      "connectors": {
+        "required": [
+          "GitHub",
+          "Jira",
+          "Slack",
+          "Google Sheets"
+        ],
+        "available_in_catalog": [
+          "GitHub",
+          "Jira",
+          "Google Tasks",
+          "Slack",
+          "Microsoft Teams",
+          "Google Sheets",
+          "GA4",
+          "BigQuery"
+        ],
+        "requires_paid": [
+          "Jira"
+        ],
+        "works_without": "yes - the plan, the matrix and the report template work from a pasted diff and acceptance criteria; reproduction and log reading do not"
+      },
+      "follows_standard": true,
+      "keeps_notes": true,
+      "tracks_performance": true,
+      "outputs": [
+        "risk table",
+        "test plan with an exit condition",
+        "generated edge-case matrix with coverage",
+        "defect list in eight fields",
+        "regression additions",
+        "residual risk and go/no-go"
+      ],
+      "best_for": [
+        "a release going out on Thursday with two days to test",
+        "a bug nobody can reproduce",
+        "a regression that keeps coming back"
+      ],
+      "evals": "skills/qa-tester/evals.json",
+      "deterministic_script": "skills/qa-tester/scripts/edge_matrix.py (--self-test)"
+    },
+    {
+      "name": "translator-localiser",
+      "version": "1.0.0",
+      "added": "2026-11-03",
+      "standard_version": 2,
+      "level": "L1",
+      "category": "operations",
+      "status": "probation",
+      "reliability": "unverified",
+      "path": "skills/translator-localiser",
+      "tagline": "Turns approved English into Hindi, Marathi, Tamil, Telugu, Bengali, Gujarati, Kannada or Hinglish that reads as written, not converted - with a glossary, one register held throughout, and the mechanical checks run before review.",
+      "skills_inside": [
+        "translation-vs-transcreation",
+        "indian-language-registers",
+        "glossary-and-terminology",
+        "localisation-qa-and-length"
+      ],
+      "tools_required": [
+        "a strings file export (JSON, CSV or XLSX)",
+        "Google Docs or Sheets for the bilingual review table",
+        "the CMS or store platform, for publishing after review",
+        "a glossary store - a sheet or the platform's terminology feature"
+      ],
+      "permissions": [
+        "read: source strings and the existing glossary",
+        "draft: translated strings and the bilingual review table",
+        "write: nothing in the product without review; publishing needs an explicit instruction",
+        "never: publish or overwrite a live string"
+      ],
+      "cost": {
+        "tier": "low",
+        "basis": "one model pass per 100-150 strings plus one check run; the checker is local"
+      },
+      "connectors": {
+        "required": [
+          "Google Docs",
+          "Google Sheets",
+          "Google Drive",
+          "Notion"
+        ],
+        "available_in_catalog": [
+          "Google Docs",
+          "Google Sheets",
+          "Google Drive",
+          "Notion",
+          "Word",
+          "OneDrive",
+          "Wix",
+          "Shopify"
+        ],
+        "requires_paid": [],
+        "works_without": "yes - paste the source strings and the whole job runs without a connector; only pulling and publishing need one"
+      },
+      "follows_standard": true,
+      "keeps_notes": true,
+      "tracks_performance": true,
+      "outputs": [
+        "register and mode decision per section",
+        "bilingual table with notes",
+        "glossary additions",
+        "glossary_check.py output",
+        "length flags",
+        "what needs a native reviewer"
+      ],
+      "best_for": [
+        "a checkout flow that has to work in Hindi and Marathi",
+        "an agency translation that sounds wrong",
+        "three freelancers using three words for one term"
+      ],
+      "evals": "skills/translator-localiser/evals.json",
+      "deterministic_script": "skills/translator-localiser/scripts/glossary_check.py (--self-test)"
+    },
+    {
+      "name": "pricing-analyst",
+      "version": "1.0.0",
+      "added": "2026-11-03",
+      "standard_version": 2,
+      "level": "L1",
+      "category": "founder-leverage",
+      "status": "probation",
+      "reliability": "unverified",
+      "path": "skills/pricing-analyst",
+      "tagline": "Sets and raises prices from willingness to pay and unit economics - contribution margin, the price floor, break-even, plan structure, and the discount ladder with its real cost.",
+      "skills_inside": [
+        "willingness-to-pay-research",
+        "price-structure-and-tiers",
+        "margin-and-unit-economics",
+        "discount-and-negotiation-policy"
+      ],
+      "tools_required": [
+        "Google Sheets or Excel for the model",
+        "Zoho Books or Tally for real costs, fees and returns",
+        "Shopify, Zoho CRM or HubSpot for revenue by plan and win-loss",
+        "Razorpay, Stripe or marketplace settlements for the fee load",
+        "GA4 or the warehouse for conversion at each price point"
+      ],
+      "permissions": [
+        "read: costs, settlements, revenue by plan, discount history",
+        "draft: the model, the memo, the tier structure and the discount policy",
+        "write: nothing - a price change is executed by the person who owns the store or the quote system",
+        "never: change a live price"
+      ],
+      "cost": {
+        "tier": "low",
+        "basis": "one model pass per pricing question plus one model run; the arithmetic script is local"
+      },
+      "connectors": {
+        "required": [
+          "Google Sheets",
+          "Zoho Books",
+          "Shopify",
+          "Razorpay",
+          "HubSpot"
+        ],
+        "available_in_catalog": [
+          "Google Sheets",
+          "Zoho Books",
+          "Tally",
+          "Shopify",
+          "Razorpay",
+          "Stripe",
+          "HubSpot",
+          "Zoho CRM",
+          "GA4",
+          "BigQuery",
+          "Google Drive"
+        ],
+        "requires_paid": [
+          "Zoho Books",
+          "Shopify"
+        ],
+        "works_without": "yes - with a pasted cost sheet the floor, break-even and discount arithmetic all run; only the real fee load and win-loss data need connectors"
+      },
+      "follows_standard": true,
+      "keeps_notes": true,
+      "tracks_performance": true,
+      "outputs": [
+        "decision and recommendation",
+        "unit economics table",
+        "price floor and the band",
+        "ranked evidence",
+        "tier structure or discount ladder",
+        "test and read date",
+        "what could not be verified"
+      ],
+      "best_for": [
+        "a price set by copying a competitor and never revisited",
+        "every deal ending in a discount",
+        "a subscription launching without tiers"
+      ],
+      "evals": "skills/pricing-analyst/evals.json",
+      "deterministic_script": "skills/pricing-analyst/scripts/margin_model.py (--self-test)"
     }
-  ]
+  ],
+  "standard_v2": "docs/standard-v2.md",
+  "schema_notes": {
+    "fields_from_v2": "standard_version, level, category, permissions, cost, connectors, reliability are required on every entry with standard_version 2",
+    "level_ladder": "L0 observe, L1 draft, L2 operate, L3 act, L4 autonomous - defined in docs/standard-v2.md",
+    "reliability": "unverified until evals have been run against real tasks; measured only with a recorded pass rate",
+    "backfill": "the sixteen v1 employees carry no level yet; backfilling them is the next tenth-drop task, not a silent invention"
+  }
 }

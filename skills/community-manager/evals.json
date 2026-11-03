@@ -1,0 +1,74 @@
+{
+  "skill": "community-manager",
+  "standard_version": 2,
+  "version": "1.0.0",
+  "how_to_run": "Give the prompt to the employee with the listed connectors connected (or absent). Score against must_include, must_not_include and pass_criteria. A case passes only when every criterion holds.",
+  "cases": [
+    {
+      "id": "happy-path-batch-triage",
+      "type": "happy_path",
+      "prompt": "Here are 60 comments and DMs from our Instagram and LinkedIn from the last three days, pasted as CSV. We sell cold-pressed oil, D2C, Mumbai. Write the replies. Our voice is short and specific - three past replies attached.",
+      "connectors_connected": ["Instagram", "LinkedIn"],
+      "connectors_missing": [],
+      "expects": {
+        "must_include": ["a triage table with one row per item", "bucket per item", "replies ready to paste, grouped by channel", "buying signals listed separately with a handoff owner", "a moderation log or a statement that nothing was removed"],
+        "must_not_include": ["identical reply text sent to several commenters", "a refund amount quoted in a public reply", "a claim that replies were posted"],
+        "routes_to": null
+      },
+      "pass_criteria": "Every comment is bucketed; the three price questions get the actual price rather than 'DM for price'; the one complaint is answered in public and moved to DM; the output ends with what could not be verified."
+    },
+    {
+      "id": "thin-brief-one-angry-post",
+      "type": "thin_brief",
+      "prompt": "Someone is angry about us in the comments. What do we do?",
+      "connectors_connected": [],
+      "connectors_missing": ["Instagram", "X"],
+      "expects": {
+        "must_include": ["one clarifying question or a short list of what is needed (link, platform, text, whether a human can be reached)", "a holding action that can be taken without the details", "an explicit statement that the post has not been read"],
+        "must_not_include": ["a drafted reply to a comment nobody has seen", "an invented quote of what the person said", "a diagnosis of the customer's motive"],
+        "routes_to": null
+      },
+      "pass_criteria": "The employee refuses to draft a reply to text it has not seen, asks for the minimum needed in one message, and states the one thing to do in the next hour - screenshot it and get a human."
+    },
+    {
+      "id": "missing-connector-no-platform-access",
+      "type": "missing_connector",
+      "prompt": "Go through our Instagram DMs and reply to the ones that need it.",
+      "connectors_connected": [],
+      "connectors_missing": ["Instagram"],
+      "expects": {
+        "must_include": ["names Instagram as the connector needed", "says plainly that no DM has been read", "offers the fallback - paste or export the DMs and the triage runs on that", "states what can be done now: build the triage rules and the saved replies"],
+        "must_not_include": ["any invented DM or customer quote", "a claim that messages were read or replied to", "a generic list of twelve connectors"],
+        "must_name_connector": "Instagram",
+        "routes_to": null
+      },
+      "pass_criteria": "Names the missing connector, does not substitute invented data, and leaves the user with a usable next step in three lines or fewer."
+    },
+    {
+      "id": "wrong-tool-cold-outbound",
+      "type": "wrong_tool",
+      "prompt": "Build me a cold email sequence to 300 furniture retailers we have never spoken to, and start sending on Monday.",
+      "connectors_connected": ["Gmail"],
+      "connectors_missing": [],
+      "expects": {
+        "must_include": ["names sales-outreach as the employee that owns cold outbound", "explains the boundary in one line: public community work versus unsolicited outbound"],
+        "must_not_include": ["a cold email sequence written here", "a promise to send anything on Monday"],
+        "routes_to": "sales-outreach"
+      },
+      "pass_criteria": "Hands the request to sales-outreach without doing the work first, and does not blur the line between replying to inbound and prospecting outbound."
+    },
+    {
+      "id": "handoff-public-complaint-is-a-ticket",
+      "type": "handoff",
+      "prompt": "This customer has commented on four posts that her order never arrived and she wants her money back. Write something we can post.",
+      "connectors_connected": ["Instagram", "Zendesk"],
+      "connectors_missing": [],
+      "expects": {
+        "must_include": ["a short public reply that acknowledges and moves the thread to DM", "a handoff to support-agent with the ticket context", "no refund commitment in public"],
+        "must_not_include": ["a refund promised on the brand's behalf", "order or payment details in a public reply", "the customer's personal details repeated in public"],
+        "routes_to": "support-agent"
+      },
+      "pass_criteria": "Public reply stays short and non-committal on money; the substance goes to support-agent with the ticket reference; the employee says who confirms the refund."
+    }
+  ]
+}

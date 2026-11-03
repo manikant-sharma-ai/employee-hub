@@ -1,0 +1,74 @@
+{
+  "skill": "translator-localiser",
+  "standard_version": 2,
+  "version": "1.0.0",
+  "how_to_run": "Give the prompt to the employee with the listed connectors connected (or absent). Score against must_include, must_not_include and pass_criteria. A case passes only when every criterion holds.",
+  "cases": [
+    {
+      "id": "happy-path-checkout-strings",
+      "type": "happy_path",
+      "prompt": "Translate our checkout flow into Hindi and Marathi. Here are the strings as JSON - 84 of them, placeholders like {count} and {order_id}, and we are a D2C brand selling to 25-40 year olds in Pune and Mumbai.",
+      "connectors_connected": ["Google Sheets"],
+      "connectors_missing": [],
+      "expects": {
+        "must_include": ["the register decision stated per language with the pronoun chosen", "a bilingual table with source, target and notes", "the glossary additions with an approver", "the glossary_check.py output showing placeholder parity", "a length flag list for UI strings", "which lines need a native reviewer"],
+        "must_not_include": ["a claim that the strings were published", "placeholders translated or dropped", "one register in the header and another in the strings"],
+        "routes_to": null
+      },
+      "pass_criteria": "Register is chosen and held, placeholders survive, the mechanical check is run and its result shown, statutory terms are kept in their official form, and the native-review boundary is stated."
+    },
+    {
+      "id": "thin-brief-just-translate-it",
+      "type": "thin_brief",
+      "prompt": "Translate our website into Hindi.",
+      "connectors_connected": [],
+      "connectors_missing": ["the CMS"],
+      "expects": {
+        "must_include": ["asks for the source text and whether it is final", "asks which register and audience - and why it changes the output", "asks script or romanised", "asks for the glossary or offers to build one", "does something useful now, such as a sample of ten strings in the proposed register"],
+        "must_not_include": ["a whole site translated from an assumption", "an invented page or headline", "silence until every question is answered"],
+        "routes_to": null
+      },
+      "pass_criteria": "Asks a short, prioritised set of questions, explains in one line why register changes the answer, and demonstrates the proposed register on a small sample so the choice can be checked."
+    },
+    {
+      "id": "missing-connector-no-string-file",
+      "type": "missing_connector",
+      "prompt": "Pull all the strings from our app and translate them to Tamil.",
+      "connectors_connected": [],
+      "connectors_missing": ["GitHub", "the CMS"],
+      "expects": {
+        "must_include": ["names the source of strings as the missing connector", "says plainly that no strings were pulled", "offers the fallback - paste or export a strings file", "states what it can do now: build the Tamil glossary and the length allowance for the UI"],
+        "must_not_include": ["invented string keys or app text", "a claim that the app was scanned", "a generic connector list"],
+        "must_name_connector": "GitHub",
+        "routes_to": null
+      },
+      "pass_criteria": "Names the missing source, invents no strings, and leaves the user with a usable first step that does not need the connector."
+    },
+    {
+      "id": "wrong-tool-original-hindi-copy",
+      "type": "wrong_tool",
+      "prompt": "Write a Hindi Instagram caption for our Diwali collection. There is no English version.",
+      "connectors_connected": [],
+      "connectors_missing": [],
+      "expects": {
+        "must_include": ["names content-writer as the employee that writes original copy", "explains the boundary in one line: converting an approved source versus writing one"],
+        "must_not_include": ["a caption written from scratch here", "a claim that this is localisation"],
+        "routes_to": "content-writer"
+      },
+      "pass_criteria": "Routes original copy to content-writer without doing it first, and states the boundary as a fact rather than a refusal."
+    },
+    {
+      "id": "handoff-legal-and-ui-length",
+      "type": "handoff",
+      "prompt": "Here is our terms of service in English. Translate it to Marathi, and the buttons in the app are too small for Marathi text - fix that too.",
+      "connectors_connected": ["Google Docs"],
+      "connectors_missing": [],
+      "expects": {
+        "must_include": ["flags the terms of service for legal-drafter and a qualified reviewer before translation is final", "routes the button width and truncation problem to ui-designer", "states what it will do itself: the glossary, the draft, the length flags"],
+        "must_not_include": ["a legal clause rendered as final without review", "a design change proposed as a translation fix", "a claim that the terms were published"],
+        "routes_to": "legal-drafter"
+      },
+      "pass_criteria": "Splits the request three ways - legal review, design change, translation - does the part that belongs to it, and does not let a length problem become a silent meaning change."
+    }
+  ]
+}

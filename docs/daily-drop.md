@@ -9,7 +9,7 @@ The standing procedure for adding five employees a day. Follow it exactly; the p
 3. **References.** Three to six craft files per employee, one per discipline the role actually needs, 60-120 lines each, dense, with tables and anti-patterns.
 4. **Notes.** Seed `notes/learnings.md`, `notes/contacts.md`, `notes/decisions.md` and `notes/journal/YYYY-MM.md` with the two or three rules that follow from how the skill was designed.
 5. **Assets.** One template of the role's own good output, where the role produces a document.
-6. **Validate.** `python3 scripts/validate_repo.py` must pass with zero errors. A skill that fails the standard is fixed, not shipped - if a role cannot clear the bar today, it returns to the queue and the next one is taken.
+6. **Validate.** `python3 scripts/validate_repo_v2.py --strict` must pass with zero errors (see `standard-v2.md`; the v1 `validate_repo.py` still runs and is the baseline, not the gate). A skill that fails the standard is fixed, not shipped - if a role cannot clear the bar today, it returns to the queue and the next one is taken.
 7. **Register.** Add five entries to `registry.json`.
 8. **Changelog.** One dated block for the batch, with a line per employee on why it is shaped that way. Not a file list - the reasoning.
 9. **Backlog.** Mark the five `shipped <date>`, promote the next five to `next`.
