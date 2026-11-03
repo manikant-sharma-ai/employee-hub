@@ -24,22 +24,22 @@ Nothing is removed without a note on why. A role that cannot clear the quality b
 | 16 | `bookkeeper` | Day-to-day entries, GST-ready records, vendor payment tracking | shipped 2026-11-03 |
 | 17 | `community-manager` | Comment and DM triage, reply drafting, escalation of anything sensitive | queued |
 | 18 | `presentation-designer` | Investor, board and sales decks from a document or a transcript | shipped 2026-11-03 |
-| 19 | `email-marketer` | Newsletters, sequences, subject-line testing, list hygiene | next |
+| 19 | `email-marketer` | Newsletters, sequences, subject-line testing, list hygiene | shipped 2026-11-03 |
 | 20 | `pr-writer` | Press notes, founder story pitches, journalist outreach lists | next |
-| 21 | `qa-tester` | Test plans, edge-case matrices, bug reports a developer can act on | next |
-| 22 | `translator-localiser` | Indian-language localisation with tone and idiom, not literal translation | next |
+| 21 | `qa-tester` | Test plans, edge-case matrices, bug reports a developer can act on | shipped 2026-11-03 |
+| 22 | `translator-localiser` | Indian-language localisation with tone and idiom, not literal translation | shipped 2026-11-03 |
 | 23 | `procurement` | Vendor comparison, quote analysis, negotiation prep, contract summaries | next |
-| 24 | `analytics-instrumenter` | Event schemas, funnel definitions, dashboard specs | queued |
-| 25 | `pricing-analyst` | Willingness-to-pay research, plan design, margin modelling | queued |
-| 26 | `hiring-manager` | Onboarding plans, 30-60-90s, role scorecards, performance reviews | queued |
-| 27 | `partnerships` | Outbound to potential partners, one-pagers, deal-term summaries | queued |
-| 28 | `compliance-watch` | Policy-change monitoring, filing calendars, evidence collection | queued |
+| 24 | `analytics-instrumenter` | Event schemas, funnel definitions, dashboard specs | next |
+| 25 | `pricing-analyst` | Willingness-to-pay research, plan design, margin modelling | next |
+| 26 | `hiring-manager` | Onboarding plans, 30-60-90s, role scorecards, performance reviews | next |
+| 27 | `partnerships` | Outbound to potential partners, one-pagers, deal-term summaries | next |
+| 28 | `compliance-watch` | Policy-change monitoring, filing calendars, evidence collection | next |
 | 29 | `voice-and-audio` | Podcast edits, voiceover scripts, audio cleanup briefs | queued |
 | 30 | `chief-of-staff` | Weekly operating review, decision log, follow-up enforcement across the team | queued |
-| 31 | `social-media-manager` | Calendar, posting, repurposing and engagement across platforms | queued |
+| 31 | `social-media-manager` | Calendar, posting, repurposing and engagement across platforms | shipped 2026-11-03 |
 | 32 | `copy-editor` | Line editing, house style, clarity pass, consistency across a document set | queued |
 | 33 | `ux-researcher` | Interview guides, synthesis, journey maps, usability findings | queued |
-| 34 | `ui-designer` | Screen layouts, component specs, states and handoff notes | queued |
+| 34 | `ui-designer` | Screen layouts, component specs, states and handoff notes | shipped 2026-11-03 |
 | 35 | `frontend-builder` | Ships a working interface from a design or a description | queued |
 | 36 | `backend-builder` | APIs, data models, auth and background jobs that run unattended | queued |
 | 37 | `api-integrator` | Connects two systems reliably - mapping, retries, reconciliation | queued |
@@ -156,6 +156,7 @@ Nothing is removed without a note on why. A role that cannot clear the quality b
 | 148 | `franchise-coordinator` | Franchisee onboarding, standards audits, royalty tracking | queued |
 | 149 | `warranty-claims` | Claim intake, eligibility checks, replacement and refund tracking | queued |
 | 150 | `field-sales-manager` | Beat plans, visit logs, territory review and target tracking | queued |
+| 151 | `employee-hub-router` | The hire desk - which employee owns the job, what to hand over, which connector is missing | shipped 2026-11-03 |
 
 ## Queue notes
 
