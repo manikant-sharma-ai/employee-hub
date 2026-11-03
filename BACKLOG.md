@@ -22,22 +22,22 @@ Nothing is removed without a note on why. A role that cannot clear the quality b
 | 14 | `brand-strategist` | Positioning, messaging hierarchy, naming, tone-of-voice guide | shipped 2026-11-02 |
 | 15 | `legal-drafter` | Contracts, NDAs, policies - drafts with a clear review boundary | shipped 2026-11-03 |
 | 16 | `bookkeeper` | Day-to-day entries, GST-ready records, vendor payment tracking | shipped 2026-11-03 |
-| 17 | `community-manager` | Comment and DM triage, reply drafting, escalation of anything sensitive | queued |
+| 17 | `community-manager` | Comment and DM triage, reply drafting, escalation of anything sensitive | held - collision with `social-media-manager`, see queue notes |
 | 18 | `presentation-designer` | Investor, board and sales decks from a document or a transcript | shipped 2026-11-03 |
 | 19 | `email-marketer` | Newsletters, sequences, subject-line testing, list hygiene | shipped 2026-11-03 |
-| 20 | `pr-writer` | Press notes, founder story pitches, journalist outreach lists | next |
+| 20 | `pr-writer` | Press notes, founder story pitches, journalist outreach lists | shipped 2026-11-04 |
 | 21 | `qa-tester` | Test plans, edge-case matrices, bug reports a developer can act on | shipped 2026-11-03 |
 | 22 | `translator-localiser` | Indian-language localisation with tone and idiom, not literal translation | shipped 2026-11-03 |
-| 23 | `procurement` | Vendor comparison, quote analysis, negotiation prep, contract summaries | next |
-| 24 | `analytics-instrumenter` | Event schemas, funnel definitions, dashboard specs | next |
-| 25 | `pricing-analyst` | Willingness-to-pay research, plan design, margin modelling | next |
+| 23 | `procurement` | Vendor comparison, quote analysis, negotiation prep, contract summaries | shipped 2026-11-04 |
+| 24 | `analytics-instrumenter` | Event schemas, funnel definitions, dashboard specs | shipped 2026-11-04 |
+| 25 | `pricing-analyst` | Willingness-to-pay research, plan design, margin modelling | shipped 2026-11-04 |
 | 26 | `hiring-manager` | Onboarding plans, 30-60-90s, role scorecards, performance reviews | next |
-| 27 | `partnerships` | Outbound to potential partners, one-pagers, deal-term summaries | next |
+| 27 | `partnerships` | Outbound to potential partners, one-pagers, deal-term summaries | shipped 2026-11-04 |
 | 28 | `compliance-watch` | Policy-change monitoring, filing calendars, evidence collection | next |
-| 29 | `voice-and-audio` | Podcast edits, voiceover scripts, audio cleanup briefs | queued |
-| 30 | `chief-of-staff` | Weekly operating review, decision log, follow-up enforcement across the team | queued |
+| 29 | `voice-and-audio` | Podcast edits, voiceover scripts, audio cleanup briefs | next |
+| 30 | `chief-of-staff` | Weekly operating review, decision log, follow-up enforcement across the team | next |
 | 31 | `social-media-manager` | Calendar, posting, repurposing and engagement across platforms | shipped 2026-11-03 |
-| 32 | `copy-editor` | Line editing, house style, clarity pass, consistency across a document set | queued |
+| 32 | `copy-editor` | Line editing, house style, clarity pass, consistency across a document set | next |
 | 33 | `ux-researcher` | Interview guides, synthesis, journey maps, usability findings | queued |
 | 34 | `ui-designer` | Screen layouts, component specs, states and handoff notes | shipped 2026-11-03 |
 | 35 | `frontend-builder` | Ships a working interface from a design or a description | queued |
@@ -174,6 +174,12 @@ Kept so that a later drop does not have to re-derive why the order moved.
 - **2026-11-03 - `bookkeeper` (#16) promoted two places ahead of #13 and #14.** The operations quota needed a second role, and `finance-ops` has shipped since 2 November with "not for day-to-day voucher entry (use bookkeeper)" in its description - a dead reference inside a shipped skill, which is the same debt `brand-strategist` was built to clear.
 - **2026-11-03 - `presentation-designer` (#18) taken with a written boundary against `graphic-designer`.** `graphic-designer` already lists "deck slides" and "make this deck consistent" among its triggers. The split is argument versus visual system: `presentation-designer` owns the arc, the claim in each title and the numbers, and hands the template, typography and single-slide design to `graphic-designer`. Both descriptions now say so, which is what stops "make me a deck" firing twice.
 - **2026-11-03 - `product-manager` (#12) taken as the founder-leverage role, not as operations.** Deciding what not to build is the work a founder does personally and badly, and the four backlog roles ahead of it in the queue were all revenue or operations. It also closes the loop with `qa-tester` (#21, now promoted), which the PM's acceptance criteria route to.
+
+- **2026-11-04 - `community-manager` (#17) skipped, not held for capacity.** Its trigger phrases collide with `social-media-manager` head-on: that skill shipped on 3 November with "comments and DMs piling up" in its `best_for` and `references/engagement-and-community.md` in its craft, so "reply to these comments" would fire both and the second one to arrive would be the wrong employee. It stays in the queue behind a written boundary - the likely split is `social-media-manager` answers in public and runs the calendar, `community-manager` owns the member programme, the private group, the moderation rules and the people who come back every week.
+- **2026-11-04 - `hiring-manager` (#26) held, not skipped.** The operations quota was filled by `procurement` (#23) and `analytics-instrumenter` (#24), so #26 would have been the third operations role in the batch. It leads the next drop, with `compliance-watch` (#28) behind it.
+- **2026-11-04 - `partnerships` (#27) taken ahead of #26 as the second revenue role.** The queue had no revenue role between #25 and #27, and the mix is fixed while the queue is a source. The boundary against `sales-outreach` is written into both descriptions: outbound sells to buyers who pay us, partnerships recruits the people who sell for us.
+- **2026-11-04 - `pricing-analyst` (#25) taken as the founder-leverage role, not as revenue.** It sits closest to the money of any role in the queue, but the work it removes is the founder's own: setting the number, defending it, and saying no to the discount. Counting it as revenue would have put three revenue roles in the batch and left the founder-leverage slot empty for a role the founder does not actually do personally.
+- **2026-11-04 - `analytics-instrumenter` (#24) promoted one place ahead of #25 and #26.** `data-analyst` answers questions from data that exists; nothing in the hub decided what to capture before the code shipped, which is the one analytics failure that cannot be repaired later. It is an operations role because it saves the rebuild, not because it reports anything.
 
 ## The five-a-day mix
 

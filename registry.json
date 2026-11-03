@@ -1,8 +1,8 @@
 {
   "name": "employee-hub",
   "display_name": "Employee Hub",
-  "version": "1.5.0",
-  "updated": "2026-11-03",
+  "version": "1.6.0",
+  "updated": "2026-11-04",
   "cadence": "5 employees daily at 06:00 IST",
   "standard": "core/employee-standard.md",
   "obligations": [
@@ -828,6 +828,219 @@
         "a machine translation that reads wrong",
         "the same term translated three ways",
         "a layout that breaks when the string grows"
+      ]
+    },
+    {
+      "name": "pr-writer",
+      "version": "1.0.0",
+      "added": "2026-11-04",
+      "status": "stable",
+      "path": "skills/pr-writer",
+      "tagline": "Earns coverage rather than buying it - a real news hook, a press note a journalist can file from, a 120-word pitch, a named media list with a reason per name, and an honest record of what was published.",
+      "skills_inside": [
+        "news-hooks-and-angles",
+        "press-release-craft",
+        "founder-story-and-pitch",
+        "media-list-and-outreach",
+        "measurement-and-coverage"
+      ],
+      "tools_required": [
+        "Gmail or Outlook (the pitch and the record)",
+        "Google Docs or Word (the note and the Q&A)",
+        "Google Drive (the press kit)",
+        "a web search or a media database for reading the reporter first",
+        "Google Sheets for the media list",
+        "a calendar for the announcement and the embargo"
+      ],
+      "follows_standard": true,
+      "keeps_notes": true,
+      "tracks_performance": true,
+      "outputs": [
+        "the hook in one sentence, per publication type",
+        "the press note",
+        "the 120-word pitch",
+        "the named media list",
+        "the Q&A sheet",
+        "the send plan",
+        "what could not be verified"
+      ],
+      "best_for": [
+        "a launch nobody has written about",
+        "a founder who does not know which reporter covers this",
+        "a press release that reads like an internal memo",
+        "a reporter's request for a comment"
+      ]
+    },
+    {
+      "name": "partnerships",
+      "version": "1.0.0",
+      "added": "2026-11-04",
+      "status": "stable",
+      "path": "skills/partnerships",
+      "tagline": "Revenue through other people's customers - a fit test before the first call, a one-pager in the partner's numbers, deal terms that survive a thin margin, and a first 90 days with a kill date.",
+      "skills_inside": [
+        "partner-types-and-fit",
+        "partner-one-pager",
+        "partner-outreach",
+        "deal-terms-and-economics",
+        "partner-activation-and-scorecard"
+      ],
+      "tools_required": [
+        "Gmail or Outlook",
+        "HubSpot, Zoho CRM or a sheet used as one",
+        "Google Docs or Word",
+        "Google Sheets for the economics",
+        "Google Drive for the enablement kit",
+        "LinkedIn to find the signer and the carrier",
+        "a calendar for the 90-day review and the kill date"
+      ],
+      "follows_standard": true,
+      "keeps_notes": true,
+      "tracks_performance": true,
+      "outputs": [
+        "the job the partnership does",
+        "the fit test",
+        "the economics and the floor",
+        "the partner one-pager",
+        "the target list",
+        "the outreach",
+        "the term sheet summary",
+        "the activation plan with a kill date",
+        "what could not be verified"
+      ],
+      "best_for": [
+        "a distributor who wants to carry the product",
+        "resellers who signed and never sold",
+        "a referral programme for CA firms",
+        "an inbound 'let's partner' email that needs a yes or no"
+      ]
+    },
+    {
+      "name": "procurement",
+      "version": "1.0.0",
+      "added": "2026-11-04",
+      "status": "stable",
+      "path": "skills/procurement",
+      "tagline": "Buys the right thing at a defensible price - a specification before any quote, quotes normalised to landed cost and TCO, vendor checks that catch the ones who will not deliver, negotiation with a walk-away, and a purchase-to-pay trail that survives an audit.",
+      "skills_inside": [
+        "specification-and-rfq",
+        "quote-comparison-and-tco",
+        "vendor-due-diligence",
+        "negotiation-prep",
+        "purchase-to-pay-and-controls"
+      ],
+      "tools_required": [
+        "Gmail or Outlook (the quote thread)",
+        "Google Sheets or Excel (the comparison)",
+        "Google Drive (quotes, vendor documents, approval file)",
+        "Zoho Books, Tally, QuickBooks or Xero for the PO",
+        "MCA21 and GST portals for verification",
+        "a calendar for renewals and delivery"
+      ],
+      "follows_standard": true,
+      "keeps_notes": true,
+      "tracks_performance": true,
+      "outputs": [
+        "the requirement",
+        "the landed-cost and TCO comparison",
+        "the vendor check",
+        "the recommendation",
+        "the negotiation plan",
+        "the commercial terms for legal-drafter",
+        "the control trail",
+        "what could not be verified"
+      ],
+      "best_for": [
+        "three quotes that are not comparable",
+        "a price that jumped at renewal",
+        "a new supplier asking for 50% advance",
+        "packaging or equipment bought without a spec"
+      ]
+    },
+    {
+      "name": "analytics-instrumenter",
+      "version": "1.0.0",
+      "added": "2026-11-04",
+      "status": "stable",
+      "path": "skills/analytics-instrumenter",
+      "tagline": "Decides what the business will be able to know, before the code ships - event taxonomy, tracking plan with an owner per event, written funnel definitions, a dashboard spec with a decision per chart, and a QA pass that proves the events fire.",
+      "skills_inside": [
+        "event-taxonomy",
+        "tracking-plan",
+        "funnel-and-metric-definitions",
+        "dashboard-spec",
+        "qa-and-data-quality"
+      ],
+      "tools_required": [
+        "GA4, Mixpanel, Amplitude or PostHog",
+        "Google Tag Manager",
+        "a warehouse or BigQuery for server-side events",
+        "the repo or issue tracker for the plan",
+        "Looker Studio, Metabase or the tool's dashboards",
+        "Google Sheets for the event dictionary"
+      ],
+      "follows_standard": true,
+      "keeps_notes": true,
+      "tracks_performance": true,
+      "outputs": [
+        "the questions table",
+        "the journey map",
+        "the event taxonomy",
+        "the tracking plan",
+        "the metric and funnel definitions",
+        "the dashboard spec",
+        "the QA result",
+        "the privacy note",
+        "what could not be verified"
+      ],
+      "best_for": [
+        "a launch that needs tracking planned in advance",
+        "a dashboard that says 4,200 signups and a CRM that says 3,100",
+        "a funnel with three definitions",
+        "a GA4 account where everything is direct"
+      ]
+    },
+    {
+      "name": "pricing-analyst",
+      "version": "1.0.0",
+      "added": "2026-11-04",
+      "status": "stable",
+      "path": "skills/pricing-analyst",
+      "tagline": "The founder-leverage role - what to charge and how to package it: willingness-to-pay evidence labelled by method, plans with fair fences, a contribution-margin floor, a discount ladder with a give-get, and a rollout with grandfathering and a reversal trigger.",
+      "skills_inside": [
+        "willingness-to-pay",
+        "packaging-and-plans",
+        "margin-and-unit-economics",
+        "discount-and-leakage",
+        "price-testing-and-rollout"
+      ],
+      "tools_required": [
+        "Google Sheets or Excel (the model)",
+        "HubSpot, Zoho CRM or the sales sheet for realised price",
+        "the payment gateway or billing system",
+        "Zoho Books, Tally or the accounting export for cost",
+        "Google Forms or a survey tool",
+        "Google Docs for the signed memo",
+        "a calendar for the rollout, review and reversal dates"
+      ],
+      "follows_standard": true,
+      "keeps_notes": true,
+      "tracks_performance": true,
+      "outputs": [
+        "the objective and current state",
+        "the floor",
+        "the evidence by method",
+        "the recommended plans and prices",
+        "the three scenarios and break-even volume",
+        "the discount policy",
+        "the rollout plan",
+        "what could not be verified"
+      ],
+      "best_for": [
+        "every deal ending in a discount",
+        "an annual plan that needs a discount that works",
+        "a competitor undercutting by half",
+        "a 12% price rise to be modelled before it is announced"
       ]
     }
   ]

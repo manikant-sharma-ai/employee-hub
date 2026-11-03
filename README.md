@@ -55,7 +55,7 @@ core/               the Employee Standard every skill follows
 registry.json       machine-readable index: name, version, date added, connectors
 skills/employee-hub-router/  the dispatcher - which employee to hire for the job in front of you
 CHANGELOG.md        one dated block per drop
-BACKLOG.md          128 roles queued, five a day
+BACKLOG.md          117 roles queued, five a day
 .claude-plugin/     plugin manifest, so the hub installs as one unit
 .github/workflows/  CI validation on every push, and the 06:00 IST drop ticket
 docs/daily-drop.md  the standing procedure for the 06:00 drop
@@ -87,7 +87,12 @@ docs/scheduling.md  how to put an employee on a cron, a webhook or an Action
 | [`email-marketer`](skills/email-marketer/SKILL.md) | Newsletters and sequences that get opened - subject-line tests, a list that is clean and consented, and a send that respects deliverability. | 2026-11-03 |
 | [`qa-tester`](skills/qa-tester/SKILL.md) | Test plans, edge-case matrices and bug reports a developer can act on - reproduction, severity and the release call. | 2026-11-03 |
 | [`translator-localiser`](skills/translator-localiser/SKILL.md) | Indian-language localisation with tone and idiom - transliteration, formality, number and date formats, and a glossary that stays consistent. | 2026-11-03 |
-| [`employee-hub-router`](skills/employee-hub-router/SKILL.md) | Reads the job, names the employee, says what to hand over and which connector is missing - the hire desk for the other twenty-one. | 2026-11-03 |
+| [`pr-writer`](skills/pr-writer/SKILL.md) | Earned coverage - a real news hook, a press note a journalist can file from, a 120-word pitch, a named media list with a reason per name, and an honest record of what published. | 2026-11-04 |
+| [`partnerships`](skills/partnerships/SKILL.md) | Revenue through other people's customers - a fit test before the first call, a one-pager in the partner's numbers, terms that survive a thin margin, and 90 days with a kill date. | 2026-11-04 |
+| [`procurement`](skills/procurement/SKILL.md) | The right thing at a defensible price - a spec before any quote, landed cost and TCO, vendor checks, negotiation with a walk-away, and a purchase-to-pay trail. | 2026-11-04 |
+| [`analytics-instrumenter`](skills/analytics-instrumenter/SKILL.md) | What the business will be able to know, decided before the code ships - event taxonomy, tracking plan, written funnel definitions, dashboard spec and a QA pass that proves events fire. | 2026-11-04 |
+| [`pricing-analyst`](skills/pricing-analyst/SKILL.md) | What to charge and how to package it - willingness-to-pay evidence, plans with fair fences, a contribution floor, a discount ladder and a rollout with a reversal trigger. | 2026-11-04 |
+| [`employee-hub-router`](skills/employee-hub-router/SKILL.md) | Reads the job, names the employee, says what to hand over and which connector is missing - the hire desk for the other twenty-six. | 2026-11-03 |
 
 ## Install
 

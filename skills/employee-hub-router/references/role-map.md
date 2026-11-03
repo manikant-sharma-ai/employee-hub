@@ -1,6 +1,6 @@
 # Role map - the boundary lines
 
-Twenty-one employees, and the near-misses are where routing actually goes wrong.
+Twenty-six employees, and the near-misses are where routing actually goes wrong.
 This file is the tie-breaker. Read the pair, not the description.
 
 ## The pairs that get confused
@@ -19,6 +19,12 @@ This file is the tie-breaker. Read the pair, not the description.
 | `translator-localiser` vs `content-writer` | New words in another language with idiom and tone is translator-localiser. Writing in English is content-writer. Never let a translator "improve" the argument, and never let a writer translate. |
 | `product-manager` vs everyone | If the question is "should this exist", product-manager. If the question is "make it exist well", the specialist. |
 | `presentation-designer` vs `graphic-designer` | A deck that argues to a decision is presentation-designer. Slides that just need to look right for a client pitch are graphic-designer. |
+
+| `sales-outreach` vs `partnerships` | Both write to strangers and both end in revenue. sales-outreach sells to the buyer who pays us. partnerships recruits the reseller, distributor or integrator who sells for us - and models that partner's margin before the first call. |
+| `data-analyst` vs `analytics-instrumenter` | data-analyst answers a question from data that exists. analytics-instrumenter decides what gets captured, under what name, before the code ships. If the ask is "why did this happen", data-analyst. If it is "we will never be able to tell", analytics-instrumenter. |
+| `pricing-analyst` vs `finance-ops` | The price is pricing-analyst's: the floor, the plans, the discount ladder. What is invoiced under it, and whether it reconciles, is finance-ops. A discount dispute is a pricing question only if the policy is wrong. |
+| `procurement` vs `finance-ops` | procurement chooses the vendor, negotiates and raises the PO. finance-ops pays, reconciles and closes. A three-way match failure starts at procurement and is recorded by bookkeeper. |
+| `pr-writer` vs `content-writer` | A story written to be published by us is content-writer. A story written so that someone else publishes it is pr-writer - and the deliverable is a pitch and a named journalist, not an article. |
 
 ## The sequences that actually recur
 
