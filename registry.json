@@ -1,7 +1,7 @@
 {
   "name": "employee-hub",
   "display_name": "Employee Hub",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "updated": "2026-11-03",
   "cadence": "5 employees daily at 06:00 IST",
   "standard": "core/employee-standard.md",
@@ -623,6 +623,211 @@
         "everything is urgent and there are two engineers",
         "a launch that has slipped three times",
         "feedback that has to become a decision"
+      ]
+    },
+    {
+      "name": "employee-hub-router",
+      "version": "1.0.0",
+      "added": "2026-11-03",
+      "status": "stable",
+      "path": "skills/employee-hub-router",
+      "tagline": "The hire desk - reads the job, names the employee who owns it, what to hand over and which connector is missing.",
+      "skills_inside": [
+        "role-map",
+        "brief-and-handover",
+        "scheduling-and-cadence"
+      ],
+      "tools_required": [
+        "none to route - it names what the job needs"
+      ],
+      "follows_standard": true,
+      "keeps_notes": true,
+      "tracks_performance": true,
+      "outputs": [
+        "the owner",
+        "the handover checklist",
+        "the connector gap",
+        "the cadence"
+      ],
+      "best_for": [
+        "not knowing which employee to use",
+        "a job that needs two employees in sequence",
+        "finding out what the hub can actually do"
+      ]
+    },
+    {
+      "name": "social-media-manager",
+      "version": "1.0.0",
+      "added": "2026-11-03",
+      "status": "stable",
+      "path": "skills/social-media-manager",
+      "tagline": "Owns the calendar, the posting, the repurposing and the replies - a week planned from one idea, cut per platform, with reply rules written down.",
+      "skills_inside": [
+        "content-calendar-and-cadence",
+        "platform-mechanics",
+        "repurposing-and-formats",
+        "engagement-and-community",
+        "india-social-norms"
+      ],
+      "tools_required": [
+        "Instagram/Meta, LinkedIn, YouTube or X",
+        "a scheduler (or a queue file if none)",
+        "Canva or Figma for assets",
+        "Google Drive for raw material"
+      ],
+      "follows_standard": true,
+      "keeps_notes": true,
+      "tracks_performance": true,
+      "outputs": [
+        "the calendar",
+        "per-slot copy with hooks and alt text",
+        "the scheduled queue or the gap",
+        "reply rules",
+        "the monthly read"
+      ],
+      "best_for": [
+        "a feed that has gone quiet",
+        "one idea that must become five posts",
+        "comments and DMs piling up",
+        "a launch that needs a posting calendar"
+      ]
+    },
+    {
+      "name": "ui-designer",
+      "version": "1.0.0",
+      "added": "2026-11-03",
+      "status": "stable",
+      "path": "skills/ui-designer",
+      "tagline": "Turns a job to be done into screens a developer can build - the flow, every state, the scale, and a handoff spec with real values.",
+      "skills_inside": [
+        "flow-and-screens",
+        "states-and-edge-cases",
+        "spacing-and-type-scale",
+        "handoff-and-specs"
+      ],
+      "tools_required": [
+        "Figma (file and design system)",
+        "GitHub (the build)",
+        "Google Drive (existing screens)"
+      ],
+      "follows_standard": true,
+      "keeps_notes": true,
+      "tracks_performance": true,
+      "outputs": [
+        "the flow",
+        "the states table",
+        "the scale",
+        "the spec",
+        "final copy"
+      ],
+      "best_for": [
+        "a feature that needs screens before code",
+        "a flow with dead ends",
+        "a developer asking what happens if",
+        "a layout that must survive a second language"
+      ]
+    },
+    {
+      "name": "email-marketer",
+      "version": "1.0.0",
+      "added": "2026-11-03",
+      "status": "stable",
+      "path": "skills/email-marketer",
+      "tagline": "Newsletters and sequences that get opened and clicked - consent on record, subject lines tested, deliverability protected.",
+      "skills_inside": [
+        "subject-lines-and-open-rate",
+        "sequence-design",
+        "list-hygiene-and-consent",
+        "deliverability-and-compliance"
+      ],
+      "tools_required": [
+        "Mailchimp, SendGrid or Zoho Campaigns",
+        "DNS access for SPF/DKIM/DMARC",
+        "Shopify or the store for segments"
+      ],
+      "follows_standard": true,
+      "keeps_notes": true,
+      "tracks_performance": true,
+      "outputs": [
+        "the sequence plan",
+        "per-mail subject, preview, body, CTA",
+        "the list check",
+        "the test and the numbers plan"
+      ],
+      "best_for": [
+        "a quiet newsletter",
+        "a welcome or abandoned-cart sequence",
+        "a falling open rate",
+        "a list that has never been cleaned"
+      ]
+    },
+    {
+      "name": "qa-tester",
+      "version": "1.0.0",
+      "added": "2026-11-03",
+      "status": "stable",
+      "path": "skills/qa-tester",
+      "tagline": "Test plans, edge-case matrices and bug reports a developer can act on - plus a release call with the evidence behind it.",
+      "skills_inside": [
+        "test-plan-and-scope",
+        "edge-case-matrix",
+        "bug-report-craft",
+        "release-call-and-severity"
+      ],
+      "tools_required": [
+        "GitHub or the tracker",
+        "a staging environment and a test account",
+        "BrowserStack or real devices"
+      ],
+      "follows_standard": true,
+      "keeps_notes": true,
+      "tracks_performance": true,
+      "outputs": [
+        "the scope and acceptance criteria",
+        "the matrix",
+        "bug reports",
+        "the release verdict with residual risk"
+      ],
+      "best_for": [
+        "testing before a launch",
+        "a bug that cannot be reproduced",
+        "a release checklist",
+        "a regression list"
+      ]
+    },
+    {
+      "name": "translator-localiser",
+      "version": "1.0.0",
+      "added": "2026-11-03",
+      "status": "stable",
+      "path": "skills/translator-localiser",
+      "tagline": "Indian-language localisation with tone and idiom - register per surface, a glossary that holds, and the formats that make it read local.",
+      "skills_inside": [
+        "indic-language-craft",
+        "tone-and-formality",
+        "formats-numbers-and-dates",
+        "glossary-and-consistency"
+      ],
+      "tools_required": [
+        "the repo with locale files or the CMS",
+        "Google Sheets for the review sheet",
+        "a native reviewer per language"
+      ],
+      "follows_standard": true,
+      "keeps_notes": true,
+      "tracks_performance": true,
+      "outputs": [
+        "the translation",
+        "the register note",
+        "glossary additions",
+        "growth and claim flags",
+        "back-translation on risky lines"
+      ],
+      "best_for": [
+        "shipping a product in an Indian language",
+        "a machine translation that reads wrong",
+        "the same term translated three ways",
+        "a layout that breaks when the string grows"
       ]
     }
   ]
