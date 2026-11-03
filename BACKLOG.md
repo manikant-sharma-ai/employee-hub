@@ -22,17 +22,17 @@ Nothing is removed without a note on why. A role that cannot clear the quality b
 | 14 | `brand-strategist` | Positioning, messaging hierarchy, naming, tone-of-voice guide | shipped 2026-11-02 |
 | 15 | `legal-drafter` | Contracts, NDAs, policies - drafts with a clear review boundary | shipped 2026-11-03 |
 | 16 | `bookkeeper` | Day-to-day entries, GST-ready records, vendor payment tracking | shipped 2026-11-03 |
-| 17 | `community-manager` | Comment and DM triage, reply drafting, escalation of anything sensitive | queued |
+| 17 | `community-manager` | Comment and DM triage, reply drafting, escalation of anything sensitive | shipped 2026-11-03 |
 | 18 | `presentation-designer` | Investor, board and sales decks from a document or a transcript | shipped 2026-11-03 |
-| 19 | `email-marketer` | Newsletters, sequences, subject-line testing, list hygiene | next |
+| 19 | `email-marketer` | Newsletters, sequences, subject-line testing, list hygiene | shipped 2026-11-03 |
 | 20 | `pr-writer` | Press notes, founder story pitches, journalist outreach lists | next |
-| 21 | `qa-tester` | Test plans, edge-case matrices, bug reports a developer can act on | next |
-| 22 | `translator-localiser` | Indian-language localisation with tone and idiom, not literal translation | next |
+| 21 | `qa-tester` | Test plans, edge-case matrices, bug reports a developer can act on | shipped 2026-11-03 |
+| 22 | `translator-localiser` | Indian-language localisation with tone and idiom, not literal translation | shipped 2026-11-03 |
 | 23 | `procurement` | Vendor comparison, quote analysis, negotiation prep, contract summaries | next |
-| 24 | `analytics-instrumenter` | Event schemas, funnel definitions, dashboard specs | queued |
-| 25 | `pricing-analyst` | Willingness-to-pay research, plan design, margin modelling | queued |
-| 26 | `hiring-manager` | Onboarding plans, 30-60-90s, role scorecards, performance reviews | queued |
-| 27 | `partnerships` | Outbound to potential partners, one-pagers, deal-term summaries | queued |
+| 24 | `analytics-instrumenter` | Event schemas, funnel definitions, dashboard specs | next |
+| 25 | `pricing-analyst` | Willingness-to-pay research, plan design, margin modelling | shipped 2026-11-03 |
+| 26 | `hiring-manager` | Onboarding plans, 30-60-90s, role scorecards, performance reviews | next |
+| 27 | `partnerships` | Outbound to potential partners, one-pagers, deal-term summaries | next |
 | 28 | `compliance-watch` | Policy-change monitoring, filing calendars, evidence collection | queued |
 | 29 | `voice-and-audio` | Podcast edits, voiceover scripts, audio cleanup briefs | queued |
 | 30 | `chief-of-staff` | Weekly operating review, decision log, follow-up enforcement across the team | queued |
@@ -173,6 +173,14 @@ Kept so that a later drop does not have to re-derive why the order moved.
 - **2026-11-03 - `bookkeeper` (#16) promoted two places ahead of #13 and #14.** The operations quota needed a second role, and `finance-ops` has shipped since 2 November with "not for day-to-day voucher entry (use bookkeeper)" in its description - a dead reference inside a shipped skill, which is the same debt `brand-strategist` was built to clear.
 - **2026-11-03 - `presentation-designer` (#18) taken with a written boundary against `graphic-designer`.** `graphic-designer` already lists "deck slides" and "make this deck consistent" among its triggers. The split is argument versus visual system: `presentation-designer` owns the arc, the claim in each title and the numbers, and hands the template, typography and single-slide design to `graphic-designer`. Both descriptions now say so, which is what stops "make me a deck" firing twice.
 - **2026-11-03 - `product-manager` (#12) taken as the founder-leverage role, not as operations.** Deciding what not to build is the work a founder does personally and badly, and the four backlog roles ahead of it in the queue were all revenue or operations. It also closes the loop with `qa-tester` (#21, now promoted), which the PM's acceptance criteria route to.
+
+- **2026-11-03 (second drop) - `pr-writer` (#20) held, not skipped.** With `community-manager` (#17) and `email-marketer` (#19) taken as the revenue pair, `pr-writer` would have been the third revenue-facing role in the batch and broken the 2-2-1 mix. It leads the queue for the next drop and is promoted to `next` rather than left queued.
+- **2026-11-03 (second drop) - `procurement` (#23) and `analytics-instrumenter` (#24) held for the operations quota.** `qa-tester` (#21) and `translator-localiser` (#22) were taken instead because both are in the path of work that already ships weekly: a release, and a localisation request. Procurement waits on a vendor-comparison boundary with `legal-drafter`, and `analytics-instrumenter` overlaps `data-analyst` on "what should we track" - both need the boundary written first.
+- **2026-11-03 (second drop) - `pricing-analyst` (#25) taken as the founder-leverage role, ahead of #23 and #24.** Price is the decision a founder makes personally and by feel, and the four roles ahead of it in the queue were all revenue or operations. It also closes a dead reference: `finance-ops` and `bookkeeper` both stop at recording money, and nothing in the hub decided what the number should be.
+- **2026-11-03 (second drop) - `community-manager` (#17) shipped with a written boundary against `support-agent`.** "Reply to this customer" would fire both. The split is channel and evidence: `support-agent` owns the ticketed inbox, where the order history and the refund authority live; `community-manager` owns public comments and DMs, where a reply is an act in front of an audience. Both descriptions now say so, and the handoff case in `community-manager`'s evals tests it.
+- **2026-11-03 (second drop) - `email-marketer` (#19) shipped with a written boundary against `sales-outreach`.** Cold outbound to people who never opted in is a different consent regime, and mixing the two is how a sending domain gets burned. `email-marketer` refuses a purchased list in its guardrails and in an eval case; `sales-outreach` keeps the cold sequence.
+- **2026-11-03 (second drop) - `qa-tester` (#21) closes the loop `product-manager` opened.** The PM's description already routes "test plans and bug reports" to `qa-tester`, which had been a dead reference since 3 November. The boundary written into both is acceptance criteria versus verification.
+- **2026-11-03 (second drop) - the v2 standard and its gate.** `scripts/validate_repo_v2.py --strict` is now the shipping gate: fixed section order, description under 1024 characters, 3-6 routed references, a deterministic script with a passing `--self-test`, one asset template, five eval cases of five types, a schema-only `notes.seed/`, and a registry entry carrying level, category, permissions, cost and connector availability. The sixteen v1 employees are listed as DRIFT rather than retro-fitted in the same commit - backfilling their level and permissions is the next tenth-drop task.
 
 ## The five-a-day mix
 

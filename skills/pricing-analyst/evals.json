@@ -1,0 +1,74 @@
+{
+  "skill": "pricing-analyst",
+  "standard_version": 2,
+  "version": "1.0.0",
+  "how_to_run": "Give the prompt to the employee with the listed connectors connected (or absent). Score against must_include, must_not_include and pass_criteria. A case passes only when every criterion holds.",
+  "cases": [
+    {
+      "id": "happy-path-price-increase",
+      "type": "happy_path",
+      "prompt": "We sell cold-pressed oil at ₹899 for 500ml, D2C in Mumbai, about 1,800 units a month. Here are the gateway statements and our cost sheet. Margins feel thin - should we raise the price, and to what?",
+      "connectors_connected": ["Google Sheets", "Razorpay"],
+      "connectors_missing": [],
+      "expects": {
+        "must_include": ["a unit economics table with GST, fees and returns separated", "the computed price floor in rupees", "a recommended price with the band it sits in", "the margin_model.py output with inputs visible", "a test and read date with a reversal rule", "the effect on existing customers"],
+        "must_not_include": ["a recommendation without the floor computed", "a statutory GST rate quoted as fact without routing to the CA", "a competitor's price used as the market price"],
+        "routes_to": null
+      },
+      "pass_criteria": "The floor is computed before the recommendation, GST is treated as a pass-through, the recommendation is a single number with a stated band, and the read date and reversal trigger are written down."
+    },
+    {
+      "id": "thin-brief-what-should-we-charge",
+      "type": "thin_brief",
+      "prompt": "What should we charge for our new service?",
+      "connectors_connected": [],
+      "connectors_missing": ["Zoho Books"],
+      "expects": {
+        "must_include": ["asks for the cost to serve first, itemised", "asks who the buyer is and what they compare it to", "asks what the current or closest price is", "gives a conditional starting point or a worked example rather than nothing"],
+        "must_not_include": ["a single price presented as an answer", "invented cost figures", "a market-size claim"],
+        "routes_to": null
+      },
+      "pass_criteria": "Names the cost to serve as the blocking input, asks no more than a short prioritised list, and shows the shape of the answer with an illustrative model clearly labelled as illustrative."
+    },
+    {
+      "id": "missing-connector-no-real-costs",
+      "type": "missing_connector",
+      "prompt": "Pull our real COGS and gateway fees from the books and tell me if we can afford a 15% discount.",
+      "connectors_connected": [],
+      "connectors_missing": ["Zoho Books", "Razorpay"],
+      "expects": {
+        "must_include": ["names Zoho Books and Razorpay as the missing connectors", "says plainly the real figures were not read", "offers the fallback - paste the cost sheet and the fee schedule", "states what it can say now: the break-even volume a 15% discount requires"],
+        "must_not_include": ["invented COGS or fee figures", "a yes/no answer on affordability without the costs", "a generic connector list"],
+        "must_name_connector": "Zoho Books",
+        "routes_to": null
+      },
+      "pass_criteria": "Names the missing connectors, refuses to answer affordability without costs, and still delivers the arithmetic that holds regardless - the volume a 15% discount needs."
+    },
+    {
+      "id": "wrong-tool-invoice-entry",
+      "type": "wrong_tool",
+      "prompt": "Enter last month's vendor bills into Zoho Books and reconcile the bank statement.",
+      "connectors_connected": ["Zoho Books"],
+      "connectors_missing": [],
+      "expects": {
+        "must_include": ["names bookkeeper as the employee that records entries", "explains the boundary in one line: setting the price versus recording the transaction"],
+        "must_not_include": ["journal entries written here", "a claim that bills were entered or reconciled"],
+        "routes_to": "bookkeeper"
+      },
+      "pass_criteria": "Routes the bookkeeping to bookkeeper without doing it, and states the boundary as a fact rather than a refusal."
+    },
+    {
+      "id": "handoff-competitor-and-quote",
+      "type": "handoff",
+      "prompt": "A competitor just dropped to ₹749 and our sales team wants to match it on a 400-unit B2B order. Also tell me how big the Indian market is for this.",
+      "connectors_connected": ["HubSpot"],
+      "connectors_missing": [],
+      "expects": {
+        "must_include": ["models the contribution at ₹749 and states whether it is above or below the floor", "routes the market-size question to research-analyst", "routes the customer-facing quote to quote-generator once a price is agreed", "offers the trade instead of a bare discount"],
+        "must_not_include": ["matching the competitor as a recommendation without the margin", "an invented market size", "a discount granted without a condition"],
+        "routes_to": "research-analyst"
+      },
+      "pass_criteria": "Answers the margin question with arithmetic, routes the market question out, and converts the discount request into a trade with a stated condition."
+    }
+  ]
+}

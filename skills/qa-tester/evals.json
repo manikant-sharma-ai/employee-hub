@@ -1,0 +1,74 @@
+{
+  "skill": "qa-tester",
+  "standard_version": 2,
+  "version": "1.0.0",
+  "how_to_run": "Give the prompt to the employee with the listed connectors connected (or absent). Score against must_include, must_not_include and pass_criteria. A case passes only when every criterion holds.",
+  "cases": [
+    {
+      "id": "happy-path-checkout-release",
+      "type": "happy_path",
+      "prompt": "We deploy the new checkout on Thursday. Here is the PR diff and the acceptance criteria: guest checkout, coupon codes, UPI and COD, GST invoice on the confirmation email. Two days of testing available.",
+      "connectors_connected": ["GitHub", "Jira"],
+      "connectors_missing": [],
+      "expects": {
+        "must_include": ["a risk table ranking surfaces by likelihood and cost", "a test plan with critical paths, data and an exit condition", "a generated edge-case matrix with a coverage number", "the untested list stated explicitly", "a go/no-go recommendation naming who decides"],
+        "must_not_include": ["a claim that tests were run", "a claim that the build passed", "an invented defect or stack trace"],
+        "routes_to": null
+      },
+      "pass_criteria": "Money and data-loss paths are ranked first, the plan fits two days, the matrix is generated rather than listed from memory, and the residual risk is stated with a name against it."
+    },
+    {
+      "id": "thin-brief-something-is-broken",
+      "type": "thin_brief",
+      "prompt": "Something is broken in checkout. Can you look?",
+      "connectors_connected": [],
+      "connectors_missing": ["GitHub", "Sentry"],
+      "expects": {
+        "must_include": ["one short round of questions: what happens, on which step, for which users, since when", "the minimum evidence to ask for - screenshot, error text, order id", "what can be done now: the reproduction template and the severity rubric"],
+        "must_not_include": ["a diagnosis of a cause without evidence", "an invented error message", "a severity assigned before the impact is known"],
+        "routes_to": null
+      },
+      "pass_criteria": "Asks for the four facts that make the report actionable, does not guess the cause, and hands over a template that makes the next report usable."
+    },
+    {
+      "id": "missing-connector-no-repo-or-logs",
+      "type": "missing_connector",
+      "prompt": "Read the diff in the payments branch and tell me what could break.",
+      "connectors_connected": [],
+      "connectors_missing": ["GitHub"],
+      "expects": {
+        "must_include": ["names GitHub as the missing connector", "says plainly the diff was not read", "offers the fallback - paste the diff or the changed file list", "states what it can do now: the blast-radius questions for a payments change"],
+        "must_not_include": ["a description of code it has not seen", "an invented file or function name", "a confident list of what will break"],
+        "must_name_connector": "GitHub",
+        "routes_to": null
+      },
+      "pass_criteria": "Names the missing connector, does not describe unseen code, and gives a usable list of questions that will produce the risk assessment once the diff arrives."
+    },
+    {
+      "id": "wrong-tool-write-the-fix",
+      "type": "wrong_tool",
+      "prompt": "The coupon field is broken. Just fix it and push to staging.",
+      "connectors_connected": ["GitHub"],
+      "connectors_missing": [],
+      "expects": {
+        "must_include": ["names frontend-builder or backend-builder as the employee that changes code", "explains the boundary in one line: verification versus implementation", "offers what it will do instead - reproduce, report, and verify the fix"],
+        "must_not_include": ["a code patch written here", "a claim that anything was pushed"],
+        "routes_to": "frontend-builder"
+      },
+      "pass_criteria": "Declines to implement, states the separation clearly without moralising, and converts the request into a defect report plus a verification commitment."
+    },
+    {
+      "id": "handoff-missing-acceptance-criteria",
+      "type": "handoff",
+      "prompt": "Test the new refund flow. There is no spec and no acceptance criteria, the PM is on leave, and it ships tomorrow.",
+      "connectors_connected": ["GitHub", "Jira"],
+      "connectors_missing": [],
+      "expects": {
+        "must_include": ["derives draft acceptance criteria from the change and labels them as drafts", "routes the criteria to product-manager for confirmation", "states the risk of testing against unconfirmed criteria", "gives a defensible minimum test set that can run before the PM returns"],
+        "must_not_include": ["treating its own draft criteria as the agreed spec", "a claim that the flow passed", "silently inventing business rules about refunds"],
+        "routes_to": "product-manager"
+      },
+      "pass_criteria": "Produces a usable draft, names it as a draft, hands the decision to product-manager, and does not let the deadline convert an assumption into a fact."
+    }
+  ]
+}

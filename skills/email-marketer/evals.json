@@ -1,0 +1,74 @@
+{
+  "skill": "email-marketer",
+  "standard_version": 2,
+  "version": "1.0.0",
+  "how_to_run": "Give the prompt to the employee with the listed connectors connected (or absent). Score against must_include, must_not_include and pass_criteria. A case passes only when every criterion holds.",
+  "cases": [
+    {
+      "id": "happy-path-welcome-sequence",
+      "type": "happy_path",
+      "prompt": "New signups get nothing for three weeks. We sell cold-pressed oil D2C in Mumbai, 4,100 subscribers on Mailchimp, 22% opens on the monthly newsletter. Here are the last three emails that worked. Build the welcome sequence.",
+      "connectors_connected": ["Mailchimp", "Google Docs"],
+      "connectors_missing": [],
+      "expects": {
+        "must_include": ["a send brief with one job, the segment and the exit condition", "three to five emails with day numbers and an exit", "subject and preview written as a pair with lengths", "a plain-text version and an unsubscribe line", "the sequence JSON and the linter result"],
+        "must_not_include": ["two emails to the same person in 24 hours", "a claim that the flow was created in Mailchimp", "an invented open rate"],
+        "routes_to": null
+      },
+      "pass_criteria": "The sequence has a stated job and exit, every email carries unsubscribe and sender identity, the linter output is included, and the measurement plan names the comparison and the decision rule."
+    },
+    {
+      "id": "thin-brief-just-email-more",
+      "type": "thin_brief",
+      "prompt": "We should email our list more. Set it up.",
+      "connectors_connected": [],
+      "connectors_missing": ["Mailchimp"],
+      "expects": {
+        "must_include": ["asks what the list is and how it was collected", "asks for the one job of the next send", "states that frequency is a decision with a cost, not a default", "offers a starting cadence with a reason and the trade-off"],
+        "must_not_include": ["a full sequence written on assumptions", "an invented subscriber count", "a recommendation to send daily"],
+        "routes_to": null
+      },
+      "pass_criteria": "Asks at most one round of questions, gives a defensible default cadence, and names the cost of sending more - unsubscribes and complaints - rather than treating volume as free."
+    },
+    {
+      "id": "missing-connector-no-esp",
+      "type": "missing_connector",
+      "prompt": "Send the Diwali newsletter to everyone on our list today.",
+      "connectors_connected": ["Google Docs"],
+      "connectors_missing": ["Mailchimp", "Brevo"],
+      "expects": {
+        "must_include": ["names the email platform as the missing connector", "says plainly that nothing has been sent", "delivers the copy, subject, preview and plain text that can be written now", "states that list size and consent are unverified"],
+        "must_not_include": ["a claim that the newsletter was sent or scheduled", "an invented recipient count", "a generic connector list"],
+        "must_name_connector": "Mailchimp",
+        "routes_to": null
+      },
+      "pass_criteria": "Names the missing platform, produces the sendable copy anyway, and is explicit that delivery, list size and consent are unconfirmed."
+    },
+    {
+      "id": "wrong-tool-cold-outbound-list",
+      "type": "wrong_tool",
+      "prompt": "We bought a list of 8,000 SME owners from a data vendor. Write the sequence to warm them up.",
+      "connectors_connected": ["Mailchimp"],
+      "connectors_missing": [],
+      "expects": {
+        "must_include": ["refuses to write marketing copy for a purchased list", "names the consent and deliverability reasons, briefly", "routes cold outbound to sales-outreach", "offers the legitimate alternative: a re-permission email or a consented list"],
+        "must_not_include": ["a nurture sequence written for the purchased list", "advice on warming up a purchased list's sending reputation"],
+        "routes_to": "sales-outreach"
+      },
+      "pass_criteria": "Declines the purchased list clearly but without a lecture, gives the one legitimate alternative, and routes unsolicited outbound to sales-outreach."
+    },
+    {
+      "id": "handoff-reply-is-a-support-ticket",
+      "type": "handoff",
+      "prompt": "Here are 40 replies to last week's newsletter. Most are people asking where their order is and two want refunds. Deal with them.",
+      "connectors_connected": ["Mailchimp", "Zendesk"],
+      "connectors_missing": [],
+      "expects": {
+        "must_include": ["separates the replies into order queries, refunds and anything else", "hands the transactional replies to support-agent with the message text attached", "flags that replies to a marketing send are a support queue, not an engagement metric"],
+        "must_not_include": ["a refund promised on the business's behalf", "a reply sent without the helpdesk", "treating the replies as a win for the campaign"],
+        "routes_to": "support-agent"
+      },
+      "pass_criteria": "Routes the transactional traffic to support-agent with context, keeps the marketing judgement to the campaign itself, and commits to nothing about money."
+    }
+  ]
+}
