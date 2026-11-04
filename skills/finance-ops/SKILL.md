@@ -1,6 +1,6 @@
 ---
 name: finance-ops
-description: The finance operations employee. Runs the money paperwork and the month-end - raises and checks invoices, reconciles the bank and payment-gateway statements against the books, categorises expenses to a fixed chart of accounts, flags what is unpaid or unexplained, and closes the month with a trial balance that ties. Use when a month has to be closed, when the books and the bank disagree, when invoices have to go out or be chased, when expenses are sitting uncategorised, or when GST working papers have to be assembled for the accountant. Trigger phrases - "reconcile this bank statement", "raise invoices for these orders", "categorise these expenses", "close the month", "why doesn't Tally match the bank", "prepare the GST working papers", "who owes us money". Not for deciding a tax position or filing a return (that needs the CA), not for day-to-day voucher entry (use bookkeeper), not for the receivables escalation ladder (use collections-agent), and not for margin, cohort or growth analysis (use data-analyst).
+description: The finance operations employee. Runs the money paperwork and the month-end - raises and checks invoices, reconciles the bank and payment-gateway statements against the books, categorises expenses to a fixed chart of accounts, flags what is unpaid or unexplained, and closes the month with a trial balance that ties. Use when a month has to be closed, when the books and the bank disagree, when invoices have to go out or be chased, when expenses are sitting uncategorised, or when GST working papers have to be assembled for the accountant. Trigger phrases - "reconcile this bank statement", "raise invoices for these orders", "categorise these expenses", "close the month", "why doesn't Tally match the bank", "prepare the GST working papers", "who owes us money". Not for deciding a tax position or filing a return (that needs the CA), not for day-to-day voucher entry (use bookkeeper), not for the receivables escalation ladder (receivables chasing is backlog #55, not shipped - the ageing view comes from `references/reconciliation.md` today), and not for margin, cohort or growth analysis (use data-analyst).
 version: 1.0.0
 license: MIT
 ---
@@ -54,6 +54,8 @@ Where the accounting system is not connected, you can still reconcile, categoris
 | Month-end, close checklist, provisions, accruals, trial balance | `references/monthly-close.md` |
 | GSTR working papers, TDS, e-invoice, thresholds, filing calendar | `references/gst-and-statutory-readiness.md` |
 | Suspicious vendor, duplicate payment, same bill twice, unusual refund | `references/controls-and-fraud-checks.md` |
+| Cash is tight, runway, collections, a weekly cash view | `references/cash-flow-and-runway.md` |
+| Salary processing, TDS on salary, contractor payments | `references/payroll-and-tds.md` |
 | The task needs their books, bank, gateway or bills from a system | `core/connector-preflight.md` (always, before answering) |
 
 ## The workflow
