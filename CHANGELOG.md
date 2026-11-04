@@ -20,6 +20,52 @@ One dated block per drop. What shipped, and why it is shaped that way.
 
 **Also in this commit:** `sales-outreach` gained the missing boundary sentence ("not for recruiting resellers, distributors or channel partners - use partnerships"), because a new revenue role that collides with a shipped one is the failure the queue rule exists to prevent. `employee-hub-router`'s role map gained the five new near-misses and now says twenty-six, `BACKLOG.md` carries the skip-and-hold reasoning for #17 and #26, and the version moves to 1.6.0 across `registry.json`, `plugin.json` and `marketplace.json`.
 
+## 2026-11-04 - capability audit: 24 missing disciplines filled (v1.6.0)
+
+A role was claiming a discipline in its own scope and shipping no craft file for it.
+Twenty-four of those are now written, routed and in the registry. This drop also adds
+the audit that stops it happening again, and the 06:30 IST job that runs it.
+
+**The gap this closes.** `scripts/validate_repo.py` checks that a skill is wired to
+the Employee Standard. It cannot tell you that an employee is missing a competence,
+because it has no idea what a competent AI engineer or bookkeeper should know. So a
+skill could lose a reference in a refactor and still pass. `scripts/audit_capabilities.py`
+now carries a per-role capability baseline - the disciplines each employee must keep
+shipping - and fails when one disappears.
+
+**The 06:30 IST schedule.** `.github/workflows/capability-audit.yml` runs at `0 1 * * *`
+UTC (06:30 IST), on every push that touches `skills/`, and on demand. A missing
+capability opens an issue the same morning with the exact role and discipline, because
+a gap that waits for someone to notice is a gap that ships.
+
+**The 24 files, by role.**
+
+- **`ai-engineer`** - `rag-and-retrieval` (the discipline behind every "the AI gives wrong answers" complaint: chunking, hybrid search, reranking, and refusing when nothing was retrieved), `cost-latency-and-scaling` (cost per *successful* task, not per call; caching, batching, time-to-first-token), `agent-safety-and-guardrails` (prompt injection from documents, blast-radius limits, approval gates, DPDP handling).
+- **`data-analyst`** - `sql-and-queries` (grain, join fan-out, nulls, IST day boundaries - the five mistakes that produce a confident wrong number), `forecasting-and-scenarios` (base case, range, the assumptions list, and cash runway by week).
+- **`seo-specialist`** - `technical-seo-crawl-and-index` (crawl, index, canonical, JS rendering, Core Web Vitals on 4G), `local-seo-and-maps` (the map pack, reviews, multi-location). This also resolves the dead handoff to `seo-technical`.
+- **`ui-designer`** - `accessibility-and-inclusive-design` (contrast, tap targets, screen readers, and the bandwidth reality), `responsive-and-mobile-patterns` (breakpoints, thumb reach, keyboard and safe areas).
+- **`qa-tester`** - `api-and-integration-testing` (the layer where money bugs live: idempotency, webhooks, partial failure, rounding).
+- **`video-editor`** - `long-form-and-youtube` (retention mechanics, chapters, the turn), `colour-and-finishing` (scopes over eyes, LUFS, the checks before delivery).
+- **`graphic-designer`** - `packaging-and-label-compliance` (the mandatory declaration block, bleed, barcode quiet zone, claims that carry risk), `motion-and-animated-assets` (easing, loops, muted-first design).
+- **`content-writer`** - `landing-page-and-conversion-copy` (page order, one action, message match, price on the page).
+- **`sales-outreach`** - `discovery-calls-and-demos` (the 20-minute structure, five questions, disqualifying fast).
+- **`finance-ops`** - `cash-flow-and-runway` (the weekly bridge, collections order, tax timing), `payroll-and-tds` (the monthly calendar, the register, contractor TDS).
+- **`bookkeeper`** - `payroll-and-statutory-entries` (the five-entry chain, and why a skipped deduction leaves a phantom liability).
+- **`hr-recruiter`** - `onboarding-handoff` (the handoff pack, 30-60-90 written before day one, what kills a hire in month one).
+- **`legal-drafter`** - `employment-and-consultant-agreements` (the employee-vs-consultant test, the clauses that matter, non-compete reality in India), `ip-and-brand-protection` (trade mark sequence, who owns freelancer work, domain hostage situations).
+- **`brand-strategist`** - `brand-architecture` (the four models, the five decision questions, migration).
+- **`email-marketer`** - `newsletter-and-curation` (the issue shape, cadence, curation as the work).
+- **`social-media-manager`** - `analytics-and-reporting` (four numbers that matter, honest attribution, what to do with a bad month).
+- **`translator-localiser`** - `ui-strings-and-translation-memory` (keys, variables, plurals, gender agreement, length limits, TM hygiene).
+- **`research-analyst`** - `interviews-and-surveys` (six to twelve interviews, past behaviour, surveys for counting).
+- **`employee-hub-router`** - `scheduling-and-cadence`, which the registry had been declaring without shipping.
+
+**Twenty-one dead handoffs fixed.** Several descriptions told the reader to "use `copy-editor`", "use `seo-technical`", "use `hiring-manager`" - employees that are queued, not shipped, so the boundary led nowhere. Each now names its backlog number and what to do today. `seo-technical` was the one case where the capability genuinely belonged in the shipped role, so `seo-specialist` now carries the technical file instead.
+
+**Baselines added** for the five roles that landed in the previous drop (`pr-writer`, `partnerships`, `procurement`, `analytics-instrumenter`, `pricing-analyst`), so all 27 employees are now covered by the audit.
+
+**State:** 27 employees, 151 references, `validate_repo.py` 0 errors 0 warnings, `audit_capabilities.py` 0 gaps 0 warnings, `validate_manifests.py` 0 errors at v1.6.0.
+
 ## 2026-11-03 - audit fixes + five employees + the hire desk (v1.5.0)
 
 This drop is not a queue drop. It is the repair of the four things the repo promised and did not have, plus five employees.
