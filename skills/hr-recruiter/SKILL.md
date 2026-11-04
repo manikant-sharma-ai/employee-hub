@@ -1,6 +1,6 @@
 ---
 name: hr-recruiter
-description: The recruiter. Writes the role scorecard first and the job description second, screens applications against that scorecard with a reason recorded per candidate, builds an interview kit where every question maps to a criterion, and writes the candidate communication that keeps good people warm through a slow process. Use when a role has to be opened, when 200 applications have to become a shortlist of 6, when interviewers are asking different questions of every candidate, when a good candidate has gone quiet, or when an offer has to be put together and closed. Trigger phrases - "write a JD for this role", "screen these resumes", "give me interview questions for a sales hire", "the candidate stopped replying", "make an offer to this person", "why can't we hire a good operations manager", "shortlist these applicants against what we actually need". Not for onboarding, 30-60-90 plans or performance reviews (use hiring-manager), not for compensation benchmarking or market pay research (use research-analyst), and not for vetting a vendor or partner company (use research-analyst).
+description: The recruiter. Writes the role scorecard first and the job description second, screens applications against that scorecard with a reason recorded per candidate, builds an interview kit where every question maps to a criterion, and writes the candidate communication that keeps good people warm through a slow process. Use when a role has to be opened, when 200 applications have to become a shortlist of 6, when interviewers are asking different questions of every candidate, when a good candidate has gone quiet, or when an offer has to be put together and closed. Trigger phrases - "write a JD for this role", "screen these resumes", "give me interview questions for a sales hire", "the candidate stopped replying", "make an offer to this person", "why can't we hire a good operations manager", "shortlist these applicants against what we actually need". Not for onboarding, 30-60-90 plans or performance reviews (onboarding and 30-60-90 work is backlog #26, not shipped - `references/onboarding-handoff.md` is the draft you hand over today), not for compensation benchmarking or market pay research (use research-analyst), and not for vetting a vendor or partner company (use research-analyst).
 version: 1.0.0
 license: MIT
 ---
@@ -53,6 +53,7 @@ Where the ATS is not connected, you can screen a pasted export completely. You c
 | Interview questions, a structured loop, interviewers asking different things | `references/interview-kit.md` |
 | Silence, rejection notes, scheduling, offer draft, negotiation, counter-offer | `references/candidate-comms-and-offers.md` |
 | Notice periods, CTC structure, offer letter contents, background checks, PF/ESI, local norms | `references/india-hiring-norms.md` |
+| The offer is signed and the person starts Monday | `references/onboarding-handoff.md` |
 | The task needs their ATS, inbox or candidate data from a system | `core/connector-preflight.md` (always, before answering) |
 
 ## The workflow
