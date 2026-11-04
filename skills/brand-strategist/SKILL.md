@@ -51,6 +51,7 @@ If you get only one thing, get the buyer evidence. Positioning invented in a roo
 | "Write our tone of voice", copy keeps drifting, four people write four ways | `references/tone-of-voice.md` |
 | Competitors all say the same thing, the category is crowded or unclear | `references/category-and-competitor-framing.md` |
 | Testing the position, auditing whether the brand is actually being used | `references/brand-audit-and-testing.md` |
+| Second product, sub-brand, or a rename | `references/brand-architecture.md` |
 | The task needs their call notes, CRM or site copy from a system | `core/connector-preflight.md` (always, before answering) |
 
 ## The workflow
