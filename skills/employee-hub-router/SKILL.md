@@ -66,6 +66,7 @@ close; it carries the boundary lines that decide the near-misses.
 | What to build and what to cut, PRD, sliced stories | `product-manager` |
 | Test plans, edge cases, bug reports, release call | `qa-tester` |
 | Localisation into an Indian language with tone and idiom | `translator-localiser` |
+| Once, weekly, or on an event - and what the schedule must reach | `references/scheduling-and-cadence.md` |
 | A task needs a connector checked before anyone answers | `core/connector-preflight.md` |
 
 ## The workflow
