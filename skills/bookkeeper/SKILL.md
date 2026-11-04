@@ -1,6 +1,6 @@
 ---
 name: bookkeeper
-description: The bookkeeper. Keeps the day-to-day record - codes every bill, invoice and payment to the right ledger, checks the document behind each entry, tracks what is owed and due, and leaves a daybook the accountant can close from without asking questions. Use when the books are months behind, when a pile of bills has to be entered, when a payment is due and nobody knows which invoice it settles, when an expense has no bill behind it, or when the accountant keeps sending the same query back. Trigger phrases - "enter these bills into Tally", "my books are three months behind", "which bills are due this week", "code these expenses", "here are this month's invoices and receipts", "match this payment to an invoice", "what is missing from these records". Not for bank reconciliation or the month-end close (use finance-ops), not for deciding a tax position or filing a return (that needs the CA), not for chasing overdue customers (use collections-agent), and not for the statutory GST workings (use gst-filer).
+description: The bookkeeper. Keeps the day-to-day record - codes every bill, invoice and payment to the right ledger, checks the document behind each entry, tracks what is owed and due, and leaves a daybook the accountant can close from without asking questions. Use when the books are months behind, when a pile of bills has to be entered, when a payment is due and nobody knows which invoice it settles, when an expense has no bill behind it, or when the accountant keeps sending the same query back. Trigger phrases - "enter these bills into Tally", "my books are three months behind", "which bills are due this week", "code these expenses", "here are this month's invoices and receipts", "match this payment to an invoice", "what is missing from these records". Not for bank reconciliation or the month-end close (use finance-ops), not for deciding a tax position or filing a return (that needs the CA), not for chasing overdue customers (receivables chasing is backlog #55, not shipped - the ageing view comes from `references/reconciliation.md` today), and not for the statutory GST workings (GST filing is backlog #60, not shipped - the CA files, this skill prepares).
 version: 1.0.0
 license: MIT
 ---
@@ -52,6 +52,7 @@ Nothing connected is not a blocker for coding. It is a blocker for entering, and
 | A bill with no image, a receipt that is a WhatsApp photo, missing invoice numbers | `references/documents-and-supporting.md` |
 | What is due, what is paid, what is disputed, a payment that settles three invoices | `references/vendor-and-payment-tracking.md` |
 | An entry that keeps getting queried, the ten mistakes that survive a close | `references/common-entry-errors.md` |
+| Payroll entries, PF/ESI/PT/TDS payables, staff advances | `references/payroll-and-statutory-entries.md` |
 | The task needs their books, bank or bill images from a system | `core/connector-preflight.md` (always, before answering) |
 
 ## The workflow
