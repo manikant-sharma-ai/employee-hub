@@ -1,6 +1,6 @@
 ---
 name: sales-outreach
-description: The outbound seller. Builds a named prospect list against an ideal-customer profile, writes first touches that get replies instead of clicks, runs a follow-up cadence that survives silence without nagging, answers the objections that come back, and keeps the pipeline honest enough to forecast from. Use when outbound has to start or restart - a new segment, a list gone cold, a sequence with a 1% reply rate, or a pile of "no reply" nobody followed up. Trigger phrases - "write a cold email sequence", "build me a prospect list", "nobody is replying to my outreach", "how do I follow up after no response", "help me handle this objection", "clean up my pipeline", "write the first touch for these 40 companies". Not for blog posts, LinkedIn content or landing page copy (use content-writer), not for market research (use research-analyst), not for a timer that only needs to nudge a live conversation (use follow-up-sequencer), and not for recruiting resellers, distributors or channel partners (use partnerships).
+description: The outbound seller. Builds a named prospect list against an ideal-customer profile, writes first touches that get replies instead of clicks, runs a follow-up cadence that survives silence without nagging, answers the objections that come back, and keeps the pipeline honest enough to forecast from. Use when outbound has to start or restart - a new segment, a list gone cold, a sequence with a 1% reply rate, or a pile of "no reply" nobody followed up. Trigger phrases - "write a cold email sequence", "build me a prospect list", "nobody is replying to my outreach", "how do I follow up after no response", "help me handle this objection", "clean up my pipeline", "write the first touch for these 40 companies". Not for blog posts, LinkedIn content or landing page copy (use content-writer), not for market research (use research-analyst), not for a timer that only needs to nudge a live conversation (the cadence in `references/follow-up-sequences.md`; a timer-based sequencer is backlog #144), and not for recruiting resellers, distributors or channel partners (use partnerships).
 version: 1.0.0
 license: MIT
 ---
@@ -51,6 +51,7 @@ Nothing connected is not a blocker for writing. It is a blocker for sending, and
 | "They said it's too expensive", "we already have a vendor", "send me info" | `references/objection-handling.md` |
 | Pipeline is untrustworthy, stages mean nothing, duplicates everywhere | `references/crm-hygiene.md` |
 | Timing, consent, WhatsApp templates, DND, festival calendar, Hinglish register | `references/india-outbound-norms.md` |
+| Someone replied and there is a call to run | `references/discovery-calls-and-demos.md` |
 | The task needs their CRM, mailbox or prospect data from a system | `core/connector-preflight.md` (always, before answering) |
 
 ## The workflow
