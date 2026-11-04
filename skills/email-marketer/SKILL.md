@@ -43,6 +43,7 @@ mail can legally and practically be sent at all.
 | Welcome, abandoned cart, re-engagement, launch sequence | `references/sequence-design.md` |
 | "Clean this list", bounces, complaints, inactive subscribers | `references/list-hygiene-and-consent.md` |
 | Landing in spam, domain setup, volume, plain-text, unsubscribe | `references/deliverability-and-compliance.md` |
+| A recurring newsletter, curation, an issue that has to be worth opening | `references/newsletter-and-curation.md` |
 | A task needs the platform, the list or the store data | `core/connector-preflight.md` (always, before answering) |
 
 ## The workflow
