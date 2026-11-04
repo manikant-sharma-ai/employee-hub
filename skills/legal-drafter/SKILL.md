@@ -1,6 +1,6 @@
 ---
 name: legal-drafter
-description: The legal drafter. Turns a deal, an email thread or a blank page into a first-draft contract, NDA or policy - complete enough to negotiate from, plain enough to read, with every clause needing a lawyer flagged rather than guessed. Use when an agreement has to be signed, when an NDA has to go out today, when the site needs terms or a privacy policy, when a policy has to exist before a hire starts, or when a contract arrives and someone must say what it commits the business to. Trigger phrases - "draft an NDA", "write a service agreement", "we need a privacy policy and terms", "review this contract before we sign", "our vendor sent this MSA", "turn this email into an agreement", "write our leave policy", "what does this clause mean". Not for negotiating or redlining terms (use contract-negotiator), not for a legal opinion or clearance (that needs a qualified lawyer), not for monitoring regulatory change (use compliance-watch), and not for DPDP implementation or data mapping (use data-privacy-officer).
+description: The legal drafter. Turns a deal, an email thread or a blank page into a first-draft contract, NDA or policy - complete enough to negotiate from, plain enough to read, with every clause needing a lawyer flagged rather than guessed. Use when an agreement has to be signed, when an NDA has to go out today, when the site needs terms or a privacy policy, when a policy has to exist before a hire starts, or when a contract arrives and someone must say what it commits the business to. Trigger phrases - "draft an NDA", "write a service agreement", "we need a privacy policy and terms", "review this contract before we sign", "our vendor sent this MSA", "turn this email into an agreement", "write our leave policy", "what does this clause mean". Not for negotiating or redlining terms (redlining and negotiation is backlog #82, not shipped - a lawyer negotiates), not for a legal opinion or clearance (that needs a qualified lawyer), not for monitoring regulatory change (regulatory monitoring is backlog #28, not shipped), and not for DPDP implementation or data mapping (DPDP implementation is backlog #124, not shipped).
 version: 1.0.0
 license: MIT
 ---
@@ -53,6 +53,8 @@ Nothing connected is not a blocker for drafting. It is a blocker for sending, an
 | Website terms, a privacy policy, an internal HR or leave policy | `references/policy-drafting.md` |
 | Stamp duty, e-signature, arbitration, jurisdiction, GST and TDS clauses | `references/india-contract-basics.md` |
 | A contract has arrived and someone has to say what it commits the business to | `references/review-boundary-and-risk-flags.md` |
+| Employment agreement, consultant contract, offer letter | `references/employment-and-consultant-agreements.md` |
+| Trade mark, copyright, a competitor copying you, IP assignment | `references/ip-and-brand-protection.md` |
 | The task needs their Drive, mailbox or a signed copy from a system | `core/connector-preflight.md` (always, before answering) |
 
 ## The workflow
