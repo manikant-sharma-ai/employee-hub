@@ -1,0 +1,53 @@
+name: capability-audit
+
+# 01:00 UTC = 06:30 IST. Every employee is checked for the disciplines its role
+# must keep shipping. A missing capability is opened as an issue the same morning,
+# because a skill that quietly lost a reference still passes a link check.
+on:
+  schedule:
+    - cron: "0 1 * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "skills/**"
+      - "scripts/audit_capabilities.py"
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Run the capability audit
+        id: audit
+        run: |
+          set +e
+          python3 scripts/audit_capabilities.py > "$RUNNER_TEMP/audit.md" 2>&1
+          echo "status=$?" >> "$GITHUB_OUTPUT"
+          cat "$RUNNER_TEMP/audit.md"
+      - name: Open an issue when a capability is missing
+        if: steps.audit.outputs.status != '0'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh label create capability-gap --color B60205 --description "a capability audit failure" 2>/dev/null || true
+          {
+            echo "The 06:30 IST capability audit found a gap."
+            echo
+            echo '```'
+            cat "$RUNNER_TEMP/audit.md"
+            echo '```'
+            echo
+            echo "Fix the gap or correct the baseline in \`scripts/audit_capabilities.py\`, then close this issue."
+          } > "$RUNNER_TEMP/issue.md"
+          gh issue create \
+            --title "Capability gap - $(TZ=Asia/Kolkata date +%Y-%m-%d)" \
+            --body-file "$RUNNER_TEMP/issue.md" \
+            --label capability-gap
