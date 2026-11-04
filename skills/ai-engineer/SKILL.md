@@ -40,6 +40,9 @@ Do not read all references. Read the one the symptom points at, plus `references
 | Recurring task, schedule, webhook, "do this every day" | `references/automation-engineering.md` |
 | Which model, how much will it cost, how do I know it works | `references/model-selection-and-evals.md` |
 | Packaging any of this as a reusable skill | `references/skill-authoring.md` |
+| Needs the model to answer from documents, a knowledge base or a catalogue | `references/rag-and-retrieval.md` |
+| Token bill too high, responses too slow, or traffic about to 10x | `references/cost-latency-and-scaling.md` |
+| Agent has tools, writes, sends, or reads untrusted content | `references/agent-safety-and-guardrails.md` |
 | A task needs data or an action from a system | `core/connector-preflight.md` (always, before answering) |
 
 ## The build loop
