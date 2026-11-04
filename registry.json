@@ -30,7 +30,10 @@
         "scenario-design",
         "automation-engineering",
         "model-selection-and-evals",
-        "skill-authoring"
+        "skill-authoring",
+        "rag-and-retrieval",
+        "cost-latency-and-scaling",
+        "agent-safety-and-guardrails"
       ],
       "tools_required": [
         "GitHub or your repo host",
@@ -63,7 +66,9 @@
         "social-and-thumbnail-craft",
         "print-and-production",
         "creative-brief-and-feedback",
-        "indian-market-visual-conventions"
+        "indian-market-visual-conventions",
+        "packaging-and-label-compliance",
+        "motion-and-animated-assets"
       ],
       "tools_required": [
         "Canva or Figma (production)",
@@ -98,7 +103,8 @@
         "short-form-and-hooks",
         "humanizer-pass",
         "editing-and-fact-check",
-        "distribution-and-repurposing"
+        "distribution-and-repurposing",
+        "landing-page-and-conversion-copy"
       ],
       "tools_required": [
         "Google Docs, Notion or Word",
@@ -133,7 +139,8 @@
         "competitor-and-market-mapping",
         "company-and-people-diligence",
         "synthesis-and-decision-memo",
-        "india-market-sources"
+        "india-market-sources",
+        "interviews-and-surveys"
       ],
       "tools_required": [
         "web access for public sources and registers",
@@ -203,7 +210,9 @@
         "metric-definitions",
         "charting-and-readout",
         "spreadsheet-to-answer",
-        "statistical-honesty"
+        "statistical-honesty",
+        "sql-and-queries",
+        "forecasting-and-scenarios"
       ],
       "tools_required": [
         "Google Sheets or Excel",
@@ -239,7 +248,8 @@
         "follow-up-sequences",
         "objection-handling",
         "crm-hygiene",
-        "india-outbound-norms"
+        "india-outbound-norms",
+        "discovery-calls-and-demos"
       ],
       "tools_required": [
         "Gmail or Outlook (sending)",
@@ -278,7 +288,9 @@
         "edit-and-cut-craft",
         "captions-and-subtitles",
         "audio-and-music",
-        "platform-delivery-specs"
+        "platform-delivery-specs",
+        "long-form-and-youtube",
+        "colour-and-finishing"
       ],
       "tools_required": [
         "Google Drive or OneDrive (footage)",
@@ -316,7 +328,9 @@
         "expense-categorisation",
         "monthly-close",
         "gst-and-statutory-readiness",
-        "controls-and-fraud-checks"
+        "controls-and-fraud-checks",
+        "cash-flow-and-runway",
+        "payroll-and-tds"
       ],
       "tools_required": [
         "Zoho Books, Tally, QuickBooks or Xero",
@@ -355,7 +369,8 @@
         "screening-and-shortlisting",
         "interview-kit",
         "candidate-comms-and-offers",
-        "india-hiring-norms"
+        "india-hiring-norms",
+        "onboarding-handoff"
       ],
       "tools_required": [
         "an ATS or a spreadsheet export",
@@ -395,7 +410,8 @@
         "naming",
         "tone-of-voice",
         "category-and-competitor-framing",
-        "brand-audit-and-testing"
+        "brand-audit-and-testing",
+        "brand-architecture"
       ],
       "tools_required": [
         "Google Drive or Docs (call notes, current copy)",
@@ -434,7 +450,9 @@
         "content-briefs-that-rank",
         "serp-and-competitor-gap",
         "india-search-behaviour",
-        "measuring-seo"
+        "measuring-seo",
+        "technical-seo-crawl-and-index",
+        "local-seo-and-maps"
       ],
       "tools_required": [
         "Google Search Console (the only honest source for current queries)",
@@ -515,7 +533,8 @@
         "chart-of-accounts-and-coding",
         "documents-and-supporting",
         "vendor-and-payment-tracking",
-        "common-entry-errors"
+        "common-entry-errors",
+        "payroll-and-statutory-entries"
       ],
       "tools_required": [
         "Zoho Books, Tally, QuickBooks or Xero (where entries live)",
@@ -555,7 +574,9 @@
         "service-agreements",
         "policy-drafting",
         "india-contract-basics",
-        "review-boundary-and-risk-flags"
+        "review-boundary-and-risk-flags",
+        "employment-and-consultant-agreements",
+        "ip-and-brand-protection"
       ],
       "tools_required": [
         "Google Docs or Word for the draft and the review round",
@@ -667,7 +688,8 @@
         "platform-mechanics",
         "repurposing-and-formats",
         "engagement-and-community",
-        "india-social-norms"
+        "india-social-norms",
+        "analytics-and-reporting"
       ],
       "tools_required": [
         "Instagram/Meta, LinkedIn, YouTube or X",
@@ -703,7 +725,9 @@
         "flow-and-screens",
         "states-and-edge-cases",
         "spacing-and-type-scale",
-        "handoff-and-specs"
+        "handoff-and-specs",
+        "accessibility-and-inclusive-design",
+        "responsive-and-mobile-patterns"
       ],
       "tools_required": [
         "Figma (file and design system)",
@@ -738,7 +762,8 @@
         "subject-lines-and-open-rate",
         "sequence-design",
         "list-hygiene-and-consent",
-        "deliverability-and-compliance"
+        "deliverability-and-compliance",
+        "newsletter-and-curation"
       ],
       "tools_required": [
         "Mailchimp, SendGrid or Zoho Campaigns",
@@ -772,7 +797,8 @@
         "test-plan-and-scope",
         "edge-case-matrix",
         "bug-report-craft",
-        "release-call-and-severity"
+        "release-call-and-severity",
+        "api-and-integration-testing"
       ],
       "tools_required": [
         "GitHub or the tracker",
@@ -806,7 +832,8 @@
         "indic-language-craft",
         "tone-and-formality",
         "formats-numbers-and-dates",
-        "glossary-and-consistency"
+        "glossary-and-consistency",
+        "ui-strings-and-translation-memory"
       ],
       "tools_required": [
         "the repo with locale files or the CMS",
