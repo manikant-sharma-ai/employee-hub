@@ -9,11 +9,11 @@ The standing procedure for adding five employees a day. Follow it exactly; the p
 3. **References.** Three to six craft files per employee, one per discipline the role actually needs, 60-120 lines each, dense, with tables and anti-patterns.
 4. **Notes.** Seed `notes/learnings.md`, `notes/contacts.md`, `notes/decisions.md` and `notes/journal/YYYY-MM.md` with the two or three rules that follow from how the skill was designed.
 5. **Assets.** One template of the role's own good output, where the role produces a document.
-6. **Validate.** `python3 scripts/validate_repo.py` must pass with zero errors. A skill that fails the standard is fixed, not shipped - if a role cannot clear the bar today, it returns to the queue and the next one is taken.
+6. **Validate.** `python3 scripts/validate_repo_v2.py --strict` must pass with zero errors and zero warnings, and `validate_repo.py` must pass inside it. A skill that fails the standard is fixed, not shipped - if a role cannot clear the bar today, it returns to the queue and the next one is taken.
 7. **Register.** Add five entries to `registry.json`.
 8. **Changelog.** One dated block for the batch, with a line per employee on why it is shaped that way. Not a file list - the reasoning.
 9. **Backlog.** Mark the five `shipped <date>`, promote the next five to `next`.
-10. **Commit and push** to `main`: `feat: daily drop <YYYY-MM-DD> - five employees`.
+10. **Commit to a branch and open a pull request.** Branch `drop/YYYY-MM-DD`, commit `feat: daily drop <YYYY-MM-DD> - five employees`, open a PR against `main` with the drop report as the body. Never push to `main` - the gate runs on the PR, and a bad drop should be reviewable before it lands.
 11. **Report** one paragraph: the five that shipped, what they can do that yesterday's could not, which one to use first, and what is next.
 
 ## Non-negotiables

@@ -31,23 +31,23 @@ Nothing is removed without a note on why. A role that cannot clear the quality b
 | 23 | `procurement` | Vendor comparison, quote analysis, negotiation prep, contract summaries | shipped 2026-11-04 |
 | 24 | `analytics-instrumenter` | Event schemas, funnel definitions, dashboard specs | shipped 2026-11-04 |
 | 25 | `pricing-analyst` | Willingness-to-pay research, plan design, margin modelling | shipped 2026-11-04 |
-| 26 | `hiring-manager` | Onboarding plans, 30-60-90s, role scorecards, performance reviews | next |
+| 26 | `hiring-manager` | Onboarding plans, 30-60-90s, role scorecards, performance reviews | shipped 2026-11-04 |
 | 27 | `partnerships` | Outbound to potential partners, one-pagers, deal-term summaries | shipped 2026-11-04 |
-| 28 | `compliance-watch` | Policy-change monitoring, filing calendars, evidence collection | next |
+| 28 | `compliance-watch` | Policy-change monitoring, filing calendars, evidence collection | shipped 2026-11-04 |
 | 29 | `voice-and-audio` | Podcast edits, voiceover scripts, audio cleanup briefs | next |
-| 30 | `chief-of-staff` | Weekly operating review, decision log, follow-up enforcement across the team | next |
+| 30 | `chief-of-staff` | Weekly operating review, decision log, follow-up enforcement across the team | shipped 2026-11-04 |
 | 31 | `social-media-manager` | Calendar, posting, repurposing and engagement across platforms | shipped 2026-11-03 |
 | 32 | `copy-editor` | Line editing, house style, clarity pass, consistency across a document set | next |
-| 33 | `ux-researcher` | Interview guides, synthesis, journey maps, usability findings | queued |
+| 33 | `ux-researcher` | Interview guides, synthesis, journey maps, usability findings | next |
 | 34 | `ui-designer` | Screen layouts, component specs, states and handoff notes | shipped 2026-11-03 |
-| 35 | `frontend-builder` | Ships a working interface from a design or a description | queued |
-| 36 | `backend-builder` | APIs, data models, auth and background jobs that run unattended | queued |
+| 35 | `frontend-builder` | Ships a working interface from a design or a description | next |
+| 36 | `backend-builder` | APIs, data models, auth and background jobs that run unattended | next |
 | 37 | `api-integrator` | Connects two systems reliably - mapping, retries, reconciliation | queued |
 | 38 | `database-designer` | Schema design, indexes, migrations and query tuning | queued |
 | 39 | `devops-engineer` | Deploy pipelines, environments, monitoring, rollback plans | queued |
 | 40 | `security-reviewer` | Threat review of a build, secrets hygiene, access audit | queued |
-| 41 | `growth-marketer` | Acquisition experiments, funnel diagnosis, channel mix decisions | queued |
-| 42 | `performance-ads-buyer` | Campaign structure, creative testing, budget pacing, read-outs | queued |
+| 41 | `growth-marketer` | Acquisition experiments, funnel diagnosis, channel mix decisions | shipped 2026-11-04 |
+| 42 | `performance-ads-buyer` | Campaign structure, creative testing, budget pacing, read-outs | shipped 2026-11-04 |
 | 43 | `influencer-outreach` | Creator shortlists, briefs, rate negotiation, deliverable tracking | queued |
 | 44 | `affiliate-manager` | Partner recruitment, commission design, fraud checks | queued |
 | 45 | `webinar-producer` | Run of show, promo sequence, follow-up, recording repurposing | queued |
@@ -180,6 +180,13 @@ Kept so that a later drop does not have to re-derive why the order moved.
 - **2026-11-04 - `partnerships` (#27) taken ahead of #26 as the second revenue role.** The queue had no revenue role between #25 and #27, and the mix is fixed while the queue is a source. The boundary against `sales-outreach` is written into both descriptions: outbound sells to buyers who pay us, partnerships recruits the people who sell for us.
 - **2026-11-04 - `pricing-analyst` (#25) taken as the founder-leverage role, not as revenue.** It sits closest to the money of any role in the queue, but the work it removes is the founder's own: setting the number, defending it, and saying no to the discount. Counting it as revenue would have put three revenue roles in the batch and left the founder-leverage slot empty for a role the founder does not actually do personally.
 - **2026-11-04 - `analytics-instrumenter` (#24) promoted one place ahead of #25 and #26.** `data-analyst` answers questions from data that exists; nothing in the hub decided what to capture before the code shipped, which is the one analytics failure that cannot be repaired later. It is an operations role because it saves the rebuild, not because it reports anything.
+
+- **2026-11-04 (second drop) - `hiring-manager` (#26) shipped as the first operations role.** It had led the queue since the morning drop, and it closes a reference that has been dead since 2 November: `hr-recruiter` ends at the offer, and nothing in the hub owned the ninety days after it. The boundary is now written into both descriptions - the recruiter gets the person in the door, this role makes the hire work or ends it properly.
+- **2026-11-04 - `compliance-watch` (#28) shipped as the second operations role.** `bookkeeper` and `finance-ops` both say what they file; nothing in the hub said which obligations apply to this entity in this state, when they are due, or where the proof is. It is deliberately not a filing role: it builds the register, reads the change and indexes the evidence, and hands the filing to the money pair. It also fixes the gap that `legal-drafter` refuses to fill - a policy is a draft, a deadline is a fact.
+- **2026-11-04 - `voice-and-audio` (#29) and `copy-editor` (#32) held for the quota, not skipped.** Both are operations roles and both sit behind #26 and #28 in the queue. Neither has a collision; they lead the next drop.
+- **2026-11-04 - `growth-marketer` (#41) and `performance-ads-buyer` (#42) taken as the revenue pair, out of queue order.** The queue had no revenue role between #30 and #41, and the mix is fixed while the queue is a source. The split is written into both descriptions: growth-marketer decides where the next rupee goes and designs the test, performance-ads-buyer builds the account, tests the creative and paces the budget inside that decision. Shipping them in the same drop is the point - either alone would have re-created the collision the queue rule exists to prevent.
+- **2026-11-04 - `chief-of-staff` (#30) taken as the founder-leverage role.** It is the work a founder does personally and badly: the Sunday-night status rebuild, the decision taken four times, the commitment nobody chased. It is L4 because it owns a cadence rather than a document.
+- **2026-11-04 - `decision-logger` (#146) now collides with `chief-of-staff` and must not ship as written.** `chief-of-staff` owns the decision log with the reversal test, so #146 would be the same artefact with no cadence around it. The likely resolution is to drop #146 and fold its remaining idea - a searchable, queryable log across teams - into a later `chief-of-staff` version. It stays queued and blocked until that decision is written.
 
 ## The five-a-day mix
 

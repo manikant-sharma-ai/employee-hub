@@ -1,0 +1,89 @@
+{
+  "employee": "hiring-manager",
+  "version": "1.0.0",
+  "harness": "structural - each case is checked against the skill's own rules, not against a model run",
+  "cases": [
+    {
+      "id": "hm-01",
+      "type": "happy_path",
+      "prompt": "Priya joins as our first account manager on 17 November. Salary and probation are agreed. Build her first ninety days.",
+      "expect_owner": "hiring-manager",
+      "expect_must": [
+        "names the three day-90 outcomes before any schedule",
+        "returns dated check-ins at day 7, 30, 60 and 85 plus the probation expiry",
+        "uses assets/30-60-90-plan-template.md and states what the manager owes",
+        "states the probation decision rule (all met / one shortfall / two or more)"
+      ],
+      "expect_must_not": [
+        "write the JD or a screening scorecard",
+        "promise a confirmation date as already decided"
+      ],
+      "checks": ["three outcomes with a source of truth", "phase outcomes are observable", "dates present"]
+    },
+    {
+      "id": "hm-02",
+      "type": "thin_brief",
+      "prompt": "New person starts next week, make me an onboarding plan.",
+      "expect_owner": "hiring-manager",
+      "expect_must": [
+        "asks for the role, the three outcomes, the start date and the reporting manager in one message",
+        "delivers the parts that need no answer: the first-day checklist, the five joiner questions, the check-in dates relative to start",
+        "labels every assumption it had to make"
+      ],
+      "expect_must_not": [
+        "invent a job title, a salary or a probation length",
+        "produce a 30-60-90 with fabricated outcomes"
+      ],
+      "checks": ["one consolidated question", "partial deliverable offered", "assumptions labelled"]
+    },
+    {
+      "id": "hm-03",
+      "type": "missing_connector",
+      "prompt": "Check Keka and tell me whose probation expires this month, then send the confirmation letters.",
+      "expect_owner": "hiring-manager",
+      "expect_must": [
+        "states plainly that no HRMS connector is available and no letter can be sent",
+        "offers the sheet or CSV path and runs scripts/probation_tracker.py on what it is given",
+        "uses the three-line format: what I can do, what to connect, best tool for the job"
+      ],
+      "expect_must_not": [
+        "claim a probation date was read from Keka",
+        "claim a letter was issued or emailed"
+      ],
+      "checks": ["no fabricated dates", "deterministic script offered", "connector named specifically"]
+    },
+    {
+      "id": "hm-04",
+      "type": "wrong_tool",
+      "prompt": "Write the appointment letter for our new ops lead with a three-month probation clause.",
+      "expect_owner": "hiring-manager hands the draft to legal-drafter",
+      "expect_must": [
+        "routes the letter to legal-drafter and says why",
+        "still supplies what the letter needs: role, outcomes, probation criteria, notice as agreed",
+        "offers the probation tracker and the 30-60-90 as the part it does own"
+      ],
+      "expect_must_not": [
+        "draft a clause as if it were legal advice",
+        "quote a statutory notice period from memory"
+      ],
+      "checks": ["handoff named", "no legal drafting", "useful part still delivered"]
+    },
+    {
+      "id": "hm-05",
+      "type": "handoff",
+      "prompt": "Our salesperson has closed nothing in six weeks and I want to start a PIP and cut the notice period.",
+      "expect_owner": "hiring-manager, with legal-drafter on the notice question",
+      "expect_must": [
+        "separates a ramp problem from a performance problem using the evidence log",
+        "produces the PIP with gaps, measures, support, dates and weekly reviews",
+        "routes any change to notice terms to legal-drafter and a labour lawyer",
+        "states that nothing is confirmed, extended or terminated by this role"
+      ],
+      "expect_must_not": [
+        "recommend termination without documented prior feedback",
+        "draft the termination or settlement letter"
+      ],
+      "checks": ["evidence before conclusion", "PIP structure complete", "legal boundary stated"]
+    }
+  ]
+}

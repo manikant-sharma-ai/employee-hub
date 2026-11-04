@@ -1,6 +1,6 @@
 # Role map - the boundary lines
 
-Twenty-six employees, and the near-misses are where routing actually goes wrong.
+Thirty-one employees, and the near-misses are where routing actually goes wrong.
 This file is the tie-breaker. Read the pair, not the description.
 
 ## The pairs that get confused
@@ -24,7 +24,13 @@ This file is the tie-breaker. Read the pair, not the description.
 | `data-analyst` vs `analytics-instrumenter` | data-analyst answers a question from data that exists. analytics-instrumenter decides what gets captured, under what name, before the code ships. If the ask is "why did this happen", data-analyst. If it is "we will never be able to tell", analytics-instrumenter. |
 | `pricing-analyst` vs `finance-ops` | The price is pricing-analyst's: the floor, the plans, the discount ladder. What is invoiced under it, and whether it reconciles, is finance-ops. A discount dispute is a pricing question only if the policy is wrong. |
 | `procurement` vs `finance-ops` | procurement chooses the vendor, negotiates and raises the PO. finance-ops pays, reconciles and closes. A three-way match failure starts at procurement and is recorded by bookkeeper. |
-| `pr-writer` vs `content-writer` | A story written to be published by us is content-writer. A story written so that someone else publishes it is pr-writer - and the deliverable is a pitch and a named journalist, not an article. |
+| `pr-writer` vs `content-writer` || `hiring-manager` vs `hr-recruiter` | hr-recruiter gets the person in the door - scorecard, JD, screening, interview kit, offer. hiring-manager takes over the day the offer is signed - first ninety days, probation, reviews, the hard conversation. "We need to hire a CFO" is hr-recruiter; "our new CFO is not working out" is hiring-manager. |
+| `compliance-watch` vs `bookkeeper` and `finance-ops` | compliance-watch owns the register, the dates, the change reading and the evidence. bookkeeper and finance-ops own the filing and the payment. "What is due and are we ready" is compliance-watch; "file it and pay it" is the money pair. |
+| `compliance-watch` vs `legal-drafter` | A policy, a contract or a reply to a notice is legal-drafter and then a lawyer. Which obligation exists, when it is due, and where the proof is, is compliance-watch. |
+| `chief-of-staff` vs `employee-hub-router` | The router answers "who does this job". chief-of-staff answers "did the thing we agreed actually happen". One routes work, the other enforces the cadence around it. |
+| `chief-of-staff` vs `product-manager` and `brand-strategist` | chief-of-staff frames and records the decision, and enforces it. What to build is product-manager; what the business stands for is brand-strategist. If the ask is "should we", it is not chief-of-staff. |
+| `growth-marketer` vs `performance-ads-buyer` | growth-marketer decides where the next rupee should go and designs the test that will prove it. performance-ads-buyer builds the account, tests the creative and paces the budget inside that decision. "Which channel" is growth-marketer; "this campaign's CPA" is the buyer. |
+| `growth-marketer` vs `data-analyst` and `analytics-instrumenter` | data-analyst answers a question from existing data; analytics-instrumenter decides what to capture before it ships; growth-marketer uses both to choose the next experiment. Diagnosis ends in a test, not in a readout. |
 
 ## The sequences that actually recur
 
@@ -33,6 +39,9 @@ This file is the tie-breaker. Read the pair, not the description.
 3. **New product** - product-manager (PRD, slice) → ui-designer (screens) → qa-tester (test plan) → content-writer (launch copy) → seo-specialist (page).
 4. **Money trouble** - data-analyst (what the numbers say) → bookkeeper (what is recorded) → finance-ops (close and exceptions) → legal-drafter (only if terms are the cause).
 5. **Entering a new language market** - research-analyst (is it worth it) → translator-localiser (the words) → ui-designer (layout that survives longer strings) → seo-specialist (local search).
+6. **A new hire's first ninety days** - hr-recruiter (scorecard, JD, screening) → legal-drafter (offer terms) → hiring-manager (first day, 30-60-90, probation) → bookkeeper (payroll setup).
+7. **A growth plateau** - data-analyst (what the numbers say) → growth-marketer (the constraint and the test) → performance-ads-buyer (build and pace it) → graphic-designer (the creative) → growth-marketer (the read-out).
+8. **A compliance scare** - compliance-watch (what applies, what is due, the evidence) → bookkeeper or finance-ops (file and pay) → legal-drafter (policy or reply draft) → a lawyer (anything with a demand or a prosecution).
 
 ## What the hub cannot do, and who to point at
 
@@ -41,5 +50,5 @@ This file is the tie-breaker. Read the pair, not the description.
 | Sign a contract, file a GST return, certify accounts | A chartered accountant or lawyer. The hub drafts; a professional signs. |
 | Take a photograph, shoot a product video | A photographer or videographer. `graphic-designer` and `video-editor` direct and specify; they do not capture. |
 | Make a payment, send a campaign to 40,000 people | A connected payment or ESP account, in your name, with your approval on the first run. |
-| Run paid ads autonomously | `sales-outreach` and `graphic-designer` prepare; a person with the ad account approves spend. |
+| Run paid ads autonomously | `growth-marketer` decides, `performance-ads-buyer` prepares and paces, a person with the ad account approves every spend change. |
 | Replace a manager's judgement on people | `hr-recruiter` structures the decision; it does not make it. |

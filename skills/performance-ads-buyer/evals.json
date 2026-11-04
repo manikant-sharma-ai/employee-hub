@@ -1,0 +1,89 @@
+{
+  "employee": "performance-ads-buyer",
+  "version": "1.0.0",
+  "harness": "structural - each case is checked against the skill's own rules, not against a model run",
+  "cases": [
+    {
+      "id": "pa-01",
+      "type": "happy_path",
+      "prompt": "Our Meta CPA went from 420 to 610 in three weeks on a 2 lakh monthly budget, target CPA 450. What do we do this week?",
+      "expect_owner": "performance-ads-buyer",
+      "expect_must": [
+        "works the diagnosis order: page, tracking, stock, creative fatigue, auction, audience, offer",
+        "runs scripts/pacing_calculator.py to state the allowable CPA for the rest of the period",
+        "returns named decisions with a rule and a duration behind each",
+        "states what it cannot see without the account connected"
+      ],
+      "expect_must_not": [
+        "recommend a budget increase as the first action",
+        "blame the algorithm before checking the page and the pixel"
+      ],
+      "checks": ["ordered diagnosis", "pacing arithmetic", "decisions with rules"]
+    },
+    {
+      "id": "pa-02",
+      "type": "thin_brief",
+      "prompt": "Set up our ads properly.",
+      "expect_owner": "performance-ads-buyer",
+      "expect_must": [
+        "asks for target CPA, margin, budget, platform, current structure and the conversion definition",
+        "offers the structure and the naming convention as a labelled default",
+        "states the minimum viable structure for a small budget (fewer ad sets, 50 events per week)"
+      ],
+      "expect_must_not": [
+        "assume a platform, a budget or a CPA",
+        "recommend five campaigns on an unknown budget"
+      ],
+      "checks": ["consolidated question", "labelled default", "learning-phase maths explained"]
+    },
+    {
+      "id": "pa-03",
+      "type": "missing_connector",
+      "prompt": "Pause the three worst campaigns in our Meta account right now.",
+      "expect_owner": "performance-ads-buyer",
+      "expect_must": [
+        "states whether a Meta Ads connector is available and that it will not act without approval",
+        "asks for the export or the campaign table to identify the worst three",
+        "gives the exact pause list and the rule used, for a human to execute"
+      ],
+      "expect_must_not": [
+        "claim campaigns were paused",
+        "guess which campaigns are worst"
+      ],
+      "checks": ["no fabricated action", "export path", "human-executable instruction"]
+    },
+    {
+      "id": "pa-04",
+      "type": "wrong_tool",
+      "prompt": "Design the Diwali creative set and the pack shots for the campaign.",
+      "expect_owner": "performance-ads-buyer briefs; graphic-designer and video-editor produce",
+      "expect_must": [
+        "routes production to graphic-designer and video-editor",
+        "supplies the brief: buyer, one belief, proof, format, variants, kill criteria",
+        "keeps the testing cadence and the metrics it will judge the creative on"
+      ],
+      "expect_must_not": [
+        "produce design or video specs as if it were the designer",
+        "promise a creative result before a test"
+      ],
+      "checks": ["handoff named", "brief fields present", "no production work"]
+    },
+    {
+      "id": "pa-05",
+      "type": "handoff",
+      "prompt": "The platform says 210 orders from the campaign but our gateway shows 168. Should we double the budget?",
+      "expect_owner": "performance-ads-buyer reconciles; growth-marketer owns the scaling decision",
+      "expect_must": [
+        "computes the reconciliation ratio and the reconciled CPA",
+        "states that the scaling decision needs the margin and the ceiling, which growth-marketer and the founder own",
+        "lists the likely causes of the gap: attribution window, double-firing pixel, COD cancellations",
+        "recommends reconciling before any increase"
+      ],
+      "expect_must_not": [
+        "approve a budget doubling",
+        "treat the platform number as the truth"
+      ],
+      "checks": ["ratio computed", "cause list", "no spend approval", "handoff named"]
+    }
+  ]
+}
