@@ -43,6 +43,7 @@ reason to test against production.
 | Boundaries, empty, duplicates, interruptions, long text | `references/edge-case-matrix.md` |
 | "I cannot reproduce this", vague bug report, evidence | `references/bug-report-craft.md` |
 | "Can we ship on Friday", severity, go/no-go | `references/release-call-and-severity.md` |
+| Endpoints, webhooks, payment gateway, two systems talking | `references/api-and-integration-testing.md` |
 | A task needs the repo, the build or the tracker | `core/connector-preflight.md` (always, before answering) |
 
 ## The workflow
