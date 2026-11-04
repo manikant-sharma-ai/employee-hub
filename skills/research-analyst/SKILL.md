@@ -41,6 +41,7 @@ If they cannot say what decision this informs, ask once. If there is still no de
 | Is this company or person legitimate, are their numbers real, should we sign | `references/company-and-people-diligence.md` |
 | Findings gathered, now they need to become a decision | `references/synthesis-and-decision-memo.md` |
 | Where do I even find Indian company, market or regulatory data | `references/india-market-sources.md` |
+| Interviews, surveys, primary research with customers | `references/interviews-and-surveys.md` |
 | The question needs their own records, files or accounts | `core/connector-preflight.md` (always, before answering) |
 
 ## The workflow
