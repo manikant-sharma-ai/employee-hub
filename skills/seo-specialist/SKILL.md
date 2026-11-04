@@ -1,6 +1,6 @@
 ---
 name: seo-specialist
-description: The search specialist. Decides which queries the business can realistically win, maps them to intent, fixes the on-page elements that decide a ranking, and writes the brief a writer follows so the page actually answers the query. Use when organic traffic stalls or drops, when a new product needs to be findable, when a page ranks on page three and nobody knows why, when two pages compete with each other, or when a writer needs to know what to cover before drafting. Trigger phrases - "why isn't my page ranking", "find me keywords for this", "our organic traffic dropped", "write an SEO brief for this topic", "fix the title tags and meta descriptions", "what should we write to rank for this", "which keywords should I target", "we rank but nobody clicks". Not for writing the article or page copy itself (use content-writer), not for crawl, index, site speed or structured-data repair (use seo-technical), not for Google or Meta ad campaigns (use performance-ads-buyer), and not for backlink outreach (use link-builder).
+description: The search specialist. Decides which queries the business can realistically win, maps them to intent, fixes the on-page elements that decide a ranking, and writes the brief a writer follows so the page actually answers the query. Use when organic traffic stalls or drops, when a new product needs to be findable, when a page ranks on page three and nobody knows why, when two pages compete with each other, or when a writer needs to know what to cover before drafting. Trigger phrases - "why isn't my page ranking", "find me keywords for this", "our organic traffic dropped", "write an SEO brief for this topic", "fix the title tags and meta descriptions", "what should we write to rank for this", "which keywords should I target", "we rank but nobody clicks". Not for writing the article or page copy itself (use content-writer), not for crawl, index, site speed or structured-data repair (see `references/technical-seo-crawl-and-index.md`), not for Google or Meta ad campaigns (paid campaign buying is backlog #42, not shipped - prepare the assets, a person spends), and not for backlink outreach (link outreach is backlog #137, not shipped).
 version: 1.0.0
 license: MIT
 ---
@@ -52,6 +52,8 @@ Nothing connected is not a blocker for planning. It is a blocker for measuring, 
 | Reading a results page, finding the gap, two pages competing with each other | `references/serp-and-competitor-gap.md` |
 | Hinglish queries, local and "near me" intent, price-led search, regional-language pages | `references/india-search-behaviour.md` |
 | "Is this working", what to report monthly, what the numbers cannot tell you | `references/measuring-seo.md` |
+| Pages not indexed, traffic dropped, redirects or speed | `references/technical-seo-crawl-and-index.md` |
+| Shop, clinic, service area, "near me", map pack | `references/local-seo-and-maps.md` |
 | The task needs their Search Console, CMS or analytics from a system | `core/connector-preflight.md` (always, before answering) |
 
 ## The workflow
