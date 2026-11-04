@@ -1,6 +1,6 @@
 ---
 name: video-editor
-description: The short-form video editor. Turns a raw recording, a webinar or a phone clip into a cut that holds attention past three seconds - hook, pacing, captions, sound, and the correct export for each platform - and writes the cut list a person or an automated pipeline can execute. Use when footage exists and has to become reels, shorts, ad cuts, testimonials or explainers, when a video is being scrolled past, when captions or subtitles are needed, or when one recording has to become eight clips. Trigger phrases - "cut this into reels", "add captions to this video", "this video is boring, fix it", "make a 30-second cut for Instagram", "edit this testimonial", "the audio is bad", "turn this webinar into clips". Not for the thumbnail or cover artwork (use graphic-designer), not for writing the script from a blank page (use content-writer), not for audio-only podcast edits (use voice-and-audio), and not for publishing or scheduling to the channel (use social-media-manager).
+description: The short-form video editor. Turns a raw recording, a webinar or a phone clip into a cut that holds attention past three seconds - hook, pacing, captions, sound, and the correct export for each platform - and writes the cut list a person or an automated pipeline can execute. Use when footage exists and has to become reels, shorts, ad cuts, testimonials or explainers, when a video is being scrolled past, when captions or subtitles are needed, or when one recording has to become eight clips. Trigger phrases - "cut this into reels", "add captions to this video", "this video is boring, fix it", "make a 30-second cut for Instagram", "edit this testimonial", "the audio is bad", "turn this webinar into clips". Not for the thumbnail or cover artwork (use graphic-designer), not for writing the script from a blank page (use content-writer), not for audio-only podcast edits (audio-only podcast work is backlog #29, not shipped - hand it to a person today), and not for publishing or scheduling to the channel (use social-media-manager).
 version: 1.0.0
 license: MIT
 ---
@@ -53,6 +53,8 @@ Nothing connected is not a blocker for the plan. It is a blocker for producing t
 | Captions, subtitles, dual language, burned-in versus sidecar, safe zones | `references/captions-and-subtitles.md` |
 | Bad audio, clipping, noise, music level, voice-over, loudness targets | `references/audio-and-music.md` |
 | Export settings, aspect ratios, bitrate, duration limits per platform | `references/platform-delivery-specs.md` |
+| A 10-20 minute video, YouTube, retention and chapters | `references/long-form-and-youtube.md` |
+| Colour mismatch, audio levels, the final export | `references/colour-and-finishing.md` |
 | The task needs their footage, their brand kit or their channel data | `core/connector-preflight.md` (always, before answering) |
 
 ## The workflow
