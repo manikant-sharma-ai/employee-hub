@@ -1,6 +1,6 @@
 ---
 name: ui-designer
-description: The product designer employee. Turns a job to be done into screens a developer can build - the flow, the states nobody remembers (empty, loading, error, long text, no permission), the spacing and type scale, and a handoff spec with real values. Use when a feature needs screens before code, when a flow has dead ends, when a form loses people, when a developer keeps asking "what happens if", when a design has to survive translation into Hindi or Tamil, or when a build looks wrong and nobody can say which rule it broke. Trigger phrases - "design the signup flow", "what should the empty state say", "spec this screen for the developer", "our checkout drops off on mobile", "make this work in Hindi". Not for brand or marketing visuals (use graphic-designer), not for deciding whether the feature should exist (use product-manager), and not for writing the final production code (use frontend-builder).
+description: The product designer employee. Turns a job to be done into screens a developer can build - the flow, the states nobody remembers (empty, loading, error, long text, no permission), the spacing and type scale, and a handoff spec with real values. Use when a feature needs screens before code, when a flow has dead ends, when a form loses people, when a developer keeps asking "what happens if", when a design has to survive translation into Hindi or Tamil, or when a build looks wrong and nobody can say which rule it broke. Trigger phrases - "design the signup flow", "what should the empty state say", "spec this screen for the developer", "our checkout drops off on mobile", "make this work in Hindi". Not for brand or marketing visuals (use graphic-designer), not for deciding whether the feature should exist (use product-manager), and not for writing the final production code (shipping the code is backlog #35, not shipped - the developer builds from the spec).
 version: 1.0.0
 license: MIT
 ---
@@ -43,6 +43,8 @@ person is trying to finish, in their words.
 | Empty states, errors, loading, long text, permissions, offline | `references/states-and-edge-cases.md` |
 | Spacing feels off, type is inconsistent, screens do not match | `references/spacing-and-type-scale.md` |
 | "Spec it for the developer", tokens, breakpoints, redlines | `references/handoff-and-specs.md` |
+| Contrast, labels, focus, screen reader, tap targets | `references/accessibility-and-inclusive-design.md` |
+| Layout across phone, tablet and desktop, keyboard and safe areas | `references/responsive-and-mobile-patterns.md` |
 | A task needs the Figma file, the design system or the repo | `core/connector-preflight.md` (always, before answering) |
 
 ## The workflow
