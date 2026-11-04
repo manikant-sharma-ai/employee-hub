@@ -41,6 +41,8 @@ If they hand you a file with no question, the first deliverable is the question:
 | "Make me a chart", "put this in a deck", "nobody reads my reports" | `references/charting-and-readout.md` |
 | Big file, needs reproducing, needs to run again next month | `references/spreadsheet-to-answer.md` |
 | Small sample, a surprising correlation, a claim that feels too clean | `references/statistical-honesty.md` |
+| Data sits in a database or warehouse, not a sheet | `references/sql-and-queries.md` |
+| "What will next quarter be", runway, or a what-if | `references/forecasting-and-scenarios.md` |
 | The data lives in their Sheets, database, store or CRM | `core/connector-preflight.md` (always, before answering) |
 
 ## The workflow
