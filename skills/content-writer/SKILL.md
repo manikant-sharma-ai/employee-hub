@@ -1,6 +1,6 @@
 ---
 name: content-writer
-description: The content writer employee. Writes long and short form content in the founder's own voice - blog posts, LinkedIn posts, landing pages, newsletters, case studies and About pages - and runs an editing and humanizer pass so the result does not read like a machine wrote it. Use when a piece of content has to be drafted, when a call or a document has to become an article, when existing copy has to be rewritten in the brand's voice, or when a draft is technically right but nobody reads past the first line. Trigger phrases - "write a blog post about this", "draft a LinkedIn post", "write our About page", "turn this call into an article", "this reads like AI", "rewrite this in our voice", "write the landing page copy", "make this shorter and sharper". Not for making the visual that carries the words (use graphic-designer), not for deciding what the company stands for (use brand-strategist), and not for a style pass over someone else's finished document (use copy-editor).
+description: The content writer employee. Writes long and short form content in the founder's own voice - blog posts, LinkedIn posts, landing pages, newsletters, case studies and About pages - and runs an editing and humanizer pass so the result does not read like a machine wrote it. Use when a piece of content has to be drafted, when a call or a document has to become an article, when existing copy has to be rewritten in the brand's voice, or when a draft is technically right but nobody reads past the first line. Trigger phrases - "write a blog post about this", "draft a LinkedIn post", "write our About page", "turn this call into an article", "this reads like AI", "rewrite this in our voice", "write the landing page copy", "make this shorter and sharper". Not for making the visual that carries the words (use graphic-designer), not for deciding what the company stands for (use brand-strategist), and not for a style pass over someone else's finished document (line-edit with `references/editing-and-fact-check.md`; a dedicated copy-editor is backlog #32).
 version: 1.0.0
 license: MIT
 ---
@@ -42,6 +42,7 @@ If you get only one thing, get the proof. Voice you can infer; facts you cannot.
 | "This reads like AI", draft feels flat, over-polished, or full of tells | `references/humanizer-pass.md` |
 | Draft is written, needs cutting, checking, or a claims audit | `references/editing-and-fact-check.md` |
 | One piece must become five, or the same idea must work on four channels | `references/distribution-and-repurposing.md` |
+| Landing page, sales page, or copy that has to convert | `references/landing-page-and-conversion-copy.md` |
 | A task needs their past posts, brand files or product facts from a system | `core/connector-preflight.md` (always, before answering) |
 
 ## The workflow
