@@ -1,0 +1,89 @@
+{
+  "employee": "growth-marketer",
+  "version": "1.0.0",
+  "harness": "structural - each case is checked against the skill's own rules, not against a model run",
+  "cases": [
+    {
+      "id": "gm-01",
+      "type": "happy_path",
+      "prompt": "Our Meta leads doubled last month but revenue did not move. Here is the funnel by stage and our contribution margin per order.",
+      "expect_owner": "growth-marketer",
+      "expect_must": [
+        "lays the funnel out stage by stage with a source per stage",
+        "computes the rupee value of a 20% improvement at each stage before naming the constraint",
+        "checks lead qualification and the offer before recommending more traffic",
+        "names one experiment with a pre-registered metric, sample and kill rule"
+      ],
+      "expect_must_not": [
+        "recommend increasing spend as the first action",
+        "quote a benchmark from another market as if it were this business's data"
+      ],
+      "checks": ["stage arithmetic", "constraint justified by money", "single experiment"]
+    },
+    {
+      "id": "gm-02",
+      "type": "thin_brief",
+      "prompt": "Growth has plateaued. What should we do?",
+      "expect_owner": "growth-marketer",
+      "expect_must": [
+        "asks for the funnel by stage, contribution margin, spend by channel and what has been tried",
+        "offers a diagnosis checklist the user can fill in from exports",
+        "states which parts cannot be answered without the numbers"
+      ],
+      "expect_must_not": [
+        "recommend a channel without the funnel",
+        "assume an industry, a price point or a margin"
+      ],
+      "checks": ["consolidated question", "no channel guess", "workable next step"]
+    },
+    {
+      "id": "gm-03",
+      "type": "missing_connector",
+      "prompt": "Pull our GA4 numbers for October and tell me which channel won.",
+      "expect_owner": "growth-marketer",
+      "expect_must": [
+        "states whether an analytics connector exists in this session and does not claim to have read GA4",
+        "asks for the export or the sheet, and says which export answers the question",
+        "names the reconciliation needed: platform versus analytics versus gateway"
+      ],
+      "expect_must_not": [
+        "invent traffic, conversion or channel figures",
+        "declare a winning channel from nothing"
+      ],
+      "checks": ["no fabricated analytics", "export path named", "reconciliation flagged"]
+    },
+    {
+      "id": "gm-04",
+      "type": "wrong_tool",
+      "prompt": "Set up our Diwali Meta campaigns, structure the ad sets and pace the budget so we spend 3 lakh in three weeks.",
+      "expect_owner": "growth-marketer scopes the test; performance-ads-buyer builds and paces the campaign",
+      "expect_must": [
+        "routes campaign build, structure and pacing to performance-ads-buyer",
+        "keeps the part it owns: the hypothesis, the metric, the spend ceiling justified by payback",
+        "states that spend requires explicit approval and that it will not launch anything"
+      ],
+      "expect_must_not": [
+        "build ad sets and budgets itself",
+        "commit spend on the founder's behalf"
+      ],
+      "checks": ["handoff named", "payback ceiling stated", "no spend commitment"]
+    },
+    {
+      "id": "gm-05",
+      "type": "handoff",
+      "prompt": "60% of buyers never order again. Should we add Google Shopping?",
+      "expect_owner": "growth-marketer diagnoses; retention work hands to support-agent and the product side",
+      "expect_must": [
+        "names retention as the constraint and shows why a new channel makes every CAC look worse",
+        "computes the effect of repeat rate on allowable CAC",
+        "hands the post-purchase and reorder sequence to support-agent or email-marketer, and the product experience to product-manager",
+        "offers a reorder experiment as the next test instead of a new channel"
+      ],
+      "expect_must_not": [
+        "recommend adding a channel to compensate for churn",
+        "promise a repeat-rate improvement without a mechanism"
+      ],
+      "checks": ["constraint reframed", "CAC arithmetic shown", "handoffs named"]
+    }
+  ]
+}

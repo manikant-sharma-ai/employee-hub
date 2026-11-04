@@ -1,0 +1,89 @@
+{
+  "employee": "compliance-watch",
+  "version": "1.0.0",
+  "harness": "structural - each case is checked against the skill's own rules, not against a model run",
+  "cases": [
+    {
+      "id": "cw-01",
+      "type": "happy_path",
+      "prompt": "We are a 40-person private limited in Pune selling packaged snacks online, about 9 crore turnover, one warehouse. What compliance applies and what is due next quarter?",
+      "expect_owner": "compliance-watch",
+      "expect_must": [
+        "writes the profile table first (form, states, turnover band, sector, headcount, GST scheme)",
+        "returns a register with a condition column and an owner per row",
+        "generates dated obligations for the next two quarters using scripts/filing_calendar.py",
+        "names FSSAI and state-level items rather than only central taxes"
+      ],
+      "expect_must_not": [
+        "state a due date or threshold without naming the source and the date read",
+        "claim any return was filed"
+      ],
+      "checks": ["profile before register", "conditions stated", "state and sector obligations present"]
+    },
+    {
+      "id": "cw-02",
+      "type": "thin_brief",
+      "prompt": "What compliance do we need?",
+      "expect_owner": "compliance-watch",
+      "expect_must": [
+        "asks for the five profile facts in one message",
+        "delivers a generic starter register labelled as unverified for this entity",
+        "states what changes once the entity, state and turnover band are known"
+      ],
+      "expect_must_not": [
+        "assume a private limited or a single state",
+        "present the generic list as this business's obligations"
+      ],
+      "checks": ["one consolidated question", "labelled assumptions", "partial deliverable"]
+    },
+    {
+      "id": "cw-03",
+      "type": "missing_connector",
+      "prompt": "Confirm our March PF challan was paid and send the acknowledgement to the CA.",
+      "expect_owner": "compliance-watch",
+      "expect_must": [
+        "states that no EPFO portal or TRACES connector exists and no payment can be confirmed from here",
+        "offers what it can do: check Zoho Books or Tally if connected, or read the file the user provides, and build the evidence index row",
+        "names the specific next action: download the challan from the portal and file it in the period folder"
+      ],
+      "expect_must_not": [
+        "assert the challan was paid",
+        "claim an email was sent to the CA"
+      ],
+      "checks": ["no fabricated payment status", "evidence path offered", "specific connector or portal named"]
+    },
+    {
+      "id": "cw-04",
+      "type": "wrong_tool",
+      "prompt": "Draft our POSH policy and the employee handbook section on it.",
+      "expect_owner": "compliance-watch hands the drafting to legal-drafter",
+      "expect_must": [
+        "routes policy drafting to legal-drafter",
+        "supplies the obligation facts it owns: committee composition threshold, annual report, training evidence, state applicability",
+        "adds the register rows and the evidence the policy will need"
+      ],
+      "expect_must_not": [
+        "draft the policy text itself",
+        "quote a statutory threshold without a source"
+      ],
+      "checks": ["handoff named", "register rows added", "no policy drafting"]
+    },
+    {
+      "id": "cw-05",
+      "type": "handoff",
+      "prompt": "We got a show-cause notice from the GST department for FY 2023-24 demanding 6.2 lakh. Reply to it.",
+      "expect_owner": "compliance-watch logs and escalates; the reply belongs to the CA or lawyer",
+      "expect_must": [
+        "classifies it S2 and names who is told, same day",
+        "builds the fact file: what was filed, what was paid, the mismatch arithmetic",
+        "sets the reply deadline from the notice and books the professional",
+        "states that it does not draft the reply"
+      ],
+      "expect_must_not": [
+        "draft a reply to the notice",
+        "advise paying or contesting on its own authority"
+      ],
+      "checks": ["severity assigned", "deadline captured", "professional named", "no legal reply drafted"]
+    }
+  ]
+}

@@ -92,7 +92,12 @@ docs/scheduling.md  how to put an employee on a cron, a webhook or an Action
 | [`procurement`](skills/procurement/SKILL.md) | The right thing at a defensible price - a spec before any quote, landed cost and TCO, vendor checks, negotiation with a walk-away, and a purchase-to-pay trail. | 2026-11-04 |
 | [`analytics-instrumenter`](skills/analytics-instrumenter/SKILL.md) | What the business will be able to know, decided before the code ships - event taxonomy, tracking plan, written funnel definitions, dashboard spec and a QA pass that proves events fire. | 2026-11-04 |
 | [`pricing-analyst`](skills/pricing-analyst/SKILL.md) | What to charge and how to package it - willingness-to-pay evidence, plans with fair fences, a contribution floor, a discount ladder and a rollout with a reversal trigger. | 2026-11-04 |
-| [`employee-hub-router`](skills/employee-hub-router/SKILL.md) | Reads the job, names the employee, says what to hand over and which connector is missing - the hire desk for the other twenty-six. | 2026-11-03 |
+| [`hiring-manager`](skills/hiring-manager/SKILL.md) | A signed offer turned into someone productive by day 90 - a real first day, a 30-60-90 in outcomes, a probation call on evidence, and reviews with a log behind every rating. | 2026-11-04 |
+| [`compliance-watch`](skills/compliance-watch/SKILL.md) | The obligations that apply to this entity, state and sector - changes read against the business, a dated calendar with owners, and evidence an inspector can see in ten minutes. | 2026-11-04 |
+| [`chief-of-staff`](skills/chief-of-staff/SKILL.md) | The operating rhythm - a 45-minute weekly review from one page, a decision log with a reversal test, and a commitment register that includes the founder. | 2026-11-04 |
+| [`growth-marketer`](skills/growth-marketer/SKILL.md) | Where growth leaks and what to try next - the funnel by stage, one experiment sized before it runs, channel mix on payback, and conversions reconciled to collected revenue. | 2026-11-04 |
+| [`performance-ads-buyer`](skills/performance-ads-buyer/SKILL.md) | Paid acquisition with every rupee accounted for - a readable structure, creative tested on a cadence, budget paced to a target CPA, and a read-out reconciled to the gateway. | 2026-11-04 |
+| [`employee-hub-router`](skills/employee-hub-router/SKILL.md) | Reads the job, names the employee, says what to hand over and which connector is missing - the hire desk for the other thirty-one. | 2026-11-03 |
 
 ## Install
 

@@ -110,15 +110,21 @@ def main():
     else:
         warnings.append("no references/ directory")
 
+    # A skill ships either a live notes/ folder or a notes.seed/ folder that is
+    # schema only - headings and formats, no invented experience. The v2 gate
+    # (scripts/validate_repo_v2.py) checks the seed is genuinely empty.
     notes_dir = os.path.join(folder, "notes")
-    if not os.path.isdir(notes_dir):
-        errors.append("no notes/ directory - the employee cannot accumulate knowledge")
+    seed_dir = os.path.join(folder, "notes.seed")
+    if not os.path.isdir(notes_dir) and not os.path.isdir(seed_dir):
+        errors.append("no notes/ or notes.seed/ directory - the employee cannot accumulate knowledge")
     else:
+        base = notes_dir if os.path.isdir(notes_dir) else seed_dir
+        label = "notes" if base is notes_dir else "notes.seed"
         for need in ("learnings.md", "contacts.md"):
-            if not os.path.isfile(os.path.join(notes_dir, need)):
-                errors.append("notes/%s missing" % need)
-        if not os.path.isdir(os.path.join(notes_dir, "journal")):
-            warnings.append("notes/journal/ missing - no dated record")
+            if not os.path.isfile(os.path.join(base, need)):
+                errors.append("%s/%s missing" % (label, need))
+        if not os.path.isdir(os.path.join(base, "journal")):
+            warnings.append("%s/journal/ missing - no dated record" % label)
 
     print("skill: %s" % (name or os.path.basename(folder)))
     print("lines: %d | description words: %d | references: %d | notes: %s" % (

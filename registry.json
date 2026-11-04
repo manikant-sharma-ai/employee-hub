@@ -1,7 +1,7 @@
 {
   "name": "employee-hub",
   "display_name": "Employee Hub",
-  "version": "1.6.0",
+  "version": "1.7.0",
   "updated": "2026-11-04",
   "cadence": "5 employees daily at 06:00 IST",
   "standard": "core/employee-standard.md",
@@ -1042,6 +1042,494 @@
         "a competitor undercutting by half",
         "a 12% price rise to be modelled before it is announced"
       ]
+    },
+    {
+      "name": "hiring-manager",
+      "version": "1.0.0",
+      "added": "2026-11-04",
+      "schema": 2,
+      "level": "L3",
+      "level_reason": "prepares the plan, the review and the letter draft and owns the dates; confirming, promoting or exiting a person is the founder's signature, not this role's",
+      "category": "operations",
+      "status": "probation",
+      "reliability": "unverified",
+      "path": "skills/hiring-manager",
+      "tagline": "Turns a signed offer into someone productive by day 90 - a first day that exists, a 30-60-90 in outcomes, a probation decision on evidence instead of silence, and reviews with a log behind every rating.",
+      "skills_inside": [
+        "onboarding-first-90",
+        "role-scorecards-and-goals",
+        "performance-review-craft",
+        "difficult-conversations-and-pips",
+        "retention-and-attrition-signals"
+      ],
+      "permissions": [
+        "read: joiner data the user provides (start dates, probation length, manager)",
+        "write: drafts only - 30-60-90 plan, review write-up, PIP, confirmation recommendation",
+        "write: calendar events for check-ins and probation milestones, with approval",
+        "never: confirm, extend, promote or terminate a person",
+        "never: read or store identity documents, salary figures or medical notes"
+      ],
+      "cost": {
+        "band": "low",
+        "driver": "a handful of short documents per joiner and per review cycle; no long transcripts unless a review is recorded",
+        "estimate_basis": "design estimate - 4-8 model calls per joiner, one per review"
+      },
+      "connectors": {
+        "available": [
+          {
+            "name": "Google Calendar",
+            "status": "connected",
+            "unlocks": "probation dates, check-ins, review windows"
+          },
+          {
+            "name": "Google Docs",
+            "status": "connected",
+            "unlocks": "the 30-60-90, the review, the PIP draft"
+          },
+          {
+            "name": "Google Sheets",
+            "status": "connected",
+            "unlocks": "joiner tracker and evidence log"
+          },
+          {
+            "name": "Gmail",
+            "status": "connected",
+            "unlocks": "pre-boarding notes and the written summary"
+          },
+          {
+            "name": "Slack",
+            "status": "connected",
+            "unlocks": "the day-one intro and the buddy channel"
+          },
+          {
+            "name": "Zoho People or Keka (HRMS)",
+            "status": "not_available",
+            "unlocks": "reading real probation dates and issuing letters"
+          },
+          {
+            "name": "Google Meet or Otter.ai",
+            "status": "connected",
+            "unlocks": "recording a review, only with consent"
+          }
+        ],
+        "required": [
+          "a calendar (dates with an owner)",
+          "a document tool (the plan and the review)",
+          "a sheet (the joiner tracker)"
+        ]
+      },
+      "follows_standard": true,
+      "keeps_notes": true,
+      "tracks_performance": true,
+      "eval_cases": 5,
+      "outputs": [
+        "the role's three day-90 outcomes",
+        "the first day and first week plan",
+        "the 30-60-90 in outcomes",
+        "the probation recommendation with evidence",
+        "the review write-up",
+        "the conversation script",
+        "what could not be verified"
+      ],
+      "best_for": [
+        "a first hire joining with no plan and no desk",
+        "a new salesperson drifting at week six",
+        "three probations expiring with no decision recorded",
+        "a review that has to land without demoralising someone"
+      ]
+    },
+    {
+      "name": "compliance-watch",
+      "version": "1.0.0",
+      "added": "2026-11-04",
+      "schema": 2,
+      "level": "L3",
+      "level_reason": "maintains the register, reads changes and prepares the calendar and evidence pack; filing and paying stay with a human holding the portal credentials",
+      "category": "operations",
+      "status": "probation",
+      "reliability": "unverified",
+      "path": "skills/compliance-watch",
+      "tagline": "Watches the rules so the founder does not have to - the obligation register for this entity, state and sector, changes read against the business, a dated calendar with owners, and evidence an inspector can see in ten minutes.",
+      "skills_inside": [
+        "obligations-map",
+        "change-monitoring",
+        "evidence-and-inspection",
+        "risk-register-and-escalation",
+        "india-filing-calendar"
+      ],
+      "permissions": [
+        "read: the entity profile, prior filings and evidence the user provides",
+        "write: the obligation register, the filing calendar and the evidence index",
+        "write: calendar reminders at T-15 and T-3, with approval",
+        "never: file a return, pay a challan or submit anything to a portal",
+        "never: hold portal credentials, DSC tokens or employee identity documents"
+      ],
+      "cost": {
+        "band": "medium",
+        "driver": "weekly source scans plus evidence indexing; long notification pages and document lists dominate the tokens",
+        "estimate_basis": "design estimate - 6-10 model calls per weekly cycle"
+      },
+      "connectors": {
+        "available": [
+          {
+            "name": "Google Drive",
+            "status": "connected",
+            "unlocks": "the evidence folder and the inspection pack"
+          },
+          {
+            "name": "Google Sheets",
+            "status": "connected",
+            "unlocks": "the obligation register and evidence index"
+          },
+          {
+            "name": "Google Calendar",
+            "status": "connected",
+            "unlocks": "due dates with owners and reminders"
+          },
+          {
+            "name": "Gmail",
+            "status": "connected",
+            "unlocks": "the notice inbox and the trail with the CA"
+          },
+          {
+            "name": "Zoho Books",
+            "status": "connected",
+            "unlocks": "confirming a challan was recorded as paid"
+          },
+          {
+            "name": "GST portal, TRACES, MCA21, EPFO",
+            "status": "not_available",
+            "unlocks": "confirming a filing or a payment directly"
+          },
+          {
+            "name": "Tally",
+            "status": "not_available",
+            "unlocks": "reading books kept in Tally"
+          }
+        ],
+        "required": [
+          "a file store for evidence (Drive or OneDrive)",
+          "a sheet for the register",
+          "a calendar for the due dates"
+        ]
+      },
+      "follows_standard": true,
+      "keeps_notes": true,
+      "tracks_performance": true,
+      "eval_cases": 5,
+      "outputs": [
+        "the entity profile and what was assumed",
+        "the obligation register with applicability conditions",
+        "the dated calendar for two quarters",
+        "changes since the last review, including what does not apply",
+        "open gaps with exposure",
+        "the evidence index",
+        "what could not be verified"
+      ],
+      "best_for": [
+        "a business that cannot list its own filings",
+        "a rule change that may or may not apply",
+        "an EPFO or GST notice arriving",
+        "an audit asking for last year's evidence"
+      ]
+    },
+    {
+      "name": "chief-of-staff",
+      "version": "1.0.0",
+      "added": "2026-11-04",
+      "schema": 2,
+      "level": "L4",
+      "level_reason": "owns the operating cadence end to end - runs the review, keeps the decision log, enforces commitments including the founder's, and reports its own closure rate",
+      "category": "founder-leverage",
+      "status": "probation",
+      "reliability": "unverified",
+      "path": "skills/chief-of-staff",
+      "tagline": "The founder's operating memory and enforcement - a 45-minute weekly review from one page of numbers, a decision log with a reversal test, and a commitment register that includes the founder.",
+      "skills_inside": [
+        "weekly-operating-review",
+        "decision-log-and-reversibility",
+        "followup-enforcement",
+        "operating-cadence",
+        "founder-time-and-delegation"
+      ],
+      "permissions": [
+        "read: the scorecard, the decision log and the commitment register",
+        "write: the review note, the decision log and the register",
+        "write: calendar holds for the cadence, with approval",
+        "write: a direct nudge to one owner per commitment, on approval",
+        "never: decide strategy, price, hiring or what to build",
+        "never: record personnel, legal or health matters in the review note"
+      ],
+      "cost": {
+        "band": "medium",
+        "driver": "a weekly page plus meeting transcripts; the transcript is the cost driver, not the arithmetic",
+        "estimate_basis": "design estimate - 3-6 model calls per weekly review"
+      },
+      "connectors": {
+        "available": [
+          {
+            "name": "Google Calendar",
+            "status": "connected",
+            "unlocks": "the cadence and the founder's time audit"
+          },
+          {
+            "name": "Google Sheets",
+            "status": "connected",
+            "unlocks": "the one-page scorecard and the commitment register"
+          },
+          {
+            "name": "Google Docs",
+            "status": "connected",
+            "unlocks": "the decision log and the review note"
+          },
+          {
+            "name": "Slack",
+            "status": "connected",
+            "unlocks": "the Monday sweep and the single-owner nudge"
+          },
+          {
+            "name": "Google Meet or Otter.ai",
+            "status": "connected",
+            "unlocks": "extracting actions from what was actually said"
+          },
+          {
+            "name": "HubSpot",
+            "status": "needs_authorisation",
+            "unlocks": "pipeline as a live number rather than an export"
+          },
+          {
+            "name": "Jira or Asana",
+            "status": "not_available",
+            "unlocks": "a register that lives in the project tool"
+          }
+        ],
+        "required": [
+          "a calendar (the cadence is a date, not an intention)",
+          "a sheet (the scorecard and the register)",
+          "a document tool (the decision log)"
+        ]
+      },
+      "follows_standard": true,
+      "keeps_notes": true,
+      "tracks_performance": true,
+      "eval_cases": 5,
+      "outputs": [
+        "the one-page scorecard with sources",
+        "what changed and what is stuck",
+        "the decisions with owners, dates and reversal tests",
+        "the commitment register and what slipped",
+        "the three questions for next week",
+        "what could not be verified"
+      ],
+      "best_for": [
+        "a founder rebuilding a status update every Sunday",
+        "a decision that was taken and never executed",
+        "nothing getting followed up",
+        "a founder who is busy and cannot see where the time went"
+      ]
+    },
+    {
+      "name": "growth-marketer",
+      "version": "1.0.0",
+      "added": "2026-11-04",
+      "schema": 2,
+      "level": "L3",
+      "level_reason": "diagnoses, models and designs the test; launching, spending and campaign changes need approval and are executed by performance-ads-buyer",
+      "category": "revenue-facing",
+      "status": "probation",
+      "reliability": "unverified",
+      "path": "skills/growth-marketer",
+      "tagline": "Finds where growth is leaking and what to try next - the funnel stage by stage, one experiment with a pre-registered metric and a kill rule, channel mix on payback, and conversions reconciled to money collected.",
+      "skills_inside": [
+        "funnel-diagnosis",
+        "experiment-design",
+        "channel-mix-and-cac",
+        "offer-and-landing-page",
+        "measurement-and-attribution"
+      ],
+      "permissions": [
+        "read: funnel exports, spend reports and order data the user provides",
+        "write: the funnel model, the experiment brief and the read-out",
+        "write: recommendations on budget allocation, never the allocation itself",
+        "never: launch, pause or change a live campaign",
+        "never: spend, or approve spend, on any channel"
+      ],
+      "cost": {
+        "band": "medium",
+        "driver": "funnel exports and experiment briefs; long spreadsheet extracts dominate the tokens",
+        "estimate_basis": "design estimate - 5-8 model calls per diagnosis, fewer per read-out"
+      },
+      "connectors": {
+        "available": [
+          {
+            "name": "Google Sheets",
+            "status": "connected",
+            "unlocks": "the funnel model, experiment log and payback arithmetic"
+          },
+          {
+            "name": "Meta Ads",
+            "status": "connected",
+            "unlocks": "spend and delivery for diagnosis"
+          },
+          {
+            "name": "LinkedIn",
+            "status": "connected",
+            "unlocks": "B2B channel context and audience reality"
+          },
+          {
+            "name": "Google Docs",
+            "status": "connected",
+            "unlocks": "the experiment brief and the read-out"
+          },
+          {
+            "name": "HubSpot",
+            "status": "needs_authorisation",
+            "unlocks": "lead quality and stage conversion without an export"
+          },
+          {
+            "name": "GA4 or Google Search Console",
+            "status": "not_available",
+            "unlocks": "on-site behaviour and organic demand"
+          },
+          {
+            "name": "Google Ads",
+            "status": "not_available",
+            "unlocks": "search and shopping spend"
+          },
+          {
+            "name": "WhatsApp Business",
+            "status": "not_available",
+            "unlocks": "reorder and broadcast experiments"
+          }
+        ],
+        "required": [
+          "a sheet or a warehouse for the funnel numbers",
+          "a source for spend by channel",
+          "a source for orders and revenue collected"
+        ]
+      },
+      "follows_standard": true,
+      "keeps_notes": true,
+      "tracks_performance": true,
+      "eval_cases": 5,
+      "outputs": [
+        "the funnel stage by stage with sources",
+        "the constraint and its rupee value",
+        "the offer and page read",
+        "the channel table with payback and ceiling CAC",
+        "the experiment brief",
+        "the read-out from the last test",
+        "what could not be verified"
+      ],
+      "best_for": [
+        "leads up and revenue flat",
+        "growth plateaued for two quarters",
+        "a channel getting expensive",
+        "a test that needs a sample size before it runs"
+      ]
+    },
+    {
+      "name": "performance-ads-buyer",
+      "version": "1.0.0",
+      "added": "2026-11-04",
+      "schema": 2,
+      "level": "L3",
+      "level_reason": "reads the account, structures campaigns and paces budget; every spend change is recommended and approved, never executed unilaterally",
+      "category": "revenue-facing",
+      "status": "probation",
+      "reliability": "unverified",
+      "path": "skills/performance-ads-buyer",
+      "tagline": "Runs paid acquisition so every rupee has a job - a readable account structure, creative tested on a cadence, budget paced against a target CPA, and a read-out reconciled to the gateway.",
+      "skills_inside": [
+        "account-structure",
+        "creative-testing",
+        "budget-pacing-and-bidding",
+        "measurement-and-incrementality",
+        "readouts-and-decisions"
+      ],
+      "permissions": [
+        "read: ad account structure, delivery, spend and creative inventory",
+        "write: campaign structure, briefs and pacing plans as drafts",
+        "write: a pause/scale list for a human to execute",
+        "never: launch, pause or edit a live campaign without approval",
+        "never: hold billing credentials or account ownership"
+      ],
+      "cost": {
+        "band": "medium",
+        "driver": "weekly read-outs over campaign exports and creative inventories; per week, not per request",
+        "estimate_basis": "design estimate - 4-7 model calls per weekly read-out"
+      },
+      "connectors": {
+        "available": [
+          {
+            "name": "Meta Ads",
+            "status": "connected",
+            "unlocks": "campaigns, audiences, creative, delivery and spend"
+          },
+          {
+            "name": "Google Sheets",
+            "status": "connected",
+            "unlocks": "pacing sheet, creative log and read-out"
+          },
+          {
+            "name": "LinkedIn Ads",
+            "status": "connected",
+            "unlocks": "B2B campaigns where the buyer is a named role"
+          },
+          {
+            "name": "Canva",
+            "status": "connected",
+            "unlocks": "a quick variant, not the production set"
+          },
+          {
+            "name": "Google Ads",
+            "status": "not_available",
+            "unlocks": "search and shopping campaigns"
+          },
+          {
+            "name": "GA4 or BigQuery",
+            "status": "not_available",
+            "unlocks": "on-site conversion events behind the platform numbers"
+          },
+          {
+            "name": "Payment gateway or Shopify",
+            "status": "not_available",
+            "unlocks": "reconciling platform conversions to collected revenue"
+          }
+        ],
+        "required": [
+          "an ad platform with read access",
+          "a sheet for pacing and the creative log",
+          "a revenue source for reconciliation"
+        ]
+      },
+      "follows_standard": true,
+      "keeps_notes": true,
+      "tracks_performance": true,
+      "eval_cases": 5,
+      "outputs": [
+        "target CPA, ceiling and the margin behind them",
+        "the account read",
+        "the pacing position and allowable CPA",
+        "the creative state",
+        "this week's pause, scale and test list",
+        "the reconciled read-out",
+        "what could not be verified"
+      ],
+      "best_for": [
+        "CPA climbing with no obvious cause",
+        "forty creatives live and no idea which work",
+        "a festival budget that needs pacing",
+        "a scaling decision that needs a ceiling"
+      ]
     }
-  ]
+  ],
+  "level_scale": {
+    "L0": "advice and templates only - no system access, no business data read",
+    "L1": "reads one connected source and summarises it",
+    "L2": "reads several sources and produces analysis or a document",
+    "L3": "acts inside one system behind an approval gate - drafts, prepares, recommends; a human executes",
+    "L4": "owns a recurring cadence end to end - schedules, enforces, escalates, reports its own performance"
+  },
+  "schema_note": "Employees carrying schema 2 also declare level, category, permissions, cost, connector availability, status probation and reliability unverified. Earlier entries keep the v1 shape until a backfill drop."
 }

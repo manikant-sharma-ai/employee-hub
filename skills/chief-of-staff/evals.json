@@ -1,0 +1,89 @@
+{
+  "employee": "chief-of-staff",
+  "version": "1.0.0",
+  "harness": "structural - each case is checked against the skill's own rules, not against a model run",
+  "cases": [
+    {
+      "id": "cos-01",
+      "type": "happy_path",
+      "prompt": "I spend every Sunday rebuilding a status update. Set up a weekly review I can run in 45 minutes for a 12-person agency.",
+      "expect_owner": "chief-of-staff",
+      "expect_must": [
+        "asks for the three to five numbers and their sources before designing the page",
+        "returns a one-page scorecard with source, target, trend and colour rules",
+        "gives the 45-minute agenda with the read-in-silence rule and the three questions",
+        "uses assets/weekly-operating-review-template.md and names the register sweep"
+      ],
+      "expect_must_not": [
+        "invent metrics or targets the business has not given",
+        "add a second recurring meeting beyond the cadence asked for"
+      ],
+      "checks": ["numbers with sources", "agenda with time boxes", "decision output defined"]
+    },
+    {
+      "id": "cos-02",
+      "type": "thin_brief",
+      "prompt": "Set up our operating rhythm.",
+      "expect_owner": "chief-of-staff",
+      "expect_must": [
+        "asks for headcount, the numbers that matter, current meetings and where the numbers live",
+        "offers a default cadence labelled as a starting point, with what to cut if it is too much",
+        "states which parts need the calendar and the sheet to be connected"
+      ],
+      "expect_must_not": [
+        "assume a headcount or a revenue band",
+        "prescribe a daily standup without knowing whether work is handed over daily"
+      ],
+      "checks": ["one consolidated question", "labelled default", "connector dependency stated"]
+    },
+    {
+      "id": "cos-03",
+      "type": "missing_connector",
+      "prompt": "Read my calendar for the last two weeks and tell me where my time went.",
+      "expect_owner": "chief-of-staff",
+      "expect_must": [
+        "says plainly whether a calendar connector is available in this session, and does not pretend to have read it",
+        "offers the export path: calendar ICS or CSV pasted in, or the five buckets filled from memory with the bias named",
+        "names what the time audit needs and what it will conclude without it"
+      ],
+      "expect_must_not": [
+        "describe meetings it cannot see",
+        "estimate hours as if they were measured"
+      ],
+      "checks": ["no fabricated calendar read", "export path offered", "limitation named"]
+    },
+    {
+      "id": "cos-04",
+      "type": "wrong_tool",
+      "prompt": "Should we reposition the agency as a premium brand and raise prices 25%?",
+      "expect_owner": "chief-of-staff frames the decision; brand-strategist and pricing-analyst own the analysis",
+      "expect_must": [
+        "routes positioning to brand-strategist and the price move to pricing-analyst",
+        "offers what it owns: the decision record, the reversal test, the review date, the number to watch",
+        "writes the decision frame with options and consequences, without picking one"
+      ],
+      "expect_must_not": [
+        "recommend a position or a price",
+        "decide on the founder's behalf"
+      ],
+      "checks": ["handoff named", "decision frame produced", "no strategy opinion"]
+    },
+    {
+      "id": "cos-05",
+      "type": "handoff",
+      "prompt": "We decided to stop taking custom orders in August and we are still taking them. Sort it out.",
+      "expect_owner": "chief-of-staff, with sales-outreach and product-manager on the operational side",
+      "expect_must": [
+        "finds the decision in the log or asks what was actually decided and by whom",
+        "diagnoses the gap: no owner, no date, no evidence, or the decision was never communicated",
+        "returns the enforcement plan: owner, register entry, the conversation, the date, the escalation rung",
+        "hands the customer-facing message and the scope change to the roles that own them"
+      ],
+      "expect_must_not": [
+        "contact customers or change the order process itself",
+        "assume the decision is wrong rather than unenforced"
+      ],
+      "checks": ["decision located", "cause named", "enforcement plan with dates"]
+    }
+  ]
+}
