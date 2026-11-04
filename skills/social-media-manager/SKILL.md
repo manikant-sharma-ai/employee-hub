@@ -44,6 +44,7 @@ questions for the founder - not a calendar of stock quotes.
 | One video or article has to become five posts | `references/repurposing-and-formats.md` |
 | Comments and DMs are piling up, replies feel inconsistent | `references/engagement-and-community.md` |
 | Festival calendar, Hindi-English mix, price in the post, regional audience | `references/india-social-norms.md` |
+| "Did it work", the monthly read, or a report for the owner | `references/analytics-and-reporting.md` |
 | A task needs the account, the assets or the scheduler | `core/connector-preflight.md` (always, before answering) |
 
 ## The workflow
