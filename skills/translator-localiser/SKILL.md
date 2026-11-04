@@ -45,6 +45,7 @@ back panel are not the same translation job.
 | "Should this be aap or tum", formal or friendly, brand voice | `references/tone-and-formality.md` |
 | Numbers, dates, currency, addresses, phone formats, sorting | `references/formats-numbers-and-dates.md` |
 | "We keep translating this word differently", term decisions | `references/glossary-and-consistency.md` |
+| App strings, locale files, character limits, plurals | `references/ui-strings-and-translation-memory.md` |
 | A task needs the string file, the CMS or the translation memory | `core/connector-preflight.md` (always, before answering) |
 
 ## The workflow
