@@ -1,8 +1,8 @@
 {
   "name": "employee-hub",
   "display_name": "Employee Hub",
-  "version": "1.6.0",
-  "updated": "2026-11-04",
+  "version": "1.7.0",
+  "updated": "2026-11-05",
   "cadence": "5 employees daily at 06:00 IST",
   "standard": "core/employee-standard.md",
   "obligations": [
@@ -1068,6 +1068,219 @@
         "an annual plan that needs a discount that works",
         "a competitor undercutting by half",
         "a 12% price rise to be modelled before it is announced"
+      ]
+    },
+    {
+      "name": "hiring-manager",
+      "version": "1.0.0",
+      "added": "2026-11-05",
+      "status": "stable",
+      "path": "skills/hiring-manager",
+      "tagline": "The people manager after the offer - onboarding that has someone useful in week one, a 30-60-90 with checkable milestones, a quarterly review cycle on evidence, underperformance named inside four weeks, and pay answered with a case or a dated no.",
+      "skills_inside": [
+        "onboarding-and-first-week",
+        "thirty-sixty-ninety",
+        "performance-review-cycle",
+        "underperformance-and-pip",
+        "promotion-and-pay-conversations"
+      ],
+      "tools_required": [
+        "Google Docs or Word (the plans and review notes)",
+        "Google Sheets or Excel (the milestone and review tracker)",
+        "Google Calendar or Outlook (1:1s, probation end, review dates)",
+        "Slack, Teams or WhatsApp (the small corrections)",
+        "Gmail or Outlook (written confirmation after every conversation)",
+        "an HRMS or the founder's people sheet for leave and probation status",
+        "the project or task tool the team already uses, for delivery evidence"
+      ],
+      "follows_standard": true,
+      "keeps_notes": true,
+      "tracks_performance": true,
+      "outputs": [
+        "the outcome the role exists for",
+        "the onboarding week and the 30-60-90",
+        "the dates on the calendar",
+        "the evidence",
+        "the assessment or decision",
+        "the conversation script",
+        "what happens next and by when",
+        "what could not be verified"
+      ],
+      "best_for": [
+        "a new hire starting Monday",
+        "a review cycle that is due",
+        "a person who is not performing and no one has said so",
+        "a raise request that needs a case or an honest no"
+      ]
+    },
+    {
+      "name": "compliance-watch",
+      "version": "1.0.0",
+      "added": "2026-11-05",
+      "status": "stable",
+      "path": "skills/compliance-watch",
+      "tagline": "Knows what this business must file, hold and prove - an obligation register derived from entity, state, headcount and turnover, a calendar built on work-back dates, change watching from primary sources, and an evidence pack that survives an inspector.",
+      "skills_inside": [
+        "obligation-register",
+        "filing-calendar",
+        "change-watching",
+        "evidence-and-inspection",
+        "licences-and-registrations"
+      ],
+      "tools_required": [
+        "Google Sheets or Excel (the register and the calendar)",
+        "Google Calendar or Outlook (lead-time reminders)",
+        "Google Drive or OneDrive (the evidence folder)",
+        "Gmail or Outlook (the consultant's filings and acknowledgements)",
+        "Zoho Books, Tally or the accounting export (turnover and challans)",
+        "the HRMS or people sheet (headcount including contract staff)",
+        "a web search to reach CBIC, MCA, EPFO, ESIC, MeitY and state portals"
+      ],
+      "follows_standard": true,
+      "keeps_notes": true,
+      "tracks_performance": true,
+      "outputs": [
+        "the profile the register is derived from",
+        "the obligation register",
+        "the next 90 days with work-back dates",
+        "the change note",
+        "evidence status",
+        "the gaps and their exposure",
+        "what could not be verified"
+      ],
+      "best_for": [
+        "a filing calendar that has never existed",
+        "crossing a headcount or turnover threshold",
+        "a new outlet, state or export",
+        "an inspector asking for documents"
+      ]
+    },
+    {
+      "name": "chief-of-staff",
+      "version": "1.0.0",
+      "added": "2026-11-05",
+      "status": "stable",
+      "path": "skills/chief-of-staff",
+      "tagline": "The founder-leverage role - the operating rhythm: a 45-minute weekly review on four numbers, a decision log with a reversal condition, commitments tracked to closure, meetings with an outcome, and the founder's week defended from their own habits.",
+      "skills_inside": [
+        "weekly-operating-review",
+        "decision-log-and-reversal",
+        "commitment-tracking",
+        "meeting-design",
+        "founder-time-and-delegation"
+      ],
+      "tools_required": [
+        "Google Calendar or Outlook (the review block and the time audit)",
+        "Google Sheets or Excel (one-pager, commitment tracker, decision log)",
+        "Google Docs or Word (review notes, agendas, quarterly priorities)",
+        "Slack, Teams or WhatsApp (where commitments are made)",
+        "Gmail or Outlook (the threads that contain the decision)",
+        "the task or project tool the team uses",
+        "the accounting and CRM connectors, so numbers come from a system"
+      ],
+      "follows_standard": true,
+      "keeps_notes": true,
+      "tracks_performance": true,
+      "outputs": [
+        "the quarter in three to five numbers",
+        "the week's one-pager",
+        "commitments closed, slipped and new",
+        "decisions needed this week",
+        "the three priorities",
+        "decision log entries",
+        "the meeting and calendar note",
+        "what could not be verified"
+      ],
+      "best_for": [
+        "a weekly review that keeps slipping",
+        "actions assigned and never closed",
+        "decisions nobody can remember making",
+        "a founder who is the bottleneck"
+      ]
+    },
+    {
+      "name": "growth-marketer",
+      "version": "1.0.0",
+      "added": "2026-11-05",
+      "status": "stable",
+      "path": "skills/growth-marketer",
+      "tagline": "The growth decider - one named constraint from the funnel, a channel mix justified by payback and marginal return, message tested before media, experiments with a sample and a stop rule, and a read-out that says scale, iterate or kill.",
+      "skills_inside": [
+        "funnel-diagnosis",
+        "channel-mix-and-budget",
+        "experiment-design",
+        "icp-and-message-fit",
+        "growth-loops-and-referrals"
+      ],
+      "tools_required": [
+        "Google Sheets or Excel (funnel model, payback table, experiment log)",
+        "the analytics connector or an export (step-by-step funnel numbers)",
+        "Meta Ads, Google Ads or LinkedIn Ads (spend and return, read-only)",
+        "HubSpot, Zoho CRM or the sales sheet (lead quality and closed revenue)",
+        "Google Docs (experiment briefs, the quarterly growth plan)",
+        "a calendar for experiment start, stop and review dates"
+      ],
+      "follows_standard": true,
+      "keeps_notes": true,
+      "tracks_performance": true,
+      "outputs": [
+        "the constraint with its proof",
+        "the funnel with absolute numbers",
+        "the economics and maximum fundable CAC",
+        "the allocation recommendation",
+        "the experiment brief",
+        "the message and segment",
+        "the loop, if one exists",
+        "what could not be verified"
+      ],
+      "best_for": [
+        "CAC climbing while revenue is flat",
+        "signups up and revenue unchanged",
+        "a budget split that has never been modelled",
+        "growth that has stalled"
+      ]
+    },
+    {
+      "name": "performance-ads-buyer",
+      "version": "1.0.0",
+      "added": "2026-11-05",
+      "status": "stable",
+      "path": "skills/performance-ads-buyer",
+      "tagline": "The paid media operator - structure sized to the learning threshold, audiences without overlap, one creative variable per test, pacing that holds the month, tracking verified before spend, and a weekly read-out on cost per verified action.",
+      "skills_inside": [
+        "account-structure",
+        "creative-testing",
+        "budget-pacing-and-bidding",
+        "measurement-and-attribution",
+        "wasted-spend-and-brand-safety"
+      ],
+      "tools_required": [
+        "Meta Ads Manager, Google Ads or LinkedIn Campaign Manager (read access is enough to analyse)",
+        "Google Analytics 4 or the product's event data",
+        "Google Sheets or Excel (pacing sheet, creative log, read-out)",
+        "Shopify, WooCommerce or the CRM (orders and qualified leads)",
+        "the payment gateway or accounting export (reconciliation)",
+        "Canva or the design files, to request variants",
+        "a calendar for flight dates, reviews and stockout dates"
+      ],
+      "follows_standard": true,
+      "keeps_notes": true,
+      "tracks_performance": true,
+      "outputs": [
+        "objective, target cost and budget",
+        "the tracking check",
+        "the structure",
+        "the creative plan",
+        "the pacing plan",
+        "the weekly read-out",
+        "wasted spend found",
+        "what could not be verified"
+      ],
+      "best_for": [
+        "a campaign that has to be built",
+        "ROAS or CPL moving unexplained",
+        "budget spent in the first third of the month",
+        "platform numbers that do not match the bank"
       ]
     }
   ]

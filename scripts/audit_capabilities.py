@@ -94,6 +94,16 @@ BASELINE = {
                                "dashboard-spec", "qa-and-data-quality"],
     "pricing-analyst": ["willingness-to-pay", "packaging-and-plans", "margin-and-unit-economics",
                         "discount-and-leakage", "price-testing-and-rollout"],
+    "hiring-manager": ["onboarding-and-first-week", "thirty-sixty-ninety", "performance-review-cycle",
+                       "underperformance-and-pip", "promotion-and-pay-conversations"],
+    "compliance-watch": ["obligation-register", "filing-calendar", "change-watching",
+                         "evidence-and-inspection", "licences-and-registrations"],
+    "chief-of-staff": ["weekly-operating-review", "decision-log-and-reversal", "commitment-tracking",
+                       "meeting-design", "founder-time-and-delegation"],
+    "growth-marketer": ["funnel-diagnosis", "channel-mix-and-budget", "experiment-design",
+                        "icp-and-message-fit", "growth-loops-and-referrals"],
+    "performance-ads-buyer": ["account-structure", "creative-testing", "budget-pacing-and-bidding",
+                              "measurement-and-attribution", "wasted-spend-and-brand-safety"],
 }
 
 HANDOFF = re.compile(r"\((?:use|see) ([a-z][a-z0-9]+(?:-[a-z0-9]+)+)\)")

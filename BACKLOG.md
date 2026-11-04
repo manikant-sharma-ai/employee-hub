@@ -31,11 +31,11 @@ Nothing is removed without a note on why. A role that cannot clear the quality b
 | 23 | `procurement` | Vendor comparison, quote analysis, negotiation prep, contract summaries | shipped 2026-11-04 |
 | 24 | `analytics-instrumenter` | Event schemas, funnel definitions, dashboard specs | shipped 2026-11-04 |
 | 25 | `pricing-analyst` | Willingness-to-pay research, plan design, margin modelling | shipped 2026-11-04 |
-| 26 | `hiring-manager` | Onboarding plans, 30-60-90s, role scorecards, performance reviews | next |
+| 26 | `hiring-manager` | Onboarding plans, 30-60-90s, role scorecards, performance reviews | shipped 2026-11-05 |
 | 27 | `partnerships` | Outbound to potential partners, one-pagers, deal-term summaries | shipped 2026-11-04 |
-| 28 | `compliance-watch` | Policy-change monitoring, filing calendars, evidence collection | next |
+| 28 | `compliance-watch` | Policy-change monitoring, filing calendars, evidence collection | shipped 2026-11-05 |
 | 29 | `voice-and-audio` | Podcast edits, voiceover scripts, audio cleanup briefs | next |
-| 30 | `chief-of-staff` | Weekly operating review, decision log, follow-up enforcement across the team | next |
+| 30 | `chief-of-staff` | Weekly operating review, decision log, follow-up enforcement across the team | shipped 2026-11-05 |
 | 31 | `social-media-manager` | Calendar, posting, repurposing and engagement across platforms | shipped 2026-11-03 |
 | 32 | `copy-editor` | Line editing, house style, clarity pass, consistency across a document set | next |
 | 33 | `ux-researcher` | Interview guides, synthesis, journey maps, usability findings | queued |
@@ -46,10 +46,10 @@ Nothing is removed without a note on why. A role that cannot clear the quality b
 | 38 | `database-designer` | Schema design, indexes, migrations and query tuning | queued |
 | 39 | `devops-engineer` | Deploy pipelines, environments, monitoring, rollback plans | queued |
 | 40 | `security-reviewer` | Threat review of a build, secrets hygiene, access audit | queued |
-| 41 | `growth-marketer` | Acquisition experiments, funnel diagnosis, channel mix decisions | queued |
-| 42 | `performance-ads-buyer` | Campaign structure, creative testing, budget pacing, read-outs | queued |
-| 43 | `influencer-outreach` | Creator shortlists, briefs, rate negotiation, deliverable tracking | queued |
-| 44 | `affiliate-manager` | Partner recruitment, commission design, fraud checks | queued |
+| 41 | `growth-marketer` | Acquisition experiments, funnel diagnosis, channel mix decisions | shipped 2026-11-05 |
+| 42 | `performance-ads-buyer` | Campaign structure, creative testing, budget pacing, read-outs | shipped 2026-11-05 |
+| 43 | `influencer-outreach` | Creator shortlists, briefs, rate negotiation, deliverable tracking | next |
+| 44 | `affiliate-manager` | Partner recruitment, commission design, fraud checks | next |
 | 45 | `webinar-producer` | Run of show, promo sequence, follow-up, recording repurposing | queued |
 | 46 | `podcast-producer` | Episode planning, guest research, edit notes, show notes and clips | queued |
 | 47 | `newsletter-editor` | Issue curation, editing, send-time and open-rate discipline | queued |
@@ -68,7 +68,7 @@ Nothing is removed without a note on why. A role that cannot clear the quality b
 | 60 | `gst-filer` | GSTR working papers, reconciliation, filing reminders | queued |
 | 61 | `audit-prep` | Evidence packs, schedules, query tracking for statutory audit | queued |
 | 62 | `investor-relations` | Updates, data room upkeep, investor question handling | queued |
-| 63 | `fundraising-analyst` | Deck numbers, model, comparables, diligence prep | queued |
+| 63 | `fundraising-analyst` | Deck numbers, model, comparables, diligence prep | next |
 | 64 | `board-reporter` | Board pack assembly, minutes, action tracking | queued |
 | 65 | `mis-reporter` | The weekly numbers that run the business, in one page | queued |
 | 66 | `budget-planner` | Annual and project budgets, variance tracking, reforecast | queued |
@@ -180,6 +180,14 @@ Kept so that a later drop does not have to re-derive why the order moved.
 - **2026-11-04 - `partnerships` (#27) taken ahead of #26 as the second revenue role.** The queue had no revenue role between #25 and #27, and the mix is fixed while the queue is a source. The boundary against `sales-outreach` is written into both descriptions: outbound sells to buyers who pay us, partnerships recruits the people who sell for us.
 - **2026-11-04 - `pricing-analyst` (#25) taken as the founder-leverage role, not as revenue.** It sits closest to the money of any role in the queue, but the work it removes is the founder's own: setting the number, defending it, and saying no to the discount. Counting it as revenue would have put three revenue roles in the batch and left the founder-leverage slot empty for a role the founder does not actually do personally.
 - **2026-11-04 - `analytics-instrumenter` (#24) promoted one place ahead of #25 and #26.** `data-analyst` answers questions from data that exists; nothing in the hub decided what to capture before the code shipped, which is the one analytics failure that cannot be repaired later. It is an operations role because it saves the rebuild, not because it reports anything.
+
+- **2026-11-05 - `hiring-manager` (#26) and `compliance-watch` (#28) shipped first, because both were already promised.** `hr-recruiter` has told users since 1 November that onboarding, 30-60-90s and reviews are "backlog #26, not shipped", and `legal-drafter` has said the same about regulatory monitoring and #28. A dead reference inside a shipped skill is a promise the hub cannot keep, which is the same debt `brand-strategist` and `bookkeeper` were promoted to clear.
+- **2026-11-05 - the `hiring-manager` boundary is written on both sides.** `hr-recruiter` owns everything up to the signed offer, including the hiring scorecard; `hiring-manager` owns everything after it, and the scorecard it writes is the performance review, not the hiring one. Without that line, "scorecard" and "onboarding" would fire both employees.
+- **2026-11-05 - `voice-and-audio` (#29) held, not skipped.** The operations quota was filled by #26 and #28. Its triggers also sit inside `video-editor`'s shipped `audio-and-music.md` and `captions-and-subtitles.md`, so it needs a boundary before it ships - the likely split is `video-editor` owns the picture and the cut, `voice-and-audio` owns the podcast, the voiceover script and the audio-only product.
+- **2026-11-05 - `copy-editor` (#32) held, not skipped.** Operations quota again, and a real collision: `content-writer` already ships `references/editing-and-fact-check.md` and a humanizer pass, so "clean this up" would fire both. The boundary to write is scope - one document in the writer's voice for `content-writer`, consistency and house style across a document set for `copy-editor`.
+- **2026-11-05 - `growth-marketer` (#41) and `performance-ads-buyer` (#42) promoted ahead of #33-#40.** Everything between #33 and #40 is a build or infrastructure role (UX research, frontend, backend, API, database, devops, security) and the batch needed two revenue roles. The pair ships together with the boundary written into both descriptions: `growth-marketer` decides where the money goes and what the experiment must prove; `performance-ads-buyer` builds the structure, paces the spend and reads out the result. Deciding and executing in one employee would have made the read-out self-serving.
+- **2026-11-05 - `chief-of-staff` (#30) taken as the founder-leverage role, ahead of `ux-researcher` (#33).** The queue's founder-leverage roles are scarce and #30 is the one that removes work the founder does personally and badly every week. The boundary against `employee-hub-router` is in both: the router answers "who owns this job", the chief of staff answers "what is this week for, and did it happen".
+- **2026-11-05 - `fundraising-analyst` (#63) promoted to `next` as the founder-leverage slot.** Nothing between #33 and #62 is founder-leverage, and raising money is work a founder does personally, at the worst possible time, with the least practice. It also closes the loop with the numbers `pricing-analyst` and `finance-ops` already produce.
 
 ## The five-a-day mix
 
