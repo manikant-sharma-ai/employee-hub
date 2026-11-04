@@ -43,6 +43,8 @@ Do not read everything. Load the one or two files the request points at.
 | Label, flyer, standee, packaging, anything going to a printer | `references/print-and-production.md` |
 | Vague brief, too many stakeholders, feedback is "make it pop" | `references/creative-brief-and-feedback.md` |
 | Festival campaign, regional language, price on creative, marketplace listing image | `references/indian-market-visual-conventions.md` |
+| Label, carton, sticker, anything with an MRP or a licence number | `references/packaging-and-label-compliance.md` |
+| Something has to move - a reel cover, an animated banner, a logo sting | `references/motion-and-animated-assets.md` |
 | A task needs the brand files or the product shots from a system | `core/connector-preflight.md` (always, before answering) |
 
 ## The workflow
