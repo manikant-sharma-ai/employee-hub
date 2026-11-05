@@ -34,10 +34,10 @@ Nothing is removed without a note on why. A role that cannot clear the quality b
 | 26 | `hiring-manager` | Onboarding plans, 30-60-90s, role scorecards, performance reviews | shipped 2026-11-05 |
 | 27 | `partnerships` | Outbound to potential partners, one-pagers, deal-term summaries | shipped 2026-11-04 |
 | 28 | `compliance-watch` | Policy-change monitoring, filing calendars, evidence collection | shipped 2026-11-05 |
-| 29 | `voice-and-audio` | Podcast edits, voiceover scripts, audio cleanup briefs | next |
+| 29 | `voice-and-audio` | Podcast edits, voiceover scripts, audio cleanup briefs | shipped 2026-11-06 |
 | 30 | `chief-of-staff` | Weekly operating review, decision log, follow-up enforcement across the team | shipped 2026-11-05 |
 | 31 | `social-media-manager` | Calendar, posting, repurposing and engagement across platforms | shipped 2026-11-03 |
-| 32 | `copy-editor` | Line editing, house style, clarity pass, consistency across a document set | next |
+| 32 | `copy-editor` | Line editing, house style, clarity pass, consistency across a document set | shipped 2026-11-06 |
 | 33 | `ux-researcher` | Interview guides, synthesis, journey maps, usability findings | queued |
 | 34 | `ui-designer` | Screen layouts, component specs, states and handoff notes | shipped 2026-11-03 |
 | 35 | `frontend-builder` | Ships a working interface from a design or a description | queued |
@@ -48,27 +48,27 @@ Nothing is removed without a note on why. A role that cannot clear the quality b
 | 40 | `security-reviewer` | Threat review of a build, secrets hygiene, access audit | queued |
 | 41 | `growth-marketer` | Acquisition experiments, funnel diagnosis, channel mix decisions | shipped 2026-11-05 |
 | 42 | `performance-ads-buyer` | Campaign structure, creative testing, budget pacing, read-outs | shipped 2026-11-05 |
-| 43 | `influencer-outreach` | Creator shortlists, briefs, rate negotiation, deliverable tracking | next |
-| 44 | `affiliate-manager` | Partner recruitment, commission design, fraud checks | next |
-| 45 | `webinar-producer` | Run of show, promo sequence, follow-up, recording repurposing | queued |
+| 43 | `influencer-outreach` | Creator shortlists, briefs, rate negotiation, deliverable tracking | shipped 2026-11-06 |
+| 44 | `affiliate-manager` | Partner recruitment, commission design, fraud checks | shipped 2026-11-06 |
+| 45 | `webinar-producer` | Run of show, promo sequence, follow-up, recording repurposing | next |
 | 46 | `podcast-producer` | Episode planning, guest research, edit notes, show notes and clips | queued |
 | 47 | `newsletter-editor` | Issue curation, editing, send-time and open-rate discipline | queued |
-| 48 | `customer-success` | Health scoring, QBR prep, renewal and expansion plays | queued |
+| 48 | `customer-success` | Health scoring, QBR prep, renewal and expansion plays | next |
 | 49 | `churn-analyst` | Cancellation reasons, cohort analysis, save-play recommendations | queued |
 | 50 | `onboarding-specialist` | First-30-days journeys, activation milestones, nudge sequences | queued |
 | 51 | `escalation-manager` | Triage rules, severity levels, who to wake and when | queued |
-| 52 | `knowledge-base-writer` | Help articles from real tickets, written so customers stop asking | queued |
+| 52 | `knowledge-base-writer` | Help articles from real tickets, written so customers stop asking | next |
 | 53 | `helpdesk-trainer` | Agent training material, reply libraries, quality rubric | queued |
 | 54 | `billing-support` | Invoice queries, failed payments, dunning and refund handling | queued |
-| 55 | `collections-agent` | Receivables follow-up, ageing buckets, escalation ladder | queued |
+| 55 | `collections-agent` | Receivables follow-up, ageing buckets, escalation ladder | next |
 | 56 | `credit-analyst` | Customer credit checks, limits, exposure review | queued |
 | 57 | `treasury-ops` | Cash position, runway, payment scheduling, FX exposure | queued |
 | 58 | `payroll-specialist` | Pay runs, statutory deductions, payslips, queries | queued |
 | 59 | `tax-prep` | Document collation, computation checks, filing calendar | queued |
 | 60 | `gst-filer` | GSTR working papers, reconciliation, filing reminders | queued |
 | 61 | `audit-prep` | Evidence packs, schedules, query tracking for statutory audit | queued |
-| 62 | `investor-relations` | Updates, data room upkeep, investor question handling | queued |
-| 63 | `fundraising-analyst` | Deck numbers, model, comparables, diligence prep | next |
+| 62 | `investor-relations` | Updates, data room upkeep, investor question handling | next |
+| 63 | `fundraising-analyst` | Deck numbers, model, comparables, diligence prep | shipped 2026-11-06 |
 | 64 | `board-reporter` | Board pack assembly, minutes, action tracking | queued |
 | 65 | `mis-reporter` | The weekly numbers that run the business, in one page | queued |
 | 66 | `budget-planner` | Annual and project budgets, variance tracking, reforecast | queued |
@@ -188,6 +188,11 @@ Kept so that a later drop does not have to re-derive why the order moved.
 - **2026-11-05 - `growth-marketer` (#41) and `performance-ads-buyer` (#42) promoted ahead of #33-#40.** Everything between #33 and #40 is a build or infrastructure role (UX research, frontend, backend, API, database, devops, security) and the batch needed two revenue roles. The pair ships together with the boundary written into both descriptions: `growth-marketer` decides where the money goes and what the experiment must prove; `performance-ads-buyer` builds the structure, paces the spend and reads out the result. Deciding and executing in one employee would have made the read-out self-serving.
 - **2026-11-05 - `chief-of-staff` (#30) taken as the founder-leverage role, ahead of `ux-researcher` (#33).** The queue's founder-leverage roles are scarce and #30 is the one that removes work the founder does personally and badly every week. The boundary against `employee-hub-router` is in both: the router answers "who owns this job", the chief of staff answers "what is this week for, and did it happen".
 - **2026-11-05 - `fundraising-analyst` (#63) promoted to `next` as the founder-leverage slot.** Nothing between #33 and #62 is founder-leverage, and raising money is work a founder does personally, at the worst possible time, with the least practice. It also closes the loop with the numbers `pricing-analyst` and `finance-ops` already produce.
+
+- **2026-11-06 - `voice-and-audio` (#29) and `copy-editor` (#32) shipped first, because both were held for a boundary and both boundaries are now written.** #29 was held on 5 November for the operations quota and for its collision with `video-editor`'s shipped audio craft; the split is medium, not task - `video-editor` owns the picture and the cut, `voice-and-audio` owns the podcast, the voiceover script and the audio-only product, and both descriptions now say so. #32 was held for the same quota and for a real collision with `content-writer`'s editing pass; the split is scope - one document in the writer's voice stays with `content-writer`, consistency across a document set and a house style belongs to `copy-editor`.
+- **2026-11-06 - `influencer-outreach` (#43) and `affiliate-manager` (#44) shipped together as the revenue pair, and the boundary between them is economic.** Both pay for a sale someone else made. A creator is paid a fee for a recommendation; an affiliate is paid commission only when an order lands. Shipping one without the other would have produced the wrong answer to "set up a referral programme", which `partnerships` also lists as a trigger - so `partnerships` now routes self-serve commission programmes here and keeps negotiated referral and reseller deals.
+- **2026-11-06 - `fundraising-analyst` (#63) shipped as the founder-leverage role and clears the dead reference `presentation-designer` has carried since 3 November.** Nothing between #33 and #61 is founder-leverage and the raise is work a founder does personally, at the worst possible time, with the least practice. It also closes the loop with `pricing-analyst` and `finance-ops`, whose numbers it argues from.
+- **2026-11-06 - the next five are promoted for the mix, not in queue order.** `investor-relations` (#62) is the founder-leverage slot and closes the last dead reference in this batch - `partnerships` and `fundraising-analyst` both route investor updates to it. `customer-success` (#48) and `webinar-producer` (#45) are the revenue pair; `knowledge-base-writer` (#52) and `collections-agent` (#55) are the operations pair, one cutting support volume and one turning receivables into cash. `ux-researcher` (#33) and the #35-#40 build roles stay queued: they are excellent roles and they are not what a businessman on day 11 is short of.
 
 ## The five-a-day mix
 

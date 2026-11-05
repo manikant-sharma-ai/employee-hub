@@ -103,7 +103,21 @@ BASELINE = {
     "growth-marketer": ["funnel-diagnosis", "channel-mix-and-budget", "experiment-design",
                         "icp-and-message-fit", "growth-loops-and-referrals"],
     "performance-ads-buyer": ["account-structure", "creative-testing", "budget-pacing-and-bidding",
-                              "measurement-and-attribution", "wasted-spend-and-brand-safety"],
+                              "measurement-and-attribution", "wasted-spend-and-brand-safety"],    "voice-and-audio": ["podcast-post-production", "audio-cleanup-and-loudness",
+                        "voiceover-and-script", "interview-and-guest-craft", "audio-in-india",
+                        "show-notes-and-clips"],
+    "copy-editor": ["house-style-guide", "line-editing-pass", "consistency-across-documents",
+                    "indian-english-conventions", "queries-and-tracked-changes",
+                    "plain-language-and-accessibility"],
+    "influencer-outreach": ["creator-shortlisting", "vetting-and-audience-quality",
+                            "rates-and-negotiation", "creator-brief-and-approval",
+                            "deliverables-and-tracking", "disclosure-and-compliance-india"],
+    "affiliate-manager": ["programme-design", "partner-recruitment", "commission-economics",
+                          "tracking-and-attribution", "fraud-and-quality-control",
+                          "partner-communication-and-management"],
+    "fundraising-analyst": ["raise-readiness", "valuation-and-dilution", "narrative-and-numbers",
+                            "investor-targeting", "data-room-and-diligence",
+                            "term-sheets-and-negotiation"],
 }
 
 HANDOFF = re.compile(r"\((?:use|see) ([a-z][a-z0-9]+(?:-[a-z0-9]+)+)\)")

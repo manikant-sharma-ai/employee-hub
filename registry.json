@@ -1,8 +1,8 @@
 {
   "name": "employee-hub",
   "display_name": "Employee Hub",
-  "version": "1.7.0",
-  "updated": "2026-11-05",
+  "version": "1.8.0",
+  "updated": "2026-11-06",
   "cadence": "5 employees daily at 06:00 IST",
   "standard": "core/employee-standard.md",
   "obligations": [
@@ -1281,6 +1281,224 @@
         "ROAS or CPL moving unexplained",
         "budget spent in the first third of the month",
         "platform numbers that do not match the bank"
+      ]
+    },
+    {
+      "name": "voice-and-audio",
+      "version": "1.0.0",
+      "added": "2026-11-06",
+      "status": "stable",
+      "path": "skills/voice-and-audio",
+      "tagline": "The audio employee - an edit decision list with timecodes, a nine-step processing chain ending at -16 LUFS, chapters named for the payoff, a voiceover script written to the clock, and clip briefs from the same episode.",
+      "skills_inside": [
+        "podcast-post-production",
+        "audio-cleanup-and-loudness",
+        "voiceover-and-script",
+        "interview-and-guest-craft",
+        "audio-in-india",
+        "show-notes-and-clips"
+      ],
+      "tools_required": [
+        "Google Drive or OneDrive (raw tracks, transcripts)",
+        "Google Docs or Word (edit sheet, script, show notes)",
+        "Google Sheets or Excel (episode tracker, loudness record)",
+        "a DAW or AI editor - Audacity, Audition, Reaper, Descript (the person runs the chain)",
+        "the podcast host - Spotify for Podcasters, Buzzsprout, Transistor (chapters, publish)",
+        "Google Calendar (recording slots, publish dates)"
+      ],
+      "follows_standard": true,
+      "keeps_notes": true,
+      "tracks_performance": true,
+      "outputs": [
+        "the job in one line",
+        "edit decision list with timecodes and reasons",
+        "processing chain with settings",
+        "running order",
+        "chapters and show notes",
+        "clip briefs",
+        "the recording fix",
+        "what could not be verified"
+      ],
+      "best_for": [
+        "a podcast that sounds amateur",
+        "a recording with hiss, echo or level jumps",
+        "a voiceover that has to fit 30 seconds",
+        "one episode that must become clips and notes"
+      ]
+    },
+    {
+      "name": "copy-editor",
+      "version": "1.0.0",
+      "added": "2026-11-06",
+      "status": "stable",
+      "path": "skills/copy-editor",
+      "tagline": "The consistency employee - a one-page house style sheet, a terminology ledger with locations, four separate passes, and numbered author queries with a proposed fix instead of a silent rewrite.",
+      "skills_inside": [
+        "house-style-guide",
+        "line-editing-pass",
+        "consistency-across-documents",
+        "indian-english-conventions",
+        "queries-and-tracked-changes",
+        "plain-language-and-accessibility"
+      ],
+      "tools_required": [
+        "Google Docs (suggesting mode)",
+        "Microsoft Word (tracked changes)",
+        "Google Drive or OneDrive (the document set, prior versions)",
+        "Google Sheets or Excel (terminology ledger, query log)",
+        "Gmail or Outlook (queries and sign-off)"
+      ],
+      "follows_standard": true,
+      "keeps_notes": true,
+      "tracks_performance": true,
+      "outputs": [
+        "the job in one line",
+        "the updated style sheet",
+        "the terminology ledger",
+        "corrections by location with the rule",
+        "numbered author queries",
+        "consistency findings",
+        "the proof list",
+        "what could not be verified"
+      ],
+      "best_for": [
+        "a site or deck set that contradicts itself",
+        "a team asking what house style is",
+        "a proofread that has to be defensible",
+        "a policy pack before an audit"
+      ]
+    },
+    {
+      "name": "influencer-outreach",
+      "version": "1.0.0",
+      "added": "2026-11-06",
+      "status": "stable",
+      "path": "skills/influencer-outreach",
+      "tagline": "The creator employee - a shortlist built on audience evidence, a rate ceiling computed from margin, six negotiation levers with rights priced, a one-page brief with the do-not-say list, and a read-out on cost per attributed order.",
+      "skills_inside": [
+        "creator-shortlisting",
+        "vetting-and-audience-quality",
+        "rates-and-negotiation",
+        "creator-brief-and-approval",
+        "deliverables-and-tracking",
+        "disclosure-and-compliance-india"
+      ],
+      "tools_required": [
+        "Instagram, YouTube and creator profiles (audience and comment quality)",
+        "a discovery or vetting tool - Modash, HypeAuditor, Phyllo (optional)",
+        "Google Sheets or Excel (shortlist, rate log, tracker, read-out)",
+        "Gmail or Outlook (outreach, negotiation, brief, approval)",
+        "WhatsApp Business (where Indian creators actually reply)",
+        "Shopify or the order system (matching codes to orders)",
+        "the payment system, with GST and TDS handled by finance-ops"
+      ],
+      "follows_standard": true,
+      "keeps_notes": true,
+      "tracks_performance": true,
+      "outputs": [
+        "the job in one line",
+        "the shortlist with evidence",
+        "the rate model",
+        "deal terms",
+        "the one-page brief",
+        "the deliverable tracker",
+        "the read-out",
+        "what could not be verified"
+      ],
+      "best_for": [
+        "a launch that needs creators",
+        "a rate card that needs a yes or a no",
+        "a creator who took the product and posted nothing",
+        "a campaign nobody can prove earned anything"
+      ]
+    },
+    {
+      "name": "affiliate-manager",
+      "version": "1.0.0",
+      "added": "2026-11-06",
+      "status": "stable",
+      "path": "skills/affiliate-manager",
+      "tagline": "The performance-partner employee - commission design under the margin ceiling, recruitment at a scale one person can run, last-click attribution with brand-issued codes, a published fraud ladder, and a read-out that separates incremental revenue from commission paid on sales you already had.",
+      "skills_inside": [
+        "programme-design",
+        "partner-recruitment",
+        "commission-economics",
+        "tracking-and-attribution",
+        "fraud-and-quality-control",
+        "partner-communication-and-management"
+      ],
+      "tools_required": [
+        "an affiliate platform - Refersion, Tapfiliate, FirstPromoter, UpPromote, GoAffPro",
+        "Shopify, WooCommerce or the order system (new vs returning, returns)",
+        "Google Sheets or Excel (commission model, payout register, read-out)",
+        "Gmail or Outlook (recruitment and partner comms)",
+        "Google Analytics 4 or site analytics (traffic vs last click)",
+        "the payment system (payouts, with GST and TDS via finance-ops)"
+      ],
+      "follows_standard": true,
+      "keeps_notes": true,
+      "tracks_performance": true,
+      "outputs": [
+        "the job in one line",
+        "the commission model with margin maths",
+        "publishable programme terms",
+        "the recruitment plan",
+        "tracking configuration",
+        "fraud controls",
+        "the monthly read-out with incrementality",
+        "what could not be verified"
+      ],
+      "best_for": [
+        "a first affiliate or referral programme",
+        "a commission rate that needs setting",
+        "coupon sites taking credit for full-price orders",
+        "a programme paying commission without growing"
+      ]
+    },
+    {
+      "name": "fundraising-analyst",
+      "version": "1.0.0",
+      "added": "2026-11-06",
+      "status": "stable",
+      "path": "skills/fundraising-analyst",
+      "tagline": "The raise employee - a model that passes the cash check, a valuation argued from comparables, ten metrics each with a definition, dilution shown after this round and the next, a staged data room with red flags named, and a term-sheet read ranked by cost.",
+      "skills_inside": [
+        "raise-readiness",
+        "valuation-and-dilution",
+        "narrative-and-numbers",
+        "investor-targeting",
+        "data-room-and-diligence",
+        "term-sheets-and-negotiation"
+      ],
+      "tools_required": [
+        "Google Sheets or Excel (model, cap table, dilution, metric sheet)",
+        "Zoho Books, Tally or QuickBooks (actuals to reconcile against)",
+        "Google Drive or OneDrive (data room with per-investor access)",
+        "Google Docs or Word (memo, data-room index, term-sheet summary)",
+        "Gmail or Outlook (investor outreach, intro requests)",
+        "Google Calendar (raise timeline, partner meetings)",
+        "a CRM or sheet for the investor pipeline"
+      ],
+      "follows_standard": true,
+      "keeps_notes": true,
+      "tracks_performance": true,
+      "outputs": [
+        "the job in one line",
+        "the readiness verdict",
+        "the model summary with cases",
+        "the metric sheet with definitions",
+        "valuation and dilution",
+        "use of funds",
+        "the target list",
+        "the data-room index",
+        "the term-sheet read",
+        "what could not be verified"
+      ],
+      "best_for": [
+        "a founder deciding whether to raise",
+        "a valuation or dilution argument",
+        "a data room a fund has asked for",
+        "a term sheet that needs reading before signing"
       ]
     }
   ]
