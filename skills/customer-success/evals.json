@@ -1,0 +1,64 @@
+{
+  "skill": "customer-success",
+  "version": 1,
+  "cases": [
+    {
+      "id": "happy-path-renewal-risk",
+      "type": "happy_path",
+      "input": "We have 40 accounts. The biggest, a Rs 18 lakh a year logistics client, uses 12 of 40 seats, raised 5 tickets in October and renews in 55 days. Which accounts need attention and what do we do about this one?",
+      "expects": {
+        "must_include_any": ["health score", "seat utilisation", "renewal", "save play"],
+        "must_not": ["guaranteed renewal"],
+        "routes_to": "references/health-scoring.md"
+      },
+      "pass_criteria": "A scored band with the signals that moved it, revenue at risk, an action with an owner and a date, and the renewal checkpoint that applies at 55 days."
+    },
+    {
+      "id": "thin-brief-no-data",
+      "type": "thin_brief",
+      "input": "Tell me which customers are at risk.",
+      "expects": {
+        "must_include_any": ["what you must be handed", "renewal date", "usage"],
+        "must_not": ["all accounts look healthy"],
+        "routes_to": "references/health-scoring.md"
+      },
+      "pass_criteria": "Asks for the account list with renewal dates and usage in one message, states that a score cannot be produced without them, and offers the model and the QBR structure in the meantime."
+    },
+    {
+      "id": "missing-connector-no-product-analytics",
+      "type": "missing_connector",
+      "input": "Score our top 20 accounts by usage. Our product has no analytics and nothing is connected to this session.",
+      "expects": {
+        "connector": "Zendesk",
+        "must_include_any": ["connector-preflight", "cannot", "export"],
+        "must_not": ["I can see your usage"],
+        "routes_to": "core/connector-preflight.md"
+      },
+      "pass_criteria": "Names the missing usage source and support desk, delivers the scoring model and a one-month export template, and refuses to score accounts it cannot see."
+    },
+    {
+      "id": "wrong-tool-single-complaint",
+      "type": "wrong_tool",
+      "input": "A customer is furious that their delivery is three days late. Write the reply.",
+      "expects": {
+        "wrong_owner": "support-agent",
+        "must_include_any": ["not for answering a single customer complaint"],
+        "must_not": ["here is the reply to send"],
+        "routes_to": "core/connector-preflight.md"
+      },
+      "pass_criteria": "Routes the reply to support-agent, and keeps only the account-health angle: whether this incident changes the band or the renewal risk."
+    },
+    {
+      "id": "handoff-to-churn-analyst",
+      "type": "handoff",
+      "input": "Analyse why 30 customers cancelled last year, by cohort and signup month, and tell us the pattern.",
+      "expects": {
+        "handoff": "churn-analyst",
+        "must_include_any": ["churn-analyst", "backlog #49"],
+        "must_not": ["here is the cohort analysis"],
+        "routes_to": "references/save-plays-and-escalation.md"
+      },
+      "pass_criteria": "Hands the base-wide cohort analysis to the queued churn-analyst role, and says what it can do today instead: per-account causes from the accounts it can see."
+    }
+  ]
+}

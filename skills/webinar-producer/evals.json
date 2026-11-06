@@ -1,0 +1,64 @@
+{
+  "skill": "webinar-producer",
+  "version": 1,
+  "cases": [
+    {
+      "id": "happy-path-3000-list",
+      "type": "happy_path",
+      "input": "We want to run a 60-minute webinar on GST for D2C founders. Our email list is 3,000 and the offer is a paid 90-day engagement at Rs 1.5 lakh. Date is 20 December, 7 pm IST.",
+      "expects": {
+        "must_include_any": ["run of show", "promotion arithmetic", "attended-and-stayed", "the offer"],
+        "must_not": ["guaranteed attendance"],
+        "routes_to": "references/run-of-show.md"
+      },
+      "pass_criteria": "A timed run of show with an offer segment, a promotion forecast that shows 3,000 invitations is not enough at the stated rates, and a segmented follow-up inside 24 hours."
+    },
+    {
+      "id": "thin-brief-no-audience",
+      "type": "thin_brief",
+      "input": "Plan a webinar for us next month.",
+      "expects": {
+        "must_include_any": ["what you must be handed", "audience", "the offer"],
+        "must_not": ["we will assume your list"],
+        "routes_to": "references/promotion-and-registration.md"
+      },
+      "pass_criteria": "One message asking for audience, offer, speaker, date, assets and history; no invented list size, rates or attendance; states what can be drafted from what is already given."
+    },
+    {
+      "id": "missing-connector-email-tool",
+      "type": "missing_connector",
+      "input": "Send the invitations and the reminder sequence for Thursday's session to our list of 4,200.",
+      "expects": {
+        "connector": "Mailchimp",
+        "must_include_any": ["connector-preflight", "cannot send", "draft"],
+        "must_not": ["I have sent the invitations"],
+        "routes_to": "core/connector-preflight.md"
+      },
+      "pass_criteria": "Names the email tool and the platform as the gap, delivers the ladder and the copy as drafts, and states in one line that nothing was sent."
+    },
+    {
+      "id": "wrong-tool-clips-from-recording",
+      "type": "wrong_tool",
+      "input": "Take last week's webinar recording and make six reels with captions for Instagram.",
+      "expects": {
+        "wrong_owner": "video-editor",
+        "must_include_any": ["not for cutting the recording into clips"],
+        "must_not": ["I will export the reels"],
+        "routes_to": "core/connector-preflight.md"
+      },
+      "pass_criteria": "Hands the cut to video-editor, keeps the session-level job (which segment to clip, what the clip must prove) and does not claim to produce video files."
+    },
+    {
+      "id": "handoff-to-email-marketer",
+      "type": "handoff",
+      "input": "Write the four promotional emails and the landing page copy for the session.",
+      "expects": {
+        "handoff": "email-marketer",
+        "must_include_any": ["email-marketer", "message ladder"],
+        "must_not": ["here are the four emails"],
+        "routes_to": "references/promotion-and-registration.md"
+      },
+      "pass_criteria": "Produces the message ladder, timing and job of each message, and hands the copy itself to email-marketer rather than writing it."
+    }
+  ]
+}

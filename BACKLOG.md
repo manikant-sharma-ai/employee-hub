@@ -50,26 +50,26 @@ Nothing is removed without a note on why. A role that cannot clear the quality b
 | 42 | `performance-ads-buyer` | Campaign structure, creative testing, budget pacing, read-outs | shipped 2026-11-05 |
 | 43 | `influencer-outreach` | Creator shortlists, briefs, rate negotiation, deliverable tracking | shipped 2026-11-06 |
 | 44 | `affiliate-manager` | Partner recruitment, commission design, fraud checks | shipped 2026-11-06 |
-| 45 | `webinar-producer` | Run of show, promo sequence, follow-up, recording repurposing | next |
+| 45 | `webinar-producer` | Run of show, promo sequence, follow-up, recording repurposing | shipped 2026-11-06 |
 | 46 | `podcast-producer` | Episode planning, guest research, edit notes, show notes and clips | queued |
-| 47 | `newsletter-editor` | Issue curation, editing, send-time and open-rate discipline | queued |
-| 48 | `customer-success` | Health scoring, QBR prep, renewal and expansion plays | next |
-| 49 | `churn-analyst` | Cancellation reasons, cohort analysis, save-play recommendations | queued |
-| 50 | `onboarding-specialist` | First-30-days journeys, activation milestones, nudge sequences | queued |
+| 47 | `newsletter-editor` | Issue curation, editing, send-time and open-rate discipline | next |
+| 48 | `customer-success` | Health scoring, QBR prep, renewal and expansion plays | shipped 2026-11-06 |
+| 49 | `churn-analyst` | Cancellation reasons, cohort analysis, save-play recommendations | next |
+| 50 | `onboarding-specialist` | First-30-days journeys, activation milestones, nudge sequences | next |
 | 51 | `escalation-manager` | Triage rules, severity levels, who to wake and when | queued |
-| 52 | `knowledge-base-writer` | Help articles from real tickets, written so customers stop asking | next |
-| 53 | `helpdesk-trainer` | Agent training material, reply libraries, quality rubric | queued |
+| 52 | `knowledge-base-writer` | Help articles from real tickets, written so customers stop asking | shipped 2026-11-06 |
+| 53 | `helpdesk-trainer` | Agent training material, reply libraries, quality rubric | next |
 | 54 | `billing-support` | Invoice queries, failed payments, dunning and refund handling | queued |
-| 55 | `collections-agent` | Receivables follow-up, ageing buckets, escalation ladder | next |
+| 55 | `collections-agent` | Receivables follow-up, ageing buckets, escalation ladder | shipped 2026-11-06 |
 | 56 | `credit-analyst` | Customer credit checks, limits, exposure review | queued |
 | 57 | `treasury-ops` | Cash position, runway, payment scheduling, FX exposure | queued |
 | 58 | `payroll-specialist` | Pay runs, statutory deductions, payslips, queries | queued |
 | 59 | `tax-prep` | Document collation, computation checks, filing calendar | queued |
 | 60 | `gst-filer` | GSTR working papers, reconciliation, filing reminders | queued |
 | 61 | `audit-prep` | Evidence packs, schedules, query tracking for statutory audit | queued |
-| 62 | `investor-relations` | Updates, data room upkeep, investor question handling | next |
+| 62 | `investor-relations` | Updates, data room upkeep, investor question handling | shipped 2026-11-06 |
 | 63 | `fundraising-analyst` | Deck numbers, model, comparables, diligence prep | shipped 2026-11-06 |
-| 64 | `board-reporter` | Board pack assembly, minutes, action tracking | queued |
+| 64 | `board-reporter` | Board pack assembly, minutes, action tracking | next |
 | 65 | `mis-reporter` | The weekly numbers that run the business, in one page | queued |
 | 66 | `budget-planner` | Annual and project budgets, variance tracking, reforecast | queued |
 | 67 | `expense-auditor` | Policy checks, duplicate detection, vendor spend review | queued |
@@ -210,3 +210,8 @@ That mix is what makes the hub useful to a businessman on day 10, not just impre
 2. Never ship two employees whose trigger phrases collide - if they would fight over the same request, the second routes through the first.
 3. If a role needs a connector the user has not connected, ship it anyway with the connector listed under *Tools it assumes*, and say so plainly.
 4. Every employee must be usable on its first day with at least one connector the user already has.
+
+- **2026-11-06 - the five on `next` were taken in order, and none needed skipping for a collision.** `webinar-producer` (#45) and `customer-success` (#48) are the revenue pair, `knowledge-base-writer` (#52) and `collections-agent` (#55) the operations pair, `investor-relations` (#62) the founder-leverage role - the 2-2-1 mix exactly, with no role held for quota. The collision screen against all 37 shipped descriptions found five near-misses and no identical trigger: `webinar-producer` vs `video-editor` (\"turn this webinar into clips\" stays with the editor - the producer owns the room, the clock and the follow-up, not the cut), `knowledge-base-writer` vs `support-agent` (one reply versus the article that stops the reply), `collections-agent` vs `finance-ops` and `bookkeeper` (both already said \"receivables chasing is backlog #55, not shipped\", so the boundary existed and the dead reference is now closed), `customer-success` vs `support-agent` (a complaint versus an account), and `investor-relations` vs `fundraising-analyst` (raising versus post-close). Every one of those is written into both descriptions rather than left to the reader.
+- **2026-11-06 - three dead references closed.** `bookkeeper`, `finance-ops` and `fundraising-analyst` have been telling users that receivables chasing (#55) and post-close updates (#62) are \"not shipped\". Both shipped today and all three now route to the employee. `video-editor` keeps its webinar-clip trigger, and `webinar-producer` says so explicitly, because that phrase was the one place the two could have fought.
+- **2026-11-06 - the next five are promoted with one caveat each.** `churn-analyst` (#49) and `newsletter-editor` (#47) are the revenue pair; both sit next to a shipped employee (`customer-success` and `email-marketer`) and need the boundary written before they ship, the way `voice-and-audio` and `copy-editor` did. `onboarding-specialist` (#50) and `helpdesk-trainer` (#53) are the operations pair and close the loop the support cluster opened today. `board-reporter` (#64) is the founder-leverage role, and it needs a written split from `presentation-designer` on who assembles a board pack versus who designs it. If either revenue role cannot clear its boundary, `escalation-manager` (#51) takes the slot.
+- **2026-11-06 - the queue rule gained a second half.** \"Never ship two employees whose trigger phrases collide\" was necessary and not sufficient: this batch also had to answer whether a new role may *reuse* a shipped role's reference. `knowledge-base-writer` and `customer-success` both touch the support desk, and neither duplicates `support-agent`'s craft files - a new employee adds a discipline, it does not restate one.

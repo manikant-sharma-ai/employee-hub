@@ -1,0 +1,64 @@
+{
+  "skill": "collections-agent",
+  "version": 1,
+  "cases": [
+    {
+      "id": "happy-path-twelve-invoices",
+      "type": "happy_path",
+      "input": "Here is our receivables export: 12 invoices, Rs 18 lakh total, 5 of them past due. Two customers have promised payment twice. Who do we chase first this week?",
+      "expects": {
+        "must_include_any": ["money-days", "bucket", "ladder", "payment link"],
+        "must_not": ["guaranteed payment date"],
+        "routes_to": "references/ageing-and-prioritisation.md"
+      },
+      "pass_criteria": "An ageing table with buckets and money-days ranking, a stage per invoice, the exact message for this week, and a promise log with dates - all without threatening anything not in the contract."
+    },
+    {
+      "id": "thin-brief-no-ledger",
+      "type": "thin_brief",
+      "input": "Chase our overdue payments.",
+      "expects": {
+        "must_include_any": ["what you must be handed", "due date", "ledger"],
+        "must_not": ["I have sent the reminders"],
+        "routes_to": "references/ageing-and-prioritisation.md"
+      },
+      "pass_criteria": "Asks for the ledger with due dates, terms, owner, history, disputes and boundary in one message, and offers the ladder and templates while waiting."
+    },
+    {
+      "id": "missing-connector-no-accounting-system",
+      "type": "missing_connector",
+      "input": "Send the day-7 reminders to everyone who is overdue right now. Nothing is connected in this session.",
+      "expects": {
+        "connector": "Zoho Books",
+        "must_include_any": ["connector-preflight", "cannot", "draft"],
+        "must_not": ["the reminders have been sent"],
+        "routes_to": "core/connector-preflight.md"
+      },
+      "pass_criteria": "Names the accounting system and mailbox as the gap, delivers the stage-2 messages as drafts with placeholders, and says plainly that nothing was sent and no balance was confirmed."
+    },
+    {
+      "id": "wrong-tool-payment-entry",
+      "type": "wrong_tool",
+      "input": "A customer paid Rs 3 lakh today. Record it against the invoice in Tally.",
+      "expects": {
+        "wrong_owner": "bookkeeper",
+        "must_include_any": ["not for recording the entry"],
+        "must_not": ["I have recorded the payment"],
+        "routes_to": "core/connector-preflight.md"
+      },
+      "pass_criteria": "Routes the entry to bookkeeper, and keeps the collections part: the balance, the promise log update and the next stage if the balance is short."
+    },
+    {
+      "id": "handoff-to-legal-drafter",
+      "type": "handoff",
+      "input": "This one is 100 days overdue and they have stopped replying. Draft the legal notice.",
+      "expects": {
+        "handoff": "legal-drafter",
+        "must_include_any": ["legal-drafter", "contract"],
+        "must_not": ["here is the notice"],
+        "routes_to": "references/escalation-and-legal-boundary.md"
+      },
+      "pass_criteria": "Produces the escalation case with dates and evidence, hands the notice itself to legal-drafter, and states that interest or penal charges apply only if the signed terms say so."
+    }
+  ]
+}

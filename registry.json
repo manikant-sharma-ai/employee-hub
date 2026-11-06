@@ -1,7 +1,7 @@
 {
   "name": "employee-hub",
   "display_name": "Employee Hub",
-  "version": "1.8.0",
+  "version": "1.9.0",
   "updated": "2026-11-06",
   "cadence": "5 employees daily at 06:00 IST",
   "standard": "core/employee-standard.md",
@@ -1499,6 +1499,401 @@
         "a valuation or dilution argument",
         "a data room a fund has asked for",
         "a term sheet that needs reading before signing"
+      ]
+    },
+    {
+      "name": "webinar-producer",
+      "version": "1.0.0",
+      "added": "2026-11-06",
+      "status": "probation",
+      "profile_version": 2,
+      "level": "L2",
+      "category": "revenue",
+      "reliability": "unverified",
+      "path": "skills/webinar-producer",
+      "tagline": "Fills a room with the right people and turns it into conversations - promotion arithmetic, a run of show timed to the minute, and a follow-up segmented by behaviour inside 24 hours.",
+      "skills_inside": [
+        "run-of-show",
+        "promotion-and-registration",
+        "live-delivery-and-hosting",
+        "follow-up-and-pipeline",
+        "webinar-economics-and-postmortem"
+      ],
+      "tools_required": [
+        "a webinar platform (Zoom Webinar, Google Meet, Teams)",
+        "an email tool (Mailchimp, Zoho Campaigns, SendGrid)",
+        "WhatsApp Business for the one-hour reminder",
+        "the CRM or a sheet for the follow-up queue"
+      ],
+      "permissions": {
+        "read": [
+          "webinar.platform.reports",
+          "mail.lists",
+          "calendar",
+          "crm.accounts",
+          "sheets"
+        ],
+        "write": [
+          "webinar.platform.event:staged",
+          "sheets.plan:draft"
+        ],
+        "send": [],
+        "spend": [],
+        "delete": []
+      },
+      "cost": {
+        "model_tier": "standard",
+        "est_tokens_per_task": 22000,
+        "est_cost_inr_per_task": [
+          6,
+          18
+        ],
+        "paid_tools": [
+          "Zoom Webinar (optional - Google Meet works to start)"
+        ],
+        "basis": "one task = one session plan, run of show, host script and follow-up set; paid promotion is a separate budget the founder approves"
+      },
+      "connectors": {
+        "available": [
+          "Google Sheets",
+          "Gmail",
+          "Google Calendar"
+        ],
+        "needs_setup": [
+          "Mailchimp (or another email tool) for the invitation ladder",
+          "Zoom Webinar for registration, reminders and the attendance report",
+          "WhatsApp Business for the one-hour and ten-minute reminders"
+        ],
+        "usable_on_day_one": true,
+        "fallback": "paste the list size and last session's numbers; the run of show, the promotion arithmetic and the follow-up copy still ship"
+      },
+      "follows_standard": true,
+      "keeps_notes": true,
+      "tracks_performance": true,
+      "outputs": [
+        "promotion plan with the rates assumed",
+        "run of show with owners",
+        "host script",
+        "three-segment follow-up plan",
+        "postmortem template"
+      ],
+      "best_for": [
+        "a business whose webinars get registrations and no revenue",
+        "a launch that needs a live session with a real offer",
+        "a follow-up list that has gone cold"
+      ]
+    },
+    {
+      "name": "customer-success",
+      "version": "1.0.0",
+      "added": "2026-11-06",
+      "status": "probation",
+      "profile_version": 2,
+      "level": "L1",
+      "category": "revenue",
+      "reliability": "unverified",
+      "path": "skills/customer-success",
+      "tagline": "Sees the churn before it is announced - a six-signal health score, a QBR that proves value in the customer's numbers, a 90-day renewal plan and expansion only where adoption is proven.",
+      "skills_inside": [
+        "health-scoring",
+        "qbr-and-value-review",
+        "renewal-playbook",
+        "expansion-and-upsell",
+        "save-plays-and-escalation"
+      ],
+      "tools_required": [
+        "a CRM (HubSpot, Zoho CRM) for accounts and renewal dates",
+        "the product's own usage analytics",
+        "the support desk (Zendesk, Freshdesk)",
+        "Zoho Books or Tally for payment behaviour"
+      ],
+      "permissions": {
+        "read": [
+          "crm.accounts",
+          "product.usage",
+          "support.tickets",
+          "ledger.invoices",
+          "calendar"
+        ],
+        "write": [
+          "crm.notes:draft",
+          "sheets.health:draft"
+        ],
+        "send": [],
+        "spend": [],
+        "delete": []
+      },
+      "cost": {
+        "model_tier": "standard",
+        "est_tokens_per_task": 20000,
+        "est_cost_inr_per_task": [
+          5,
+          15
+        ],
+        "paid_tools": [],
+        "basis": "one task = one account review or one QBR pack; a whole-base review costs 4-6x"
+      },
+      "connectors": {
+        "available": [
+          "Google Sheets",
+          "Gmail",
+          "Google Calendar"
+        ],
+        "needs_setup": [
+          "Zendesk (or another support desk) for ticket history",
+          "HubSpot or Zoho CRM for renewal dates and contacts",
+          "the product's usage export - most small products have no analytics yet"
+        ],
+        "usable_on_day_one": true,
+        "fallback": "score from a pasted account list with renewal dates and usage; the model, the QBR structure and the save-play library still ship"
+      },
+      "follows_standard": true,
+      "keeps_notes": true,
+      "tracks_performance": true,
+      "outputs": [
+        "health table with bands and revenue at risk",
+        "QBR or renewal pack",
+        "save plan with owner and date",
+        "expansion case with the adoption evidence"
+      ],
+      "best_for": [
+        "a renewal that arrives as a surprise",
+        "an account using a third of the seats it pays for",
+        "growth that has to come from the base, not new logos"
+      ]
+    },
+    {
+      "name": "knowledge-base-writer",
+      "version": "1.0.0",
+      "added": "2026-11-06",
+      "status": "probation",
+      "profile_version": 2,
+      "level": "L2",
+      "category": "operations",
+      "reliability": "unverified",
+      "path": "skills/knowledge-base-writer",
+      "tagline": "Turns the tickets a team keeps answering into articles that stop the question - clusters by cause, titles in the customer's words, a lint pass before review, and deflection measured on the cluster.",
+      "skills_inside": [
+        "ticket-mining",
+        "article-structure",
+        "writing-for-search",
+        "maintenance-and-decay",
+        "deflection-and-measurement"
+      ],
+      "tools_required": [
+        "a support desk (Zendesk, Freshdesk, Intercom)",
+        "the help-centre platform and its search analytics",
+        "Google Sheets for the cluster counts",
+        "the product itself, to test every step"
+      ],
+      "permissions": {
+        "read": [
+          "support.tickets",
+          "helpcentre.analytics",
+          "product.screens",
+          "sheets"
+        ],
+        "write": [
+          "helpdesk.articles:draft",
+          "helpdesk.articles:staged"
+        ],
+        "send": [],
+        "spend": [],
+        "delete": []
+      },
+      "cost": {
+        "model_tier": "standard",
+        "est_tokens_per_task": 18000,
+        "est_cost_inr_per_task": [
+          4,
+          12
+        ],
+        "paid_tools": [],
+        "basis": "one task = one batch of five to eight articles, linted; a 500-ticket mine adds one pass"
+      },
+      "connectors": {
+        "available": [
+          "Google Sheets",
+          "Google Docs",
+          "Google Drive"
+        ],
+        "needs_setup": [
+          "Zendesk (or another support desk) for the ticket export",
+          "the help-centre platform for publishing and the zero-result search report"
+        ],
+        "usable_on_day_one": true,
+        "fallback": "paste a ticket export; clustering, ranking, drafting and the lint pass all work, only publishing and deflection measurement wait"
+      },
+      "follows_standard": true,
+      "keeps_notes": true,
+      "tracks_performance": true,
+      "outputs": [
+        "ranked cluster list with minutes saved",
+        "lint-clean articles",
+        "search-term list per article",
+        "deflection measure with the method"
+      ],
+      "best_for": [
+        "support answering the same five questions every week",
+        "a help centre of 180 articles nobody reads",
+        "a launch that needs its help pages before day one"
+      ]
+    },
+    {
+      "name": "collections-agent",
+      "version": "1.0.0",
+      "added": "2026-11-06",
+      "status": "probation",
+      "profile_version": 2,
+      "level": "L1",
+      "category": "operations",
+      "reliability": "unverified",
+      "path": "skills/collections-agent",
+      "tagline": "Collects money already earned - ageing ranked by money-days, a five-stage ladder that escalates in tone without threatening, dispute splitting, and a promise-to-pay log that makes the cash forecast real.",
+      "skills_inside": [
+        "ageing-and-prioritisation",
+        "dunning-sequence",
+        "dispute-and-shortfall",
+        "escalation-and-legal-boundary",
+        "promise-to-pay-and-forecast"
+      ],
+      "tools_required": [
+        "Zoho Books or Tally for the receivables ledger",
+        "Gmail or Outlook for the ladder",
+        "WhatsApp Business for smaller accounts",
+        "a payment link (Razorpay, Stripe, UPI)"
+      ],
+      "permissions": {
+        "read": [
+          "ledger.invoices",
+          "bank.transactions",
+          "mail.inbox",
+          "crm.accounts"
+        ],
+        "write": [
+          "sheets.ageing:draft"
+        ],
+        "send": [],
+        "spend": [],
+        "delete": []
+      },
+      "cost": {
+        "model_tier": "small",
+        "est_tokens_per_task": 14000,
+        "est_cost_inr_per_task": [
+          3,
+          8
+        ],
+        "paid_tools": [],
+        "basis": "one task = one weekly ladder and forecast; the ageing maths runs in the script, not the model"
+      },
+      "connectors": {
+        "available": [
+          "Google Sheets",
+          "Gmail",
+          "Google Calendar"
+        ],
+        "needs_setup": [
+          "Zoho Books (or Tally) for the ledger and due dates",
+          "the bank feed or statement to confirm what landed",
+          "a payment gateway for the link in every message"
+        ],
+        "usable_on_day_one": true,
+        "fallback": "paste the ledger export; the ageing, the ladder, the dispute split and the forecast all work, only sending and payment confirmation wait"
+      },
+      "follows_standard": true,
+      "keeps_notes": true,
+      "tracks_performance": true,
+      "outputs": [
+        "ageing table ranked by money-days",
+        "stage-appropriate messages",
+        "promise log and weekly forecast",
+        "escalation case for legal or write-off"
+      ],
+      "best_for": [
+        "an ageing report nobody acts on",
+        "a customer who keeps promising and not paying",
+        "a collections forecast the founder can plan cash against"
+      ]
+    },
+    {
+      "name": "investor-relations",
+      "version": "1.0.0",
+      "added": "2026-11-06",
+      "status": "probation",
+      "profile_version": 2,
+      "level": "L1",
+      "category": "founder-leverage",
+      "reliability": "unverified",
+      "path": "skills/investor-relations",
+      "tagline": "Keeps the people who backed you informed enough to help - a monthly update on a fixed date, a data room that answers diligence, consistent answers to the recurring questions, and bad news before it is discovered.",
+      "skills_inside": [
+        "investor-update-craft",
+        "data-room-upkeep",
+        "investor-question-handling",
+        "investor-map-and-cadence",
+        "bad-news-and-disclosure"
+      ],
+      "tools_required": [
+        "Google Drive or OneDrive for the data room",
+        "Google Sheets for the metrics workbook",
+        "Gmail or Outlook for the update",
+        "Zoho Books or Tally and the bank for cash and revenue"
+      ],
+      "permissions": {
+        "read": [
+          "ledger.revenue",
+          "bank.transactions",
+          "cap-table",
+          "drive.dataroom",
+          "calendar"
+        ],
+        "write": [
+          "docs.update:draft",
+          "sheets.metrics:draft"
+        ],
+        "send": [],
+        "spend": [],
+        "delete": []
+      },
+      "cost": {
+        "model_tier": "standard",
+        "est_tokens_per_task": 24000,
+        "est_cost_inr_per_task": [
+          6,
+          16
+        ],
+        "paid_tools": [],
+        "basis": "one task = one monthly update plus the question sheet; a data-room sweep is a separate 3-4x pass"
+      },
+      "connectors": {
+        "available": [
+          "Google Sheets",
+          "Google Docs",
+          "Google Drive",
+          "Gmail"
+        ],
+        "needs_setup": [
+          "the bank statement or feed for the cash figure",
+          "the accounting system (Zoho Books or Tally) for revenue",
+          "a cap-table sheet or tool for ownership and information rights"
+        ],
+        "usable_on_day_one": true,
+        "fallback": "paste the metrics workbook; the update, the question bank, the data-room index and the disclosure structure all ship, sending and verification wait"
+      },
+      "follows_standard": true,
+      "keeps_notes": true,
+      "tracks_performance": true,
+      "outputs": [
+        "monthly investor update with the metrics table",
+        "question sheet with sourced answers",
+        "data room index and access list",
+        "bad-news note with the plan and the dates"
+      ],
+      "best_for": [
+        "a monthly update that is late, glowing and thin",
+        "a diligence request that takes a week",
+        "a month that has to be reported honestly"
       ]
     }
   ]

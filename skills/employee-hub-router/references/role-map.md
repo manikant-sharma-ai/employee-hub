@@ -1,6 +1,6 @@
 # Role map - the boundary lines
 
-Thirty-two employees, and the near-misses are where routing actually goes wrong.
+Forty-two employees, and the near-misses are where routing actually goes wrong.
 This file is the tie-breaker. Read the pair, not the description.
 
 ## The pairs that get confused
@@ -34,6 +34,15 @@ This file is the tie-breaker. Read the pair, not the description.
 | `growth-marketer` vs `performance-ads-buyer` | growth-marketer decides where the next rupee goes and what the experiment must prove, at the level of channel and segment. performance-ads-buyer builds the campaign, paces the spend and reads out the ad sets. "Which channel" is growth; "why did this ad set stop spending" is the buyer. |
 | `performance-ads-buyer` vs `graphic-designer` | The buyer specifies the variants - hook, angle, proof, format - and reads the result. graphic-designer makes them. A creative that fails is a design note for the designer and a hypothesis for the buyer. |
 | `growth-marketer` vs the channel specialists | seo-specialist, social-media-manager and email-marketer own their craft and their channel's execution. growth-marketer owns the allocation between them and the experiment that decides whether the channel deserves more. If the ask is "make this channel work", it is the specialist; if it is "should we keep funding this channel", it is growth. |
+| `webinar-producer` vs `video-editor` | The room is the producer's: the promise, the promotion ladder, the run of show, the follow-up. The cut is the editor's: clips, captions, hooks, exports. "Run a webinar" is the producer; "turn this webinar into clips" is the editor, and both descriptions say so. |
+| `webinar-producer` vs `email-marketer` | The producer decides which message goes out when, and what job it does; the email role writes it, owns deliverability and owns the list. A promotional sequence with no session attached is entirely email-marketer. |
+| `customer-success` vs `support-agent` | One customer with a problem is support-agent. An account whose usage, tickets and payments say it is leaving is customer-success. The same customer can need both in the same week; split it by whether the ask is a reply or a plan. |
+| `customer-success` vs `churn-analyst` | customer-success scores the accounts it can see and acts on them this month. churn-analyst (backlog #49) does the base-wide cohort and cancellation-reason analysis after the fact. One account now, all accounts later. |
+| `knowledge-base-writer` vs `support-agent` | The reply to this customer is support-agent. The article that stops the next hundred asking is knowledge-base-writer. A macro is neither: it is a saved reply, and it lives with support. |
+| `collections-agent` vs `finance-ops` and `bookkeeper` | bookkeeper records the payment, finance-ops reconciles and closes, collections-agent asks for the money and keeps the promise log. A dispute about an invoice is collections until it becomes a credit note, then it is finance-ops. |
+| `collections-agent` vs `legal-drafter` | The ladder, the hold and the case file are collections. The notice is legal-drafter, and whether interest applies is a contract question for it and the CA. Never let the chase write the notice. |
+| `investor-relations` vs `fundraising-analyst` | Raising is fundraising-analyst: the model, the valuation, the target list, the term sheet. Reporting to the people who already invested is investor-relations: the monthly update, the data room, the question sheet. A new investor in conversation belongs to the first role; an existing one belongs to the second. |
+| `investor-relations` vs `chief-of-staff` | The internal week - commitments, decisions, the operating review - is chief-of-staff. The external month - investors, data room, disclosure timing - is investor-relations. One is what the team did; the other is what the people who funded it are told. |
 
 ## The sequences that actually recur
 
@@ -43,6 +52,10 @@ This file is the tie-breaker. Read the pair, not the description.
 4. **Money trouble** - data-analyst (what the numbers say) → bookkeeper (what is recorded) → finance-ops (close and exceptions) → legal-drafter (only if terms are the cause).
 5. **Growth review** - growth-marketer (constraint, allocation) → performance-ads-buyer (build, pace, read out) → content-writer and graphic-designer (message and creative) → analytics-instrumenter (events) → data-analyst (what the numbers say).
 6. **Entering a new language market** - research-analyst (is it worth it) → translator-localiser (the words) → ui-designer (layout that survives longer strings) → seo-specialist (local search).
+7. **Launching with a live session** - webinar-producer (promise, promotion arithmetic, run of show) → email-marketer (the four emails) → presentation-designer (the slides) → video-editor (clips from the recording) → customer-success (the accounts that came out of it).
+8. **A support cost problem** - knowledge-base-writer (mine the tickets, write the top five) → support-agent (macros for what does not deserve an article) → qa-tester and the engineers (the bugs the clusters expose).
+9. **Money that has stopped moving** - collections-agent (ageing, ladder, promise log) → finance-ops (credit notes, close) → legal-drafter (the notice, if it comes to that) → chief-of-staff (the founder's decision on a write-off).
+10. **A month that has to be reported** - finance-ops (the numbers) → data-analyst (what they mean) → investor-relations (the update) → chief-of-staff (what changes internally because of it).
 
 ## What the hub cannot do, and who to point at
 
