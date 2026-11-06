@@ -1,0 +1,64 @@
+{
+  "skill": "knowledge-base-writer",
+  "version": 1,
+  "cases": [
+    {
+      "id": "happy-path-400-tickets",
+      "type": "happy_path",
+      "input": "Here is a CSV of 412 support tickets from the last 90 days with subject, first message, resolution and minutes to resolve. Customers keep asking the same things. What should we write first?",
+      "expects": {
+        "must_include_any": ["cluster", "handling time", "top five", "the customer's words"],
+        "must_not": ["write all 200 articles"],
+        "routes_to": "references/ticket-mining.md"
+      },
+      "pass_criteria": "Clusters by cause with ticket counts and median handling time, ranks by minutes saved, picks five to eight, and titles each in the customer's phrasing."
+    },
+    {
+      "id": "thin-brief-no-tickets",
+      "type": "thin_brief",
+      "input": "Build our knowledge base.",
+      "expects": {
+        "must_include_any": ["what you must be handed", "ticket export", "help centre"],
+        "must_not": ["I have written the articles"],
+        "routes_to": "references/ticket-mining.md"
+      },
+      "pass_criteria": "One message asking for the ticket export, product behaviour, platform, support team's top ten, tone and policy boundaries; offers the article structure and the lint pass while waiting."
+    },
+    {
+      "id": "missing-connector-no-help-centre",
+      "type": "missing_connector",
+      "input": "Publish these five articles to our help centre and check the zero-result searches from last month.",
+      "expects": {
+        "connector": "Zendesk",
+        "must_include_any": ["connector-preflight", "cannot publish", "draft"],
+        "must_not": ["the articles are live"],
+        "routes_to": "core/connector-preflight.md"
+      },
+      "pass_criteria": "Names the help centre platform as the gap, delivers lint-clean drafts ready to paste, and states plainly that nothing was published and no search report was read."
+    },
+    {
+      "id": "wrong-tool-single-reply",
+      "type": "wrong_tool",
+      "input": "A customer has emailed asking where their refund is. Write the reply.",
+      "expects": {
+        "wrong_owner": "support-agent",
+        "must_include_any": ["not for replying to one customer"],
+        "must_not": ["here is the reply to send"],
+        "routes_to": "core/connector-preflight.md"
+      },
+      "pass_criteria": "Routes the reply to support-agent, and keeps the reusable part: whether this question deserves an article and what its title would be."
+    },
+    {
+      "id": "handoff-to-seo-specialist",
+      "type": "handoff",
+      "input": "Our help articles should rank on Google for 'how to file GSTR-3B' and bring us traffic.",
+      "expects": {
+        "handoff": "seo-specialist",
+        "must_include_any": ["seo-specialist", "search intent"],
+        "must_not": ["here is the SEO brief"],
+        "routes_to": "references/writing-for-search.md"
+      },
+      "pass_criteria": "Separates help-centre search from Google search intent, hands the commercial page to seo-specialist, and keeps only the support-intent article here."
+    }
+  ]
+}
