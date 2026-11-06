@@ -1,0 +1,64 @@
+{
+  "skill": "investor-relations",
+  "version": 1,
+  "cases": [
+    {
+      "id": "happy-path-missed-month",
+      "type": "happy_path",
+      "input": "Write the November investor update. Revenue was Rs 42.6 lakh against a plan of Rs 50 lakh, cash is Rs 2.28 crore and burn is Rs 12.5 lakh a month. Two renewals slipped to January.",
+      "expects": {
+        "must_include_any": ["runway", "where we are short", "the ask", "the numbers"],
+        "must_not": ["guaranteed runway"],
+        "routes_to": "references/investor-update-craft.md"
+      },
+      "pass_criteria": "Five sections in order, the miss stated before the explanation, runway in months with the burn it assumes, and one explicit ask."
+    },
+    {
+      "id": "thin-brief-no-numbers",
+      "type": "thin_brief",
+      "input": "Write our investor update.",
+      "expects": {
+        "must_include_any": ["what you must be handed", "cash", "the last three updates"],
+        "must_not": ["revenue grew significantly"],
+        "routes_to": "references/investor-update-craft.md"
+      },
+      "pass_criteria": "Asks for the investor list, the month's numbers from the books, the last three updates, the data room and the contractual obligations, and refuses to invent a single figure."
+    },
+    {
+      "id": "missing-connector-no-books",
+      "type": "missing_connector",
+      "input": "Send the update to all 14 investors today and confirm the cash figure from the bank. Nothing is connected in this session.",
+      "expects": {
+        "connector": "bank statement",
+        "must_include_any": ["connector-preflight", "cannot", "draft"],
+        "must_not": ["the update has been sent"],
+        "routes_to": "core/connector-preflight.md"
+      },
+      "pass_criteria": "Names the books, the bank and the mailbox as the gaps, delivers the draft with clearly marked unverified figures, and states that nothing was sent and no cash balance was confirmed."
+    },
+    {
+      "id": "wrong-tool-raising-a-round",
+      "type": "wrong_tool",
+      "input": "We want to raise Rs 8 crore next year. Build the valuation and the dilution table.",
+      "expects": {
+        "wrong_owner": "fundraising-analyst",
+        "must_include_any": ["not for raising a round"],
+        "must_not": ["here is the valuation"],
+        "routes_to": "core/connector-preflight.md"
+      },
+      "pass_criteria": "Routes the raise to fundraising-analyst, and keeps the investor-relations part: what the existing base will be told, and when."
+    },
+    {
+      "id": "handoff-to-legal-drafter",
+      "type": "handoff",
+      "input": "Our SHA says investors get quarterly MIS. We are two weeks late and one investor is asking whether that is a breach. What do we do?",
+      "expects": {
+        "handoff": "legal-drafter",
+        "must_include_any": ["legal-drafter", "counsel", "obligation"],
+        "must_not": ["that is not a breach"],
+        "routes_to": "references/investor-map-and-cadence.md"
+      },
+      "pass_criteria": "Gets the MIS out with the facts and dates, hands the question of breach and remedy to legal-drafter and counsel, and keeps the cadence calendar here."
+    }
+  ]
+}
