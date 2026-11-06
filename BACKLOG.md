@@ -50,37 +50,37 @@ Nothing is removed without a note on why. A role that cannot clear the quality b
 | 42 | `performance-ads-buyer` | Campaign structure, creative testing, budget pacing, read-outs | shipped 2026-11-05 |
 | 43 | `influencer-outreach` | Creator shortlists, briefs, rate negotiation, deliverable tracking | shipped 2026-11-06 |
 | 44 | `affiliate-manager` | Partner recruitment, commission design, fraud checks | shipped 2026-11-06 |
-| 45 | `webinar-producer` | Run of show, promo sequence, follow-up, recording repurposing | next |
+| 45 | `webinar-producer` | Run of show, promo sequence, follow-up, recording repurposing | shipped 2026-11-07 |
 | 46 | `podcast-producer` | Episode planning, guest research, edit notes, show notes and clips | queued |
 | 47 | `newsletter-editor` | Issue curation, editing, send-time and open-rate discipline | queued |
-| 48 | `customer-success` | Health scoring, QBR prep, renewal and expansion plays | next |
+| 48 | `customer-success` | Health scoring, QBR prep, renewal and expansion plays | shipped 2026-11-07 |
 | 49 | `churn-analyst` | Cancellation reasons, cohort analysis, save-play recommendations | queued |
 | 50 | `onboarding-specialist` | First-30-days journeys, activation milestones, nudge sequences | queued |
 | 51 | `escalation-manager` | Triage rules, severity levels, who to wake and when | queued |
-| 52 | `knowledge-base-writer` | Help articles from real tickets, written so customers stop asking | next |
+| 52 | `knowledge-base-writer` | Help articles from real tickets, written so customers stop asking | shipped 2026-11-07 |
 | 53 | `helpdesk-trainer` | Agent training material, reply libraries, quality rubric | queued |
 | 54 | `billing-support` | Invoice queries, failed payments, dunning and refund handling | queued |
-| 55 | `collections-agent` | Receivables follow-up, ageing buckets, escalation ladder | next |
+| 55 | `collections-agent` | Receivables follow-up, ageing buckets, escalation ladder | shipped 2026-11-07 |
 | 56 | `credit-analyst` | Customer credit checks, limits, exposure review | queued |
 | 57 | `treasury-ops` | Cash position, runway, payment scheduling, FX exposure | queued |
 | 58 | `payroll-specialist` | Pay runs, statutory deductions, payslips, queries | queued |
 | 59 | `tax-prep` | Document collation, computation checks, filing calendar | queued |
 | 60 | `gst-filer` | GSTR working papers, reconciliation, filing reminders | queued |
 | 61 | `audit-prep` | Evidence packs, schedules, query tracking for statutory audit | queued |
-| 62 | `investor-relations` | Updates, data room upkeep, investor question handling | next |
+| 62 | `investor-relations` | Updates, data room upkeep, investor question handling | shipped 2026-11-07 |
 | 63 | `fundraising-analyst` | Deck numbers, model, comparables, diligence prep | shipped 2026-11-06 |
-| 64 | `board-reporter` | Board pack assembly, minutes, action tracking | queued |
-| 65 | `mis-reporter` | The weekly numbers that run the business, in one page | queued |
+| 64 | `board-reporter` | Board pack assembly, minutes, action tracking | next |
+| 65 | `mis-reporter` | The weekly numbers that run the business, in one page | next |
 | 66 | `budget-planner` | Annual and project budgets, variance tracking, reforecast | queued |
 | 67 | `expense-auditor` | Policy checks, duplicate detection, vendor spend review | queued |
 | 68 | `vendor-payment-tracker` | Due dates, ageing, disputes, payment run prep | queued |
-| 69 | `inventory-planner` | Stock cover, reorder points, dead-stock identification | queued |
+| 69 | `inventory-planner` | Stock cover, reorder points, dead-stock identification | next |
 | 70 | `demand-forecaster` | Seasonality, baseline and promo uplift, forecast accuracy review | queued |
 | 71 | `warehouse-coordinator` | Pick-pack-ship coordination, stock counts, discrepancy handling | queued |
 | 72 | `logistics-coordinator` | Carrier selection, rate comparison, delivery exception handling | queued |
 | 73 | `returns-manager` | Return reasons, refund policy application, reverse logistics | queued |
 | 74 | `catalog-manager` | Product data, attributes, images, variants and taxonomy | queued |
-| 75 | `marketplace-lister` | Listings on IndiaMART, Amazon, Flipkart and GeM - titles, attributes, compliance | queued |
+| 75 | `marketplace-lister` | Listings on IndiaMART, Amazon, Flipkart and GeM - titles, attributes, compliance | next |
 | 76 | `shopify-merchandiser` | Collections, bundles, discounts, on-site merchandising | queued |
 | 77 | `product-photographer-brief` | Shot lists, styling direction, retouch notes for product imagery | queued |
 | 78 | `packaging-designer` | Pack structure, label copy, statutory declarations, print-ready files | queued |
@@ -125,7 +125,7 @@ Nothing is removed without a note on why. A role that cannot clear the quality b
 | 117 | `safety-compliance` | Statutory registers, inspection readiness, incident reporting | queued |
 | 118 | `energy-auditor` | Consumption baselines, loss identification, saving cases with payback | queued |
 | 119 | `sales-engineer` | Technical qualification, solution design, demo scripts | queued |
-| 120 | `proposal-writer` | Winning proposals and RFP responses from a requirements document | queued |
+| 120 | `proposal-writer` | Winning proposals and RFP responses from a requirements document | next |
 | 121 | `tender-bidder` | GeM and state tender discovery, eligibility checks, bid assembly | queued |
 | 122 | `govt-scheme-finder` | Matches a business to MSME, export and state incentive schemes | queued |
 | 123 | `ip-researcher` | Trademark and patent landscape checks, filing prep notes | queued |
@@ -193,6 +193,13 @@ Kept so that a later drop does not have to re-derive why the order moved.
 - **2026-11-06 - `influencer-outreach` (#43) and `affiliate-manager` (#44) shipped together as the revenue pair, and the boundary between them is economic.** Both pay for a sale someone else made. A creator is paid a fee for a recommendation; an affiliate is paid commission only when an order lands. Shipping one without the other would have produced the wrong answer to "set up a referral programme", which `partnerships` also lists as a trigger - so `partnerships` now routes self-serve commission programmes here and keeps negotiated referral and reseller deals.
 - **2026-11-06 - `fundraising-analyst` (#63) shipped as the founder-leverage role and clears the dead reference `presentation-designer` has carried since 3 November.** Nothing between #33 and #61 is founder-leverage and the raise is work a founder does personally, at the worst possible time, with the least practice. It also closes the loop with `pricing-analyst` and `finance-ops`, whose numbers it argues from.
 - **2026-11-06 - the next five are promoted for the mix, not in queue order.** `investor-relations` (#62) is the founder-leverage slot and closes the last dead reference in this batch - `partnerships` and `fundraising-analyst` both route investor updates to it. `customer-success` (#48) and `webinar-producer` (#45) are the revenue pair; `knowledge-base-writer` (#52) and `collections-agent` (#55) are the operations pair, one cutting support volume and one turning receivables into cash. `ux-researcher` (#33) and the #35-#40 build roles stay queued: they are excellent roles and they are not what a businessman on day 11 is short of.
+
+- **2026-11-07 - the five that were already on `next` shipped, and the mix held without a skip.** `webinar-producer` (#45) and `customer-success` (#48) are the revenue pair - one builds a room and one keeps the customers who came out of it. `knowledge-base-writer` (#52) and `collections-agent` (#55) are the operations pair, one cutting support volume and one turning receivables into cash. `investor-relations` (#62) is the founder-leverage slot and clears the last dead reference in the repo: `fundraising-analyst`, `partnerships` and `pr-writer` have all routed investor updates to it since 4 November, so its absence was a promise the hub could not keep.
+- **2026-11-07 - `collections-agent` (#55) needed a boundary against two shipped employees, and it is written in all three descriptions.** `finance-ops` and `bookkeeper` both carry "who owes us money" and both compute the ageing; the split is arithmetic versus conversation - they produce the ageing report, `collections-agent` runs the ladder, the promise tracking and the escalation. Its description no longer says "not shipped" anywhere, and neither do theirs.
+- **2026-11-07 - `collections-agent` (#55) also needed a split from `billing-support` (#54), which is still queued.** Both would claim "dunning". The line is who the customer is and what is broken: a failed card retry, a mandate failure or a refund on a subscription is #54's, and a B2B invoice owed by a business that has received the goods is #55's. #54 stays queued with that boundary written here so it does not ship as a duplicate.
+- **2026-11-07 - `webinar-producer` (#45) was held off `video-editor`'s trigger, not skipped for it.** `video-editor` ships "turn this webinar into clips" and that stays its job. The split is artefact against craft: `webinar-producer` owns the promise, the room and the timecoded repurposing *map*, `video-editor` executes the cut from it. Neither description asks for the other's work.
+- **2026-11-07 - `knowledge-base-writer` (#52) was separated from `content-writer` and `support-agent` on the reader, not the format.** Marketing prose for a prospect is `content-writer`; one reply to one customer is `support-agent`; the article that stops the next forty tickets is this one, and its test is the ticket count on the topic, not the page views.
+- **2026-11-07 - the next five are promoted for the mix again, not in queue order.** `board-reporter` (#64) is the founder-leverage slot and closes the reference `chief-of-staff` has carried since 5 November. `mis-reporter` (#65) and `inventory-planner` (#69) are the operations pair; `marketplace-lister` (#75) and `proposal-writer` (#120) are the revenue pair - one puts products in front of buyers, one turns a requirements document into a signed order. Everything between #33 and #40 stays queued: those build roles still need a businessman who has a product to build.
 
 ## The five-a-day mix
 

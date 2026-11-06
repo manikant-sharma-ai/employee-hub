@@ -1,8 +1,8 @@
 {
   "name": "employee-hub",
   "display_name": "Employee Hub",
-  "version": "1.8.0",
-  "updated": "2026-11-06",
+  "version": "1.9.0",
+  "updated": "2026-11-07",
   "cadence": "5 employees daily at 06:00 IST",
   "standard": "core/employee-standard.md",
   "obligations": [
@@ -317,7 +317,7 @@
     },
     {
       "name": "finance-ops",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "added": "2026-11-02",
       "status": "stable",
       "path": "skills/finance-ops",
@@ -522,7 +522,7 @@
     },
     {
       "name": "bookkeeper",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "added": "2026-11-03",
       "status": "stable",
       "path": "skills/bookkeeper",
@@ -900,7 +900,7 @@
     },
     {
       "name": "partnerships",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "added": "2026-11-04",
       "status": "stable",
       "path": "skills/partnerships",
@@ -1457,7 +1457,7 @@
     },
     {
       "name": "fundraising-analyst",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "added": "2026-11-06",
       "status": "stable",
       "path": "skills/fundraising-analyst",
@@ -1499,6 +1499,230 @@
         "a valuation or dilution argument",
         "a data room a fund has asked for",
         "a term sheet that needs reading before signing"
+      ]
+    },
+    {
+      "name": "webinar-producer",
+      "version": "1.0.0",
+      "added": "2026-11-07",
+      "status": "stable",
+      "path": "skills/webinar-producer",
+      "tagline": "The webinar employee - a promise worth an hour, a promotion sequence that fills the room, a run of show with the host's lines, a live room that is actually worked, a 24-hour follow-up split three ways, and a timecoded map so the recording keeps selling.",
+      "skills_inside": [
+        "promise-and-format",
+        "promotion-sequencing",
+        "run-of-show",
+        "live-room-ops",
+        "follow-up-and-pipeline",
+        "recording-repurposing"
+      ],
+      "tools_required": [
+        "Zoom, Google Meet or Microsoft Teams (hosting, registration, recording, attendance report)",
+        "Gmail or Outlook (promotion sequence, reminders, follow-up)",
+        "WhatsApp Business (the reminder that moves attendance in India)",
+        "Google Calendar (session, rehearsals, follow-up blocks)",
+        "Google Sheets or Excel (registration and attendance sheet, Q&A log, pipeline)",
+        "a CRM or sheet (attendees as contacts with a stage)",
+        "Canva or Figma (banner, carousel, poll graphic)",
+        "Razorpay or a payment link (only for a paid session)",
+        "YouTube or LinkedIn (the replay)"
+      ],
+      "follows_standard": true,
+      "keeps_notes": true,
+      "tracks_performance": true,
+      "outputs": [
+        "the job in one line",
+        "the promise, and the versions rejected",
+        "the registration page copy",
+        "the promotion sequence with dates and channels",
+        "the run of show with failure scripts",
+        "the live ops sheet",
+        "the three-way follow-up set",
+        "the repurposing map",
+        "what could not be verified"
+      ],
+      "best_for": [
+        "a business running its first webinar",
+        "a session with registrations but no attendance",
+        "a launch that needs a live room",
+        "a recording nobody is using"
+      ]
+    },
+    {
+      "name": "customer-success",
+      "version": "1.0.0",
+      "added": "2026-11-07",
+      "status": "stable",
+      "path": "skills/customer-success",
+      "tagline": "The account employee - a health score with evidence behind every input, a QBR that ends in a decision, a renewal run 120 days out, an expansion play the data has earned, and a save plan with the reason established before the concession.",
+      "skills_inside": [
+        "health-scoring",
+        "qbr-and-business-reviews",
+        "renewal-plays",
+        "expansion-plays",
+        "save-plays",
+        "account-escalation"
+      ],
+      "tools_required": [
+        "a CRM (HubSpot, Zoho or Salesforce) for accounts, contacts, renewal dates",
+        "the product's analytics (Mixpanel, Amplitude, GA4 or the admin dashboard)",
+        "the helpdesk (Freshdesk, Zendesk, Intercom) for ticket history and open P1s",
+        "Google Sheets or Excel (health model, renewal calendar, account plan)",
+        "Gmail or Outlook (check-ins, QBR invites, renewal conversations)",
+        "Google Calendar (QBRs, renewal checkpoints)",
+        "Zoom, Meet or Teams (the QBR itself)",
+        "Google Docs or Word (QBR pack, account plan)",
+        "Razorpay, Zoho Books or the billing system (payment behaviour)"
+      ],
+      "follows_standard": true,
+      "keeps_notes": true,
+      "tracks_performance": true,
+      "outputs": [
+        "the job in one line",
+        "the portfolio read, ranked by value at risk",
+        "the health table with raw inputs",
+        "the account in focus",
+        "the play with an owner and a date",
+        "the QBR pack or renewal case",
+        "the commercial ask with a floor",
+        "the honest churn risks",
+        "what could not be verified"
+      ],
+      "best_for": [
+        "a renewal inside 90 days",
+        "a big account gone quiet",
+        "a QBR that has to produce a decision",
+        "an account that is quietly leaving"
+      ]
+    },
+    {
+      "name": "knowledge-base-writer",
+      "version": "1.0.0",
+      "added": "2026-11-07",
+      "status": "stable",
+      "path": "skills/knowledge-base-writer",
+      "tagline": "The help-centre employee - the question counted before it is written, the article titled as the search, the answer in the first line, a task-based structure, deflection measured on tickets and not page views, and a review date on every page.",
+      "skills_inside": [
+        "gap-analysis-from-tickets",
+        "article-anatomy",
+        "help-centre-structure",
+        "deflection-measurement",
+        "content-maintenance"
+      ],
+      "tools_required": [
+        "the helpdesk (Freshdesk, Zendesk, Intercom, or a shared Gmail inbox) for the ticket source",
+        "the help-centre platform (Intercom Articles, Zendesk Guide, Freshdesk KB, Notion or a CMS)",
+        "Google Sheets or Excel (gap log, topic counts, review calendar)",
+        "Google Docs or Word (drafts, style sheet)",
+        "the product or a demo login (the screens and the exact labels)",
+        "Google Analytics or the site search report (zero-result searches)",
+        "a screenshot or recording tool (annotated images)"
+      ],
+      "follows_standard": true,
+      "keeps_notes": true,
+      "tracks_performance": true,
+      "outputs": [
+        "the job in one line",
+        "the gap log with counts and cost",
+        "the articles ready to publish",
+        "the structure change and the duplicates retired",
+        "the policy quotes with the owner's name",
+        "the measurement plan",
+        "what could not be verified"
+      ],
+      "best_for": [
+        "the same question arriving every week",
+        "a help centre nobody can navigate",
+        "articles before a launch",
+        "proving whether the docs work"
+      ]
+    },
+    {
+      "name": "collections-agent",
+      "version": "1.0.0",
+      "added": "2026-11-07",
+      "status": "stable",
+      "path": "skills/collections-agent",
+      "tagline": "The receivables employee - an ageing read that classifies accounts, a per-account dunning ladder with the words ready to send, promises to pay checked on the promised day, a weekly cash view that keeps promises out of the confirmed line, and an escalation that stops at the legal boundary.",
+      "skills_inside": [
+        "ageing-and-classification",
+        "dunning-ladders",
+        "promise-to-pay",
+        "hardship-and-tone",
+        "escalation-and-legal-boundary"
+      ],
+      "tools_required": [
+        "Zoho Books, Tally, QuickBooks or the billing system (invoices, due dates, ageing, payment status)",
+        "Gmail or Outlook (the reminder sequence and the replies)",
+        "WhatsApp Business (the nudge, with consent)",
+        "Razorpay, PayU or a bank payment link",
+        "Google Sheets or Excel (chase log, promise tracker, weekly cash view)",
+        "a CRM or sheet (the account owner, so the chase does not contradict a live deal)",
+        "Google Calendar (promise dates, escalation checkpoints)",
+        "a telephone (the channel that resolves most overdue invoices)"
+      ],
+      "follows_standard": true,
+      "keeps_notes": true,
+      "tracks_performance": true,
+      "outputs": [
+        "the job in one line",
+        "the ageing read by bucket and class",
+        "the ladder per account with the next mail ready to send",
+        "the promise tracker",
+        "the weekly cash view",
+        "the escalations and who decides",
+        "the disputes, separated",
+        "what could not be verified"
+      ],
+      "best_for": [
+        "an invoice overdue and unanswered",
+        "a promise to pay that broke",
+        "receivables piling up faster than cash",
+        "escalating without losing the customer"
+      ]
+    },
+    {
+      "name": "investor-relations",
+      "version": "1.0.0",
+      "added": "2026-11-07",
+      "status": "stable",
+      "path": "skills/investor-relations",
+      "tagline": "The investor employee after the cheque clears - the same date every month, the same five numbers with definitions, last month's promises closed out, misses before wins, bad news to the lead within 24 hours, a data room that is already current, and a next round kept warm without a pitch.",
+      "skills_inside": [
+        "monthly-updates",
+        "investor-questions",
+        "data-room-upkeep",
+        "bad-news-and-governance",
+        "follow-ons-and-intros"
+      ],
+      "tools_required": [
+        "Gmail or Outlook (the update, individual answers, the record)",
+        "Google Sheets or Excel (shareholder register, metrics sheet, update log)",
+        "Zoho Books, Tally or QuickBooks (revenue, burn, cash, reconciled)",
+        "Google Drive or OneDrive (the data room, per-investor access, access log)",
+        "Google Docs or Word (update, FAQ, bad-news note)",
+        "Google Calendar (update date, investor calls, quarterly check-ins)",
+        "a CRM or sheet (last contact, what each investor cares about and has offered)",
+        "the cap table, or the company secretary (register of members)"
+      ],
+      "follows_standard": true,
+      "keeps_notes": true,
+      "tracks_performance": true,
+      "outputs": [
+        "the job in one line",
+        "the numbers block with definitions and sources",
+        "last month's promises closed out",
+        "the update, ready to send",
+        "the individual notes for the lead and outliers",
+        "the anticipated questions with answers",
+        "the data-room status",
+        "what could not be verified"
+      ],
+      "best_for": [
+        "the monthly investor update",
+        "an investor asking about runway or burn",
+        "telling investors about a delay",
+        "a data room a fund has asked to see"
       ]
     }
   ]

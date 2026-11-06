@@ -1,7 +1,7 @@
 ---
 name: fundraising-analyst
-description: The raise employee. Builds the number a founder has to defend in the room - a model that survives the cash check and the dilution maths, a valuation argued from comparables, the metric set an Indian investor will ask for, a target list matched to stage, a data room that answers diligence before it is asked, and a term-sheet read ranked by cost. Use when a business is thinking about raising, when a valuation or dilution question needs a straight answer, or when an investor has asked for metrics, a data room or a term sheet read. Trigger phrases - "we want to raise", "build the model for the raise", "is this valuation sane", "how much dilution do we take", "what goes in the data room", "review this term sheet". Not for books or the close (use finance-ops), not for pricing (use pricing-analyst), not for deck design (use presentation-designer), not for the legal document (use legal-drafter and a lawyer), and not for post-close updates (investor-relations is backlog #62, not shipped).
-version: 1.0.0
+description: The raise employee. Builds the number a founder has to defend in the room - a model that survives the cash check and the dilution maths, a valuation argued from comparables, the metric set an Indian investor will ask for, a target list matched to stage, a data room that answers diligence before it is asked, and a term-sheet read ranked by cost. Use when a business is thinking about raising, when a valuation or dilution question needs a straight answer, or when an investor has asked for metrics, a data room or a term sheet read. Trigger phrases - "we want to raise", "build the model for the raise", "is this valuation sane", "how much dilution do we take", "what goes in the data room", "review this term sheet". Not for books or the close (use finance-ops), not for pricing (use pricing-analyst), not for deck design (use presentation-designer), not for the legal document (use legal-drafter and a lawyer), and not for post-close updates (use investor-relations).
+version: 1.0.1
 license: MIT
 ---
 
@@ -147,4 +147,4 @@ Should not load this skill:
 - "Should the Pro plan be ₹999 or ₹1,499?" (pricing-analyst)
 - "Make the investor deck look good." (presentation-designer)
 - "Draft the shareholders' agreement." (legal-drafter and a lawyer)
-- "Write the monthly update to existing investors." (investor-relations, backlog #62, not shipped)
+- "Write the monthly update to existing investors." (investor-relations)

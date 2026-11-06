@@ -2,6 +2,86 @@
 
 One dated block per drop. What shipped, and why it is shaped that way.
 
+## 2026-11-07 - daily drop: five employees (v1.9.0)
+
+**The mix this drop: two revenue-facing, two operations, one founder-leverage.** All
+five were already sitting on `next`, promoted on 6 November for exactly this mix, so
+no role was skipped for the balance. What shaped the batch is that four of the five
+needed a boundary written against an employee that already ships - and one of them,
+`collections-agent`, needed the shipped descriptions edited to make the split real
+rather than aspirational. The dead-reference debt is now cleared: nothing in the repo
+says "backlog #55, not shipped" or "backlog #62, not shipped" any more.
+
+- **`webinar-producer`** (`skills/webinar-producer`, v1.0.0) - the revenue role, and the
+  first in the hub whose deliverable is a *date*. A webinar fails in two places that a
+  skill file can actually fix: the promise (a topic attracts curiosity, an outcome
+  attracts the person with the problem this month) and the last 24 hours (the
+  hour-before WhatsApp and the calendar invite at registration move attendance more
+  than any extra announcement). So the craft is arranged around those two - a promise
+  written and tested before the agenda, a T-14 to T-1h sequence with the words for each
+  touch, and a follow-up split three ways because "thanks for attending" sent to a
+  no-show is a spam complaint. The recording is deliberately *not* this role's work:
+  `video-editor` owns the cut, and this role hands it a timecoded map, which is the
+  split that stops "turn this webinar into clips" firing twice.
+- **`customer-success`** (`skills/customer-success`, v1.0.0) - the second revenue role,
+  and the one that had to be separated from `support-agent` on the object rather than
+  the topic: a ticket is a transaction, a renewal is a relationship with a date on it.
+  The health score is five weighted inputs with the raw values printed beside the
+  score, because "health 6/10" is an opinion and "usage down 40% in 60 days, two P1s
+  open, champion left in September" is a case - and usage carries the most weight
+  because it is the one input a polite customer cannot lie about. The renewal calendar
+  starts at 120 days with the notice period and the PO process confirmed, since a
+  six-week procurement cycle discovered in week three is the commonest lost renewal.
+  Discounting is the last rung of a seven-rung concession ladder, and the floor is set
+  in writing before the call.
+- **`knowledge-base-writer`** (`skills/knowledge-base-writer`, v1.0.0) - the first
+  operations role, built around a measurement that most help centres get wrong. The
+  article is the easy part; the craft is grouping 90 days of tickets by *the question
+  asked* rather than the product area, ranking by volume, cost and self-service
+  potential, and then refusing to promise a deflection rate a document cannot deliver -
+  "where is my order" needs a tracking page, not better prose. So the file states which
+  five topic types can be deflected and which cannot, and the measurement is the
+  topic's ticket count eight weeks later with the product fixes named as the
+  confounder. It is also the only role in the hub whose review cycle is part of the
+  output: every article carries a review date, because the product ships monthly and
+  the help centre is wrong by default.
+- **`collections-agent`** (`skills/collections-agent`, v1.0.0) - the second operations
+  role, and the most delicate in the hub: the money is owed, which makes it easy to win
+  an argument and lose a customer who buys every month. It is scoped to the *chase*
+  and not the arithmetic - `finance-ops` still produces the ageing report and
+  `bookkeeper` still matches payments - so the split is written into all three
+  descriptions. Three design choices carry the role: a ladder per account *class*,
+  because a reliable-slow payer at 68 days and a customer in trouble at 68 days need
+  different words on the same day; a promise to pay recorded with amount, date,
+  approver and condition and checked on the promised morning, because a promise
+  accepted and forgotten teaches the customer the date is optional; and a written legal
+  boundary with rupee thresholds, because a consequence named and never applied is
+  worse than silence, and a notice is a legal act rather than a negotiating tactic.
+- **`investor-relations`** (`skills/investor-relations`, v1.0.0) - the founder-leverage
+  role, and the one that existed as a dead reference in three shipped skills since
+  4 November. It is deliberately *not* the fundraiser: `fundraising-analyst` builds the
+  model, the valuation and the term-sheet read; this role owns the monthly record and
+  the trust, which is a different craft with a different failure - a founder who goes
+  quiet for four months because the numbers are bad, and then needs that investor's
+  help in a bridge. Hence the non-negotiables: the same date every month, the same five
+  numbers with definitions, last month's promises closed out one by one, misses before
+  wins with the effect on the plan, and bad news to the lead within 24 hours in writing
+  with a plan and a date. No forward-looking promise anywhere in the skill, because a
+  missed date becomes the subject of the next call.
+- **Four shipped descriptions edited, four patch versions.** `finance-ops` and
+  `bookkeeper` both said receivables chasing was "backlog #55, not shipped" and
+  `fundraising-analyst` and `partnerships` said investor updates were "#62, not
+  shipped". Both statements became false today, and a false boundary inside a shipped
+  skill is worse than no boundary, so all four now route to the new employees and are
+  bumped to v1.0.1. This is the same debt `brand-strategist`, `bookkeeper`,
+  `hiring-manager`, `compliance-watch` and `fundraising-analyst` were each promoted to
+  clear on their own drop.
+- **`billing-support` (#54) stays queued with a written split from #55.** Both roles
+  would claim "dunning", so the line is now recorded in the backlog: a failed card
+  retry, a mandate failure or a subscription refund belongs to #54; a B2B invoice owed
+  by a business that has received the goods belongs to `collections-agent`. Written
+  before it ships, which is cheaper than fixing it after.
+
 ## 2026-11-06 - daily drop: five employees (v1.8.0)
 
 **The mix this drop: two revenue-facing, two operations, one founder-leverage.** The five that were already sitting on `next` - `voice-and-audio` (#29), `copy-editor` (#32), `influencer-outreach` (#43), `affiliate-manager` (#44) and `fundraising-analyst` (#63) - turned out to fill the 2-2-1 exactly, so no role was skipped for the mix and no role was skipped for a collision. What made this batch possible is that the two held roles finally have the boundary they were held for: #29 was waiting on a written split from `video-editor` and #32 on a split from `content-writer`, and both are now in the descriptions of the pairs rather than in a queue note.
