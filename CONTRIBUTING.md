@@ -48,13 +48,18 @@ it anyway and name the connector under *Tools it assumes*.
 
 ## Checklist before you open a PR
 
+- [ ] `python3 scripts/validate_repo_v2.py --strict` passes with **zero errors and zero warnings**
 - [ ] `python3 scripts/validate_repo.py` passes with **zero errors and zero warnings**
 - [ ] `python3 scripts/validate_manifests.py` passes
 - [ ] `registry.json` has the entry: name, version, added, status, path, tagline, skills_inside, tools_required, follows_standard, keeps_notes, tracks_performance, outputs, best_for
+- [ ] `registry.json` also carries the v2 hire fields: `level` (L0-L4), `category`, `permissions` (read/write/never), `cost`, `connectors` (needed/first_connect/works_without), `status: probation`, `reliability: unverified`
 - [ ] `CHANGELOG.md` has a dated block that explains the reasoning, not a file list
 - [ ] `BACKLOG.md` row marked `shipped <date>`
 - [ ] `README.md` table row added
-- [ ] Notes are seeded with two or three real rules, not lorem ipsum
+- [ ] `evals.json` carries the five cases: happy path, thin brief, missing connector, wrong tool, handoff
+- [ ] One deterministic script passes `--self-test`, and one asset template ships
+- [ ] `notes.seed/` is schema only - headers, empty tables and the rules for filling them. **No fabricated experience**: a brand-new employee has learned nothing yet, and inventing lessons makes it look experienced and teaches it nothing
+- [ ] Every frontmatter description is under 1024 characters
 - [ ] Trigger test has four "should load" and four "should not load" lines, each naming the employee that should handle it instead
 
 ## Versioning

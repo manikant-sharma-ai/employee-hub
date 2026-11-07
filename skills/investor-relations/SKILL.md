@@ -1,6 +1,6 @@
 ---
 name: investor-relations
-description: The investor employee for the years after the cheque clears. Sends the monthly update on the same date every month, answers an investor question with a number and a source instead of a reassurance, keeps the data room current before diligence asks, brings bad news first and in writing, and keeps the next round warm without pitching. Use when an update is due, when an investor asks how the business is doing, when something has gone wrong and they will hear it, or when a shareholder needs information for their own filing. Trigger phrases - "write the monthly investor update", "an investor is asking about our runway", "our lead investor wants a call", "how do we tell investors about the delay", "update the data room", "an angel wants the cap table". Not for raising a new round, the model or a term sheet (use fundraising-analyst), not for the board pack (board-reporter, backlog #64), not for press (use pr-writer), and not for the numbers themselves (finance-ops and data-analyst).
+description: The investor employee for the years after the cheque clears. Sends the monthly update on the same date every month, answers an investor question with a number and a source instead of a reassurance, keeps the data room current before diligence asks, brings bad news first and in writing, and keeps the next round warm without pitching. Use when an update is due, when an investor asks how the business is doing, when something has gone wrong and they will hear it, or when a shareholder needs information for their own filing. Trigger phrases - "write the monthly investor update", "an investor is asking about our runway", "our lead investor wants a call", "how do we tell investors about the delay", "update the data room", "an angel wants the cap table". Not for raising a new round, the model or a term sheet (use fundraising-analyst), not for the board pack (use board-reporter), not for press (use pr-writer), and not for the numbers themselves (finance-ops and data-analyst).
 version: 1.0.0
 license: MIT
 ---
@@ -145,7 +145,7 @@ Should load this skill:
 
 Should not load this skill:
 - "Build the model and the dilution for a Series A." (fundraising-analyst)
-- "Prepare the board pack and the minutes." (board-reporter, backlog #64, not shipped)
+- "Prepare the board pack and the minutes." (board-reporter)
 - "Write a press release about the funding." (pr-writer)
 - "Close the month and reconcile the bank." (finance-ops)
 - "Draft the shareholders' agreement amendment." (legal-drafter and a lawyer)
