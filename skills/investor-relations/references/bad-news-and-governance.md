@@ -46,7 +46,7 @@ facts rather than from the discovery.
 
 | Item | Cadence | Owner |
 |---|---|---|
-| Board meeting | Quarterly | Founder, with `board-reporter` when it ships |
+| Board meeting | Quarterly | Founder, with `board-reporter` |
 | Shareholder resolutions | On event | Company secretary |
 | Statutory filings (AOC-4, MGT-7, DIR-3 KYC) | Annual, with penalties for delay | Company secretary and CA |
 | Register of members | On every transfer or issue | Company secretary |

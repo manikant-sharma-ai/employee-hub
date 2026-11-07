@@ -1,0 +1,98 @@
+{
+  "skill": "board-reporter",
+  "version": "1.0.0",
+  "cases": [
+    {
+      "id": "happy-path",
+      "type": "happy_path",
+      "title": "Full pack for a quarterly board with accounts in hand",
+      "prompt": "Our board meets on 20 November. Here are the September management accounts, the trading summary, last meeting's minutes and the open action register. Build the pack.",
+      "must_include": [
+        "chair's summary with three decisions",
+        "page budget from pack_planner.py",
+        "section briefs with one named owner each",
+        "provenance line per table with source and date",
+        "action register read out with ageing",
+        "what I could not verify"
+      ],
+      "must_exclude": [
+        "a pack longer than the agreed page budget",
+        "numbers with no source",
+        "minutes that narrate the discussion"
+      ],
+      "pass_criteria": "Pack structure, page allocation and gap list are produced deterministically; every figure carries a source, a date and a status; the three decisions are stated before any section content."
+    },
+    {
+      "id": "thin-brief",
+      "type": "thin_brief",
+      "title": "One line and no papers",
+      "prompt": "board meeting next week, need the pack",
+      "must_include": [
+        "a request for the decisions to be taken",
+        "a request for last meeting's minutes and action register",
+        "a skeleton pack that can be filled",
+        "the assumption stated in the first line"
+      ],
+      "must_exclude": [
+        "an invented agenda",
+        "invented financials",
+        "a refusal to start"
+      ],
+      "pass_criteria": "Asks for the decisions and the papers in one message, starts on the skeleton and the chair's summary template immediately, and states plainly that nothing can be populated until the papers arrive."
+    },
+    {
+      "id": "missing-connector",
+      "type": "missing_connector",
+      "title": "No access to the accounts or the board folder",
+      "prompt": "Build the November board pack. I'll paste whatever you need.",
+      "must_include": [
+        "the three-line preflight answer (can do / connect / best tool)",
+        "Google Drive or the board folder named as the gap",
+        "the accounting system named as the gap",
+        "the part that is still deliverable without access"
+      ],
+      "must_exclude": [
+        "any invented revenue, cash or runway figure",
+        "a claim that a folder or ledger was read",
+        "a list of ten connectors"
+      ],
+      "pass_criteria": "Names the two gaps in priority order with what each unlocks, delivers the pack structure, the chair's summary template, the action register format and the resolution log, and does not fabricate a single number."
+    },
+    {
+      "id": "wrong-tool",
+      "type": "wrong_tool",
+      "title": "Asked for the investor update instead",
+      "prompt": "Write the monthly update my angels get, and while you're at it the board pack for the 20th.",
+      "must_include": [
+        "the monthly update routed to investor-relations",
+        "the board pack kept and delivered",
+        "the boundary stated in one line",
+        "no duplicate work across the two"
+      ],
+      "must_exclude": [
+        "an investor update written by this skill",
+        "a refusal to do the board pack",
+        "the same content produced twice"
+      ],
+      "pass_criteria": "Splits the request on the object - a recurring investor communication belongs to investor-relations, a governed decision document belongs here - and delivers only its own half."
+    },
+    {
+      "id": "handoff",
+      "type": "handoff",
+      "title": "Numbers and deck design belong to other employees",
+      "prompt": "Here's the pack outline. Fill in the financial pages and make the deck look good for the board.",
+      "must_include": [
+        "financial pages handed to finance-ops with a brief",
+        "the deck's visual system handed to presentation-designer",
+        "the provenance requirements passed with the brief",
+        "what this role keeps (structure, chair's summary, minutes, actions)"
+      ],
+      "must_exclude": [
+        "financial statements produced here",
+        "a brand or typography system invented here",
+        "a handoff with no deadline"
+      ],
+      "pass_criteria": "Writes two briefs - numbers to finance-ops, visual system to presentation-designer - each with the question, the page budget, the provenance requirement and a deadline, and keeps the governed document."
+    }
+  ]
+}

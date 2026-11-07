@@ -2,6 +2,95 @@
 
 One dated block per drop. What shipped, and why it is shaped that way.
 
+## 2026-11-07 - daily drop, second batch: five employees (v1.10.0)
+
+**The mix this drop: two revenue-facing, two operations, one founder-leverage.**
+A first batch of five shipped earlier today (v1.9.0); this is the batch behind it,
+built from the five roles that batch promoted to `next`, so the queue moved without
+a skip. What shaped it is that the hub already had the *inputs* of every one of
+these jobs and none of the *artefacts*: the numbers existed but nobody produced the
+one page, the stock sheet existed but nobody set a reorder point, the requirements
+document arrived but nobody built the compliance matrix, and the board pack was a
+promise two shipped employees had been making since 5 November.
+
+- **`marketplace-lister`** (`skills/marketplace-lister`, v1.0.0) - the revenue role
+  that puts a product in front of a buyer. The craft is not the description, it is
+  the record the channel validates: a title built from the words buyers actually
+  search inside the character limit, attributes complete to the category template,
+  HSN and GSTIN in the right shape, and a price tested down to contribution per
+  unit after commission, shipping and returns. `scripts/listing_qa.py` applies the
+  four channels' rejectable rules before an upload instead of after a rejection,
+  because the same missing attribute rejects 200 SKUs at once.
+- **`proposal-writer`** (`skills/proposal-writer`, v1.0.0) - the second revenue
+  role, and the one built around a hard truth: proposals are lost on a mandatory
+  line nobody answered, not on the writing. Every requirement in the buyer's
+  document is decomposed with the buyer's numbering preserved, marked mandatory or
+  desirable, and owned. `scripts/compliance_matrix.py --gate` exits non-zero until
+  every mandatory line is answered, and "partial" does not count as answered -
+  which is the check that stops a technically excellent bid being disqualified on
+  an annexure.
+- **`mis-reporter`** (`skills/mis-reporter`, v1.0.0) - the first operations role,
+  and the answer to the commonest Monday in a small business: three spreadsheets,
+  three revenue figures, no decision. Five to eight metrics, one definition card
+  each, one authoritative source each, and one flag rule applied mechanically -
+  five per cent on track, fifteen watch, beyond that off - implemented in
+  `scripts/mis_variance.py` so the colour is arithmetic rather than opinion. The
+  page carries two decisions and their owners; a page where everything is red names
+  nothing.
+- **`inventory-planner`** (`skills/inventory-planner`, v1.0.0) - the second
+  operations role, and the one that puts a number on the money sleeping in a
+  godown. Cover in days, reorder point from lead time and safety days, order
+  quantity from the review cycle, and a dead-stock list with the cash at cost and a
+  cure per SKU. `scripts/reorder_plan.py` counts stock on order in the position,
+  because a reorder that ignores stock in transit is how overstock is born, and it
+  refuses to plan on a sheet that assumes a zero lead time without saying so.
+- **`board-reporter`** (`skills/board-reporter`, v1.0.0) - the founder-leverage
+  slot, and the one that clears the last dead reference in the repo: `chief-of-staff`
+  and `investor-relations` have both been routing "the board pack" to "#64, not
+  shipped". The craft is subtraction - a page budget agreed before anyone writes,
+  one page per question the board will ask, provenance on every figure, minutes that
+  record decisions and not conversation, and an action register where three
+  meetings open is a decision rather than a delay. `scripts/pack_planner.py`
+  allocates the budget deterministically and flags every section without a source
+  before it is written.
+
+**New in the standard this drop (v2).** Five things became enforceable rather than
+advisory, and they are enforced by a new `scripts/validate_repo_v2.py --strict`,
+which is a superset of `scripts/validate_repo.py`:
+
+1. **A fixed section order in `SKILL.md`** - accountable for, handed before start,
+   tools, routing, workflow, standards, notes, output contract, guardrails, trigger
+   test. The order is what makes a skill readable by a stranger.
+2. **`evals.json` with five named cases** - happy path, thin brief, missing
+   connector, wrong tool, handoff. The five are the five ways an employee actually
+   fails, and writing them down is the cheapest quality gate in the repo.
+3. **`notes.seed/` is schema only.** The live `notes/` folder starts from the same
+   schema with **no fabricated experience** - empty tables and the rules for
+   filling them. Previous drops seeded notes with invented lessons, which made a
+   brand-new employee look experienced and taught nothing.
+4. **A deterministic script with a passing `--self-test`** in every skill, so the
+   arithmetic an employee relies on can be checked by anyone, offline, in one
+   command.
+5. **Registry fields for hire decisions**: `level` (L0-L4, defined in the registry),
+   `category`, `permissions` (read / write / never), `cost`, `connectors`
+   (needed / first_connect / works_without), `status: probation` and
+   `reliability: unverified`. An employee that has never been measured is not
+   described as reliable.
+
+The v2 checks apply in full to employees added from this drop onward; older
+employees are still validated on the v1 standard, because back-filling an evals
+file with invented cases would be exactly the fabrication this drop removed.
+
+**Standard wiring:** all five link `core/connector-preflight.md` before the first
+substantive step and `core/memory-and-notes.md` plus `core/performance-tracking.md`
+before the output contract. Each carries four craft references, one asset template,
+one deterministic script with a passing self-test, `evals.json` with five cases,
+and `notes.seed/` plus a `notes/` folder that is schema only.
+
+**State:** 47 employees, `validate_repo_v2.py --strict` 0 errors 0 warnings,
+`validate_repo.py` 0 errors 0 warnings, `validate_manifests.py` 0 errors at
+v1.10.0.
+
 ## 2026-11-07 - daily drop: five employees (v1.9.0)
 
 **The mix this drop: two revenue-facing, two operations, one founder-leverage.** All

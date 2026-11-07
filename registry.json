@@ -1,7 +1,7 @@
 {
   "name": "employee-hub",
   "display_name": "Employee Hub",
-  "version": "1.9.0",
+  "version": "1.10.0",
   "updated": "2026-11-07",
   "cadence": "5 employees daily at 06:00 IST",
   "standard": "core/employee-standard.md",
@@ -1724,6 +1724,446 @@
         "telling investors about a delay",
         "a data room a fund has asked to see"
       ]
+    },
+    {
+      "name": "board-reporter",
+      "version": "1.0.0",
+      "added": "2026-11-07",
+      "status": "probation",
+      "path": "skills/board-reporter",
+      "tagline": "The board employee. Assembles the pack a board actually reads - the chair's summary first, one page per question the board will ask, the financial and trading pages owned by the people who produced the numbers, minutes that record decisions rather than conversation, and an action register that carries every commitment to the next meeting.",
+      "skills_inside": [
+        "governance-boundaries",
+        "minutes-and-actions",
+        "numbers-and-provenance",
+        "pack-architecture"
+      ],
+      "tools_required": [
+        "Google Drive or OneDrive (board folder)",
+        "Google Docs or Word",
+        "Google Sheets or Excel",
+        "Google Calendar",
+        "Gmail or Outlook"
+      ],
+      "follows_standard": true,
+      "keeps_notes": true,
+      "tracks_performance": true,
+      "outputs": [
+        "the job in one line",
+        "the pack outline with page budget",
+        "the chair's summary",
+        "section briefs",
+        "the provenance table",
+        "the minutes",
+        "the action register",
+        "the resolution log entry",
+        "what could not be verified"
+      ],
+      "best_for": [
+        "a board or advisory meeting coming up",
+        "minutes overdue",
+        "a pack nobody read",
+        "the same action open three meetings running"
+      ],
+      "level": "L1",
+      "category": "founder-leverage",
+      "permissions": {
+        "read": [
+          "board folder",
+          "management accounts",
+          "last minutes and action register",
+          "calendar"
+        ],
+        "write": [
+          "drafts only - pack, minutes, action register, resolution log for the chair to sign"
+        ],
+        "never": [
+          "sign minutes",
+          "circulate a pack",
+          "record a resolution",
+          "give a legal or audit opinion"
+        ]
+      },
+      "cost": {
+        "tier": "low",
+        "estimate_inr_per_month": "0-400",
+        "note": "no paid connector required; cost is model time on a 12-16 page pack"
+      },
+      "connectors": {
+        "needed": [
+          "Google Drive or OneDrive (board folder)",
+          "Google Docs or Word",
+          "Google Sheets or Excel",
+          "Google Calendar",
+          "Gmail or Outlook"
+        ],
+        "first_connect": [
+          "Google Drive",
+          "Google Calendar"
+        ],
+        "works_without": [
+          "pack structure",
+          "page budget",
+          "chair's summary template",
+          "minutes template",
+          "action register",
+          "resolution log"
+        ]
+      },
+      "reliability": "unverified",
+      "evals": "evals.json (5 cases)"
+    },
+    {
+      "name": "mis-reporter",
+      "version": "1.0.0",
+      "added": "2026-11-07",
+      "status": "probation",
+      "path": "skills/mis-reporter",
+      "tagline": "The weekly numbers employee. Produces the one page that runs the business - five to eight metrics with the actual, the target, last month and a flag computed by one stated rule - so the Monday conversation is about the decision and not about whose spreadsheet is right.",
+      "skills_inside": [
+        "governance-boundaries",
+        "minutes-and-actions",
+        "numbers-and-provenance",
+        "pack-architecture"
+      ],
+      "tools_required": [
+        "Google Sheets or Excel",
+        "Zoho Books or Tally",
+        "the store or marketplace seller panel",
+        "GA4",
+        "Gmail or Outlook"
+      ],
+      "follows_standard": true,
+      "keeps_notes": true,
+      "tracks_performance": true,
+      "outputs": [
+        "the job in one line",
+        "the metric set with owners and targets",
+        "the definition cards",
+        "the one-page table",
+        "the notes strip",
+        "the two decisions this week",
+        "the reconciliation line",
+        "what could not be verified"
+      ],
+      "best_for": [
+        "a weekly or monthly review that needs numbers",
+        "two reports that disagree",
+        "too many dashboards",
+        "a metric that moved with no explanation"
+      ],
+      "level": "L2",
+      "category": "operations",
+      "permissions": {
+        "read": [
+          "sales and order exports",
+          "accounting system reports",
+          "store or marketplace panels",
+          "analytics"
+        ],
+        "write": [
+          "the published one-pager and the metric dictionary, after the owner's review"
+        ],
+        "never": [
+          "change a definition silently",
+          "restate a prior period silently",
+          "certify a number"
+        ]
+      },
+      "cost": {
+        "tier": "low",
+        "estimate_inr_per_month": "0-400",
+        "note": "spreadsheet-based; a BI tool is optional and not required for the page"
+      },
+      "connectors": {
+        "needed": [
+          "Google Sheets or Excel",
+          "Zoho Books or Tally",
+          "the store or marketplace seller panel",
+          "GA4",
+          "Gmail or Outlook"
+        ],
+        "first_connect": [
+          "Google Sheets",
+          "the accounting system"
+        ],
+        "works_without": [
+          "metric set",
+          "definition cards",
+          "flag rule",
+          "one-page layout",
+          "a page built from a pasted export"
+        ]
+      },
+      "reliability": "unverified",
+      "evals": "evals.json (5 cases)"
+    },
+    {
+      "name": "inventory-planner",
+      "version": "1.0.0",
+      "added": "2026-11-07",
+      "status": "probation",
+      "path": "skills/inventory-planner",
+      "tagline": "The stock employee. Turns a stock sheet and a sales history into a reorder plan the owner can act on - cover in days, reorder point from lead time and safety days, how much to order, what stocks out inside a fortnight, and which stock is dead money - with the arithmetic written down so two people get the same answer.",
+      "skills_inside": [
+        "cover-and-reorder-points",
+        "dead-and-slow-stock",
+        "safety-stock-and-lead-time",
+        "stock-sheet-discipline"
+      ],
+      "tools_required": [
+        "Google Sheets or Excel",
+        "Shopify or the marketplace seller panel",
+        "Zoho Inventory or Tally",
+        "Gmail or Outlook"
+      ],
+      "follows_standard": true,
+      "keeps_notes": true,
+      "tracks_performance": true,
+      "outputs": [
+        "the job in one line",
+        "the plan table with cover and reorder points",
+        "orders to raise after MOQ",
+        "stockout risk",
+        "dead and slow stock",
+        "the cash view",
+        "assumptions",
+        "what could not be verified"
+      ],
+      "best_for": [
+        "stock piling up",
+        "fast movers stocking out",
+        "planning before a season",
+        "working capital stuck in inventory"
+      ],
+      "level": "L2",
+      "category": "operations",
+      "permissions": {
+        "read": [
+          "stock sheet",
+          "sales history",
+          "purchase orders and lead times",
+          "unit costs"
+        ],
+        "write": [
+          "the reorder plan and worksheet - recommendations only, no purchase orders raised"
+        ],
+        "never": [
+          "raise a PO",
+          "write off stock",
+          "change a stock figure",
+          "give a valuation opinion"
+        ]
+      },
+      "cost": {
+        "tier": "low",
+        "estimate_inr_per_month": "0-400",
+        "note": "stdlib arithmetic on a sheet; no paid API in the loop"
+      },
+      "connectors": {
+        "needed": [
+          "Google Sheets or Excel",
+          "Shopify or the marketplace seller panel",
+          "Zoho Inventory or Tally",
+          "Gmail or Outlook"
+        ],
+        "first_connect": [
+          "Google Sheets"
+        ],
+        "works_without": [
+          "cover and reorder-point method",
+          "reorder worksheet",
+          "dead-stock list",
+          "cash view",
+          "a full plan from a pasted stock sheet"
+        ]
+      },
+      "reliability": "unverified",
+      "evals": "evals.json (5 cases)"
+    },
+    {
+      "name": "marketplace-lister",
+      "version": "1.0.0",
+      "added": "2026-11-07",
+      "status": "probation",
+      "path": "skills/marketplace-lister",
+      "tagline": "The listing employee for Indian marketplaces. Writes and checks product listings for IndiaMART, Amazon, Flipkart and GeM - a title built from the words buyers search, attributes that pass the channel's own validation, images that meet the minimum, HSN and GSTIN in the right shape, and a price that survives the commission - then flags what will be rejected before anything is uploaded.",
+      "skills_inside": [
+        "cover-and-reorder-points",
+        "dead-and-slow-stock",
+        "safety-stock-and-lead-time",
+        "stock-sheet-discipline"
+      ],
+      "tools_required": [
+        "Amazon Seller Central",
+        "Flipkart Seller Hub",
+        "IndiaMART seller panel",
+        "GeM seller portal",
+        "Google Sheets or Excel",
+        "Google Drive (images and certificates)"
+      ],
+      "follows_standard": true,
+      "keeps_notes": true,
+      "tracks_performance": true,
+      "outputs": [
+        "the job in one line",
+        "the title and the rejected versions",
+        "the attribute sheet",
+        "bullets and description",
+        "the QA result",
+        "the price working",
+        "the image brief",
+        "the upload file",
+        "what could not be verified"
+      ],
+      "best_for": [
+        "products that need to go live",
+        "a listing that keeps getting rejected",
+        "poor enquiries on a live listing",
+        "a catalogue to load in bulk"
+      ],
+      "level": "L2",
+      "category": "revenue-facing",
+      "permissions": {
+        "read": [
+          "seller panels",
+          "catalogue and cost data",
+          "HSN and GST records",
+          "certificate folder"
+        ],
+        "write": [
+          "listing sheets and upload-ready files; publishing needs the owner's approval in this version"
+        ],
+        "never": [
+          "publish without approval",
+          "invent an HSN, GSTIN or certificate",
+          "use a prohibited claim"
+        ]
+      },
+      "cost": {
+        "tier": "medium",
+        "estimate_inr_per_month": "0-1500",
+        "note": "seller panel access is free; image work and category approvals cost time, not API spend"
+      },
+      "connectors": {
+        "needed": [
+          "Amazon Seller Central",
+          "Flipkart Seller Hub",
+          "IndiaMART seller panel",
+          "GeM seller portal",
+          "Google Sheets or Excel",
+          "Google Drive (images and certificates)"
+        ],
+        "first_connect": [
+          "IndiaMART seller panel or Amazon Seller Central"
+        ],
+        "works_without": [
+          "titles and bullets",
+          "attribute sheets",
+          "QA check",
+          "price working",
+          "upload-ready CSV"
+        ]
+      },
+      "reliability": "unverified",
+      "evals": "evals.json (5 cases)"
+    },
+    {
+      "name": "proposal-writer",
+      "version": "1.0.0",
+      "added": "2026-11-07",
+      "status": "probation",
+      "path": "skills/proposal-writer",
+      "tagline": "The proposal employee. Turns a buyer's requirements document into a response that can be scored - a compliance matrix where every mandatory line has an owner and a status, a solution section written in the buyer's own words, evidence that survives a reference check, and pricing that matches the scope exactly - then says honestly whether the proposal is ready to send.",
+      "skills_inside": [
+        "compliance-matrix",
+        "pricing-and-win-loss",
+        "requirement-decomposition",
+        "solution-and-evidence"
+      ],
+      "tools_required": [
+        "Google Docs or Word",
+        "Google Sheets or Excel",
+        "Google Drive or OneDrive",
+        "Gmail or Outlook",
+        "a CRM"
+      ],
+      "follows_standard": true,
+      "keeps_notes": true,
+      "tracks_performance": true,
+      "outputs": [
+        "the job in one line",
+        "the requirement map",
+        "the compliance matrix",
+        "the readiness verdict",
+        "the response structure",
+        "the drafted solution sections",
+        "the commercial section",
+        "the evidence pack",
+        "what could not be verified"
+      ],
+      "best_for": [
+        "an RFP or large proposal to answer",
+        "proposals lost without feedback",
+        "a requirements document to turn into an offer",
+        "a bid that must not be disqualified"
+      ],
+      "level": "L1",
+      "category": "revenue-facing",
+      "permissions": {
+        "read": [
+          "requirements documents",
+          "certificates and evidence folder",
+          "CRM opportunity",
+          "price list"
+        ],
+        "write": [
+          "drafts only - the response, the compliance matrix and the commercial section for sign-off"
+        ],
+        "never": [
+          "submit a proposal",
+          "name a reference without agreement",
+          "commit to an SLA or price floor"
+        ]
+      },
+      "cost": {
+        "tier": "low",
+        "estimate_inr_per_month": "0-600",
+        "note": "document work; cost is model time per bid plus any portal fees"
+      },
+      "connectors": {
+        "needed": [
+          "Google Docs or Word",
+          "Google Sheets or Excel",
+          "Google Drive or OneDrive",
+          "Gmail or Outlook",
+          "a CRM"
+        ],
+        "first_connect": [
+          "Google Drive",
+          "Google Docs"
+        ],
+        "works_without": [
+          "requirement decomposition",
+          "compliance matrix",
+          "readiness gate",
+          "response structure",
+          "commercial framework"
+        ]
+      },
+      "reliability": "unverified",
+      "evals": "evals.json (5 cases)"
     }
-  ]
+  ],
+  "levels": {
+    "L0": "read-only: reads and explains, changes nothing",
+    "L1": "drafts for a human signature - documents that carry the company's name",
+    "L2": "produces and publishes artefacts within a written policy, after the owner's review",
+    "L3": "acts on connected systems unattended within a written policy and a spend limit",
+    "L4": "owns a budget or an irreversible external action; requires standing approval"
+  },
+  "reliability_states": {
+    "unverified": "no tracked task history yet - probation until the first scorecard",
+    "measured": "at least one monthly scorecard in notes/journal"
+  }
 }

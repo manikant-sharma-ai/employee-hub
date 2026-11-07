@@ -1,0 +1,97 @@
+{
+  "skill": "mis-reporter",
+  "version": "1.0.0",
+  "cases": [
+    {
+      "id": "happy-path",
+      "type": "happy_path",
+      "title": "Weekly page from a real export with targets",
+      "prompt": "Here's last week's sales export and our targets for November. Give me the Monday numbers.",
+      "must_include": [
+        "five to eight metrics with a target each",
+        "actual, target, prior and both variances",
+        "a flag from the stated rule, computed by the script",
+        "one clause per red",
+        "two decisions with owners and dates",
+        "the reconciliation line"
+      ],
+      "must_exclude": [
+        "more than eight metrics",
+        "hand-coloured flags",
+        "an invented cause for a movement"
+      ],
+      "pass_criteria": "Page is produced by mis_variance.py, every metric has an owner and a target, reds carry a clause, and at most two decisions are named."
+    },
+    {
+      "id": "thin-brief",
+      "type": "thin_brief",
+      "title": "Asked for numbers with nothing supplied",
+      "prompt": "give me the weekly numbers",
+      "must_include": [
+        "a request for the export and the targets in one message",
+        "a default metric set to start from",
+        "the assumption stated in the first line",
+        "the publishing day confirmed"
+      ],
+      "must_exclude": [
+        "invented figures",
+        "a refusal to start",
+        "a list of thirty metrics"
+      ],
+      "pass_criteria": "Proposes the default five-to-eight set with owners and targets as placeholders, asks for the export and targets in one message, and delivers the page skeleton and the flag rule immediately."
+    },
+    {
+      "id": "missing-connector",
+      "type": "missing_connector",
+      "title": "No access to the accounting system or the store",
+      "prompt": "Build this week's MIS. Everything is in Zoho Books and Shopify.",
+      "must_include": [
+        "the three-line preflight answer",
+        "Zoho Books named as the gap for money metrics",
+        "Shopify named as the gap for order metrics",
+        "the part still deliverable (dictionary, layout, flag rule, any pasted figures)"
+      ],
+      "must_exclude": [
+        "a revenue figure that was not supplied",
+        "a claim that Zoho or Shopify was read",
+        "a refusal to produce anything"
+      ],
+      "pass_criteria": "Names both gaps with what each unlocks, delivers the metric dictionary, the layout and the flag rule, and reports every unavailable metric as missing rather than estimating."
+    },
+    {
+      "id": "wrong-tool",
+      "type": "wrong_tool",
+      "title": "Asked for a one-off analysis of a spreadsheet",
+      "prompt": "Take this 40,000-row order dump and tell me which courier is costing me the most.",
+      "must_include": [
+        "the one-off analysis routed to data-analyst",
+        "the reason stated in one line (recurring page versus a question about one dataset)",
+        "the offer to add courier cost to the page if it is recurring"
+      ],
+      "must_exclude": [
+        "a full ad-hoc analysis produced here",
+        "a refusal without a route",
+        "a page of unrelated metrics"
+      ],
+      "pass_criteria": "Recognises a one-dataset question, routes it to data-analyst in one line, and offers to promote courier cost to a page metric if it is asked every week."
+    },
+    {
+      "id": "handoff",
+      "type": "handoff",
+      "title": "Numbers move to the board pack and the meeting",
+      "prompt": "The board pack is due Friday and I want the Monday review to run off the same numbers.",
+      "must_include": [
+        "the board pack handed to board-reporter with a provenance brief",
+        "the review meeting handed to chief-of-staff",
+        "the definition cards passed with both briefs",
+        "what this role keeps (the page and the dictionary)"
+      ],
+      "must_exclude": [
+        "the pack assembled here",
+        "the meeting run here",
+        "a handoff without the provenance requirement"
+      ],
+      "pass_criteria": "Sends the same definition cards to both employees, keeps the recurring page, and states that board-reporter owns the governed document and chief-of-staff owns the meeting."
+    }
+  ]
+}

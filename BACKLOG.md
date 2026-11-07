@@ -69,18 +69,18 @@ Nothing is removed without a note on why. A role that cannot clear the quality b
 | 61 | `audit-prep` | Evidence packs, schedules, query tracking for statutory audit | queued |
 | 62 | `investor-relations` | Updates, data room upkeep, investor question handling | shipped 2026-11-07 |
 | 63 | `fundraising-analyst` | Deck numbers, model, comparables, diligence prep | shipped 2026-11-06 |
-| 64 | `board-reporter` | Board pack assembly, minutes, action tracking | next |
-| 65 | `mis-reporter` | The weekly numbers that run the business, in one page | next |
+| 64 | `board-reporter` | Board pack assembly, minutes, action tracking | shipped 2026-11-07 |
+| 65 | `mis-reporter` | The weekly numbers that run the business, in one page | shipped 2026-11-07 |
 | 66 | `budget-planner` | Annual and project budgets, variance tracking, reforecast | queued |
 | 67 | `expense-auditor` | Policy checks, duplicate detection, vendor spend review | queued |
-| 68 | `vendor-payment-tracker` | Due dates, ageing, disputes, payment run prep | queued |
-| 69 | `inventory-planner` | Stock cover, reorder points, dead-stock identification | next |
-| 70 | `demand-forecaster` | Seasonality, baseline and promo uplift, forecast accuracy review | queued |
+| 68 | `vendor-payment-tracker` | Due dates, ageing, disputes, payment run prep | next |
+| 69 | `inventory-planner` | Stock cover, reorder points, dead-stock identification | shipped 2026-11-07 |
+| 70 | `demand-forecaster` | Seasonality, baseline and promo uplift, forecast accuracy review | next |
 | 71 | `warehouse-coordinator` | Pick-pack-ship coordination, stock counts, discrepancy handling | queued |
 | 72 | `logistics-coordinator` | Carrier selection, rate comparison, delivery exception handling | queued |
 | 73 | `returns-manager` | Return reasons, refund policy application, reverse logistics | queued |
 | 74 | `catalog-manager` | Product data, attributes, images, variants and taxonomy | queued |
-| 75 | `marketplace-lister` | Listings on IndiaMART, Amazon, Flipkart and GeM - titles, attributes, compliance | next |
+| 75 | `marketplace-lister` | Listings on IndiaMART, Amazon, Flipkart and GeM - titles, attributes, compliance | shipped 2026-11-07 |
 | 76 | `shopify-merchandiser` | Collections, bundles, discounts, on-site merchandising | queued |
 | 77 | `product-photographer-brief` | Shot lists, styling direction, retouch notes for product imagery | queued |
 | 78 | `packaging-designer` | Pack structure, label copy, statutory declarations, print-ready files | queued |
@@ -125,11 +125,11 @@ Nothing is removed without a note on why. A role that cannot clear the quality b
 | 117 | `safety-compliance` | Statutory registers, inspection readiness, incident reporting | queued |
 | 118 | `energy-auditor` | Consumption baselines, loss identification, saving cases with payback | queued |
 | 119 | `sales-engineer` | Technical qualification, solution design, demo scripts | queued |
-| 120 | `proposal-writer` | Winning proposals and RFP responses from a requirements document | next |
-| 121 | `tender-bidder` | GeM and state tender discovery, eligibility checks, bid assembly | queued |
+| 120 | `proposal-writer` | Winning proposals and RFP responses from a requirements document | shipped 2026-11-07 |
+| 121 | `tender-bidder` | GeM and state tender discovery, eligibility checks, bid assembly | next |
 | 122 | `govt-scheme-finder` | Matches a business to MSME, export and state incentive schemes | queued |
 | 123 | `ip-researcher` | Trademark and patent landscape checks, filing prep notes | queued |
-| 124 | `data-privacy-officer` | Data maps, consent records, DPDP readiness, breach playbook | queued |
+| 124 | `data-privacy-officer` | Data maps, consent records, DPDP readiness, breach playbook | next |
 | 125 | `accessibility-auditor` | WCAG checks on a site or app with prioritised fixes | queued |
 | 126 | `localisation-qa` | Checks translated UI and content for tone, length and errors | queued |
 | 127 | `doc-writer` | API and product documentation a new user can actually follow | queued |
@@ -146,7 +146,7 @@ Nothing is removed without a note on why. A role that cannot clear the quality b
 | 138 | `app-store-optimiser` | Store listing, screenshots, keyword and rating strategy | queued |
 | 139 | `youtube-strategist` | Channel positioning, titles, thumbnails brief, retention fixes | queued |
 | 140 | `scriptwriter` | Scripts for ads, explainers and reels with hook and payoff | queued |
-| 141 | `lead-qualifier` | Scores inbound leads against an ICP and routes them | queued |
+| 141 | `lead-qualifier` | Scores inbound leads against an ICP and routes them | next |
 | 142 | `crm-hygienist` | Dedupe, field standards, pipeline cleanup, stage definitions | queued |
 | 143 | `quote-generator` | Builds quotes from a price list with margins and terms applied | queued |
 | 144 | `follow-up-sequencer` | Timed follow-ups that reference the actual last conversation | queued |
@@ -200,6 +200,13 @@ Kept so that a later drop does not have to re-derive why the order moved.
 - **2026-11-07 - `webinar-producer` (#45) was held off `video-editor`'s trigger, not skipped for it.** `video-editor` ships "turn this webinar into clips" and that stays its job. The split is artefact against craft: `webinar-producer` owns the promise, the room and the timecoded repurposing *map*, `video-editor` executes the cut from it. Neither description asks for the other's work.
 - **2026-11-07 - `knowledge-base-writer` (#52) was separated from `content-writer` and `support-agent` on the reader, not the format.** Marketing prose for a prospect is `content-writer`; one reply to one customer is `support-agent`; the article that stops the next forty tickets is this one, and its test is the ticket count on the topic, not the page views.
 - **2026-11-07 - the next five are promoted for the mix again, not in queue order.** `board-reporter` (#64) is the founder-leverage slot and closes the reference `chief-of-staff` has carried since 5 November. `mis-reporter` (#65) and `inventory-planner` (#69) are the operations pair; `marketplace-lister` (#75) and `proposal-writer` (#120) are the revenue pair - one puts products in front of buyers, one turns a requirements document into a signed order. Everything between #33 and #40 stays queued: those build roles still need a businessman who has a product to build.
+
+- **2026-11-07 (second batch) - the five that were on `next` shipped, and the mix held without a skip.** `marketplace-lister` (#75) and `proposal-writer` (#120) are the revenue pair - one puts products in front of buyers, one turns a requirements document into a scored response. `mis-reporter` (#65) and `inventory-planner` (#69) are the operations pair, one producing the weekly page and one turning a stock sheet into reorders and released cash. `board-reporter` (#64) is the founder-leverage slot and clears the last dead reference of the previous batch: `chief-of-staff` and `investor-relations` both routed the board pack to "#64, not shipped" since 5 and 7 November.
+- **2026-11-07 (second batch) - `mis-reporter` (#65) needed a boundary against `chief-of-staff`, written on both sides.** `chief-of-staff` already shipped "a Monday review with the four numbers that move the business", so "the weekly numbers" would have fired both. The split is artefact against meeting: `mis-reporter` produces the one page and its definitions, `chief-of-staff` runs the review and chases what the page says needs a decision.
+- **2026-11-07 (second batch) - `board-reporter` (#64) is separated from `presentation-designer` on the object, not the format.** A board pack is a governed document with provenance, quorum, resolutions and minutes; `presentation-designer` owns the deck's arc and visual system. Both descriptions now say so, so "make the board deck" does not fire twice.
+- **2026-11-07 (second batch) - `inventory-planner` (#69) is separated from `procurement` and from the queued `demand-forecaster` (#70).** `procurement` chooses and negotiates with the supplier; this role decides how much to hold and when to reorder. `demand-forecaster` builds the demand curve from scratch; this role plans on the sales history it is handed and says so on the sheet.
+- **2026-11-07 (second batch) - `proposal-writer` (#120) is separated from three neighbours.** `tender-bidder` (#121) owns GeM and state tender discovery, eligibility and submission; `presentation-designer` owns the deck; `quote-generator` (#143) builds a one-page price from a rate card. This role owns the scored written response to a requirements document.
+- **2026-11-07 (second batch) - the next five are promoted for the mix.** `tender-bidder` (#121) and `lead-qualifier` (#141) are the revenue pair - one closes the boundary this drop opened, one stops good enquiries going cold. `demand-forecaster` (#70) and `vendor-payment-tracker` (#68) are the operations pair, both extending work that now ships. `data-privacy-officer` (#124) is the founder-leverage slot: DPDP readiness is a founder's legal exposure and nobody else's.
 
 ## The five-a-day mix
 

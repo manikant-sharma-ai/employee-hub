@@ -1,0 +1,97 @@
+{
+  "skill": "marketplace-lister",
+  "version": "1.0.0",
+  "cases": [
+    {
+      "id": "happy-path",
+      "type": "happy_path",
+      "title": "Forty SKUs listed on Amazon and Flipkart",
+      "prompt": "Here's our catalogue sheet with HSN, cost and images. List these 40 kurta SKUs on Amazon and Flipkart.",
+      "must_include": [
+        "a channel-specific title within the limit",
+        "every mandatory attribute filled or marked for confirmation",
+        "HSN and GSTIN validated",
+        "the listing_qa.py output with FAILs fixed",
+        "the price working down to contribution per unit",
+        "a variation family rather than 40 separate listings"
+      ],
+      "must_exclude": [
+        "one title reused across channels",
+        "an invented HSN code",
+        "a price with no commission or returns provision"
+      ],
+      "pass_criteria": "Two channel-specific sheets are produced, listing_qa.py passes or every FAIL is explained, and the price working shows the net realisation per unit."
+    },
+    {
+      "id": "thin-brief",
+      "type": "thin_brief",
+      "title": "One line, no product detail",
+      "prompt": "list my product on amazon",
+      "must_include": [
+        "a request for product, price, HSN and images in one message",
+        "the assumption stated in the first line",
+        "a title draft from the little that was given, marked for confirmation",
+        "the category template named as the deciding rule"
+      ],
+      "must_exclude": [
+        "an invented HSN or GSTIN",
+        "a claim the listing was uploaded",
+        "a refusal to start"
+      ],
+      "pass_criteria": "Drafts the title and attributes from what is given, marks every unconfirmed field, asks for the four missing inputs in one message, and states that nothing can be uploaded."
+    },
+    {
+      "id": "missing-connector",
+      "type": "missing_connector",
+      "title": "No seller panel access",
+      "prompt": "Put these SKUs live on IndiaMART and Amazon. I'll send the sheet.",
+      "must_include": [
+        "the three-line preflight answer",
+        "the seller panels named as the gap for upload and rejection reasons",
+        "the part still deliverable (sheet, QA, price working, copy)"
+      ],
+      "must_exclude": [
+        "a claim that a listing is live",
+        "an invented rejection reason",
+        "a refusal to produce the sheet"
+      ],
+      "pass_criteria": "Delivers the validated listing sheets and the upload-ready file, names both panels as the gap for going live, and never claims a listing was published."
+    },
+    {
+      "id": "wrong-tool",
+      "type": "wrong_tool",
+      "title": "Asked for the product photographs",
+      "prompt": "Write the listing and shoot the product photos for these 40 SKUs.",
+      "must_include": [
+        "the photography routed to product-photographer-brief",
+        "the listing written here",
+        "the image brief stated as the boundary",
+        "no duplicated work"
+      ],
+      "must_exclude": [
+        "a shot list produced as the main deliverable",
+        "a refusal to write the listing",
+        "an invented image set"
+      ],
+      "pass_criteria": "Writes the listing and a short image brief (count, what each shows, channel minimum), and routes the photography itself to product-photographer-brief in one line."
+    },
+    {
+      "id": "handoff",
+      "type": "handoff",
+      "title": "Taxonomy, tenders and merchandising",
+      "prompt": "Also fix our category taxonomy, find GeM tenders, and set up the discount calendar.",
+      "must_include": [
+        "taxonomy handed to catalog-manager",
+        "tender discovery handed to tender-bidder",
+        "the discount calendar handed to shopify-merchandiser or the channel owner",
+        "what this role keeps (the listing itself)"
+      ],
+      "must_exclude": [
+        "a tender shortlist produced here",
+        "a taxonomy redesign produced here",
+        "a handoff with no date"
+      ],
+      "pass_criteria": "Names the three employees with what each needs and by when, keeps the listing work, and states the statutory fields that must be confirmed before any of it ships."
+    }
+  ]
+}
