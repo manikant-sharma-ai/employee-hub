@@ -2,6 +2,81 @@
 
 One dated block per drop. What shipped, and why it is shaped that way.
 
+## 2026-11-10 - daily drop: five employees (v1.10.0)
+
+**The mix this drop: two revenue-facing, two operations, one founder-leverage.** All five
+were already on `next`, promoted on 7 November for exactly this mix, so nothing was skipped
+for the balance. What shaped the batch is that three of the five arrived with a boundary
+already written by a shipped employee - `chief-of-staff`, `investor-relations` and
+`presentation-designer` had all been pointing at `board-reporter` as "backlog #64, not
+shipped" since 5 November - and one of them, `seo-specialist`, was already routing a live
+trigger ("our listings on Amazon aren't showing up") to a role that did not exist. That
+debt is now cleared: nothing in the repo says "backlog #64" any more, and every one of the
+five is the destination a shipped employee already names.
+
+- **`board-reporter`** (`skills/board-reporter`, v1.0.0) - the founder-leverage role, and
+  the only employee in the hub whose deliverable is a *record* rather than a document. A
+  board fails in two places a skill file can fix: the pack informs for ninety pages and
+  asks for nothing, and the minutes summarise a conversation instead of recording a
+  decision. So the craft is arranged around those two - a decision list as page one, the
+  open actions as page two, one page per decision with the ask, the options, the
+  recommendation and the cost of deferring, and minutes written in operative language with
+  mover, dissent, abstention and conflict. It is scoped to the governance cycle, not the
+  deck: `presentation-designer` builds the slides and now says so, `investor-relations`
+  keeps the monthly letter, and `chief-of-staff` keeps the weekly rhythm. It also states,
+  in three places, that a CS or lawyer signs what this role drafts - a governance employee
+  that implies it filed something is worse than no governance employee.
+- **`mis-reporter`** (`skills/mis-reporter`, v1.0.0) - the first operations role, and the
+  one that had to be separated from `chief-of-staff` on the object rather than the topic:
+  the chief of staff runs the Monday review, this role produces the page that review runs
+  on. The design choice that carries it is plan-beside-actual in adjacent columns, because
+  a number without a plan answers nothing, and the second is the driver block - three
+  movements with a rupee effect each, not forty metrics with a percentage. Eight numbers
+  chosen from the business model rather than a template, a definitions sheet that is
+  versioned instead of quietly improved, and a data-quality footer naming what is
+  provisional. It is the only role in the hub whose anti-pattern list includes "two
+  numbers for the same thing", which is the failure that ends a report's authority.
+- **`inventory-planner`** (`skills/inventory-planner`, v1.0.0) - the second operations role,
+  built around the arithmetic most small businesses do on feel. Three choices shape it:
+  policy by class rather than by SKU, because 4,000 individual reorder points are 4,000
+  things nobody follows; lead time at P90 rather than the supplier's promise, because a
+  supplier who says 21 days and delivers in 45 is a 45-day supplier; and the cash effect on
+  every recommendation, because "₹8.2 lakh released this quarter" is a decision and "reduce
+  inventory" is a slogan. Dead stock gets a ladder with a price floor written before the
+  negotiation, since clearance in the main channel resets the price reference permanently.
+  It recommends and does not buy - `procurement` still owns the purchase - and it refuses
+  the statistical forecast, which is `demand-forecaster` (#70).
+- **`marketplace-lister`** (`skills/marketplace-lister`, v1.0.0) - the first revenue role,
+  and the one `seo-specialist` has been routing to since 3 November. The craft is arranged
+  around the diagnosis rather than the copy: most listings are invisible at the attribute
+  step, not the ranking step, so the attribute sheet is filled before the title is written,
+  and the search-term report gives four separate verdicts - indexing, title and image,
+  detail page, or expectation. It is also the only role in the hub with a fee stack in its
+  arithmetic: commission, closing fee, shipping, a category return provision and GST, with
+  the break-even price on every sheet, because a price copied from a competitor is a margin
+  someone else chose. Compliance is a pre-publish checklist with the certificate in hand,
+  not a post-rejection scramble, and the platform's rule beats the brand's preference every
+  time.
+- **`proposal-writer`** (`skills/proposal-writer`, v1.0.0) - the second revenue role, and
+  the only one whose input is a document that will be scored. The matrix is the proposal:
+  every requirement shredded into mandatory, scored, administrative or informational, with
+  a section and a page, and the red-team read is a second person finding each mandatory
+  answer in ten seconds. Win themes come from the published criteria with a proof point
+  attached, so a theme the evaluator cannot tick is deleted rather than softened. The
+  commercial section carries assumptions and exclusions as part of the offer, and the
+  submission section is a T-48 freeze with a checklist run by someone who did not write the
+  bid - because the commonest loss in this category is a better proposal that arrived at
+  15:01. It writes the response; it does not find tenders (`tender-bidder`, #121), set the
+  price (`pricing-analyst`) or sign anything (`legal-drafter`).
+
+**Shipped descriptions edited, not just new ones.** Three shipped employees carried a
+promise this hub could not keep until today, and all three were corrected in this commit:
+`chief-of-staff` and `investor-relations` no longer describe `board-reporter` as unshipped,
+and `presentation-designer` no longer ships the trigger "fix the board pack" - it ships
+"fix the board deck" and routes the papers, agenda, minutes and resolutions to
+`board-reporter`. That is the split the two roles needed: a deck is a visual argument, a
+pack is a governed record.
+
 ## 2026-11-07 - daily drop: five employees (v1.9.0)
 
 **The mix this drop: two revenue-facing, two operations, one founder-leverage.** All

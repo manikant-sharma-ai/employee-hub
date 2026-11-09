@@ -1,8 +1,8 @@
 {
   "name": "employee-hub",
   "display_name": "Employee Hub",
-  "version": "1.9.0",
-  "updated": "2026-11-07",
+  "version": "1.10.0",
+  "updated": "2026-11-10",
   "cadence": "5 employees daily at 06:00 IST",
   "standard": "core/employee-standard.md",
   "obligations": [
@@ -1723,6 +1723,223 @@
         "an investor asking about runway or burn",
         "telling investors about a delay",
         "a data room a fund has asked to see"
+      ]
+    },
+    {
+      "name": "board-reporter",
+      "version": "1.0.0",
+      "added": "2026-11-10",
+      "status": "stable",
+      "path": "skills/board-reporter",
+      "tagline": "The governance employee - a board cycle that runs itself: notice and agenda inside the statutory window, papers five days early with the decision on page one, minutes that record decisions and dissent rather than discussion, resolutions and the minute book kept correct, and every action carried forward until it closes.",
+      "skills_inside": [
+        "board-cycle-and-calendar",
+        "board-pack-architecture",
+        "minutes-and-resolutions",
+        "action-tracking-and-follow-through",
+        "director-questions-and-relations"
+      ],
+      "tools_required": [
+        "Google Docs or Word (pack, decision papers, minutes, resolutions)",
+        "Google Drive or OneDrive (board folder per meeting, minute book, resolution register)",
+        "Google Calendar (governance calendar, notice dates, pack dates, filing dates)",
+        "Gmail or Outlook (notice, circulation, pre-read notes)",
+        "Google Sheets or Excel (action register, director register, compliance calendar)",
+        "Zoho Books, Tally or QuickBooks (management accounts and cash position)",
+        "a PDF or e-sign tool (signed minutes, circular resolutions)",
+        "the company secretary or a CS firm (statutory forms, register of members, filings)"
+      ],
+      "follows_standard": true,
+      "keeps_notes": true,
+      "tracks_performance": true,
+      "outputs": [
+        "the meeting in six lines - entity, type, date, notice and its clause, quorum and its clause",
+        "the decision list - ask, owner, disposition per item",
+        "the open actions page with slippage",
+        "the pack index with page budget",
+        "one-page decision papers with a recommendation and the cost of deferring",
+        "draft minutes or a draft resolution",
+        "register updates and the forms the CS must file",
+        "what could not be verified"
+      ],
+      "best_for": [
+        "a quarterly board meeting that has to decide four things in ninety minutes",
+        "minutes that are still unwritten three weeks after the meeting",
+        "a capex that needs a resolution before the next scheduled board",
+        "a board pack that informs for ninety pages and decides nothing"
+      ]
+    },
+    {
+      "name": "mis-reporter",
+      "version": "1.0.0",
+      "added": "2026-11-10",
+      "status": "stable",
+      "path": "skills/mis-reporter",
+      "tagline": "The management reporting employee - the one page the business is run from: eight numbers against plan and last period, the three that moved with the driver and the rupee effect behind each, one decision, and a data-quality line that says how far to trust it. Same day, same definitions, from systems.",
+      "skills_inside": [
+        "mis-architecture",
+        "metric-definitions",
+        "variance-and-drivers",
+        "cadence-and-distribution",
+        "kpi-selection-by-model"
+      ],
+      "tools_required": [
+        "Google Sheets or Excel (MIS workbook, definitions sheet, variance log)",
+        "Zoho Books, Tally, QuickBooks or an ERP (revenue, cost, receivables, cash)",
+        "the bank feed or statement (the cash line, reconciled)",
+        "a CRM or the sales sheet (pipeline, bookings, conversion)",
+        "the ops or warehouse sheet, or the ecommerce back end (volume, cover, returns)",
+        "Google Docs or Word (monthly commentary, outside-reader pack)",
+        "Gmail or Outlook (distribution on the fixed day)",
+        "Google Calendar (send date and the monthly variance review)"
+      ],
+      "follows_standard": true,
+      "keeps_notes": true,
+      "tracks_performance": true,
+      "outputs": [
+        "the one-page numbers with plan, actual, last period and run rate",
+        "the three movements with a driver and a rupee effect each",
+        "the decision line",
+        "the data-quality line",
+        "the definitions sheet, versioned",
+        "the variance-to-plan table with owners",
+        "the outside-reader variant for lender, board or investor",
+        "what could not be verified"
+      ],
+      "best_for": [
+        "a weekly page nobody has built yet and everybody asks for",
+        "a 40-metric dashboard that nobody reads",
+        "two reports that disagree about revenue",
+        "the monthly pack a lender or board expects on a fixed date"
+      ]
+    },
+    {
+      "name": "inventory-planner",
+      "version": "1.0.0",
+      "added": "2026-11-10",
+      "status": "stable",
+      "path": "skills/inventory-planner",
+      "tagline": "The stock employee - reorder points and safety stock from real lead time and demand variability, an ABC-XYZ class with a policy per class rather than 4,000 individual ones, a dead-stock list with a rupee value and a laddered exit, a season build plan dated backwards from the selling window, and the working capital each decision frees or ties up.",
+      "skills_inside": [
+        "reorder-points-and-safety-stock",
+        "abc-xyz-classification",
+        "dead-and-slow-stock",
+        "seasonality-and-lead-time",
+        "working-capital-and-purchase-plan"
+      ],
+      "tools_required": [
+        "Google Sheets or Excel (stock file, sales history, policy sheet)",
+        "Zoho Inventory, Tally, QuickBooks or an ERP (on-hand, inward, outward, valuation)",
+        "the marketplace or D2C back end (sell-through, stock-outs, returns)",
+        "Gmail or Outlook (purchase plans to the buyer, liquidation offers)",
+        "Google Drive or OneDrive (policy sheet, dead-stock file, season plan)",
+        "Google Calendar (review cycle per class, season build dates, counts)",
+        "IndiaMART or a reseller list (only where dead stock has to move)"
+      ],
+      "follows_standard": true,
+      "keeps_notes": true,
+      "tracks_performance": true,
+      "outputs": [
+        "the ABC-XYZ classification with annual consumption value and cover",
+        "the policy sheet - reorder point, safety stock, order quantity, review cycle",
+        "this week's action list - order now, stop ordering",
+        "the dead and slow-stock table with provision and liquidation action",
+        "the season build plan with the last safe order date",
+        "the cash effect - inventory days and rupees",
+        "what could not be verified"
+      ],
+      "best_for": [
+        "4,000 SKUs and no reorder policy",
+        "out of stock on the best seller while everything else sits",
+        "cash stuck in inventory",
+        "a festive season that needs an order date, not an intention"
+      ]
+    },
+    {
+      "name": "marketplace-lister",
+      "version": "1.0.0",
+      "added": "2026-11-10",
+      "status": "stable",
+      "path": "skills/marketplace-lister",
+      "tagline": "The marketplace employee - a listing that is found, believed and bought on IndiaMART, Amazon.in, Flipkart or GeM: a title built from searched words, every attribute filled, images to each platform's spec, a price built from landed cost and the fee stack, compliance cleared before publishing, and a health check at 72 hours and 14 days.",
+      "skills_inside": [
+        "platform-mechanics",
+        "titles-attributes-and-search",
+        "listing-compliance-india",
+        "images-and-rich-content",
+        "listing-economics-and-pricing"
+      ],
+      "tools_required": [
+        "Amazon Seller Central, Flipkart Seller Hub, IndiaMART seller panel or GeM seller account",
+        "Google Sheets or Excel (listing sheet, price build-up, health tracker)",
+        "Google Drive or OneDrive (images at full resolution, certificates, brand assets)",
+        "Canva or Figma (to brief the designer, not to make the images)",
+        "Gmail or Outlook (buyer enquiries, platform notices, supplier confirmations)",
+        "the inventory system (stock that can actually ship)",
+        "the platform's reports (search terms, impressions, conversion)"
+      ],
+      "follows_standard": true,
+      "keeps_notes": true,
+      "tracks_performance": true,
+      "outputs": [
+        "the listing sheet - title, bullets, attributes, keywords, images, price",
+        "the title with the searched words it carries and its character count",
+        "five bullets, one objection each",
+        "the attribute table, every field filled or marked not applicable",
+        "the price build-up with break-even",
+        "the image brief for the designer",
+        "the compliance checklist",
+        "what could not be verified"
+      ],
+      "best_for": [
+        "a product that has to go live on a marketplace this week",
+        "a listing with impressions and no clicks",
+        "a catalogue rejected for a missing declaration",
+        "a price that was never checked against commission and returns"
+      ]
+    },
+    {
+      "name": "proposal-writer",
+      "version": "1.0.0",
+      "added": "2026-11-10",
+      "status": "stable",
+      "path": "skills/proposal-writer",
+      "tagline": "The bid employee - a requirements document shredded into a compliance matrix, three win themes taken from the scored criteria with a proof point each, a solution that answers every mandatory clause in the client's own words, commercials from a costed build-up with assumptions written, and a submission frozen at T-48 and checked by a second person.",
+      "skills_inside": [
+        "requirements-and-compliance-matrix",
+        "proposal-architecture",
+        "win-themes-and-proof",
+        "commercials-and-pricing",
+        "submission-and-deadlines"
+      ],
+      "tools_required": [
+        "Google Docs or Word (response, matrix, annexures)",
+        "Google Sheets or Excel (compliance matrix, cost build-up, submission checklist)",
+        "Google Drive or OneDrive (evidence library - CVs, certificates, project summaries)",
+        "Gmail or Outlook (clarifications, submission confirmations)",
+        "the client's portal or email (the actual submission channel)",
+        "a PDF tool (locked, page-counted, bookmarked final file)",
+        "Zoho Books, Tally or a cost sheet (the cost base)",
+        "the CRM (relationship history, the incumbent)"
+      ],
+      "follows_standard": true,
+      "keeps_notes": true,
+      "tracks_performance": true,
+      "outputs": [
+        "the bid in six lines",
+        "the compliance matrix with status and page references",
+        "three or four win themes with proof points",
+        "the response in the client's structure and page budget",
+        "the commercial response with options, assumptions and exclusions",
+        "the deviation register",
+        "the submission checklist",
+        "what could not be verified"
+      ],
+      "best_for": [
+        "an RFP that closes in ten days",
+        "proposals that keep losing and nobody knows why",
+        "a 60-question vendor questionnaire",
+        "a bid that has to be priced with two options and stated assumptions"
       ]
     }
   ]
