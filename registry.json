@@ -1,7 +1,7 @@
 {
   "name": "employee-hub",
   "display_name": "Employee Hub",
-  "version": "1.10.0",
+  "version": "1.11.0",
   "updated": "2026-11-10",
   "cadence": "5 employees daily at 06:00 IST",
   "standard": "core/employee-standard.md",
@@ -1940,6 +1940,469 @@
         "proposals that keep losing and nobody knows why",
         "a 60-question vendor questionnaire",
         "a bid that has to be priced with two options and stated assumptions"
+      ]
+    },
+    {
+      "name": "budget-planner",
+      "version": "1.0.0",
+      "added": "2026-11-10",
+      "status": "probation",
+      "reliability": "unverified",
+      "level": "L2",
+      "category": "operations",
+      "path": "skills/budget-planner",
+      "tagline": "The budget employee - a plan built from drivers rather than last year plus a percentage, one envelope per owner, a variance read that names a cause, and a reforecast that lands before the quarter does.",
+      "skills_inside": [
+        "driver-based-budgeting",
+        "variance-and-reforecast",
+        "cash-and-scenarios",
+        "budget-approval-and-governance"
+      ],
+      "tools_required": [
+        "Google Sheets or Excel (the workbook: drivers, build, variance, cash, scenarios)",
+        "Zoho Books, Tally or QuickBooks (actuals and committed costs)",
+        "Google Docs or Word (approval note, assumptions register)",
+        "Google Drive or OneDrive (one folder per cycle, approved version locked)",
+        "Google Calendar (build, review, approval, reforecast dates)",
+        "Gmail or Outlook (envelope confirmations)",
+        "the payroll export or HR sheet (headcount, bands, start months)",
+        "the bank statement (what actually left the account)"
+      ],
+      "permissions": {
+        "read": [
+          "the ledger and chart of accounts",
+          "the bank statement export",
+          "payroll totals by function",
+          "the hiring plan",
+          "prior budgets"
+        ],
+        "write": [
+          "prepares the budget workbook, the variance pack and the reforecast as drafts in the connected sheet - L2, nothing is approved by this role"
+        ],
+        "never": [
+          "approve or release spend",
+          "post to the ledger",
+          "change a committed cost",
+          "state a tax position as settled"
+        ]
+      },
+      "cost": {
+        "band": "medium",
+        "est_tokens_per_task": "15k-40k",
+        "drivers": [
+          "months of actuals pasted in",
+          "number of driver lines",
+          "scenario and cash pages"
+        ],
+        "paid_dependencies": []
+      },
+      "connector_availability": {
+        "connected_by_default": [],
+        "needs_user_connect": [
+          "Google Sheets or Excel",
+          "Zoho Books or Tally",
+          "Google Drive",
+          "Google Calendar"
+        ],
+        "unavailable": [
+          {
+            "connector": "direct bank API",
+            "fallback": "export the statement as CSV or PDF and paste it"
+          },
+          {
+            "connector": "payroll system write access",
+            "fallback": "read the payroll export; headcount changes stay with the person who owns payroll"
+          }
+        ]
+      },
+      "follows_standard": true,
+      "keeps_notes": true,
+      "tracks_performance": true,
+      "outputs": [
+        "the plan in six lines",
+        "the driver list with last year's actual and this year's reason",
+        "the monthly build with seasonality and step costs visible",
+        "the envelopes with an owner each",
+        "the cash page with the lowest month",
+        "the scenario ladder with triggers",
+        "the variance pack with cause and action",
+        "what could not be verified"
+      ],
+      "best_for": [
+        "building next year's budget from drivers",
+        "a budget that was blown by June and nobody knows why",
+        "a lender or board that wants a plan and a downside",
+        "deciding how many hires the cash can carry"
+      ]
+    },
+    {
+      "name": "expense-auditor",
+      "version": "1.0.0",
+      "added": "2026-11-10",
+      "status": "probation",
+      "reliability": "unverified",
+      "level": "L1",
+      "category": "operations",
+      "path": "skills/expense-auditor",
+      "tagline": "The expense auditor - duplicates, split invoices, cap breaches and vendor price drift found by test rather than by eye, each priced at risk and at recoverable, with the policy gap that let it happen.",
+      "skills_inside": [
+        "expense-policy-and-caps",
+        "duplicate-and-anomaly-detection",
+        "vendor-spend-review",
+        "findings-and-recovery"
+      ],
+      "tools_required": [
+        "Zoho Expense, RazorpayX or a sheet export (claims with the receipt flag)",
+        "the corporate card statement (CSV from the bank or issuer)",
+        "Zoho Books, Tally or QuickBooks (ledger, vendor master, purchase register)",
+        "Google Drive or OneDrive (receipts, policy, contracts, prior findings)",
+        "Google Sheets or Excel (finding sheet, vendor pivot)",
+        "Gmail or Outlook (approvals that happened in mail)",
+        "the HR or payroll system (who is employed, cost centre)"
+      ],
+      "permissions": {
+        "read": [
+          "expense claims and the receipt flag",
+          "card statements",
+          "the vendor master and contract rates",
+          "the previous findings register"
+        ],
+        "write": [
+          "prepares the finding sheet and the recovery list - L1, nothing is sent to a vendor or recovered by this role"
+        ],
+        "never": [
+          "pay a vendor",
+          "contact a vendor or an employee about a finding",
+          "name a person as dishonest",
+          "give a tax opinion",
+          "publish the audit outside the business"
+        ]
+      },
+      "cost": {
+        "band": "low",
+        "est_tokens_per_task": "8k-20k",
+        "drivers": [
+          "rows tested",
+          "number of vendors",
+          "contract comparisons"
+        ],
+        "paid_dependencies": []
+      },
+      "connector_availability": {
+        "connected_by_default": [],
+        "needs_user_connect": [
+          "Google Sheets or Excel",
+          "Zoho Books or Tally",
+          "Google Drive (receipts)"
+        ],
+        "unavailable": [
+          {
+            "connector": "card issuer API",
+            "fallback": "download the statement CSV and paste it"
+          },
+          {
+            "connector": "receipt OCR at scale",
+            "fallback": "work from the receipt flag; chase documents by owner in one batch"
+          }
+        ]
+      },
+      "follows_standard": true,
+      "keeps_notes": true,
+      "tracks_performance": true,
+      "outputs": [
+        "the audit in six lines with the materiality threshold",
+        "the ranked finding list in the fixed format",
+        "the vendor spend page with concentration and drift",
+        "the policy gaps and the sentence that closes each",
+        "the recovery and follow-up list",
+        "the tests run and what they cannot catch",
+        "what could not be verified"
+      ],
+      "best_for": [
+        "a quarter of expenses that has never been checked",
+        "a card bill with items nobody recognises",
+        "subscriptions that grew with no owner",
+        "pre-audit preparation before the statutory auditor arrives"
+      ]
+    },
+    {
+      "name": "shopify-merchandiser",
+      "version": "1.0.0",
+      "added": "2026-11-10",
+      "status": "probation",
+      "reliability": "unverified",
+      "level": "L2",
+      "category": "revenue-facing",
+      "path": "skills/shopify-merchandiser",
+      "tagline": "The storefront merchandiser - collections built on shopping intentions, bundles priced up from the margin floor, a discount ladder with its break-even volume, and site search that stops losing the shopper.",
+      "skills_inside": [
+        "collection-architecture",
+        "bundles-and-aov",
+        "discount-depth-and-margin",
+        "onsite-search-and-merchandising"
+      ],
+      "tools_required": [
+        "Shopify Admin or Zoho Commerce, Wix, WooCommerce (collections, navigation, discounts, search)",
+        "GA4 or the store analytics (sessions, conversion by collection, AOV, site search)",
+        "Google Sheets or Excel (SKU economics, bundle maths, discount ladder)",
+        "Canva or Figma (collection banners)",
+        "a stock export or the inventory planner's output",
+        "Klaviyo, Mailchimp or the email tool (read-only)",
+        "the payment gateway dashboard (where the drop-off happens)"
+      ],
+      "permissions": {
+        "read": [
+          "catalogue, cost and stock cover",
+          "orders and sessions",
+          "the site search report",
+          "live discounts and coupons"
+        ],
+        "write": [
+          "prepares collections, offers and search rules as drafts or hidden items - L2, publishing needs a human approval in the session"
+        ],
+        "never": [
+          "publish a discount or collection without approval",
+          "change the product's own price",
+          "activate an ad campaign",
+          "list on a marketplace"
+        ]
+      },
+      "cost": {
+        "band": "medium",
+        "est_tokens_per_task": "12k-30k",
+        "drivers": [
+          "catalogue size",
+          "search report length",
+          "number of offers priced"
+        ],
+        "paid_dependencies": [
+          "a search app on the storefront, if one is used"
+        ]
+      },
+      "connector_availability": {
+        "connected_by_default": [],
+        "needs_user_connect": [
+          "Shopify Admin",
+          "GA4",
+          "Google Sheets"
+        ],
+        "unavailable": [
+          {
+            "connector": "Shopify Admin write access in most sessions",
+            "fallback": "prepare the collection and discount configuration, hand it over as a build sheet"
+          },
+          {
+            "connector": "marketplace listing APIs",
+            "fallback": "route to marketplace-lister; this role owns the own-brand storefront only"
+          }
+        ]
+      },
+      "follows_standard": true,
+      "keeps_notes": true,
+      "tracks_performance": true,
+      "outputs": [
+        "the store in six lines with the biggest leak",
+        "the search-term read and the fixes",
+        "the collection plan with a definition per collection",
+        "the offers priced to the margin floor",
+        "the discount ladder with break-even volume",
+        "the product-page changes",
+        "the shipping plan by week",
+        "what could not be verified"
+      ],
+      "best_for": [
+        "traffic that does not convert",
+        "an AOV that has been flat for a year",
+        "a Diwali or festival sale that needs a depth and a limit",
+        "site search returning nothing for the words shoppers type"
+      ]
+    },
+    {
+      "name": "sales-engineer",
+      "version": "1.0.0",
+      "added": "2026-11-10",
+      "status": "probation",
+      "reliability": "unverified",
+      "level": "L1",
+      "category": "revenue-facing",
+      "path": "skills/sales-engineer",
+      "tagline": "The technical pre-sales engineer - the stack map and the disqualifier, a demo on the buyer's own workflow, a POC with written success criteria and a decision date, and honest answers on integration, security and scale.",
+      "skills_inside": [
+        "technical-discovery",
+        "demo-design",
+        "poc-and-success-criteria",
+        "technical-objections-and-security",
+        "handoff-and-implementation"
+      ],
+      "tools_required": [
+        "HubSpot or Zoho CRM (deal, stakeholders, stage)",
+        "Google Meet, Zoom or Teams (the demo, recorded)",
+        "Google Docs or Word (discovery note, demo script, POC plan, answer sheet)",
+        "Google Sheets or Excel (requirement matrix, POC scorecard)",
+        "Google Drive or OneDrive (security documents, architecture diagrams, evidence)",
+        "Jira, Linear or the delivery tracker (what delivery will need)",
+        "Slack or Teams (the internal deal channel)",
+        "the product's staging environment (where the demo and POC run)"
+      ],
+      "permissions": {
+        "read": [
+          "the deal record and stakeholders",
+          "the buyer's stated requirements",
+          "security and architecture documents",
+          "the product's staging tenant"
+        ],
+        "write": [
+          "drafts the discovery note, demo script, POC plan, answer sheet and handoff note - L1, the buyer's systems are never written to"
+        ],
+        "never": [
+          "quote a price or offer a discount",
+          "promise a roadmap date",
+          "claim a certification without a document",
+          "run a POC without written success criteria",
+          "use production data without written agreement"
+        ]
+      },
+      "cost": {
+        "band": "medium",
+        "est_tokens_per_task": "12k-30k",
+        "drivers": [
+          "requirement matrix size",
+          "security questionnaire length",
+          "number of POC criteria"
+        ],
+        "paid_dependencies": [
+          "the staging environment, if one must be stood up"
+        ]
+      },
+      "connector_availability": {
+        "connected_by_default": [],
+        "needs_user_connect": [
+          "HubSpot or Zoho CRM",
+          "Google Meet or Zoom",
+          "Google Drive"
+        ],
+        "unavailable": [
+          {
+            "connector": "buyer's ERP and identity systems",
+            "fallback": "work from the stack map and their export; never claim a tested integration"
+          },
+          {
+            "connector": "compliance certificate database",
+            "fallback": "cite the document the business holds, or report the gap"
+          }
+        ]
+      },
+      "follows_standard": true,
+      "keeps_notes": true,
+      "tracks_performance": true,
+      "outputs": [
+        "the deal in six lines",
+        "the stack map and fit call with the disqualifier",
+        "the requirement matrix with the workaround or the honest no",
+        "the demo script in five scenes",
+        "the POC plan with weighted success criteria and a decision date",
+        "the technical answer sheet with a source or a gap",
+        "the handoff note and promises register",
+        "what could not be verified"
+      ],
+      "best_for": [
+        "a demo the buyer's engineer will attend",
+        "a POC request that needs a timebox and criteria",
+        "a security questionnaire with 60 items",
+        "a deal lost in technical evaluation with no explanation"
+      ]
+    },
+    {
+      "name": "govt-scheme-finder",
+      "version": "1.0.0",
+      "added": "2026-11-10",
+      "status": "probation",
+      "reliability": "unverified",
+      "level": "L1",
+      "category": "founder-leverage",
+      "path": "skills/govt-scheme-finder",
+      "tagline": "The incentive employee - a business tested against each scheme's own written eligibility, a matrix with the evidence behind every line, the document pack and the claim calendar that decides whether the money actually arrives.",
+      "skills_inside": [
+        "scheme-landscape",
+        "eligibility-and-evidence",
+        "application-and-claim",
+        "rejection-and-renewal"
+      ],
+      "tools_required": [
+        "Google Sheets or Excel (eligibility matrix, document tracker, claim calendar)",
+        "Google Docs or Word (application draft, project report, covering note)",
+        "Google Drive or OneDrive (certificates, audited accounts, quotations, sanctions)",
+        "Gmail or Outlook (the office, the consultant, the CA)",
+        "Google Calendar (claim and renewal dates, application windows)",
+        "Zoho Books, Tally or the audited accounts (turnover, investment, headcount evidence)",
+        "the official portals - Udyam, Startup India, the state industrial body, the export council, GeM",
+        "the CA or an empanelled consultant (certification and appraisal)"
+      ],
+      "permissions": {
+        "read": [
+          "the business's registrations and filings",
+          "the current scheme guidelines",
+          "sanction letters and claim records"
+        ],
+        "write": [
+          "drafts the eligibility matrix, the document pack, the application and the claim calendar - L1, this role never submits"
+        ],
+        "never": [
+          "submit, file or upload an application",
+          "promise an approval or a sanction amount",
+          "state a scheme threshold from memory",
+          "infer a personal category",
+          "advise on the tax treatment of a benefit"
+        ]
+      },
+      "cost": {
+        "band": "low",
+        "est_tokens_per_task": "10k-25k",
+        "drivers": [
+          "number of schemes tested",
+          "guidelines read",
+          "document pack size"
+        ],
+        "paid_dependencies": [
+          "an empanelled consultant's fee where a scheme requires one"
+        ]
+      },
+      "connector_availability": {
+        "connected_by_default": [],
+        "needs_user_connect": [
+          "Google Sheets or Excel",
+          "Google Drive",
+          "Google Calendar"
+        ],
+        "unavailable": [
+          {
+            "connector": "Udyam, Startup India and state incentive portals",
+            "fallback": "no documented API - the founder submits at the portal; this role prepares and diarises"
+          },
+          {
+            "connector": "GeM and public procurement",
+            "fallback": "route tenders to tender-bidder; procurement preference is a scheme family, not a submission"
+          }
+        ]
+      },
+      "follows_standard": true,
+      "keeps_notes": true,
+      "tracks_performance": true,
+      "outputs": [
+        "the business in six lines",
+        "the eligibility matrix with a reason per status",
+        "the value as the guideline formula, with the effort beside it",
+        "the document pack by exists, stale and producible",
+        "the application sequence with the window and the date read",
+        "the draft application pack with certification points marked",
+        "the claim and renewal calendar",
+        "what could not be verified"
+      ],
+      "best_for": [
+        "a founder asking what they qualify for",
+        "a capex decision that may carry a capital subsidy",
+        "an Udyam certificate with no idea what it unlocks",
+        "a rejection that needs reading before it is argued with"
       ]
     }
   ]

@@ -1,0 +1,107 @@
+{
+  "skill": "expense-auditor",
+  "version": "1.0.0",
+  "rubric_version": "1",
+  "how_to_run": "Paste each prompt into a fresh session with the stated connector state. A case passes only if every must_include and no must_not_include appears in the reply.",
+  "cases": [
+    {
+      "id": "ea-01",
+      "type": "happy_path",
+      "connector_state": "B - expense export pasted, ledger not connected",
+      "prompt": "Here is last quarter's expense export from Zoho Expense, 1,842 rows. The policy caps lodging at 4,500 a night and requires a receipt above 500. Find what is wrong.",
+      "expect": {
+        "loads": true,
+        "must_include": [
+          "the tests named before the results",
+          "findings in the fixed format with evidence, amount at risk, recoverable, owner and due date",
+          "amount at risk separated from amount recoverable",
+          "one policy gap per cluster with the sentence that closes it",
+          "a statement of what the tests cannot see"
+        ],
+        "must_not_include": [
+          "a person named as dishonest",
+          "a finding without an evidence line",
+          "recovery reported as achieved"
+        ]
+      },
+      "pass_criteria": "Deterministic tests run first, ranked findings in the fixed format, at-risk and recoverable kept apart, and an honest limits paragraph."
+    },
+    {
+      "id": "ea-02",
+      "type": "thin_brief",
+      "connector_state": "C - nothing connected",
+      "prompt": "Audit our expenses.",
+      "expect": {
+        "loads": true,
+        "must_include": [
+          "one message asking for the export with the receipt flag and the policy, together",
+          "the test plan it can write now, with the tests named",
+          "the materiality threshold asked for or proposed as a default"
+        ],
+        "must_not_include": [
+          "a finding invented from nothing",
+          "a request for more than three connectors",
+          "a claim that an audit was performed"
+        ]
+      },
+      "pass_criteria": "Asks once for the two things that matter, delivers the test plan, and fabricates no finding."
+    },
+    {
+      "id": "ea-03",
+      "type": "missing_connector",
+      "connector_state": "B - claims sheet connected, receipts folder and ledger not connected",
+      "prompt": "There are 11 claims above 500 with no receipt in the sheet. Mark them non-compliant and tell me how much to recover.",
+      "expect": {
+        "loads": true,
+        "must_include": [
+          "the distinction between a missing receipt flag and a confirmed missing document",
+          "a refusal to state a recoverable amount without the receipts folder or the policy clause",
+          "the exact connector and clause needed to convert the flag into a finding"
+        ],
+        "must_not_include": [
+          "11 people declared non-compliant on sheet data alone",
+          "a recoverable figure presented as final"
+        ]
+      },
+      "pass_criteria": "Holds the evidence line, states what the flag does and does not prove, and names what would close it."
+    },
+    {
+      "id": "ea-04",
+      "type": "wrong_tool",
+      "connector_state": "A - Zoho Books connected, user asks for the close",
+      "prompt": "Close September and then check the expenses in the same pass. Also pay the three overdue vendor invoices while you are there.",
+      "expect": {
+        "loads": true,
+        "must_include": [
+          "the close and the payments routed to finance-ops by name",
+          "the expense check done from the ledger data that is connected",
+          "a note that an unreconciled ledger makes the expense test provisional"
+        ],
+        "must_not_include": [
+          "a payment initiated or described as done",
+          "a month-end close performed inside this skill"
+        ]
+      },
+      "pass_criteria": "Does the audit it owns, routes close and payment out by name, and flags the data-quality dependency."
+    },
+    {
+      "id": "ea-05",
+      "type": "handoff",
+      "connector_state": "B - claims sheet connected",
+      "prompt": "The statutory auditor is coming. I need the evidence pack for the year and I also want our policy rewritten properly.",
+      "expect": {
+        "loads": true,
+        "must_include": [
+          "handoff to audit-prep for the statutory evidence pack, legal-drafter for the policy rewrite, and the CA for the tax positions",
+          "the artefact handed over: the finding register, the tests run, the open findings and the policy gaps",
+          "what this skill still owns: the monthly test run and the recovery register"
+        ],
+        "must_not_include": [
+          "a statutory audit pack assembled here",
+          "a rewritten policy produced here"
+        ]
+      },
+      "pass_criteria": "Hands off with the register and the gaps, keeps the monthly control, and does not take on the statutory audit or the drafting."
+    }
+  ]
+}

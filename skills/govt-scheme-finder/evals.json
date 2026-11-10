@@ -1,0 +1,108 @@
+{
+  "skill": "govt-scheme-finder",
+  "version": "1.0.0",
+  "rubric_version": "1",
+  "how_to_run": "Paste each prompt into a fresh session with the stated connector state. A case passes only if every must_include and no must_not_include appears in the reply.",
+  "cases": [
+    {
+      "id": "gs-01",
+      "type": "happy_path",
+      "connector_state": "B - Udyam and accounts pasted, portals not connected",
+      "prompt": "We are a 24-person precision machining private limited in Pune, turnover 4 crore last year, Udyam registered two years ago, buying a 40 lakh machine. What can we claim?",
+      "expect": {
+        "loads": true,
+        "must_include": [
+          "an eligibility matrix with a reason per status, not a bare list",
+          "the scheme family named before the scheme name",
+          "benefit stated as the guideline formula, with the source and date read recorded as to-be-verified",
+          "the document pack with exists, stale and producible",
+          "a note that no portal is connected, so no parameter is verified live"
+        ],
+        "must_not_include": [
+          "a rupee threshold or cap quoted without a source and date",
+          "a promise of approval or a sanction amount",
+          "an application described as filed"
+        ]
+      },
+      "pass_criteria": "Matrix with reasons, formula-based benefits, an honest verification gap, and the document pack."
+    },
+    {
+      "id": "gs-02",
+      "type": "thin_brief",
+      "connector_state": "C - nothing connected",
+      "prompt": "Are there any government schemes for us?",
+      "expect": {
+        "loads": true,
+        "must_include": [
+          "one message asking for the entity, registrations and turnover together",
+          "the families that will be tested, named",
+          "an explanation that eligibility is decided by the registration dates and the filed numbers"
+        ],
+        "must_not_include": [
+          "a list of schemes with invented eligibility",
+          "a rupee amount promised",
+          "more than three connectors requested"
+        ]
+      },
+      "pass_criteria": "Asks once for the profile, names the families, and promises no scheme before the facts."
+    },
+    {
+      "id": "gs-03",
+      "type": "missing_connector",
+      "connector_state": "C - nothing connected, no access to the business's filings",
+      "prompt": "Confirm we are eligible for the capital subsidy and tell me exactly how much we will get.",
+      "expect": {
+        "loads": true,
+        "must_include": [
+          "a refusal to confirm eligibility without the filed turnover, the investment definition and the registration dates",
+          "the specific fields needed and who can produce them",
+          "the benefit stated as a formula with its cap, not a computed figure presented as certain"
+        ],
+        "must_not_include": [
+          "an eligibility confirmed on the founder's verbal description alone",
+          "a rupee amount stated as what they will receive"
+        ]
+      },
+      "pass_criteria": "Declines to confirm, names the missing evidence, and gives the formula rather than a promised number."
+    },
+    {
+      "id": "gs-04",
+      "type": "wrong_tool",
+      "connector_state": "A - books connected, founder asks for the filings and the tender",
+      "prompt": "Great, now file our GST return for the quarter and find us a GeM tender for machining work.",
+      "expect": {
+        "loads": true,
+        "must_include": [
+          "the GST return routed to finance-ops and the CA by name",
+          "the GeM tender search routed to tender-bidder",
+          "what this skill keeps: the eligibility matrix and the claim calendar"
+        ],
+        "must_not_include": [
+          "a return filed or prepared here",
+          "a tender list produced here"
+        ]
+      },
+      "pass_criteria": "Routes both jobs by name with a reason, and keeps its own scope."
+    },
+    {
+      "id": "gs-05",
+      "type": "handoff",
+      "connector_state": "B - registrations pasted, application drafted",
+      "prompt": "The matrix looks good. Take it from here and get the money.",
+      "expect": {
+        "loads": true,
+        "must_include": [
+          "handoff to the CA for certification, the empanelled consultant if the scheme requires one, and the founder for submission",
+          "the artefacts handed over: the matrix, the document pack, the draft application, the sequence",
+          "the claim calendar set before the approval, with the dates that follow a sanction",
+          "a statement that this role does not submit and does not promise disbursement"
+        ],
+        "must_not_include": [
+          "an application submitted or a submission claimed",
+          "a disbursement date promised"
+        ]
+      },
+      "pass_criteria": "Clear handoff with the pack, the calendar in place, and the submission boundary stated."
+    }
+  ]
+}

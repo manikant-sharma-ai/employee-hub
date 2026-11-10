@@ -1,0 +1,108 @@
+{
+  "skill": "shopify-merchandiser",
+  "version": "1.0.0",
+  "rubric_version": "1",
+  "how_to_run": "Paste each prompt into a fresh session with the stated connector state. A case passes only if every must_include and no must_not_include appears in the reply.",
+  "cases": [
+    {
+      "id": "sm-01",
+      "type": "happy_path",
+      "connector_state": "B - product and session data pasted, store admin not connected",
+      "prompt": "Our Shopify store gets 40,000 sessions a month at 0.6% conversion. AOV is 1,850, gross margin 58%. Here is the 90-day product data and the search report. Fix the shop.",
+      "expect": {
+        "loads": true,
+        "must_include": [
+          "the search report read before the catalogue, with zero-result terms named",
+          "a collection architecture with a one-line definition per collection",
+          "offers priced from component cost to a margin floor, not a discount off list",
+          "a discount depth with its break-even volume lift",
+          "every recommendation buildable in the theme, with a date",
+          "one line naming the store admin as the missing connector"
+        ],
+        "must_not_include": [
+          "a sitewide discount without a break-even volume",
+          "an invented conversion rate or cost",
+          "a revenue forecast presented as fact"
+        ]
+      },
+      "pass_criteria": "Search-first diagnosis, intention-based collections, margin-floor offers, and a shipping plan that names what needs a developer."
+    },
+    {
+      "id": "sm-02",
+      "type": "thin_brief",
+      "connector_state": "C - nothing connected",
+      "prompt": "Make my Shopify store better.",
+      "expect": {
+        "loads": true,
+        "must_include": [
+          "one message asking for the product economics, 90-day sessions and the search report together",
+          "the frame questions: margin floor, market, sale calendar, whether anything may go live",
+          "a statement of what can be done now - the architecture and the search plan structure"
+        ],
+        "must_not_include": [
+          "a conversion diagnosis invented without data",
+          "more than three connectors requested",
+          "a list of twenty generic e-commerce tips"
+        ]
+      },
+      "pass_criteria": "Asks once for the three things that matter, states the frame, and offers the structure it can build without data."
+    },
+    {
+      "id": "sm-03",
+      "type": "missing_connector",
+      "connector_state": "C - nothing connected, user pastes a product list with prices but no costs",
+      "prompt": "Build me a three-product bundle and price it at 15% off. Here are the list prices.",
+      "expect": {
+        "loads": true,
+        "must_include": [
+          "the refusal to price a bundle without component cost, stated as the blocker",
+          "what can be done: the bundle structure, the floor formula, the break-even lift at 15%",
+          "the exact ask - cost per unit or the purchase invoices"
+        ],
+        "must_not_include": [
+          "a bundle price derived from list prices alone",
+          "an assumed cost percentage presented as fact"
+        ]
+      },
+      "pass_criteria": "Names cost as the blocker, shows the method, and refuses to invent the number."
+    },
+    {
+      "id": "sm-04",
+      "type": "wrong_tool",
+      "connector_state": "A - Shopify admin connected read-only, user asks for marketplace listings",
+      "prompt": "Take the top 20 SKUs and put them on Amazon and Flipkart. Also set up a 30% off sale for the weekend.",
+      "expect": {
+        "loads": true,
+        "must_include": [
+          "the marketplace listings routed to marketplace-lister by name",
+          "the sale assessed here, with the break-even lift and the price-reference note",
+          "a statement that the sale cannot be activated without write access"
+        ],
+        "must_not_include": [
+          "Amazon or Flipkart listing copy produced here",
+          "a discount described as live or scheduled"
+        ]
+      },
+      "pass_criteria": "Splits the jobs by owner, does the offer maths, and does not claim an action it could not take."
+    },
+    {
+      "id": "sm-05",
+      "type": "handoff",
+      "connector_state": "B - store analytics pasted",
+      "prompt": "We are launching the gifting collection in two weeks. I need the launch handled end to end.",
+      "expect": {
+        "loads": true,
+        "must_include": [
+          "handoff to email-marketer for the announcement, graphic-designer for banners, seo-specialist for the collection page copy, inventory-planner for stock cover",
+          "the artefacts handed over: collection definitions, the offer maths, the margin floor, the search terms",
+          "what this skill keeps: the storefront build, the weekly merchandising review"
+        ],
+        "must_not_include": [
+          "an email sequence written here",
+          "a stock plan produced here"
+        ]
+      },
+      "pass_criteria": "Hands over a complete package with the margin and search data attached, and keeps the storefront work."
+    }
+  ]
+}
