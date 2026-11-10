@@ -2,6 +2,71 @@
 
 One dated block per drop. What shipped, and why it is shaped that way.
 
+## 2026-11-10 - daily drop: five employees (v1.11.0)
+
+**The mix this drop: two revenue-facing, two operations, one founder-leverage.** All five
+were already sitting on `next`, promoted on 10 November for exactly this mix, so nothing
+was skipped for the balance. What shaped the batch is that all five were built to a bar
+the repo could not previously check: a deterministic script with a passing self-test, five
+eval cases per employee, and a registry entry that says what the employee is allowed to do
+in a system rather than only what it knows. `scripts/validate_repo_v2.py --strict` is that
+bar, and this drop is the first to clear it.
+
+- **`shopify-merchandiser`** (`skills/shopify-merchandiser`, v1.0.0, L2, revenue-facing) -
+  the first employee in the hub whose subject is the brand's own storefront rather than a
+  marketplace. The split against `marketplace-lister` is the object: a listing is found by
+  a platform's search, a store is navigated by a shopper. So the craft starts from the
+  site-search report rather than the catalogue, because the words people type are the only
+  unbiased statement of what they came for, and every offer is priced *up* from component
+  cost to a margin floor rather than down from a list price. The arithmetic that carries
+  the role is the discount break-even: at a 60% gross margin a 30% discount needs twice the
+  units to stand still, and `scripts/merch_math.py` prints that table for any product, so a
+  sale is a decision with a number beside it instead of a mood.
+- **`sales-engineer`** (`skills/sales-engineer`, v1.0.0, L1, revenue-facing) - the
+  technical half of a sale, and the only employee in the hub whose deliverable is a
+  *decision with a date on it*. Two choices shape it: the disqualifier is hunted on purpose
+  in discovery, because a no in week one saves a quarter and a no in month four loses one,
+  and the POC carries weighted success criteria agreed before anything is built, scored by
+  `scripts/poc_plan.py` so go/conditional/no-go is arithmetic the buyer helped write. It
+  answers security questions only from documents and returns a gap list where there is
+  none - the failure mode in this category is a confident answer that fails an audit three
+  weeks later.
+- **`budget-planner`** (`skills/budget-planner`, v1.0.0, L2, operations) - the first
+  operations role that owns the *plan* the MIS reports against. The design decision is that
+  every line carries a driver, an owner and a cost behaviour, because "cut 10%" means three
+  different things to a fixed line, a variable line and a hire that starts in October. The
+  cash page sits beside the P&L page every time, and the scenario ladder - base, downside,
+  severe, each with a trigger and a cut order - is written in the calm quarter, which is the
+  only time a cut order is worth writing.
+- **`expense-auditor`** (`skills/expense-auditor`, v1.0.0, L1, operations) - the second
+  operations role, and the one built around false positives. An audit that flags 400 lines
+  gets read to line 20; so the tests are deterministic (`scripts/expense_check.py` runs
+  exact and near duplicates, split invoices, cap breaches, missing receipts and vendor
+  concentration), the output is ranked by severity and materiality, and the finding format
+  is seven fields with no prose. Amount at risk and amount recoverable are separate
+  columns, because one is exposure and one is money, and a finding is always about a
+  transaction rather than a person - fraud stops the audit and goes to the founder alone.
+- **`govt-scheme-finder`** (`skills/govt-scheme-finder`, v1.0.0, L1, founder-leverage) -
+  money the business is already eligible for and does not know about, which is founder work
+  done badly in the gaps between everything else. It is deliberately built with **no
+  thresholds in it at all**: every scheme parameter is read from the current guideline and
+  recorded with its source and the date read, because a number remembered from last year is
+  worse than no number. `scripts/scheme_match.py` is an engine that compares a business
+  profile against a rules file a human built from those guidelines, and every status carries
+  the clause that produced it. The claim calendar is set before the approval arrives, since
+  that is where most of this money is actually lost.
+
+**Three new repo-level pieces, and why they exist.** `scripts/validate_repo_v2.py` is the
+new gate: it runs the v1 checks, then the v2 bar for every employee on probation - the
+description under 1024 characters, the fixed section order, 3-6 references, a script whose
+`--self-test` passes, an asset template, five eval cases covering the five case types, notes
+seeded as schema only, the new registry fields, and a trigger-collision check against every
+other employee. Employees shipped before v2 are grandfathered and counted in the output, so
+the debt is visible rather than hidden. `docs/employee-levels.md` defines the L0-L4 ladder
+that the registry now records, because "L2" is otherwise a label. And every employee in this
+drop ships `evals.json` with five cases - happy path, thin brief, missing connector, wrong
+tool and handoff - so the next drop can be judged against something other than its own prose.
+
 ## 2026-11-10 - daily drop: five employees (v1.10.0)
 
 **The mix this drop: two revenue-facing, two operations, one founder-leverage.** All five

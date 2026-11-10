@@ -1,0 +1,108 @@
+{
+  "skill": "budget-planner",
+  "version": "1.0.0",
+  "rubric_version": "1",
+  "how_to_run": "Paste each prompt into a fresh session with the stated connector state. Check every must_include and must_not_include against the reply. A case passes only if all checks hold.",
+  "cases": [
+    {
+      "id": "bp-01",
+      "type": "happy_path",
+      "connector_state": "B - books connected, bank not connected",
+      "prompt": "Here are 24 months of monthly P&L from Zoho Books. Build the FY27 budget. We are 24 people, plan to hire 7, and expect 25% growth because we are doubling ad spend.",
+      "expect": {
+        "loads": true,
+        "must_include": [
+          "a driver list with last year's actual beside this year's assumption",
+          "cost split by behaviour: fixed, variable, step, with hire months",
+          "monthly seasonality taken from the actuals, not a flat line",
+          "envelopes with a named owner each",
+          "a cash page with the lowest month named",
+          "one line naming the bank statement as missing"
+        ],
+        "must_not_include": [
+          "an invented cash balance",
+          "a flat 1/12 of an annual number presented as a monthly plan",
+          "the budget described as approved"
+        ]
+      },
+      "pass_criteria": "Driver-based build, step costs at their real months, envelopes owned, cash view present, and the missing bank connector named in one line."
+    },
+    {
+      "id": "bp-02",
+      "type": "thin_brief",
+      "connector_state": "C - nothing connected",
+      "prompt": "Make us a budget for next year.",
+      "expect": {
+        "loads": true,
+        "must_include": [
+          "one clarifying message asking for actuals and the driver list together",
+          "a statement of what can be built without them - frame, driver structure, envelope sheet, approval note",
+          "the two connectors that would unblock it, ranked, with what each unlocks"
+        ],
+        "must_not_include": [
+          "a full twelve-month budget with invented numbers",
+          "an industry-average growth rate presented as their assumption",
+          "more than three connectors requested"
+        ]
+      },
+      "pass_criteria": "Asks once for the minimum set, offers the structure it can build now, and does not fabricate a single line."
+    },
+    {
+      "id": "bp-03",
+      "type": "missing_connector",
+      "connector_state": "C - nothing connected, user pastes a 12-month revenue total only",
+      "prompt": "Revenue last year was 4.2 crore. Build the budget and tell me my lowest cash month.",
+      "expect": {
+        "loads": true,
+        "must_include": [
+          "the lowest-cash-month answer refused as unanswerable without payments timing",
+          "what can be done from a single annual total - an increment frame, explicitly labelled as such",
+          "a named ask: the books for cost by month, the bank statement for cash timing"
+        ],
+        "must_not_include": [
+          "an invented lowest cash month",
+          "a cost structure guessed from industry norms and stated as fact"
+        ]
+      },
+      "pass_criteria": "Refuses the cash question, delivers the honest partial, names the two connectors with what each unlocks."
+    },
+    {
+      "id": "bp-04",
+      "type": "wrong_tool",
+      "connector_state": "A - Google Sheets connected, user asks for a bank reconciliation",
+      "prompt": "The bank balance and Tally do not match by 1.8 lakh. Also, while you are in there, update the budget for October.",
+      "expect": {
+        "loads": true,
+        "must_include": [
+          "the reconciliation routed to finance-ops with one reason",
+          "the October budget update done from the sheet that is connected",
+          "a statement that an unreconciled ledger makes the October actual provisional"
+        ],
+        "must_not_include": [
+          "an attempt to reconcile the bank inside this skill",
+          "an October variance read presented as final while the books do not tie"
+        ]
+      },
+      "pass_criteria": "Splits the two jobs, does the one it owns, routes the other by name, and flags the data-quality consequence."
+    },
+    {
+      "id": "bp-05",
+      "type": "handoff",
+      "connector_state": "B - books connected",
+      "prompt": "Budget approved. Now build the deck for the board meeting on the 24th and write the minutes after.",
+      "expect": {
+        "loads": true,
+        "must_include": [
+          "handoff to board-reporter for the pack and the minutes, and presentation-designer for the deck",
+          "the artefacts handed over: the plan in six lines, the three assumptions, the scenario ladder, the lowest cash month",
+          "the monthly variance pack named as this skill's continuing deliverable"
+        ],
+        "must_not_include": [
+          "board minutes drafted here",
+          "a slide deck built here"
+        ]
+      },
+      "pass_criteria": "Hands off with a complete package and keeps the variance cycle, without doing either neighbour's job."
+    }
+  ]
+}

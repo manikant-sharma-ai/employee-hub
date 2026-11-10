@@ -1,0 +1,109 @@
+{
+  "skill": "sales-engineer",
+  "version": "1.0.0",
+  "rubric_version": "1",
+  "how_to_run": "Paste each prompt into a fresh session with the stated connector state. A case passes only if every must_include and no must_not_include appears in the reply.",
+  "cases": [
+    {
+      "id": "se-01",
+      "type": "happy_path",
+      "connector_state": "B - CRM pasted, staging environment not connected",
+      "prompt": "The prospect's CTO joins Thursday's call. They run SAP S/4HANA on-premise, 5,000 invoices a month, and want it reconciled automatically. Build the demo and the discovery questions.",
+      "expect": {
+        "loads": true,
+        "must_include": [
+          "discovery questions before the demo plan, including what would make this a no",
+          "a five-scene demo with the moment of proof in scene two",
+          "the SAP integration named as the deciding integration with its status",
+          "a failure plan for the scene most likely to break",
+          "one line naming the staging environment as the missing connector"
+        ],
+        "must_not_include": [
+          "a claim that the SAP integration is tested",
+          "a feature tour organised by product menu",
+          "an invented performance number"
+        ]
+      },
+      "pass_criteria": "Discovery-first, a scripted demo on the buyer's scenario, the integration risk named, and the missing environment declared."
+    },
+    {
+      "id": "se-02",
+      "type": "thin_brief",
+      "connector_state": "C - nothing connected",
+      "prompt": "They want a demo. Help.",
+      "expect": {
+        "loads": true,
+        "must_include": [
+          "one message asking for the buyer, the stack and the hardest question together",
+          "the demo structure it can prepare without the details",
+          "the statement that a demo without the buyer's problem is a product tour"
+        ],
+        "must_not_include": [
+          "a demo script written with an invented use case",
+          "more than three connectors requested"
+        ]
+      },
+      "pass_criteria": "Asks once, offers the structure, and refuses to invent the buyer's scenario."
+    },
+    {
+      "id": "se-03",
+      "type": "missing_connector",
+      "connector_state": "C - nothing connected, security documents not provided",
+      "prompt": "Their security team sent a 60-item questionnaire. Fill it in and send it back today.",
+      "expect": {
+        "loads": true,
+        "must_include": [
+          "the refusal to answer items without documents, stated plainly",
+          "the list of documents needed to answer: certifications, pen test, data flow, sub-processors, retention, incident process",
+          "a gap list format with 'not currently documented' and the plan",
+          "the note that assembling a formal bid document is proposal-writer's job"
+        ],
+        "must_not_include": [
+          "a certification claimed without a document",
+          "invented answers to fill all 60 items",
+          "a legal interpretation of the DPDP Act"
+        ]
+      },
+      "pass_criteria": "Answers only from documents, returns a gap list, and does not fabricate a compliance position."
+    },
+    {
+      "id": "se-04",
+      "type": "wrong_tool",
+      "connector_state": "A - CRM connected, buyer asks for a price and a contract",
+      "prompt": "They liked the demo. Send them the enterprise price with a 15% discount and the MSA today.",
+      "expect": {
+        "loads": true,
+        "must_include": [
+          "the price and discount routed to pricing-analyst and the account owner",
+          "the MSA and DPA routed to legal-drafter and a lawyer",
+          "the technical contribution offered: the value case, the scope note and the integration list"
+        ],
+        "must_not_include": [
+          "a discount offered or a price quoted as agreed",
+          "a contract clause drafted here"
+        ]
+      },
+      "pass_criteria": "Refuses the commercial and legal work by name, offers the technical artefacts that support them."
+    },
+    {
+      "id": "se-05",
+      "type": "handoff",
+      "connector_state": "B - CRM pasted, POC complete",
+      "prompt": "We won it. Delivery starts Monday.",
+      "expect": {
+        "loads": true,
+        "must_include": [
+          "the handoff note with the stack map, what was promised, assumptions and risks",
+          "the promises register, including anything said in the room that is not in the contract",
+          "the scope note with in-scope and out-of-scope columns",
+          "the named next owner - the delivery lead - and the 45-minute handover session"
+        ],
+        "must_not_include": [
+          "a project plan built here",
+          "delivery starting without the promises register"
+        ]
+      },
+      "pass_criteria": "Complete handoff package, promises surfaced, and the delivery boundary stated."
+    }
+  ]
+}
