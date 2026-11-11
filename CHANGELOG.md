@@ -2,6 +2,79 @@
 
 One dated block per drop. What shipped, and why it is shaped that way.
 
+## 2026-11-12 - daily drop: five employees (v1.11.0)
+
+**The mix this drop: two revenue-facing, two operations, one founder-leverage.** All five were
+already on `next`, promoted on 10 November for exactly this mix, so nothing was skipped for the
+balance. What shaped the batch is that this drop fills the hole every other employee in the hub
+was standing next to: the hub could record, reconcile, report and plan a sale, and none of it
+could answer "should this have been paid", "what do we show the visitor", "will it work in their
+environment", or "is there government money we already qualify for". Three of the five also
+arrived with a live pointer from a shipped employee, and two of those pointers are now closed.
+
+- **`budget-planner`** (`skills/budget-planner`, v1.0.0) - the first operations role, and the only
+  employee in the hub written in the future tense. `finance-ops` records and `mis-reporter`
+  reports; both describe what happened, and neither could answer what is meant to happen next.
+  Three design choices carry it. Revenue is built from units, price, mix and capacity rather than
+  a growth rate, because a percentage nobody can act on is the reason budgets get ignored. The
+  monthly index is taken from actuals and the *level* grows, never the *shape* - the most common
+  way a small-business plan overstates a year is multiplying a growth rate into a festive month.
+  And the cash budget is mandatory and separate, with collection patterns rather than collection
+  days, because a profitable month with a cash hole is the failure this role exists to prevent.
+  Cost is tagged fixed, variable or step on every line, which is what makes "what if volume moves
+  20%" answerable in a meeting instead of a week.
+- **`expense-auditor`** (`skills/expense-auditor`, v1.0.0) - the second operations role, and the
+  one this drop could most easily have skipped. `bookkeeper` codes the bill and `finance-ops`
+  reconciles it; the gap is the check that never happened, whether the bill should have been paid
+  at all. The boundary is written as record against check in all three descriptions. The craft is
+  arranged around provability rather than suspicion: data is normalised before it is matched, every
+  test is published with its false-positive count, and a finding needs an amount, two documents and
+  a policy clause or it moves to a "to confirm" list. It is also the only employee in the hub that
+  states, twice, that it audits transactions and never people - intent is not readable from a
+  spreadsheet, and an accusation costs the documents the next audit needs. Recoverable and avoidable
+  rupees are counted apart, because adding a credit note to a cancelled subscription is how an audit
+  loses its mandate.
+- **`shopify-merchandiser`** (`skills/shopify-merchandiser`, v1.0.0) - the first revenue role, and
+  the one that had to be separated from `marketplace-lister` on the surface rather than the craft.
+  Both write titles and both care about conversion; the split is where the buyer stands. The design
+  choice that carries it is the diagnosis-before-design rule: five named problems - traffic,
+  relevance, page, offer, checkout - and the instruction to fix only the one that is actually
+  broken, because a better product page in front of the wrong traffic converts nothing. The second
+  is the margin arithmetic. Offers are built upward from a contribution floor with a cap, an end
+  date and a stacking rule priced on the worst-case basket, since codes and automatic discounts
+  combine by default and that is how a 42% margin becomes 19% without anyone deciding it should. It
+  is also the only role that treats the delivery promise as a conversion element ahead of the
+  discount, which is true in India and almost never written down.
+- **`sales-engineer`** (`skills/sales-engineer`, v1.0.0) - the second revenue role, and the one
+  that closes a hole between two shipped employees: `sales-outreach` could start a conversation but
+  could not qualify it technically, and `proposal-writer` was writing responses to requirements
+  nobody had scoped. The boundary is the artefact - a proposal is a document scored against
+  criteria, the technical case is a decision about whether it works in their environment. Three
+  choices shape it: discovery ends in a written verdict of fit, fit with conditions, not a fit
+  today, or unknown, because a deal without a verdict stays in evaluation for three months; the
+  POC needs a decision date and a named client owner before it starts, since an open-ended POC is
+  unpaid consulting with a worse conversion rate; and the competitive comparison must concede at
+  least one row, because a table where you win everything is read as marketing and the buyer's
+  trust moves to whoever was honest.
+- **`govt-scheme-finder`** (`skills/govt-scheme-finder`, v1.0.0) - the founder-leverage role, and
+  deliberately the most conservative skill in the repo. Its subject is money the business already
+  owns and has not claimed, which is founder work done badly in the gaps between everything else -
+  and it is also the domain with the most confident wrong answers available on the internet. So the
+  skill names the three facts that change most often (the rate, the window, the district), requires
+  all three to be re-read at the official source before any brief, marks every unverified number as
+  unverified, and puts a verification block with a date at the end of every brief. It refuses to
+  guarantee a sanction, ranks by rupees per person-day discounted by odds rather than by headline
+  benefit, and states in the guardrails that the application can be filed free on the portal - a
+  consultant is paid for work, never for access. It also states the rule that costs founders the
+  most money: the application comes before the purchase.
+
+**Also in this drop:** six shipped descriptions now route to the new roles rather than leaving a
+gap - `finance-ops`, `bookkeeper`, `mis-reporter`, `marketplace-lister`, `sales-outreach` and
+`compliance-watch`. All six were tightened to stay inside the description budget while doing it.
+Registry, both plugin manifests and `BACKLOG.md` move to v1.11.0, with `treasury-ops` (#57),
+`payroll-specialist` (#58), `returns-manager` (#73), `tender-bidder` (#121) and `quote-generator`
+(#143) promoted to `next` for the same mix.
+
 ## 2026-11-10 - daily drop: five employees (v1.10.0)
 
 **The mix this drop: two revenue-facing, two operations, one founder-leverage.** All five

@@ -62,8 +62,8 @@ Nothing is removed without a note on why. A role that cannot clear the quality b
 | 54 | `billing-support` | Invoice queries, failed payments, dunning and refund handling | queued |
 | 55 | `collections-agent` | Receivables follow-up, ageing buckets, escalation ladder | shipped 2026-11-07 |
 | 56 | `credit-analyst` | Customer credit checks, limits, exposure review | queued |
-| 57 | `treasury-ops` | Cash position, runway, payment scheduling, FX exposure | queued |
-| 58 | `payroll-specialist` | Pay runs, statutory deductions, payslips, queries | queued |
+| 57 | `treasury-ops` | Cash position, runway, payment scheduling, FX exposure | next |
+| 58 | `payroll-specialist` | Pay runs, statutory deductions, payslips, queries | next |
 | 59 | `tax-prep` | Document collation, computation checks, filing calendar | queued |
 | 60 | `gst-filer` | GSTR working papers, reconciliation, filing reminders | queued |
 | 61 | `audit-prep` | Evidence packs, schedules, query tracking for statutory audit | queued |
@@ -71,17 +71,17 @@ Nothing is removed without a note on why. A role that cannot clear the quality b
 | 63 | `fundraising-analyst` | Deck numbers, model, comparables, diligence prep | shipped 2026-11-06 |
 | 64 | `board-reporter` | Board pack assembly, minutes, action tracking | shipped 2026-11-10 |
 | 65 | `mis-reporter` | The weekly numbers that run the business, in one page | shipped 2026-11-10 |
-| 66 | `budget-planner` | Annual and project budgets, variance tracking, reforecast | next |
-| 67 | `expense-auditor` | Policy checks, duplicate detection, vendor spend review | next |
+| 66 | `budget-planner` | Annual and project budgets, variance tracking, reforecast | shipped 2026-11-12 |
+| 67 | `expense-auditor` | Policy checks, duplicate detection, vendor spend review | shipped 2026-11-12 |
 | 68 | `vendor-payment-tracker` | Due dates, ageing, disputes, payment run prep | queued |
 | 69 | `inventory-planner` | Stock cover, reorder points, dead-stock identification | shipped 2026-11-10 |
 | 70 | `demand-forecaster` | Seasonality, baseline and promo uplift, forecast accuracy review | queued |
 | 71 | `warehouse-coordinator` | Pick-pack-ship coordination, stock counts, discrepancy handling | queued |
 | 72 | `logistics-coordinator` | Carrier selection, rate comparison, delivery exception handling | queued |
-| 73 | `returns-manager` | Return reasons, refund policy application, reverse logistics | queued |
+| 73 | `returns-manager` | Return reasons, refund policy application, reverse logistics | next |
 | 74 | `catalog-manager` | Product data, attributes, images, variants and taxonomy | queued |
 | 75 | `marketplace-lister` | Listings on IndiaMART, Amazon, Flipkart and GeM - titles, attributes, compliance | shipped 2026-11-10 |
-| 76 | `shopify-merchandiser` | Collections, bundles, discounts, on-site merchandising | next |
+| 76 | `shopify-merchandiser` | Collections, bundles, discounts, on-site merchandising | shipped 2026-11-12 |
 | 77 | `product-photographer-brief` | Shot lists, styling direction, retouch notes for product imagery | queued |
 | 78 | `packaging-designer` | Pack structure, label copy, statutory declarations, print-ready files | queued |
 | 79 | `quality-inspector` | Inspection checklists, AQL sampling, defect classification | queued |
@@ -124,10 +124,10 @@ Nothing is removed without a note on why. A role that cannot clear the quality b
 | 116 | `maintenance-scheduler` | Preventive maintenance plans, downtime logs, spares | queued |
 | 117 | `safety-compliance` | Statutory registers, inspection readiness, incident reporting | queued |
 | 118 | `energy-auditor` | Consumption baselines, loss identification, saving cases with payback | queued |
-| 119 | `sales-engineer` | Technical qualification, solution design, demo scripts | next |
+| 119 | `sales-engineer` | Technical qualification, solution design, demo scripts | shipped 2026-11-12 |
 | 120 | `proposal-writer` | Winning proposals and RFP responses from a requirements document | shipped 2026-11-10 |
-| 121 | `tender-bidder` | GeM and state tender discovery, eligibility checks, bid assembly | queued |
-| 122 | `govt-scheme-finder` | Matches a business to MSME, export and state incentive schemes | next |
+| 121 | `tender-bidder` | GeM and state tender discovery, eligibility checks, bid assembly | next |
+| 122 | `govt-scheme-finder` | Matches a business to MSME, export and state incentive schemes | shipped 2026-11-12 |
 | 123 | `ip-researcher` | Trademark and patent landscape checks, filing prep notes | queued |
 | 124 | `data-privacy-officer` | Data maps, consent records, DPDP readiness, breach playbook | queued |
 | 125 | `accessibility-auditor` | WCAG checks on a site or app with prioritised fixes | queued |
@@ -148,7 +148,7 @@ Nothing is removed without a note on why. A role that cannot clear the quality b
 | 140 | `scriptwriter` | Scripts for ads, explainers and reels with hook and payoff | queued |
 | 141 | `lead-qualifier` | Scores inbound leads against an ICP and routes them | queued |
 | 142 | `crm-hygienist` | Dedupe, field standards, pipeline cleanup, stage definitions | queued |
-| 143 | `quote-generator` | Builds quotes from a price list with margins and terms applied | queued |
+| 143 | `quote-generator` | Builds quotes from a price list with margins and terms applied | next |
 | 144 | `follow-up-sequencer` | Timed follow-ups that reference the actual last conversation | queued |
 | 145 | `feedback-synthesiser` | Clusters customer feedback into themes with counts and quotes | queued |
 | 146 | `decision-logger` | Records decisions, owners, dates and what would reverse them | queued |
@@ -244,6 +244,49 @@ Kept so that a later drop does not have to re-derive why the order moved.
   deal that `proposal-writer` then writes the response to. The #33-#40 build roles and the
   vertical packs (#96-#118) stay queued: they need a businessman who has already bought the
   basics.
+
+- **2026-11-12 - the five on `next` shipped, and the mix held with no skip.** `govt-scheme-finder`
+  (#122) is the founder-leverage slot and the only role in the hub whose subject is money the
+  business already owns but has not claimed - which is founder work done badly in the gaps between
+  everything else. `budget-planner` (#66) and `expense-auditor` (#67) are the operations pair - one
+  decides where the money is going, one finds where it already went without permission.
+  `shopify-merchandiser` (#76) and `sales-engineer` (#119) are the revenue pair - one converts the
+  traffic the store already has, one converts the deal that is already in technical evaluation.
+- **2026-11-12 - `budget-planner` was separated from `finance-ops` and `mis-reporter` on tense.**
+  Both of those describe what happened; this one describes what is meant to happen, and the plan
+  beside the actual is the whole point. `mis-reporter` still owns the weekly page and
+  `finance-ops` still owns the close, and both now route a forward plan here. `pricing-analyst`
+  still owns the price and `fundraising-analyst` the investor model; a budget takes both as inputs.
+- **2026-11-12 - `expense-auditor` was the one role this drop could have skipped.** `bookkeeper`
+  codes the bill and `finance-ops` reconciles it, so the question was whether anything was left.
+  What is left is the check that never happened: whether the bill should have been paid at all.
+  The boundary is written as record against check - the other two make the entry true, this one
+  asks whether the spend was allowed, correctly priced and paid once. It is also the only employee
+  in the hub that reports on transactions and explicitly refuses to report on people.
+- **2026-11-12 - `shopify-merchandiser` was split from `marketplace-lister` on the surface, not the
+  craft.** Both write titles, both care about conversion, and they would have fought over "fix our
+  product page". The split is where the buyer stands: a marketplace shopper is already searching
+  and the listing competes with everyone else's; a store visitor arrived on purpose and the shop
+  decides what they see. `marketplace-lister` now routes the brand's own storefront here.
+- **2026-11-12 - `sales-engineer` arrived with two destinations already promised.** `sales-outreach`
+  has been unable to answer a technical qualification and `proposal-writer` has been writing
+  responses to requirements nobody had technically scoped. The boundary is the artefact: the
+  proposal is a document scored against criteria, the technical case is a decision about whether it
+  works in their environment - and the POC is what turns the second into the first.
+- **2026-11-12 - `govt-scheme-finder` is deliberately the most conservative skill in the repo.** It
+  names three facts - rate, window, district eligibility - that must be re-read at the official
+  source before any brief, marks every unverified number as unverified, refuses to guarantee a
+  sanction, and states that the application can be filed free on the portal. In this domain a
+  confident wrong number costs a founder a month and every later answer their trust.
+- **2026-11-12 - the next five are promoted for the mix again, not in queue order.**
+  `treasury-ops` (#57) is the founder-leverage slot: the weekly cash position and payment schedule
+  is the thing a founder does at 11pm from three spreadsheets. `payroll-specialist` (#58) and
+  `returns-manager` (#73) are the operations pair - one is a recurring statutory obligation, one is
+  the leak that shows up as a support queue. `tender-bidder` (#121) and `quote-generator` (#143)
+  are the revenue pair - and both are already named as the destination by shipped employees
+  (`proposal-writer` and `govt-scheme-finder` for tenders, `pricing-analyst` for quotes), so this
+  drop creates no new debt. The #33-#40 build roles and the vertical packs (#96-#118) stay queued:
+  they need a businessman who has already bought the basics.
 
 ## The five-a-day mix
 

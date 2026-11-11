@@ -1,8 +1,8 @@
 {
   "name": "employee-hub",
   "display_name": "Employee Hub",
-  "version": "1.10.0",
-  "updated": "2026-11-10",
+  "version": "1.11.0",
+  "updated": "2026-11-12",
   "cadence": "5 employees daily at 06:00 IST",
   "standard": "core/employee-standard.md",
   "obligations": [
@@ -1940,6 +1940,217 @@
         "proposals that keep losing and nobody knows why",
         "a 60-question vendor questionnaire",
         "a bid that has to be priced with two options and stated assumptions"
+      ]
+    },
+    {
+      "name": "budget-planner",
+      "version": "1.0.0",
+      "added": "2026-11-12",
+      "status": "stable",
+      "path": "skills/budget-planner",
+      "tagline": "The budget employee - a driver-based plan of units, price, mix, headcount and capacity phased by month, fixed and step costs separated, a variance that names the cause, a reforecast on triggers, and a cash budget beside the P&L one.",
+      "skills_inside": [
+        "budget-architecture",
+        "revenue-and-driver-build",
+        "cost-and-headcount-planning",
+        "variance-and-reforecast",
+        "cash-and-scenario-planning"
+      ],
+      "tools_required": [
+        "Google Sheets or Excel (the model, phasing, variance report)",
+        "Zoho Books, Tally or QuickBooks (the actuals and committed costs)",
+        "the bank statement or a banking connector (cash position, EMIs)",
+        "the payroll file (headcount and CTC)",
+        "Google Calendar or Outlook (reforecast and approval dates)",
+        "Google Drive or OneDrive (the plan of record)"
+      ],
+      "follows_standard": true,
+      "keeps_notes": true,
+      "tracks_performance": true,
+      "outputs": [
+        "the plan in six lines",
+        "the driver table with a source per driver",
+        "the monthly P&L plan reconciled to the drivers",
+        "the cash budget with the low point and its month",
+        "three scenarios with the decision each changes",
+        "the assumptions register, dated and owned",
+        "the variance method and reforecast triggers",
+        "what could not be verified"
+      ],
+      "best_for": [
+        "planning a new financial year",
+        "costing a project before it is approved",
+        "explaining why spend is over plan",
+        "a twelve-month projection a lender will read"
+      ]
+    },
+    {
+      "name": "expense-auditor",
+      "version": "1.0.0",
+      "added": "2026-11-12",
+      "status": "stable",
+      "path": "skills/expense-auditor",
+      "tagline": "The spend auditor - duplicate and split invoices, claims with no bill, reimbursements outside limits, vendors billing above the contract, subscriptions nobody uses, each finding carrying the rupees, the evidence, the policy clause and a recovery route.",
+      "skills_inside": [
+        "policy-and-claim-rules",
+        "duplicate-and-anomaly-detection",
+        "vendor-spend-review",
+        "gst-and-tds-on-expenses",
+        "reimbursement-and-travel-audit"
+      ],
+      "tools_required": [
+        "Google Sheets or Excel (exceptions register, duplicate matching)",
+        "Zoho Books, Tally or QuickBooks (ledger, vendor bills, payments)",
+        "the bank or card statement (what actually left)",
+        "Gmail or Outlook (approval trail, invoices, contracts)",
+        "Google Drive or OneDrive (policy, contracts, rate cards)",
+        "the procurement or PO system (three-way match)",
+        "SaaS admin consoles (seats paid against seats used)"
+      ],
+      "follows_standard": true,
+      "keeps_notes": true,
+      "tracks_performance": true,
+      "outputs": [
+        "the audit in six lines",
+        "the exceptions register with amount, evidence, clause and route",
+        "the top findings expanded with documents side by side",
+        "the vendor spend view with rate variance and recurring charges",
+        "the policy gaps and the fix proposed",
+        "the recovery tracker",
+        "what could not be verified"
+      ],
+      "best_for": [
+        "a founder who suspects leakage",
+        "a month's spend that jumped unexplained",
+        "reimbursement claims that look wrong",
+        "vendor invoices that disagree with the rate card"
+      ]
+    },
+    {
+      "name": "shopify-merchandiser",
+      "version": "1.0.0",
+      "added": "2026-11-12",
+      "status": "stable",
+      "path": "skills/shopify-merchandiser",
+      "tagline": "The storefront merchandiser - collection architecture and sort rules, the product page above the fold on a phone, bundles and discounts built up from a contribution floor, the drop and sale calendar, on-site search, and a read-out from conversion and AOV.",
+      "skills_inside": [
+        "store-architecture-and-collections",
+        "product-page-conversion",
+        "bundles-and-offers",
+        "merchandising-calendar-and-launches",
+        "onsite-search-and-measurement"
+      ],
+      "tools_required": [
+        "Shopify admin or the store platform",
+        "Google Analytics or the platform's own analytics",
+        "Google Sheets or Excel (calendar, offer margin model)",
+        "Canva or Figma (banner and block layouts)",
+        "Razorpay, PayU or the payment gateway dashboard",
+        "Shiprocket or the logistics dashboard (serviceability, RTO)",
+        "Google Drive or OneDrive (calendar of record, approved offer sheet)"
+      ],
+      "follows_standard": true,
+      "keeps_notes": true,
+      "tracks_performance": true,
+      "outputs": [
+        "the diagnosis in six lines and which of five problems it is",
+        "the collection and navigation map",
+        "the product page spec in reading order",
+        "the offer with margin arithmetic, stacking rule and end date",
+        "the calendar and the home page blocks",
+        "the build list with specified, built or live",
+        "the measurement plan with a revert threshold",
+        "what could not be verified"
+      ],
+      "best_for": [
+        "a store with traffic and few orders",
+        "a festive campaign that has to be built",
+        "a bundle or prepaid discount decision",
+        "a new range launching on the storefront"
+      ]
+    },
+    {
+      "name": "sales-engineer",
+      "version": "1.0.0",
+      "added": "2026-11-12",
+      "status": "stable",
+      "path": "skills/sales-engineer",
+      "tagline": "The technical seller - discovery that finds the binding constraint, a solution design with scope, out-of-scope and effort, a demo told as a story on the buyer's data, a POC with success and exit criteria and a decision date, and a comparison that names where we lose.",
+      "skills_inside": [
+        "technical-discovery",
+        "solution-design-and-scoping",
+        "demo-scripting",
+        "poc-and-pilot-design",
+        "technical-objections-and-competitive"
+      ],
+      "tools_required": [
+        "the CRM (HubSpot, Zoho, Salesforce) - deal stage and technical record",
+        "Google Meet, Zoom or Teams",
+        "Google Docs or Word (solution design, POC plan, answers)",
+        "Google Sheets or Excel (requirements matrix, effort, POC scorecard)",
+        "a diagram tool (Excalidraw, Figma, draw.io)",
+        "the product in a demo or sandbox environment",
+        "a ticket or issue tracker (is the gap a bug, a config or a roadmap item)"
+      ],
+      "follows_standard": true,
+      "keeps_notes": true,
+      "tracks_performance": true,
+      "outputs": [
+        "the verdict in six lines - constraint, fit, effort, risk, decision, date",
+        "discovery findings and the environment map",
+        "the one-page solution design with scope and out-of-scope",
+        "the demo plan with the failure path",
+        "the POC plan with criteria, owners and a decision date",
+        "the answers pack with evidence or an explicit no",
+        "the competitive comparison with a conceded row",
+        "what could not be verified"
+      ],
+      "best_for": [
+        "a deal stuck in technical evaluation",
+        "a demo that is a feature tour",
+        "an integration question the salesperson cannot answer",
+        "a POC that has no end date"
+      ]
+    },
+    {
+      "name": "govt-scheme-finder",
+      "version": "1.0.0",
+      "added": "2026-11-12",
+      "status": "stable",
+      "path": "skills/govt-scheme-finder",
+      "tagline": "The entitlements employee - matches a specific business to the MSME, credit guarantee, state incentive, export and technology schemes it is already eligible for, with the eligibility grid run on its own facts, the documents, the effort, the odds and one next action.",
+      "skills_inside": [
+        "scheme-landscape-india",
+        "eligibility-matching",
+        "application-and-documents",
+        "claim-and-disbursement-discipline",
+        "scheme-verification-and-outreach"
+      ],
+      "tools_required": [
+        "a browser on the official portals (Udyam, MSME ministry, DGFT, Startup India, the state department)",
+        "Google Sheets or Excel (eligibility grid, scheme tracker, claim milestones)",
+        "Google Drive or OneDrive (the reusable document pack)",
+        "Gmail or Outlook (DIC, nodal agency, bank, CA correspondence)",
+        "Zoho Books or Tally (turnover and investment figures)",
+        "Google Calendar (windows, submission and milestone dates)"
+      ],
+      "follows_standard": true,
+      "keeps_notes": true,
+      "tracks_performance": true,
+      "outputs": [
+        "the answer in six lines with the rupees realistically available",
+        "the eligibility grid marked met, not met or unverified with evidence",
+        "three to six ranked one-page scheme briefs",
+        "the rejected list with reasons",
+        "the claim plan with milestones and the utilisation certificate",
+        "the risks - clawback, undertakings, exclusions",
+        "what could not be verified and where to confirm it"
+      ],
+      "best_for": [
+        "a founder asking what they can claim",
+        "a machinery or expansion purchase",
+        "a lender offering a scheme-linked loan",
+        "an exporter who has never claimed a duty benefit"
       ]
     }
   ]
