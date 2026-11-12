@@ -2,6 +2,77 @@
 
 One dated block per drop. What shipped, and why it is shaped that way.
 
+## 2026-11-13 - daily drop: five employees (v1.12.0)
+
+**The mix this drop: two revenue-facing, two operations, one founder-leverage.** All five were already
+on `next`, promoted on 12 November for exactly this mix, so nothing was skipped for the balance. What
+shaped the batch is that the hub could plan, reconcile, report, chase and forecast, and still could not
+answer four ordinary questions: can we pay everyone this week, what does this person actually take
+home, what happens after the customer sends it back, and what do we write on the quotation. Three of
+the five also arrived with a live pointer from a shipped employee, and all three of those pointers are
+now closed.
+
+- **`treasury-ops`** (`skills/treasury-ops`, v1.0.0) - the founder-leverage role, and the only one in
+  the hub that works in weeks rather than months. `finance-ops` reconciles what happened, `bookkeeper`
+  records it, `budget-planner` plans a year of it, `collections-agent` chases one receivable and
+  `fundraising-analyst` argues about whether to raise - and none of them decides what clears on
+  Thursday. Three design choices carry it. The horizon is thirteen weeks, because that is as far ahead
+  as dated commitments are real, and the output is the *minimum point* rather than the closing balance,
+  since a business does not fail on an average. Promised receipts are booked at the customer's
+  historical delay with a confidence mark, because booking them at their words is why a cash forecast is
+  wrong in the same direction every month. And the priority ladder - statutory, payroll, secured debt,
+  supply-stopping, rent, terms, discretionary - is written down in advance, so the next hard week is a
+  decision instead of a panic. It never releases a payment; it schedules, and a human signs.
+- **`payroll-specialist`** (`skills/payroll-specialist`, v1.0.0) - the first operations role, and the
+  one the repo has been promising since 3 November: `bookkeeper` has said in its guardrails that
+  payroll statutory computation "is `payroll-specialist`" while the role did not exist. The boundary is
+  the register: `finance-ops` books the payroll summary in the close and `bookkeeper` posts the
+  entries, and neither computes a person's pay. Two choices shape it. The register is built from the
+  structure every month rather than rolled forward, because last month plus edits is how one wrong
+  component survives a year and a departed employee gets paid twice. And the cycle is fixed on
+  published dates - attendance by the 20th, variable pay by the 22nd, changes by the 24th, file on the
+  27th - because the pay date is immovable and the only structural fix for a late payroll is an input
+  cut-off. Every statutory rate is quoted with the date it was verified, since PF, ESI, professional
+  tax and slabs change by notification and a stale rate is a dispute the employee wins.
+- **`returns-manager`** (`skills/returns-manager`, v1.0.0) - the second operations role, and the one
+  this drop most easily could have got wrong. `support-agent` already answers "a refund is being asked
+  for", so the split is the decision against the reply: support writes the words to one customer, this
+  role decides the disposition, moves the money, books the pickup and reads the rate. Three choices
+  carry it. The reason taxonomy is fixed at eight codes, because "customer not satisfied" makes a
+  returns log unreadable and the log is the only product feedback a business gets for free. Grade, then
+  refund, where the amount is material, since refunding first and finding an unsaleable unit is a
+  double loss. And the economics are stated per return - reverse freight, forward freight written off,
+  the gateway fee that is not returned, the markdown on resale - so a 22% return rate on a 38% margin
+  is visible as the loss it is. Integrity patterns are flagged and never accused: a wrong accusation is
+  unrecoverable and the marketplace penalises it.
+- **`tender-bidder`** (`skills/tender-bidder`, v1.0.0) - the first revenue role, and the destination
+  `proposal-writer` and `govt-scheme-finder` have both been naming as "backlog #121" since 10 November.
+  The split from `proposal-writer` is the artefact and the buyer: a private RFP is a document scored
+  against criteria, a tender is a published rulebook with an L1 price and a penalty clause. Three
+  choices shape it. Eligibility is grid-tested before a word is written, because four days of writing
+  on a tender the business was never eligible for is the most expensive habit in this job. The document
+  hierarchy is explicit - notice, then ATC, then corrigendum - with a conflict raised with the buyer in
+  writing before the deadline. And the price has a floor built from cost, with the reverse-auction
+  walk-away written down and approved before the auction starts, because a floor decided live is the
+  last bid plus one step. It prepares; it never signs, submits or pays an EMD.
+- **`quote-generator`** (`skills/quote-generator`, v1.0.0) - the second revenue role, and the
+  destination `pricing-analyst` has carried as "backlog #143" since 10 November. The boundary is policy
+  against application: `pricing-analyst` decides what a product costs and what discount structure is
+  allowed, and this role applies that to one customer, one quantity and one date - and never invents a
+  number to close a deal. Three choices carry it. Nothing is "as applicable": freight, taxes,
+  installation and lead time are numbers or stated exclusions, because ambiguity returns as a discount
+  demand at the invoice. The margin floor is checked before the quote leaves, and a breach produces a
+  one-line recommendation to the founder rather than a price. And the quotation is treated as an
+  invitation to offer, with the purchase order checked against it before acknowledgement - the PO is
+  where the customer's terms replace ours.
+
+**Also in this drop:** three dead references in shipped skills now resolve - `bookkeeper` to
+`payroll-specialist`, `proposal-writer` and `govt-scheme-finder` to `tender-bidder`, and
+`pricing-analyst` to `quote-generator`. No shipped description was edited for this drop, so nothing
+else was tightened to pay for it. Registry, both plugin manifests and `BACKLOG.md` move to v1.12.0,
+with `ip-researcher` (#123), `cost-optimiser` (#134), `lead-qualifier` (#141), `feedback-synthesiser`
+(#145) and `field-sales-manager` (#150) promoted to `next` for the same mix.
+
 ## 2026-11-12 - daily drop: five employees (v1.11.0)
 
 **The mix this drop: two revenue-facing, two operations, one founder-leverage.** All five were

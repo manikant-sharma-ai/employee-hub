@@ -62,8 +62,8 @@ Nothing is removed without a note on why. A role that cannot clear the quality b
 | 54 | `billing-support` | Invoice queries, failed payments, dunning and refund handling | queued |
 | 55 | `collections-agent` | Receivables follow-up, ageing buckets, escalation ladder | shipped 2026-11-07 |
 | 56 | `credit-analyst` | Customer credit checks, limits, exposure review | queued |
-| 57 | `treasury-ops` | Cash position, runway, payment scheduling, FX exposure | next |
-| 58 | `payroll-specialist` | Pay runs, statutory deductions, payslips, queries | next |
+| 57 | `treasury-ops` | Cash position, runway, payment scheduling, FX exposure | shipped 2026-11-13 |
+| 58 | `payroll-specialist` | Pay runs, statutory deductions, payslips, queries | shipped 2026-11-13 |
 | 59 | `tax-prep` | Document collation, computation checks, filing calendar | queued |
 | 60 | `gst-filer` | GSTR working papers, reconciliation, filing reminders | queued |
 | 61 | `audit-prep` | Evidence packs, schedules, query tracking for statutory audit | queued |
@@ -78,7 +78,7 @@ Nothing is removed without a note on why. A role that cannot clear the quality b
 | 70 | `demand-forecaster` | Seasonality, baseline and promo uplift, forecast accuracy review | queued |
 | 71 | `warehouse-coordinator` | Pick-pack-ship coordination, stock counts, discrepancy handling | queued |
 | 72 | `logistics-coordinator` | Carrier selection, rate comparison, delivery exception handling | queued |
-| 73 | `returns-manager` | Return reasons, refund policy application, reverse logistics | next |
+| 73 | `returns-manager` | Return reasons, refund policy application, reverse logistics | shipped 2026-11-13 |
 | 74 | `catalog-manager` | Product data, attributes, images, variants and taxonomy | queued |
 | 75 | `marketplace-lister` | Listings on IndiaMART, Amazon, Flipkart and GeM - titles, attributes, compliance | shipped 2026-11-10 |
 | 76 | `shopify-merchandiser` | Collections, bundles, discounts, on-site merchandising | shipped 2026-11-12 |
@@ -126,9 +126,9 @@ Nothing is removed without a note on why. A role that cannot clear the quality b
 | 118 | `energy-auditor` | Consumption baselines, loss identification, saving cases with payback | queued |
 | 119 | `sales-engineer` | Technical qualification, solution design, demo scripts | shipped 2026-11-12 |
 | 120 | `proposal-writer` | Winning proposals and RFP responses from a requirements document | shipped 2026-11-10 |
-| 121 | `tender-bidder` | GeM and state tender discovery, eligibility checks, bid assembly | next |
+| 121 | `tender-bidder` | GeM and state tender discovery, eligibility checks, bid assembly | shipped 2026-11-13 |
 | 122 | `govt-scheme-finder` | Matches a business to MSME, export and state incentive schemes | shipped 2026-11-12 |
-| 123 | `ip-researcher` | Trademark and patent landscape checks, filing prep notes | queued |
+| 123 | `ip-researcher` | Trademark and patent landscape checks, filing prep notes | next |
 | 124 | `data-privacy-officer` | Data maps, consent records, DPDP readiness, breach playbook | queued |
 | 125 | `accessibility-auditor` | WCAG checks on a site or app with prioritised fixes | queued |
 | 126 | `localisation-qa` | Checks translated UI and content for tone, length and errors | queued |
@@ -139,23 +139,23 @@ Nothing is removed without a note on why. A role that cannot clear the quality b
 | 131 | `release-manager` | Release notes, go/no-go checklist, rollout and rollback | queued |
 | 132 | `incident-commander` | Severity calls, comms cadence, timeline, postmortem | queued |
 | 133 | `runbook-author` | Operational runbooks with real commands and stop conditions | queued |
-| 134 | `cost-optimiser` | Cloud and SaaS spend review with a cut list and savings estimate | queued |
+| 134 | `cost-optimiser` | Cloud and SaaS spend review with a cut list and savings estimate | next |
 | 135 | `vendor-security-reviewer` | Third-party risk questionnaires and gap notes | queued |
 | 136 | `seo-technical` | Crawl, index, speed and structured-data fixes | queued |
 | 137 | `link-builder` | Outreach for citations and partnerships, with quality filters | queued |
 | 138 | `app-store-optimiser` | Store listing, screenshots, keyword and rating strategy | queued |
 | 139 | `youtube-strategist` | Channel positioning, titles, thumbnails brief, retention fixes | queued |
 | 140 | `scriptwriter` | Scripts for ads, explainers and reels with hook and payoff | queued |
-| 141 | `lead-qualifier` | Scores inbound leads against an ICP and routes them | queued |
+| 141 | `lead-qualifier` | Scores inbound leads against an ICP and routes them | next |
 | 142 | `crm-hygienist` | Dedupe, field standards, pipeline cleanup, stage definitions | queued |
-| 143 | `quote-generator` | Builds quotes from a price list with margins and terms applied | next |
+| 143 | `quote-generator` | Builds quotes from a price list with margins and terms applied | shipped 2026-11-13 |
 | 144 | `follow-up-sequencer` | Timed follow-ups that reference the actual last conversation | queued |
-| 145 | `feedback-synthesiser` | Clusters customer feedback into themes with counts and quotes | queued |
+| 145 | `feedback-synthesiser` | Clusters customer feedback into themes with counts and quotes | next |
 | 146 | `decision-logger` | Records decisions, owners, dates and what would reverse them | queued |
 | 147 | `store-ops-manager` | Daily store checklist, staffing, replenishment and shrink control | queued |
 | 148 | `franchise-coordinator` | Franchisee onboarding, standards audits, royalty tracking | queued |
 | 149 | `warranty-claims` | Claim intake, eligibility checks, replacement and refund tracking | queued |
-| 150 | `field-sales-manager` | Beat plans, visit logs, territory review and target tracking | queued |
+| 150 | `field-sales-manager` | Beat plans, visit logs, territory review and target tracking | next |
 | 151 | `employee-hub-router` | The hire desk - which employee owns the job, what to hand over, which connector is missing | shipped 2026-11-03 |
 
 ## Queue notes
@@ -287,6 +287,30 @@ Kept so that a later drop does not have to re-derive why the order moved.
   (`proposal-writer` and `govt-scheme-finder` for tenders, `pricing-analyst` for quotes), so this
   drop creates no new debt. The #33-#40 build roles and the vertical packs (#96-#118) stay queued:
   they need a businessman who has already bought the basics.
+
+- **2026-11-13 - the five on `next` shipped, and the mix held with no skip.** `treasury-ops` (#57)
+  is the founder-leverage slot, `payroll-specialist` (#58) and `returns-manager` (#73) are the
+  operations pair, and `tender-bidder` (#121) with `quote-generator` (#143) are the revenue pair. Three
+  of the five were already named by shipped employees, so this drop closed three live pointers and
+  created none.
+- **2026-11-13 - `returns-manager` was separated from `support-agent` on the decision, not the
+  channel.** Both see the same message, and the split is what each one does with it: support writes the
+  reply to one customer, and the disposition, the money, the pickup and the return-rate read are a
+  different job with a different cost. Its trigger phrases deliberately avoid "write a refund reply",
+  which stays with `support-agent`, and it hands the decision back with the words to use.
+- **2026-11-13 - `payroll-specialist` closed the oldest open promise in the repo.** `bookkeeper` has
+  pointed at it since 3 November, and `finance-ops` carries a payroll reference for the booking side.
+  The boundary is written as register against entry: this role computes a person's pay, and neither of
+  the other two does.
+- **2026-11-13 - the next five are promoted for the mix again, not in queue order.**
+  `ip-researcher` (#123) is the founder-leverage slot: a trademark or a patent question is work a
+  founder does personally, once, badly, and usually too late. `cost-optimiser` (#134) and
+  `feedback-synthesiser` (#145) are the operations pair - one finds money already being spent on
+  software nobody uses, one turns the feedback scattered across channels into themes with counts.
+  `lead-qualifier` (#141) and `field-sales-manager` (#150) are the revenue pair, one scoring inbound
+  demand and one running the field beat. `crm-hygienist` (#142) stays queued: `sales-outreach` already
+  ships CRM hygiene, and the two would fight over "clean up our pipeline". `decision-logger` (#146)
+  stays queued for the same reason against `chief-of-staff`'s decision log.
 
 ## The five-a-day mix
 

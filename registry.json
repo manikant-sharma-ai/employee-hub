@@ -1,8 +1,8 @@
 {
   "name": "employee-hub",
   "display_name": "Employee Hub",
-  "version": "1.11.0",
-  "updated": "2026-11-12",
+  "version": "1.12.0",
+  "updated": "2026-11-13",
   "cadence": "5 employees daily at 06:00 IST",
   "standard": "core/employee-standard.md",
   "obligations": [
@@ -2151,6 +2151,212 @@
         "a machinery or expansion purchase",
         "a lender offering a scheme-linked loan",
         "an exporter who has never claimed a duty benefit"
+      ]
+    },
+    {
+      "name": "treasury-ops",
+      "version": "1.0.0",
+      "added": "2026-11-13",
+      "status": "stable",
+      "path": "skills/treasury-ops",
+      "tagline": "The treasury employee - a thirteen-week cash position built from dated obligations, a payment schedule ranked by cost of delay, a surplus policy layered by horizon, the credit lines read at their all-in cost, and the currency exposure on foreign invoices.",
+      "skills_inside": [
+        "cash-position-and-13-week-view",
+        "payment-scheduling-and-prioritisation",
+        "idle-cash-and-bank-relationships",
+        "fx-and-cross-border-collections",
+        "treasury-controls-and-fraud"
+      ],
+      "tools_required": [
+        "the bank - statements and balances, read-only where possible",
+        "Zoho Books, Tally or QuickBooks (payables and receivables ageing)",
+        "Google Sheets or Excel (the thirteen-week model)",
+        "Google Calendar (the weekly position and payment dates)",
+        "the payroll file (net pay and pay date)",
+        "Gmail or Outlook (vendor terms, bank correspondence)",
+        "a browser on the bank and GST portals"
+      ],
+      "follows_standard": true,
+      "keeps_notes": true,
+      "tracks_performance": true,
+      "outputs": [
+        "the answer in six lines - cash today, the minimum point, the one decision",
+        "the thirteen-week cash view with the minimum week marked",
+        "the payment schedule ranked clear, hold or renegotiate",
+        "the inflow confidence table with the date assumed against the date promised",
+        "the levers in order, each with the amount it frees and its cost",
+        "the controls flag on anything moving money",
+        "what could not be verified"
+      ],
+      "best_for": [
+        "a founder asking whether everyone can be paid this week",
+        "a payroll week that collides with a GST week",
+        "money sitting idle in a current account",
+        "a foreign invoice and a rate that moved"
+      ]
+    },
+    {
+      "name": "payroll-specialist",
+      "version": "1.0.0",
+      "added": "2026-11-13",
+      "status": "stable",
+      "path": "skills/payroll-specialist",
+      "tagline": "The payroll employee - inputs frozen on published dates, a register built from the structure rather than last month, statutory deductions computed per person and per state, a bank file that reconciles to the rupee, payslips, challans prepared for review, and full-and-final settlements with the computation shown.",
+      "skills_inside": [
+        "monthly-payroll-cycle",
+        "statutory-deductions-india",
+        "salary-structure-and-ctc",
+        "full-and-final-settlement",
+        "payroll-queries-and-confidentiality"
+      ],
+      "tools_required": [
+        "Google Sheets or Excel (the register)",
+        "a payroll product where one exists - exported and checked, never trusted unread",
+        "the bank's bulk payment file",
+        "Google Drive or OneDrive (payslips, declarations, evidence)",
+        "Gmail or Outlook (distribution and queries)",
+        "the EPFO and ESIC portals, read only"
+      ],
+      "follows_standard": true,
+      "keeps_notes": true,
+      "tracks_performance": true,
+      "outputs": [
+        "the answer in six lines - period, headcount, gross, net, employer cost, pay date",
+        "the register with control totals",
+        "the deduction workings per head with the rule and the rate date",
+        "the bank file summary reconciled to the register",
+        "the variance note against last month, by name",
+        "the challan sheet, prepared for review",
+        "what could not be verified"
+      ],
+      "best_for": [
+        "a pay run that lands late every month",
+        "a joiner or an exit in the middle of a cycle",
+        "PF and ESI questions nobody can answer",
+        "a final settlement that must not become a dispute"
+      ]
+    },
+    {
+      "name": "returns-manager",
+      "version": "1.0.0",
+      "added": "2026-11-13",
+      "status": "stable",
+      "path": "skills/returns-manager",
+      "tagline": "The returns employee - the reason behind each return, the disposition and the money, the reverse pickup that actually happens, the QC grade on receipt, and the return rate read by SKU, channel and reason so the cause is fixed upstream.",
+      "skills_inside": [
+        "return-reason-taxonomy-and-diagnosis",
+        "refund-and-policy-application",
+        "reverse-logistics-and-pickup",
+        "returns-economics-and-leakage",
+        "marketplace-return-ops-and-claims"
+      ],
+      "tools_required": [
+        "the store or marketplace panel (Shopify, Amazon, Flipkart, Meesho)",
+        "the helpdesk (Freshdesk, Zoho Desk, Gorgias)",
+        "the courier's reverse-pickup console",
+        "Google Sheets or Excel (the returns log)",
+        "the warehouse or 3PL QC process",
+        "the payment gateway (refund status)"
+      ],
+      "follows_standard": true,
+      "keeps_notes": true,
+      "tracks_performance": true,
+      "outputs": [
+        "the decision in six lines - order, reason, disposition, refund, method, date",
+        "the rule it rests on, with the policy in force on the order date",
+        "the money with every deduction disclosed and the refund reference",
+        "the reverse plan with a pickup date and a next action",
+        "the disposition and the recovered value",
+        "the pattern note pointing at the upstream cause",
+        "what could not be verified"
+      ],
+      "best_for": [
+        "a return rate that jumped this month",
+        "a reverse pickup that keeps failing",
+        "a marketplace claim about to expire",
+        "a refund policy that has to be published"
+      ]
+    },
+    {
+      "name": "tender-bidder",
+      "version": "1.0.0",
+      "added": "2026-11-13",
+      "status": "stable",
+      "path": "skills/tender-bidder",
+      "tagline": "The public-procurement employee - GeM, CPPP and state tender discovery, an eligibility grid run before anything is written, a bid pack that survives technical evaluation, a price with a floor for an L1 world, and the contract managed after award.",
+      "skills_inside": [
+        "tender-discovery-and-portals",
+        "eligibility-and-qualification",
+        "bid-assembly-and-documents",
+        "pricing-and-commercial-strategy",
+        "post-award-and-contract-management"
+      ],
+      "tools_required": [
+        "a browser on GeM, CPPP and the state portals",
+        "the class 3 DSC, registered on each portal",
+        "Google Drive or OneDrive (the standing document pack)",
+        "Google Sheets or Excel (eligibility grid, price build-up, bid register)",
+        "Google Calendar (deadlines, EMD, PBG, delivery)",
+        "Gmail or Outlook (corrigenda, buyer queries)",
+        "the accounting system (costing, turnover, past invoices)"
+      ],
+      "follows_standard": true,
+      "keeps_notes": true,
+      "tracks_performance": true,
+      "outputs": [
+        "the answer in six lines - tender, buyer, value, deadline, verdict, go or no-go",
+        "the eligibility grid with evidence documents named",
+        "the disqualifier list and any exemption in its clause",
+        "the effort and the odds",
+        "the bid pack plan with the portal checklist",
+        "the price build-up with the floor and the walk-away limit",
+        "what could not be verified"
+      ],
+      "best_for": [
+        "a business that has never bid for government work",
+        "a tender notice nobody has time to read",
+        "a technical rejection nobody can explain",
+        "a won order that has to be delivered without LD"
+      ]
+    },
+    {
+      "name": "quote-generator",
+      "version": "1.0.0",
+      "added": "2026-11-13",
+      "status": "stable",
+      "path": "skills/quote-generator",
+      "tagline": "The quoting employee - a quotation the customer can sign, with the tier applied from the price list, freight and installation stated, GST and place of supply correct, terms and a dated validity, and a follow-up that gets an answer.",
+      "skills_inside": [
+        "quote-anatomy-and-terms",
+        "price-list-and-margin-application",
+        "variants-configuration-and-bom",
+        "taxes-and-compliance-on-quotes",
+        "quote-follow-up-and-conversion"
+      ],
+      "tools_required": [
+        "the price list with its version date",
+        "the CRM (HubSpot, Zoho, Salesforce)",
+        "Google Docs or Word (the quotation document)",
+        "Google Sheets or Excel (line items, margin check, freight table)",
+        "Gmail or Outlook (sending and follow-up)",
+        "the accounting system (proforma invoice, sales order)"
+      ],
+      "follows_standard": true,
+      "keeps_notes": true,
+      "tracks_performance": true,
+      "outputs": [
+        "the quotation with line items, taxes, terms and validity",
+        "the internal margin sheet with the tier applied",
+        "the options table where a choice exists",
+        "the terms summary in five lines",
+        "the cover note and the follow-up plan",
+        "what could not be verified"
+      ],
+      "best_for": [
+        "a price request that has to go out today",
+        "a dealer who needs his own rate",
+        "a quote that lost on price and needs reworking",
+        "a quotation that has to become a proforma invoice"
       ]
     }
   ]
