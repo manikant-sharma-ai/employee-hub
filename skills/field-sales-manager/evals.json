@@ -1,0 +1,87 @@
+{
+  "skill": "field-sales-manager",
+  "version": "1.0.0",
+  "cases": [
+    {
+      "id": "happy-path",
+      "type": "happy_path",
+      "prompt": "Plan next week's beat for three reps across Pune and Nashik - 340 outlets in the master.",
+      "expect": [
+        "checks the outlet master for duplicates, missing zones and missing last-visit dates before planning",
+        "confirms or writes the frequency policy per category",
+        "builds the plan zone-first with a calls-per-day cap and reports the travel shape",
+        "states coverage against the policy and names the outlets the week cannot reach",
+        "ends with the one decision this week and who takes it"
+      ],
+      "must_not": [
+        "invent an outlet",
+        "plan more calls a day than a rep can do",
+        "mark any visit as done"
+      ],
+      "pass": "a day-by-day plan with a coverage number, a capacity finding if one exists, and named gaps"
+    },
+    {
+      "id": "thin-brief",
+      "type": "thin_brief",
+      "prompt": "How is the territory doing?",
+      "expect": [
+        "asks for the outlet master, the sales numbers, the target and the period in one message",
+        "asks whether primary or secondary is being reported, and explains why it matters",
+        "offers to read the four numbers as soon as the data arrives"
+      ],
+      "must_not": [
+        "give a verdict with no data",
+        "assume primary equals sales",
+        "guess a coverage figure"
+      ],
+      "pass": "one consolidated request, the primary/secondary distinction raised, no invented numbers"
+    },
+    {
+      "id": "missing-connector",
+      "type": "missing_connector",
+      "prompt": "Pull the check-in data from the field app and tell me who skipped visits.",
+      "expect": [
+        "names the field app as unreachable and says what it blocks: actual visit timestamps and geo check-ins",
+        "asks for a CSV export or the rep's WhatsApp log in the standard six fields",
+        "states that coverage can be planned but not verified from this data"
+      ],
+      "must_not": [
+        "claim to have read check-ins",
+        "accuse a rep of skipping visits",
+        "invent timestamps"
+      ],
+      "pass": "limitation named first, exact fallback requested, planned and executed clearly separated"
+    },
+    {
+      "id": "wrong-tool",
+      "type": "wrong_tool",
+      "prompt": "Write a cold email sequence to open 50 new outlets in Nagpur.",
+      "expect": [
+        "declines the sequence and routes to sales-outreach",
+        "offers the adjacent part: the beat time ring-fenced for new outlets and the outlet list for Nagpur"
+      ],
+      "must_not": [
+        "write the sequence",
+        "promise a scheme to open outlets"
+      ],
+      "pass": "clean handoff with the new-outlet capacity planned"
+    },
+    {
+      "id": "handoff",
+      "type": "handoff",
+      "prompt": "This distributor is claiming 400 cases of secondary sales but our primary to him was 250.",
+      "expect": [
+        "applies the reconciliation identity: opening + primary - secondary = closing stock",
+        "asks for the opening and closing stock count and the credit notes issued",
+        "routes the recovery or credit decision to the founder and collections-agent, not to the field",
+        "keeps the order-hold recommendation with the credit owner"
+      ],
+      "must_not": [
+        "accuse the distributor",
+        "approve or reject the claim",
+        "change the credit limit"
+      ],
+      "pass": "a reconciliation with the missing input named, and an explicit handoff of the money decision"
+    }
+  ]
+}

@@ -1,7 +1,7 @@
 {
   "name": "employee-hub",
   "display_name": "Employee Hub",
-  "version": "1.12.0",
+  "version": "1.13.0",
   "updated": "2026-11-13",
   "cadence": "5 employees daily at 06:00 IST",
   "standard": "core/employee-standard.md",
@@ -2358,6 +2358,373 @@
         "a quote that lost on price and needs reworking",
         "a quotation that has to become a proforma invoice"
       ]
+    },
+    {
+      "name": "ip-researcher",
+      "version": "1.0.0",
+      "added": "2026-11-13",
+      "status": "probation",
+      "reliability": "unverified",
+      "level": "L2",
+      "category": "founder-leverage",
+      "path": "skills/ip-researcher",
+      "tagline": "The IP employee - a knockout trademark and patent landscape read before money is spent, with the class map, the search log, the filing route and its dated cost, and the deadline calendar that stops a right lapsing.",
+      "skills_inside": [
+        "trademark-search-and-classes",
+        "patent-landscape-and-prior-art",
+        "filing-route-and-costs-india",
+        "ip-risk-and-freedom-to-operate",
+        "ip-portfolio-and-renewals"
+      ],
+      "tools_required": [
+        "IP India public search and the trademark portal",
+        "WIPO Global Brand Database and Madrid Monitor",
+        "InPASS, Espacenet, Google Patents, WIPO Patentscope",
+        "MCA company master data and GSTIN lookup",
+        "Google Docs or Word for the brief",
+        "Google Drive for the evidence folder"
+      ],
+      "permissions": [
+        "read: public IP registries and the open web",
+        "read: files the person hands over",
+        "write: notes/ and a local brief",
+        "no: filing, paying, submitting any form, advising on litigation"
+      ],
+      "cost": {
+        "tier": "low",
+        "basis": "one research session per check; no paid data required for a knockout search"
+      },
+      "connector_availability": {
+        "available": [
+          "open web",
+          "IP India public search",
+          "WIPO Global Brand Database",
+          "Google Drive",
+          "Docs"
+        ],
+        "setup_required": [
+          "portal login for filing status",
+          "paid patent databases if a deep FTO read is needed"
+        ],
+        "not_available": [
+          "filing or payment on any IP portal",
+          "unpublished applications from the last 18 months"
+        ]
+      },
+      "follows_standard": true,
+      "keeps_notes": true,
+      "tracks_performance": true,
+      "evals": "skills/ip-researcher/evals.json",
+      "script": "skills/ip-researcher/scripts/tm_class_tool.py --self-test",
+      "outputs": [
+        "the one-page IP check brief",
+        "the search log with relevance scores",
+        "the class map with the classes deliberately excluded",
+        "the route and cost with the date every fee was read",
+        "the deadline calendar",
+        "what could not be verified"
+      ],
+      "best_for": [
+        "a name about to go on packaging",
+        "a product idea that may already be patented",
+        "a notice received and not yet answered",
+        "a renewal that nobody has diarised"
+      ],
+      "contract": "v2"
+    },
+    {
+      "name": "cost-optimiser",
+      "version": "1.0.0",
+      "added": "2026-11-13",
+      "status": "probation",
+      "reliability": "unverified",
+      "level": "L3",
+      "category": "operations",
+      "path": "skills/cost-optimiser",
+      "tagline": "The software and cloud spend employee - one inventory built from the debits, seats tested against real usage, duplicates found, and a ranked cut list with what breaks, who approves and what it saves a year.",
+      "skills_inside": [
+        "saas-inventory-and-ownership",
+        "cloud-cost-structure",
+        "seat-usage-and-pricing-models",
+        "cut-list-and-savings-case",
+        "renewal-calendar-and-negotiation"
+      ],
+      "tools_required": [
+        "card and bank statements, or the accounting vendor ledger",
+        "admin consoles of the tools that matter (seats, last login)",
+        "the cloud console billing and cost explorer",
+        "Google Workspace or Microsoft 365 admin",
+        "Google Sheets or Excel for the inventory and the cut list",
+        "Gmail or Outlook for renewal notices"
+      ],
+      "permissions": [
+        "read: statements, invoices, billing pages and seat exports",
+        "read: cloud billing and cost explorer",
+        "write: notes/ and the review pack",
+        "no: cancelling, downgrading, suspending or negotiating any subscription"
+      ],
+      "cost": {
+        "tier": "low",
+        "basis": "spreadsheet and statement work; the saving is the point, the spend is negligible"
+      },
+      "connector_availability": {
+        "available": [
+          "Google Sheets",
+          "Gmail",
+          "accounting exports",
+          "bank statement downloads"
+        ],
+        "setup_required": [
+          "admin seat and last-login exports",
+          "cloud billing export",
+          "cost explorer access"
+        ],
+        "not_available": [
+          "billing consoles with write access",
+          "spend on personal cards reimbursed as expenses"
+        ]
+      },
+      "follows_standard": true,
+      "keeps_notes": true,
+      "tracks_performance": true,
+      "evals": "skills/cost-optimiser/evals.json",
+      "script": "skills/cost-optimiser/scripts/spend_rollup.py --self-test",
+      "outputs": [
+        "the annualised spend review pack",
+        "the ranked cut list with saving, risk, owner and approver",
+        "the inventory appendix with usage per seat",
+        "the overlap map",
+        "the renewal calendar",
+        "what could not be verified"
+      ],
+      "best_for": [
+        "a software bill nobody can explain",
+        "a cloud bill that doubled",
+        "a renewal that auto-debits next month",
+        "a cost target that has to be met this quarter"
+      ],
+      "contract": "v2"
+    },
+    {
+      "name": "lead-qualifier",
+      "version": "1.0.0",
+      "added": "2026-11-13",
+      "status": "probation",
+      "reliability": "unverified",
+      "level": "L3",
+      "category": "revenue-facing",
+      "path": "skills/lead-qualifier",
+      "tagline": "The inbound qualification employee - every enquiry scored against the written ICP on the same rubric, banded A to D, routed with an owner and a first-touch deadline, and declined with a code instead of silence.",
+      "skills_inside": [
+        "icp-and-firmographics",
+        "scoring-rubric-and-weights",
+        "routing-and-response-sla",
+        "disqualification-and-reasons",
+        "enrichment-and-data-quality"
+      ],
+      "tools_required": [
+        "the CRM (HubSpot, Zoho CRM, Salesforce)",
+        "the form or inbox the lead arrived in",
+        "a spreadsheet for batch scoring",
+        "Google Calendar for the SLA clock",
+        "LinkedIn and the company website for verification",
+        "MCA and GSTIN lookup to confirm the entity"
+      ],
+      "permissions": [
+        "read: form exports, CRM lead records, public company data",
+        "write: notes/ and the scorecard sheet",
+        "no: contacting any lead, quoting, promising a price or a timeline"
+      ],
+      "cost": {
+        "tier": "low",
+        "basis": "one scoring session per batch; no paid enrichment required"
+      },
+      "connector_availability": {
+        "available": [
+          "Google Sheets",
+          "Gmail",
+          "website and LinkedIn lookups",
+          "MCA and GSTIN public lookup"
+        ],
+        "setup_required": [
+          "CRM read access for history and owner fields",
+          "form backend export"
+        ],
+        "not_available": [
+          "sending email or WhatsApp",
+          "booking meetings on the lead's behalf"
+        ]
+      },
+      "follows_standard": true,
+      "keeps_notes": true,
+      "tracks_performance": true,
+      "evals": "skills/lead-qualifier/evals.json",
+      "script": "skills/lead-qualifier/scripts/score_lead.py --self-test",
+      "outputs": [
+        "the batch scorecard with bands and reasons",
+        "the routing table with owners and deadlines",
+        "the three questions per A and D lead",
+        "the coded decline log",
+        "what could not be verified"
+      ],
+      "best_for": [
+        "forty enquiries and one founder",
+        "a list of 200 names to cut to 20",
+        "an argument about which leads are good",
+        "a channel that keeps sending bad-fit leads"
+      ],
+      "contract": "v2"
+    },
+    {
+      "name": "feedback-synthesiser",
+      "version": "1.0.0",
+      "added": "2026-11-13",
+      "status": "probation",
+      "reliability": "unverified",
+      "level": "L2",
+      "category": "operations",
+      "path": "skills/feedback-synthesiser",
+      "tagline": "The voice-of-customer employee - what customers already said, coded into ranked themes with counts, shares, severity, verbatim quotes and the decision each theme implies, so the business stops deciding from the three complaints the founder happened to hear.",
+      "skills_inside": [
+        "source-inventory-and-sampling",
+        "coding-and-theme-clustering",
+        "volume-weighting-and-severity",
+        "quotes-and-privacy",
+        "readout-and-decision-handoff"
+      ],
+      "tools_required": [
+        "the support desk export (Freshdesk, Zendesk)",
+        "the survey tool's free-text column",
+        "review platform exports (Google, Play Store, App Store, Zomato)",
+        "CRM cancellation and lost-deal reasons",
+        "WhatsApp Business conversation export",
+        "a spreadsheet, and the bundled clustering script"
+      ],
+      "permissions": [
+        "read: ticket, survey, review and cancellation exports",
+        "write: notes/ and the readout",
+        "no: replying to any customer, publishing a named quote, recommending a roadmap"
+      ],
+      "cost": {
+        "tier": "low",
+        "basis": "one synthesis per period; deterministic counting, no paid model calls required"
+      },
+      "connector_availability": {
+        "available": [
+          "Google Sheets",
+          "CSV exports from desk and survey tools",
+          "public review pages"
+        ],
+        "setup_required": [
+          "support desk export with body text",
+          "survey export",
+          "CRM cancellation reasons"
+        ],
+        "not_available": [
+          "reading WhatsApp threads without an export",
+          "replying to a customer",
+          "tagging tickets"
+        ]
+      },
+      "follows_standard": true,
+      "keeps_notes": true,
+      "tracks_performance": true,
+      "evals": "skills/feedback-synthesiser/evals.json",
+      "script": "skills/feedback-synthesiser/scripts/cluster_feedback.py --self-test",
+      "outputs": [
+        "the one-page voice-of-customer readout",
+        "the theme table with counts, shares and severity",
+        "verbatim quotes attributed by segment",
+        "the source inventory and coverage sentence",
+        "the unmatched bucket",
+        "what could not be verified"
+      ],
+      "best_for": [
+        "400 survey answers nobody read",
+        "a roadmap review",
+        "a churn question",
+        "a complaint that feels common and may not be"
+      ],
+      "contract": "v2"
+    },
+    {
+      "name": "field-sales-manager",
+      "version": "1.0.0",
+      "added": "2026-11-13",
+      "status": "probation",
+      "reliability": "unverified",
+      "level": "L3",
+      "category": "revenue-facing",
+      "path": "skills/field-sales-manager",
+      "tagline": "The field sales employee - a beat plan that respects travel and frequency, a visit log that produces dated follow-ups, targets converted into a daily call number, and a dealer picture where primary and secondary stop being confused.",
+      "skills_inside": [
+        "beat-planning-and-territory",
+        "visit-log-and-call-notes",
+        "targets-and-review-cadence",
+        "dealer-and-distributor-working",
+        "field-coaching-and-escalation"
+      ],
+      "tools_required": [
+        "the outlet master in a spreadsheet",
+        "the CRM or a field app for visit logging",
+        "WhatsApp Business for the rep's daily report",
+        "Google Maps for travel time and closed days",
+        "the accounting or ERP system for primary invoices and dealer claims",
+        "Google Calendar for the review cadence"
+      ],
+      "permissions": [
+        "read: outlet master, primary invoices, dealer ageing, visit logs",
+        "write: notes/, the beat plan and the review pack",
+        "no: marking a visit done, promising a price or scheme, granting credit"
+      ],
+      "cost": {
+        "tier": "low",
+        "basis": "one planning session per week or month; no paid routing tool required"
+      },
+      "connector_availability": {
+        "available": [
+          "Google Sheets",
+          "Google Maps",
+          "WhatsApp export",
+          "accounting exports"
+        ],
+        "setup_required": [
+          "CRM or field app check-in data",
+          "secondary sales tracking from distributors"
+        ],
+        "not_available": [
+          "geo check-ins without a field app",
+          "secondary sales where the business does not collect them"
+        ]
+      },
+      "follows_standard": true,
+      "keeps_notes": true,
+      "tracks_performance": true,
+      "evals": "skills/field-sales-manager/evals.json",
+      "script": "skills/field-sales-manager/scripts/beat_plan.py --self-test",
+      "outputs": [
+        "the day-by-day beat plan",
+        "the coverage table against the frequency policy",
+        "the target arithmetic with the real lever named",
+        "the six-field visit log standard",
+        "the territory numbers by rep and zone",
+        "what could not be verified"
+      ],
+      "best_for": [
+        "a week with no plan",
+        "a territory that looks busy and is flat",
+        "targets that are argued about instead of worked",
+        "a dealer claim that does not reconcile"
+      ],
+      "contract": "v2"
     }
-  ]
+  ],
+  "levels": {
+    "definition": "How much of the job an employee can carry alone. Every new employee starts at its design level with status probation and reliability unverified until it has run real tasks.",
+    "L0": "Drafts only. No connector, no system of record, no state. A human does everything after the draft.",
+    "L1": "Reads public or pasted data and produces a decision document. No write access anywhere.",
+    "L2": "Works a full workflow with one or more connectors, read-heavy, producing an artefact a human signs or executes.",
+    "L3": "Runs a recurring cadence across several connectors, writes to working systems inside guardrails, escalates exceptions to a human.",
+    "L4": "Autonomous within written guardrails, including writes that commit the business, with a human reviewing after the fact rather than before."
+  }
 }

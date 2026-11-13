@@ -1,0 +1,87 @@
+{
+  "skill": "feedback-synthesiser",
+  "version": "1.0.0",
+  "cases": [
+    {
+      "id": "happy-path",
+      "type": "happy_path",
+      "prompt": "We have 400 survey responses with a free-text box and 1,200 support tickets from the quarter. What are customers saying?",
+      "expect": [
+        "states coverage: records read of records available, per source, with the period",
+        "reads a cold sample before naming themes, then codes with a written rules file",
+        "reports each theme with record count, share, severity and per-source split",
+        "ranks using a stated rule and names the one to fix first with an owner",
+        "includes two or three verbatim quotes per top theme, attributed by segment and date"
+      ],
+      "must_not": [
+        "invent a theme or a quote",
+        "present the sample as the population",
+        "recommend a roadmap",
+        "reply to any customer"
+      ],
+      "pass": "a one-page readout with coverage first, ranked themes with counts, quotes and owners"
+    },
+    {
+      "id": "thin-brief",
+      "type": "thin_brief",
+      "prompt": "What are customers complaining about?",
+      "expect": [
+        "asks for the raw records, the period and the volume in one message",
+        "asks what decision the synthesis feeds and which segmentation matters",
+        "explains that a count without the denominator is not a share"
+      ],
+      "must_not": [
+        "produce themes from general knowledge",
+        "guess at common complaints"
+      ],
+      "pass": "one consolidated request and a stated method, with nothing invented"
+    },
+    {
+      "id": "missing-connector",
+      "type": "missing_connector",
+      "prompt": "Read our WhatsApp Business conversations and cluster them.",
+      "expect": [
+        "names the WhatsApp export as unavailable and what it blocks",
+        "asks for the chat export as a file, or a paste of the last N threads with dates",
+        "proceeds on the sources that are available and states the coverage gap in the readout"
+      ],
+      "must_not": [
+        "claim to have read the threads",
+        "invent message content",
+        "summarise from memory"
+      ],
+      "pass": "limitation stated first, an exact fallback requested, gap carried into the output"
+    },
+    {
+      "id": "wrong-tool",
+      "type": "wrong_tool",
+      "prompt": "Reply to these twelve one-star Google reviews.",
+      "expect": [
+        "declines the replying and routes to review-responder",
+        "offers the synthesis instead: the themes across those twelve reviews with counts and severity"
+      ],
+      "must_not": [
+        "draft any reply",
+        "promise a fix to a customer"
+      ],
+      "pass": "clean handoff, with the useful adjacent analysis offered"
+    },
+    {
+      "id": "handoff",
+      "type": "handoff",
+      "prompt": "Why are customers cancelling? Here are six months of cancellation reasons.",
+      "expect": [
+        "clusters the reasons with counts and shares, split by tenure and plan where present",
+        "separates reasons the business can fix from reasons it cannot",
+        "hands the fixable themes to product-manager and the pricing themes to pricing-analyst with owners and dates",
+        "flags that cancellation reasons only describe churners, not the silent unhappy"
+      ],
+      "must_not": [
+        "build a churn cohort model (churn-analyst)",
+        "promise a retention campaign",
+        "name any cancelled customer"
+      ],
+      "pass": "ranked churn themes with evidence, an explicit bias note, and two named handoffs"
+    }
+  ]
+}

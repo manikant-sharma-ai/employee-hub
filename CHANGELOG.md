@@ -2,6 +2,80 @@
 
 One dated block per drop. What shipped, and why it is shaped that way.
 
+## 2026-11-13 (second batch) - daily drop: five employees (v1.13.0)
+
+**The mix: two revenue-facing, two operations, one founder-leverage.** This is the batch the 05:10
+commit of today (v1.12.0) promoted to `next` for exactly this mix, so nothing was skipped for the
+balance. What shaped it is the gap between what the hub can do and what it can *see*. The hub could
+plan a budget, reconcile a month, report to a board, chase a receivable and forecast a quarter - and
+still could not answer four ordinary questions: can we put this name on a carton, why is the software
+bill this size, which of these enquiries is worth a founder's hour, and what are customers actually
+saying. Each of the five closes one of those, and each was written to a boundary with a shipped
+employee rather than beside one.
+
+- **`ip-researcher`** (`skills/ip-researcher`, v1.0.0) - the founder-leverage role, and the one the
+  hub has been missing since `legal-drafter` shipped on 3 November. The split is research against
+  drafting: `legal-drafter` writes the assignment, the licence and the notice; this role finds out
+  what exists, what is registrable and what it costs, and hands the attorney a file. Three choices
+  carry it. The class map is built from the goods in plain words, because "we are a food brand" has
+  produced more wrong filings than any other sentence and class 29, 30, 32 and 43 are four different
+  businesses. Every hit in the search log carries its number, class, status, proprietor and the date
+  it was read, and is scored against the section 11 test rather than against how similar it looks.
+  And every fee is passed into `scripts/tm_class_tool.py` rather than hardcoded, because a stale
+  official fee is a client pack that is wrong on page one - the script refuses to compute a fee it was
+  not given. It never files, never pays and never says a mark is available.
+- **`cost-optimiser`** (`skills/cost-optimiser`, v1.0.0) - the first operations role, and the one that
+  finally makes `expense-auditor` a boundary instead of an overlap: the auditor checks claims against
+  policy, this role reads what the business is *subscribed* to and finds the money. Three choices
+  shape it. The inventory is built from the debits, not from a list of tools, because the team's
+  memory contains the ten tools everyone likes and none of the leaks. Every line is annualised in one
+  currency at a stated rate, since a ₹4,000 monthly plan and a ₹48,000 annual plan are the same number
+  and only one of them looks like it. And the cut ladder runs cheapest-risk first with commitments
+  last, because committing to a reserved plan before removing the waste is how a business locks in the
+  thing it was trying to cut. `scripts/spend_rollup.py` normalises the vendors, annualises, finds
+  duplicate lines and ranks the unused seats, so the arithmetic is reproducible and the founder can
+  disagree with the rule rather than with a number.
+- **`lead-qualifier`** (`skills/lead-qualifier`, v1.0.0) - the first revenue role, and the answer to
+  the one sentence `sales-outreach` has carried in its own boundary since 2 November: it writes the
+  sequence, and something had to decide who deserves one. The split is decision against message. Three
+  choices carry it. One rubric of seven weighted factors, written down before the batch, because a
+  score computed from a rubric invented per lead is a number with no meaning across forty leads.
+  Unknown is a value - it scores zero and is listed - and a lead whose unknowns could lift it a band
+  goes to band D for one question rather than being declined as a C, which is the single most
+  expensive error in inbound. And every decline carries a code, so the monthly roll-up tells the
+  business which channel to stop paying for. It scores and routes; it never contacts, quotes or
+  promises.
+- **`feedback-synthesiser`** (`skills/feedback-synthesiser`, v1.0.0) - the second operations role, and
+  the one that turns four thousand sentences the business already paid for into a decision. The split
+  is reading against replying: `review-responder` and `support-agent` write the words to one customer,
+  this role counts what all of them said. Three choices shape it. Thirty records are read cold before
+  a single theme is named, because a theme list invented first finds exactly what the team already
+  believed. The coverage sentence - records read of records available - is the first line of every
+  output, since "customers are saying" is the sentence the first sceptic ends. And frequency and
+  severity are kept as separate axes, with the ranking rule stated, because the rare theme that
+  quietly loses customers never surfaces in a volume ranking. An unmatched share above 15% is reported
+  as a finding rather than hidden, since that is where the newest problem lives.
+- **`field-sales-manager`** (`skills/field-sales-manager`, v1.0.0) - the second revenue role, and the
+  first employee in the hub whose unit of work is a *day on the road*. The split from `sales-outreach`
+  is the same one as everywhere else in this batch: that role writes to people who are not in front of
+  you, this one plans the people who are. Three choices carry it. The frequency policy is written per
+  category before any route, because a beat built on a rep's preference is a tour and the A outlet
+  visited twice a quarter is the one that starts buying elsewhere. The plan is filled zone-first with
+  a calls-per-day cap, and `scripts/beat_plan.py` reports the visits that do not fit as a capacity
+  finding rather than quietly producing a twenty-two-call day nobody will run. And primary is treated
+  as a shipment until secondary proves otherwise, with the reconciliation identity - opening plus
+  primary minus secondary equals closing - as the tool that settles a dealer claim without an
+  accusation. It never marks a visit done and never grants credit.
+
+**Also in this drop:** `registry.json` gains a level scale (L0-L4), and every employee in this batch
+carries `level`, `category`, `permissions`, `cost`, `connector_availability`, `status: probation` and
+`reliability: unverified` - the honest state of an employee on its first day. Each of the five ships
+`evals.json` with five cases (happy path, thin brief, missing connector, wrong tool, handoff), one
+deterministic script with a passing `--self-test`, one asset template, and a `notes.seed/` folder that
+is schema only - no fabricated experience anywhere. Registry and both plugin manifests move to
+v1.13.0. `data-privacy-officer` (#124), `incident-commander` (#132), `link-builder` (#137),
+`crm-hygienist` (#142) and `follow-up-sequencer` (#144) are promoted to `next` for the same 2-2-1 mix.
+
 ## 2026-11-13 - daily drop: five employees (v1.12.0)
 
 **The mix this drop: two revenue-facing, two operations, one founder-leverage.** All five were already

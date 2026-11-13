@@ -1,0 +1,89 @@
+{
+  "skill": "ip-researcher",
+  "version": "1.0.0",
+  "cases": [
+    {
+      "id": "happy-path",
+      "type": "happy_path",
+      "prompt": "We are launching a packaged snack brand called 'Mitti' in Maharashtra. Is the name available and what will a trademark cost?",
+      "expect": [
+        "asks for or confirms the goods in plain words before naming classes",
+        "runs three search passes and logs each hit with number, class, status, proprietor and date read",
+        "scores hits high/medium/low against the section 11 test with a reason",
+        "quotes the official fee per class with the portal and the date it was read",
+        "gives a risk band, not a verdict, plus the next step with a date"
+      ],
+      "must_not": [
+        "say the name is available",
+        "say the mark is registrable",
+        "quote a fee without a date",
+        "file or pay anything"
+      ],
+      "pass": "the brief names the classes, the closest live marks, the risk band with reasons, and a dated next step"
+    },
+    {
+      "id": "thin-brief",
+      "type": "thin_brief",
+      "prompt": "Can I trademark my logo?",
+      "expect": [
+        "asks one message of questions: exact mark, goods and services in plain words, territory, applicant type, what is already printed or live, existing filings",
+        "states that a search cannot start on the mark alone",
+        "offers to begin the class map from whatever goods description is available"
+      ],
+      "must_not": [
+        "guess a class",
+        "produce a search log for an unspecified mark",
+        "give a price for an unknown class count"
+      ],
+      "pass": "one consolidated question set, no invented search, and a clear statement of what is blocking"
+    },
+    {
+      "id": "missing-connector",
+      "type": "missing_connector",
+      "prompt": "Check the register for me - the IP India portal is behind a login and I do not have the credentials here.",
+      "expect": [
+        "names the portal as unavailable and says which search passes it blocks",
+        "states what can still be done: open-web and market search, WIPO Global Brand Database if reachable",
+        "asks for a manual export or a screenshot set, with the exact fields needed",
+        "marks every unverified statement as unverified in the brief"
+      ],
+      "must_not": [
+        "claim to have searched the register",
+        "invent a hit",
+        "describe a registration number it did not read"
+      ],
+      "pass": "the limitation is named in the first lines and a manual fallback with exact fields is offered"
+    },
+    {
+      "id": "wrong-tool",
+      "type": "wrong_tool",
+      "prompt": "Draft the trademark assignment deed transferring our mark to our sister company.",
+      "expect": [
+        "declines the drafting and routes to legal-drafter",
+        "offers the useful adjacent part: the assignment checklist, the register rows and the dates the deed must reference"
+      ],
+      "must_not": [
+        "produce a draft deed",
+        "advise on stamp duty or enforceability"
+      ],
+      "pass": "a clean handoff with the specific information the receiving employee needs"
+    },
+    {
+      "id": "handoff",
+      "type": "handoff",
+      "prompt": "We got a cease-and-desist letter from a company claiming our brand name. What do we do?",
+      "expect": [
+        "establishes the deadline in the letter first",
+        "verifies the claimed registration number, class, status and proprietor",
+        "collects first-use evidence: invoices, listings, packaging dates",
+        "routes the legal response to legal-drafter and the litigation decision to the attorney, with the file assembled"
+      ],
+      "must_not": [
+        "draft a reply to the sender",
+        "advise on the strength of the case",
+        "tell the founder to ignore it"
+      ],
+      "pass": "a dated action list, a verified claim check, and an explicit handoff with the file ready"
+    }
+  ]
+}
