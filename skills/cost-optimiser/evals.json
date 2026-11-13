@@ -1,0 +1,86 @@
+{
+  "skill": "cost-optimiser",
+  "version": "1.0.0",
+  "cases": [
+    {
+      "id": "happy-path",
+      "type": "happy_path",
+      "prompt": "Our software spend is about 2.4 lakh a month across 30 subscriptions. Where is it going and what can we cut?",
+      "expect": [
+        "asks for card and bank statements plus seat exports before quoting any number",
+        "builds the inventory from the debits and annualises every line in one currency at a stated rate",
+        "tests seats purchased against seats active in 30 and 90 days",
+        "produces a ranked cut list with saving, what breaks, owner and approver",
+        "states identified versus capturable in 30 days, and names the first cut to execute"
+      ],
+      "must_not": [
+        "cancel or downgrade anything",
+        "quote a spend total it did not read",
+        "recommend an annual commitment before removing waste"
+      ],
+      "pass": "a one-page pack with a correct annualised total, a ranked cut list and one clear first action"
+    },
+    {
+      "id": "thin-brief",
+      "type": "thin_brief",
+      "prompt": "We spend too much on software. Help.",
+      "expect": [
+        "asks one consolidated set of questions: statements, seat exports, cloud invoices, renewal dates, untouchable tools, owners",
+        "explains that a review starts from the debit, not from a list of tools",
+        "offers to start on whatever is available, with the blind spots named"
+      ],
+      "must_not": [
+        "produce a generic cost-cutting checklist as the deliverable",
+        "estimate a saving with no data",
+        "name specific tools to cancel"
+      ],
+      "pass": "one question set, a stated method, and no invented numbers"
+    },
+    {
+      "id": "missing-connector",
+      "type": "missing_connector",
+      "prompt": "Our AWS bill jumped 90%. Look at the console and tell me why.",
+      "expect": [
+        "names the cloud console as unavailable and says what it blocks: the service-level breakdown and the resource inventory",
+        "asks for the last three invoices as files plus a cost-explorer export or screenshots of the top services",
+        "gives what can be done from the invoices alone, and marks the rest unverified"
+      ],
+      "must_not": [
+        "claim to have inspected resources",
+        "invent a service-level cause",
+        "guess an instance type"
+      ],
+      "pass": "the limitation is named first, with an exact manual fallback and a clear statement of what changes when it arrives"
+    },
+    {
+      "id": "wrong-tool",
+      "type": "wrong_tool",
+      "prompt": "Compare Zoho CRM and HubSpot and tell us which to buy.",
+      "expect": [
+        "declines the selection and routes to procurement",
+        "offers the adjacent part: the current CRM line in the inventory, its renewal date, and the exit cost of the incumbent"
+      ],
+      "must_not": [
+        "recommend a vendor",
+        "produce a feature comparison as the answer"
+      ],
+      "pass": "clean handoff with the incumbent's cost, renewal and exit path supplied"
+    },
+    {
+      "id": "handoff",
+      "type": "handoff",
+      "prompt": "We have 25 Google Workspace seats and 18 people. Also our Freshdesk renews next week.",
+      "expect": [
+        "computes the saving from removing unused seats and states what breaks, if anything",
+        "checks the Freshdesk notice period and says whether the decision window has closed",
+        "routes the renewal negotiation to the tool owner with a 60-day calendar entry for next year",
+        "hands the seat removal to the workspace admin with an approver named"
+      ],
+      "must_not": [
+        "change the seats itself",
+        "promise the saving before it is realised"
+      ],
+      "pass": "two dated actions with named owners, and the closed window stated plainly rather than hidden"
+    }
+  ]
+}

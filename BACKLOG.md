@@ -128,8 +128,8 @@ Nothing is removed without a note on why. A role that cannot clear the quality b
 | 120 | `proposal-writer` | Winning proposals and RFP responses from a requirements document | shipped 2026-11-10 |
 | 121 | `tender-bidder` | GeM and state tender discovery, eligibility checks, bid assembly | shipped 2026-11-13 |
 | 122 | `govt-scheme-finder` | Matches a business to MSME, export and state incentive schemes | shipped 2026-11-12 |
-| 123 | `ip-researcher` | Trademark and patent landscape checks, filing prep notes | next |
-| 124 | `data-privacy-officer` | Data maps, consent records, DPDP readiness, breach playbook | queued |
+| 123 | `ip-researcher` | Trademark and patent landscape checks, filing prep notes | shipped 2026-11-13 |
+| 124 | `data-privacy-officer` | Data maps, consent records, DPDP readiness, breach playbook | next |
 | 125 | `accessibility-auditor` | WCAG checks on a site or app with prioritised fixes | queued |
 | 126 | `localisation-qa` | Checks translated UI and content for tone, length and errors | queued |
 | 127 | `doc-writer` | API and product documentation a new user can actually follow | queued |
@@ -137,25 +137,25 @@ Nothing is removed without a note on why. A role that cannot clear the quality b
 | 129 | `forum-moderator` | Community rules, spam control, escalation of harmful content | queued |
 | 130 | `bug-triager` | Reproduction, severity, duplicates, ownership routing | queued |
 | 131 | `release-manager` | Release notes, go/no-go checklist, rollout and rollback | queued |
-| 132 | `incident-commander` | Severity calls, comms cadence, timeline, postmortem | queued |
+| 132 | `incident-commander` | Severity calls, comms cadence, timeline, postmortem | next |
 | 133 | `runbook-author` | Operational runbooks with real commands and stop conditions | queued |
-| 134 | `cost-optimiser` | Cloud and SaaS spend review with a cut list and savings estimate | next |
+| 134 | `cost-optimiser` | Cloud and SaaS spend review with a cut list and savings estimate | shipped 2026-11-13 |
 | 135 | `vendor-security-reviewer` | Third-party risk questionnaires and gap notes | queued |
 | 136 | `seo-technical` | Crawl, index, speed and structured-data fixes | queued |
-| 137 | `link-builder` | Outreach for citations and partnerships, with quality filters | queued |
+| 137 | `link-builder` | Outreach for citations and partnerships, with quality filters | next |
 | 138 | `app-store-optimiser` | Store listing, screenshots, keyword and rating strategy | queued |
 | 139 | `youtube-strategist` | Channel positioning, titles, thumbnails brief, retention fixes | queued |
 | 140 | `scriptwriter` | Scripts for ads, explainers and reels with hook and payoff | queued |
-| 141 | `lead-qualifier` | Scores inbound leads against an ICP and routes them | next |
-| 142 | `crm-hygienist` | Dedupe, field standards, pipeline cleanup, stage definitions | queued |
+| 141 | `lead-qualifier` | Scores inbound leads against an ICP and routes them | shipped 2026-11-13 |
+| 142 | `crm-hygienist` | Dedupe, field standards, pipeline cleanup, stage definitions | next |
 | 143 | `quote-generator` | Builds quotes from a price list with margins and terms applied | shipped 2026-11-13 |
-| 144 | `follow-up-sequencer` | Timed follow-ups that reference the actual last conversation | queued |
-| 145 | `feedback-synthesiser` | Clusters customer feedback into themes with counts and quotes | next |
+| 144 | `follow-up-sequencer` | Timed follow-ups that reference the actual last conversation | next |
+| 145 | `feedback-synthesiser` | Clusters customer feedback into themes with counts and quotes | shipped 2026-11-13 |
 | 146 | `decision-logger` | Records decisions, owners, dates and what would reverse them | queued |
 | 147 | `store-ops-manager` | Daily store checklist, staffing, replenishment and shrink control | queued |
 | 148 | `franchise-coordinator` | Franchisee onboarding, standards audits, royalty tracking | queued |
 | 149 | `warranty-claims` | Claim intake, eligibility checks, replacement and refund tracking | queued |
-| 150 | `field-sales-manager` | Beat plans, visit logs, territory review and target tracking | next |
+| 150 | `field-sales-manager` | Beat plans, visit logs, territory review and target tracking | shipped 2026-11-13 |
 | 151 | `employee-hub-router` | The hire desk - which employee owns the job, what to hand over, which connector is missing | shipped 2026-11-03 |
 
 ## Queue notes
@@ -311,6 +311,25 @@ Kept so that a later drop does not have to re-derive why the order moved.
   demand and one running the field beat. `crm-hygienist` (#142) stays queued: `sales-outreach` already
   ships CRM hygiene, and the two would fight over "clean up our pipeline". `decision-logger` (#146)
   stays queued for the same reason against `chief-of-staff`'s decision log.
+
+- **2026-11-13 (second batch) - the five `next` rows were taken in order, nothing skipped.** The
+  mix held without a hold: `lead-qualifier` and `field-sales-manager` are revenue-facing,
+  `cost-optimiser` and `feedback-synthesiser` are operations, `ip-researcher` is the founder-leverage
+  role. Each of the five was already carrying a written boundary in a shipped skill's guardrails -
+  `sales-outreach` on who deserves a sequence, `expense-auditor` on claims against subscriptions,
+  `legal-drafter` on drafting against research, `review-responder` on counting against replying - so
+  shipping them closed four promises instead of opening four new overlaps.
+- **2026-11-13 (second batch) - `crm-hygienist` (#142) promoted to `next` rather than shipped.**
+  `lead-qualifier` now routes "clean up duplicate companies and standardise the industry field" to it
+  by name, and `sales-outreach` already ships some CRM hygiene, so it needs a written boundary before
+  it can ship: pipeline *data* against pipeline *discipline* is the likely split.
+- **2026-11-13 (second batch) - `decision-logger` (#146) held again.** `chief-of-staff` owns the
+  decision log as part of the weekly operating review, and a second employee recording decisions would
+  fire on the same sentence. It stays queued until the split is written.
+- **2026-11-13 (second batch) - `data-privacy-officer` (#124) promoted as the founder-leverage role
+  for the next drop, ahead of three lower-numbered queued roles.** DPDP readiness is the one
+  compliance question in the queue that a founder cannot delegate to an accountant and that gets
+  worse every month it is not answered.
 
 ## The five-a-day mix
 

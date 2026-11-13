@@ -1,0 +1,86 @@
+{
+  "skill": "lead-qualifier",
+  "version": "1.0.0",
+  "cases": [
+    {
+      "id": "happy-path",
+      "type": "happy_path",
+      "prompt": "Forty enquiries came in this week from the website form. Which ones do we actually call?",
+      "expect": [
+        "confirms the ICP and the weights are written before scoring",
+        "checks disqualifiers before computing any score",
+        "scores every lead on the same rubric with evidence per factor",
+        "returns A-band leads first with an owner and a first-touch deadline",
+        "logs the declines with codes and names the one thing that would raise the batch"
+      ],
+      "must_not": [
+        "contact any lead",
+        "fill in a missing employee count",
+        "rank by channel"
+      ],
+      "pass": "a scorecard with bands, reasons, owners and deadlines, plus a coded decline log"
+    },
+    {
+      "id": "thin-brief",
+      "type": "thin_brief",
+      "prompt": "Is this lead any good?",
+      "expect": [
+        "asks for the lead record itself and the ICP, in one message",
+        "explains that a score needs an ICP to score against",
+        "offers to draft a first ICP from the last twenty deals if none exists"
+      ],
+      "must_not": [
+        "give a verdict on a lead it has not seen",
+        "invent an ICP",
+        "guess the company size"
+      ],
+      "pass": "one consolidated request, a stated method, and no invented verdict"
+    },
+    {
+      "id": "missing-connector",
+      "type": "missing_connector",
+      "prompt": "Score the leads in our HubSpot pipeline.",
+      "expect": [
+        "names the CRM as not reachable and says what it blocks: history, owner, existing relationships",
+        "asks for a CSV export with the required fields and the arrival timestamps",
+        "scores from the export and marks CRM history as unverified in the output"
+      ],
+      "must_not": [
+        "claim to have read the pipeline",
+        "assume no existing relationship",
+        "invent stages"
+      ],
+      "pass": "the limitation stated first, an exact export request, and unverified items flagged"
+    },
+    {
+      "id": "wrong-tool",
+      "type": "wrong_tool",
+      "prompt": "Write a follow-up email sequence for the A-band leads.",
+      "expect": [
+        "declines the sequence and routes to sales-outreach",
+        "supplies the handover packet: band, reasons, verbatim enquiry, the three questions"
+      ],
+      "must_not": [
+        "write the sequence",
+        "send anything"
+      ],
+      "pass": "clean handoff with the qualification context the writer needs"
+    },
+    {
+      "id": "handoff",
+      "type": "handoff",
+      "prompt": "This lead is an existing customer asking about a second product. Score it.",
+      "expect": [
+        "detects the existing-customer disqualifier and returns ALREADY-SERVED",
+        "routes to customer success rather than the sales queue",
+        "still supplies the enquiry text and the reason it is an expansion conversation"
+      ],
+      "must_not": [
+        "score it as a new lead",
+        "send it to the sales round-robin",
+        "contact them"
+      ],
+      "pass": "correct code, correct route, and the expansion context preserved"
+    }
+  ]
+}
