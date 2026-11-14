@@ -1,8 +1,8 @@
 {
   "name": "employee-hub",
   "display_name": "Employee Hub",
-  "version": "1.12.0",
-  "updated": "2026-11-13",
+  "version": "1.13.0",
+  "updated": "2026-11-15",
   "cadence": "5 employees daily at 06:00 IST",
   "standard": "core/employee-standard.md",
   "obligations": [
@@ -2357,6 +2357,212 @@
         "a dealer who needs his own rate",
         "a quote that lost on price and needs reworking",
         "a quotation that has to become a proforma invoice"
+      ]
+    },
+    {
+      "name": "ip-researcher",
+      "version": "1.0.0",
+      "added": "2026-11-15",
+      "status": "stable",
+      "path": "skills/ip-researcher",
+      "tagline": "The IP employee - trademark clearance and class strategy, patent and design landscape reads, the filing route with dated fees and deadlines, the ownership record behind every asset, and the monthly watch that catches a conflicting application inside the opposition window.",
+      "skills_inside": [
+        "trademark-search-and-clearance",
+        "patent-and-design-landscape",
+        "filing-strategy-and-costs",
+        "ip-portfolio-and-enforcement",
+        "ip-audit-and-ownership"
+      ],
+      "tools_required": [
+        "a browser on the IP India, WIPO, TMview, Espacenet and Google Patents search pages (public, no login)",
+        "Google Drive or OneDrive (brand assets, receipts, assignments)",
+        "Gmail or Outlook (agent correspondence, objection notices, vendor contracts)",
+        "Zoho Books, Tally or QuickBooks (fees paid, for the renewal calendar)",
+        "Google Calendar (filing deadlines, opposition windows, renewals)",
+        "the filing portal is NOT connected - a human or the registered agent files and pays"
+      ],
+      "follows_standard": true,
+      "keeps_notes": true,
+      "tracks_performance": true,
+      "outputs": [
+        "the verdict in three lines with the action that follows",
+        "the register hits as a table - mark, class, applicant, status, dates",
+        "the similarity read in examiner language",
+        "the route, the fee by applicant type and every deadline with an owner",
+        "the ownership position and the missing document",
+        "the boundary of the search"
+      ],
+      "best_for": [
+        "a founder about to print packaging under a new name",
+        "a trademark question that keeps being postponed",
+        "a product design a competitor has started copying",
+        "a raise or a sale where the IP paperwork is the gap"
+      ]
+    },
+    {
+      "name": "cost-optimiser",
+      "version": "1.0.0",
+      "added": "2026-11-15",
+      "status": "stable",
+      "path": "skills/cost-optimiser",
+      "tagline": "The cost-base employee - the reconciled inventory of every recurring line, seats provisioned against seats actually used, cloud sized against real load, cost per order or per user, the renewal calendar with its notice deadlines, and a cut list priced net of the switch cost.",
+      "skills_inside": [
+        "spend-inventory-and-tagging",
+        "saas-licence-audit",
+        "cloud-rightsizing-and-unit-economics",
+        "vendor-negotiation-and-renewal",
+        "cut-list-and-savings-case"
+      ],
+      "tools_required": [
+        "the accounting ledger or the bank and card statements (the inventory is built from the money)",
+        "the cloud console and its billing export (AWS, GCP, Azure, DigitalOcean)",
+        "Google Workspace or Microsoft 365 admin, or the SSO log (who actually logs in)",
+        "Google Sheets or Excel (inventory, unit economics, savings tracker)",
+        "Gmail or Outlook (renewal notices, order forms, the account manager)",
+        "Google Calendar (renewal dates with a 30-day advance)",
+        "vendor usage APIs are mostly NOT connected - the admin console and the SSO log are the evidence"
+      ],
+      "follows_standard": true,
+      "keeps_notes": true,
+      "tracks_performance": true,
+      "outputs": [
+        "the headline in four lines - spend, saving, two actions, the next forced decision",
+        "the inventory reconciled to the ledger with the difference explained",
+        "utilisation per line with the source named",
+        "unit economics against three months ago",
+        "the cut list ranked with net saving, risk, owner and deadline",
+        "the renewal calendar sorted by notice deadline",
+        "what could not be verified"
+      ],
+      "best_for": [
+        "a cloud bill growing faster than the business",
+        "a stack of forty tools nobody owns",
+        "a renewal quote that arrived 18% higher",
+        "a founder who wants software spend down by a fifth"
+      ]
+    },
+    {
+      "name": "feedback-synthesiser",
+      "version": "1.0.0",
+      "added": "2026-11-15",
+      "status": "stable",
+      "path": "skills/feedback-synthesiser",
+      "tagline": "The voice-of-customer employee - every channel of feedback collected and bias-stated, coded into themes in the customer's own words, counted by customer rather than mention, ranked on frequency, severity, revenue and fit, and turned into a disposition with an owner and a re-read date.",
+      "skills_inside": [
+        "feedback-sources-and-collection",
+        "coding-and-theme-taxonomy",
+        "counting-and-prioritisation",
+        "verbatims-and-report-writing",
+        "closing-the-loop"
+      ],
+      "tools_required": [
+        "the helpdesk (Freshdesk, Zoho Desk, Intercom, Gorgias) - tickets, tags, CSAT",
+        "app store and Google Business review exports",
+        "WhatsApp Business or the chat tool",
+        "Gmail or Outlook (NPS replies, unsubscribe reasons)",
+        "the CRM (HubSpot, Zoho) - plan, tenure and value, which is what weights a mention",
+        "Google Sheets or Excel (the coding sheet - one row per item, one code)",
+        "call recordings and telephony are usually NOT connected - say so when they would change the read"
+      ],
+      "follows_standard": true,
+      "keeps_notes": true,
+      "tracks_performance": true,
+      "outputs": [
+        "the one-page read - corpus, bias, top three themes with counts",
+        "the theme table with severity, revenue at stake, segment, disposition and owner",
+        "five to ten redacted verbatims per top theme",
+        "the segment read",
+        "movement since the last read",
+        "the limits of the corpus and the decision it supports"
+      ],
+      "best_for": [
+        "a roadmap decision resting on one loud customer",
+        "three thousand unread tickets before a planning cycle",
+        "a churn question nobody can answer from the forms",
+        "a pricing complaint that needs a denominator"
+      ]
+    },
+    {
+      "name": "lead-qualifier",
+      "version": "1.0.0",
+      "added": "2026-11-15",
+      "status": "stable",
+      "path": "skills/lead-qualifier",
+      "tagline": "The inbound qualification employee - every enquiry scored on fit and intent with a written reason, disqualified with a route instead of silence, routed to a named owner against a response deadline that respects the channel and the language, and read weekly by source on cost per qualified lead.",
+      "skills_inside": [
+        "icp-and-scoring-model",
+        "inbound-triage-and-routing",
+        "qualification-conversations",
+        "lead-source-quality",
+        "handover-and-crm-hygiene"
+      ],
+      "tools_required": [
+        "the CRM (HubSpot, Zoho CRM, Bigin, Pipedrive)",
+        "Gmail or Outlook (the enquiry inbox and the first reply)",
+        "WhatsApp Business (where much Indian inbound actually arrives)",
+        "the website form or landing page tool",
+        "the marketplace seller panel (IndiaMART, Amazon, GeM)",
+        "Google Sheets or Excel (scoring model, source-quality table)",
+        "telephony and call recordings are usually NOT connected - the CRM note is then the only evidence"
+      ],
+      "follows_standard": true,
+      "keeps_notes": true,
+      "tracks_performance": true,
+      "outputs": [
+        "the queue in one table with fit, intent, owner, deadline and reason",
+        "the call list in order with the opening question for each",
+        "the disqualifications with the reason and where each went",
+        "acknowledgement drafts in the lead's language",
+        "the source read on qualified leads against won deals",
+        "queue health and what could not be verified"
+      ],
+      "best_for": [
+        "a week of enquiries with no one deciding who to call",
+        "a sales team that blames lead quality",
+        "a two-day response time nobody has measured",
+        "a channel spend decision that needs qualification data"
+      ]
+    },
+    {
+      "name": "field-sales-manager",
+      "version": "1.0.0",
+      "added": "2026-11-15",
+      "status": "stable",
+      "path": "skills/field-sales-manager",
+      "tagline": "The field sales employee - territory split by potential, frequency by outlet class, a journey plan that fits the days available with travel priced in, a six-field visit log a rep will actually fill, primary and secondary against target, distributor stock and credit, and the coverage read that keeps, fixes or drops a beat.",
+      "skills_inside": [
+        "territory-and-beat-planning",
+        "visit-execution-and-logging",
+        "distributor-and-channel-management",
+        "targets-incentives-and-review",
+        "field-data-and-coverage-analytics"
+      ],
+      "tools_required": [
+        "the distributor management system or ERP (Marg, Busy, Tally with a sales module, Zoho Inventory)",
+        "Google Sheets or Excel (outlet master, beat plan, coverage read)",
+        "WhatsApp Business (the daily six-field visit log when there is no app)",
+        "Google Maps (route distance, cluster map, pin codes)",
+        "a field app or the CRM (Zoho CRM, Kapture, Bizom, FieldAssist)",
+        "Google Calendar (the beat cycle, market and shut days, review cadence)",
+        "outlet-level secondary sales are often NOT reported - the read then says primary only"
+      ],
+      "follows_standard": true,
+      "keeps_notes": true,
+      "tracks_performance": true,
+      "outputs": [
+        "the answer in five lines - number, cause, one change, the beat to drop, the date",
+        "the territory and beat plan with calls per day and travel share",
+        "the call standard and the log format",
+        "primary and secondary against target by territory, rep and distributor",
+        "the distributor read - stock cover, outstanding, claims, ROI",
+        "the coverage read and the beats to keep, fix or drop",
+        "what could not be verified"
+      ],
+      "best_for": [
+        "a beat plan that has to fit six days and six reps",
+        "reps who are busy while the number is flat",
+        "a distributor sitting on sixty days of stock",
+        "a territory split or a target that needs to be defensible"
       ]
     }
   ]

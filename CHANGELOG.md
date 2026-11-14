@@ -2,6 +2,84 @@
 
 One dated block per drop. What shipped, and why it is shaped that way.
 
+## 2026-11-15 - daily drop: five employees (v1.13.0)
+
+**The mix this drop: two revenue-facing, two operations, one founder-leverage.** All five were already on
+`next`, promoted on 13 November for exactly this mix, so nothing was skipped for the balance - but one of them
+was kept only after the collision was resolved in writing, and that decision is recorded below rather than
+hidden. The 14 November drop did not run; this batch carries the same five the 13th promoted, so the queue is
+where the plan left it. What shaped the batch is that the hub could invoice, collect, report, list and pitch,
+and could not answer five ordinary questions a founder asks in the gaps between everything else: is this name
+mine to use, why is the software bill bigger than the payroll, what are customers actually saying, who should
+we call first this morning, and is the field team working or just travelling.
+
+- **`ip-researcher`** (`skills/ip-researcher`, v1.0.0) - the founder-leverage role, and the destination
+  `legal-drafter` has named since 3 November in its own guardrails, so this drop closes a live pointer and
+  creates none. The boundary is search against drafting: the drafter needs the register extract, the
+  chronology and the ownership position, and none of those existed anywhere in the hub. Four design choices
+  carry it. The class, not the mark, is treated as the answer, because every "the name is free" that becomes a
+  notice was a search in the class the website describes rather than the one the invoice is raised in. Status
+  is read before similarity, so a lapsed identical mark is not sold to a founder as a blocker and a rebrand is
+  not spent on nothing. The verdict vocabulary is fixed at three answers plus "cannot answer" - clear, file
+  with risk, blocked - because "probably fine" is the sentence this role exists to make impossible. And the
+  brief always ends with the boundary of the search: registers, classes, countries and dates, plus the
+  sentence that no register carries common-law use. It never files, never pays a fee, and never gives an
+  opinion on infringement.
+- **`cost-optimiser`** (`skills/cost-optimiser`, v1.0.0) - the first operations role, and the one collision
+  this drop had to settle before it could ship. `expense-auditor` shipped on 12 November owning "why did our
+  software spend double" and "subscriptions nobody uses", so the surface was genuinely contested. The split is
+  tense and unit: the auditor asks whether a past, individual transaction was allowed and correctly paid, and
+  this role asks what the business should be paying next, in aggregate, for the size it actually needs. The
+  handover is written both ways in the descriptions, and this role's triggers deliberately avoid the auditor's
+  phrases. Three choices shape the craft. The inventory is built from the money - statements reconciled to the
+  ledger - because a vendor dashboard can only show what you pay that vendor, and the reconciliation gap is
+  itself a finding. Utilisation must name its source, the SSO or admin log, because "nobody uses it" without a
+  log has cancelled tools that people use. And every saving is stated net of the switch cost, in three waves
+  (waste, then price and size, then structure), because gross savings flatter the first case and destroy the
+  second. It never cancels, downgrades or contacts a vendor.
+- **`feedback-synthesiser`** (`skills/feedback-synthesiser`, v1.0.0) - the second operations role, and the one
+  separated from `knowledge-base-writer` on the output rather than the source. Both read the same tickets; the
+  writer produces the article that stops the next forty, this role produces the counted, ranked theme list that
+  decides which forty are worth stopping. Four choices carry it. Customers are counted, not mentions, because
+  one angry customer with forty messages is the top theme in every read that counts messages. Every theme
+  carries its denominator and the bias of the channel it came from, so "14% of our customers" can never be
+  written where "31 of 214 who wrote to us" is true. Ranking is four visible axes with a written tie-break
+  rule, because a composite score hides the judgement and a hidden judgement cannot be argued with. And the
+  codebook is fixed across reads - themes are added, never renamed - since otherwise the quarter-on-quarter
+  movement measures the coding, not the customers. A theme that shrank is checked against the churn list
+  before it is called a win.
+- **`lead-qualifier`** (`skills/lead-qualifier`, v1.0.0) - the first revenue role, and the one split from
+  `sales-outreach` on direction of travel: that role builds lists and writes sequences, this one owns the
+  enquiries that already arrived and the clock that is already running on them. Three choices shape it. Fit
+  and intent are two axes with a one-line reason each, never one score, because a perfect fit with no intent is
+  a nurture and a poor fit with high intent is a referral that is often worth more than the call. The SLA is
+  measured from the lead's own timestamp, and the promise has to survive a Sunday and a 9:40pm WhatsApp,
+  because that is when Indian inbound arrives. And every lead gets a decision including the ones that get
+  nothing - disqualified with a reason and a route, never left in the queue - since a queue with no exits grows
+  until it is ignored and the good leads die inside it. It drafts the acknowledgement; the named owner sends
+  it. It never quotes, never discounts and never scores a lead on anything but the business need.
+- **`field-sales-manager`** (`skills/field-sales-manager`, v1.0.0) - the second revenue role, and the only
+  employee in the hub whose subject is a physical day with a fuel cost. `sales-outreach` owns the inbox and
+  this role owns the beat; `lead-qualifier` owns the queue and this role owns the territory. Four choices
+  carry it. Days available are counted before calls are planned, with travel share priced into the day, because
+  the commonest beat failure is a plan that needs nine days in a six-day week and reports as "market is slow".
+  Frequency follows outlet class, since uniform frequency starves the A outlets and over-serves the C ones at
+  the same cost. The log is six fields on WhatsApp when there is no app, because adoption decides whether data
+  exists at all. And primary is never reported without secondary, with the gap explained, because a rising
+  primary against a flat secondary is stock in a godown that becomes a return and a stock-out two months
+  later. Every miss is decomposed into coverage, strike rate and drop size; "market is slow" is not a
+  decomposition and does not tell anyone what to do on Monday.
+
+**Also in this drop:** the four shipped skills that named these roles by number now resolve -
+`legal-drafter` to `ip-researcher` - and the three that route work here (`expense-auditor` on the forward cost
+base, `knowledge-base-writer` on which theme to write, `sales-outreach` on inbound) can now hand over instead
+of apologising. No shipped description was edited for this drop. Registry, both plugin manifests and
+`BACKLOG.md` move to v1.13.0, with `churn-analyst` (#49) and `follow-up-sequencer` (#144) promoted as the revenue
+pair, `demand-forecaster` (#70) and `logistics-coordinator` (#72) as the operations pair and `data-privacy-officer`
+(#124) as the founder-leverage slot - between them they close twelve open backlog pointers carried by shipped
+skills, more than any previous promotion. `cost-optimiser`'s boundary against `expense-auditor` is recorded in the
+queue notes so it is not re-argued on the next review.
+
 ## 2026-11-13 - daily drop: five employees (v1.12.0)
 
 **The mix this drop: two revenue-facing, two operations, one founder-leverage.** All five were already
