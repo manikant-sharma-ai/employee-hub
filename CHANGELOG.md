@@ -2,6 +2,65 @@
 
 One dated block per drop. What shipped, and why it is shaped that way.
 
+## 2026-11-16 - daily drop: five employees (v1.14.0)
+
+**The mix this drop: two revenue-facing, two operations, one founder-leverage.** All five were already on `next`,
+promoted on 15 November for this mix, so nothing was skipped for the balance and no role was returned to the queue
+after writing. What shaped the batch is that the hub could
+win a deal and could not keep one, could chase an invoice but not a quiet buyer, could report what sold but not
+what will sell, could list a product but not ship it, and had nothing at all to say the day a customer asked for
+their data to be deleted. Five gaps, five ordinary questions a founder answers personally and badly.
+
+- **`churn-analyst`** (`skills/churn-analyst`, v1.0.0) - the first revenue role, and the destination
+  `customer-success` and `feedback-synthesiser` have both been naming since their own drops, so it closes two live
+  pointers and creates none. The boundary is pattern against account: `customer-success` saves one named customer,
+  this role says whether the reason that customer left is happening to forty others. Four choices carry it. The base
+  table is computed before any percentage, because a churn rate on a moving base is the commonest way a growing
+  business reports itself as a shrinking one. `unknown` is kept as a visible code rather than redistributed, since
+  redistributing it invents evidence and the gap is itself the finding. Save plays are priced against the margin
+  they protect and require a control group, because a save claimed by the person who offered the discount is not
+  data. And the read is one page, because a churn analysis the founder cannot act on in a minute is a deck, not a
+  decision. It never contacts a customer and never recommends a discount as a first response.
+- **`follow-up-sequencer`** (`skills/follow-up-sequencer`, v1.0.0) - the second revenue role, and the one this drop
+  could most easily have collided with a shipped employee. `sales-outreach` writes sequences to people who have
+  never spoken to the business and already routes "a timer-based sequencer" here in its own description; the split
+  is a prior conversation. Three choices shape the craft. The next-step date is treated as the unit of the whole
+  role, because a pipeline without dates is a list of hopes and every other discipline depends on it. Every touch
+  must carry a reference line taken from the thread or the call note, and where the evidence is missing the draft
+  says less rather than inventing a plausible detail - an invented reference is discovered the moment the buyer
+  reads it. And the stop rule is decided before touch one, with `no-decision` as a required lost reason, because
+  silence is the largest outcome in a small pipeline and the one nobody records. It drafts; the named owner sends.
+- **`demand-forecaster`** (`skills/demand-forecaster`, v1.0.0) - the first operations role, and the number
+  `inventory-planner` has been unable to produce for itself since 10 November. The split is the number against the
+  policy: this role forecasts units, the planner turns them into reorder points and safety stock. Four choices
+  carry it. Stockouts are treated as censored demand rather than low demand, because leaving the zero in teaches
+  the model that sales fell exactly when they peaked and produces a permanent under-order in the season. Seasonality
+  is built on weeks relative to the festival, not on calendar months, since the lunar calendar moves the peak and a
+  copied "Diwali is 2.5x" is wrong the year it matters. Uplift is net of pull-forward and cannibalisation and is
+  judged on margin, because a promotion that lifts 40% and leaves a 25% hole has lifted very little. And every
+  number ships with an out-of-sample error, a bias figure and a planning interval, with the naive forecast as the
+  benchmark it has to beat. It never orders, never prices and never adjusts the number to a target.
+- **`logistics-coordinator`** (`skills/logistics-coordinator`, v1.0.0) - the second operations role, and the forward
+  half of a job `returns-manager` has been pointing at since 13 November. Three choices carry it. The carrier is
+  chosen per lane and weight slab on landed cost - fuel, COD, ODA, volumetric and the return leg - because a
+  headline-rate comparison is wrong by a fifth in the direction of the carrier with the most surcharges, and
+  volumetric weight is where freight silently doubles on a box nobody measured. Every exception carries an owner, an
+  action and a date, with the customer contacted inside 24 hours of a failed attempt, since that window is the
+  cheapest save in the whole shipment and the marketplace penalty arrives after it. And COD is reconciled per order
+  rather than per total, because a total that matches can hide two orders swapped and one missing. It quotes no
+  promise the carrier has not made, gives no tax opinion on freight, and offers no compensation.
+- **`data-privacy-officer`** (`skills/data-privacy-officer`, v1.0.0) - the founder-leverage role, and the first
+  employee in the hub whose subject is an obligation rather than an operation. It is separated from
+  `compliance-watch` on tense - that role knows what is due and when, this one knows what the business actually
+  holds - and from `legal-drafter` on the artefact: the policy document is drafted there, from this role's map. Four
+  choices carry it. The map is built before any notice, because a policy written first describes an aspiration and
+  the gap between the two is the liability. Every answer about the law carries the date it was checked, because the
+  DPDP obligations are being brought into force in phases and a confident wrong deadline costs more than an honest
+  "re-check on this date". Deletion is written as a process that reaches the inbox, the helpdesk and the WhatsApp
+  thread, with the free-text fields called out, since a field-level erase is the commonest false deletion. And the
+  breach playbook starts with containment, not notification. It never states that the business is compliant, never
+  gives a legal opinion, and never puts a real record in the map.
+
 ## 2026-11-15 - daily drop: five employees (v1.13.0)
 
 **The mix this drop: two revenue-facing, two operations, one founder-leverage.** All five were already on
