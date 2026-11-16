@@ -118,6 +118,22 @@ BASELINE = {
     "fundraising-analyst": ["raise-readiness", "valuation-and-dilution", "narrative-and-numbers",
                             "investor-targeting", "data-room-and-diligence",
                             "term-sheets-and-negotiation"],
+    # 2026-11-16, second run - the v2 batch
+    "onboarding-specialist": ["kickoff-and-success-criteria", "activation-path-and-milestones",
+                              "onboarding-sequence-and-comms", "stalled-accounts-and-unblocking",
+                              "handover-and-thirty-day-review"],
+    "youtube-strategist": ["channel-position-and-audience", "packaging-titles-and-thumbnails",
+                           "retention-and-watch-time", "search-and-suggested-traffic",
+                           "shorts-longform-and-cadence"],
+    "warehouse-coordinator": ["stock-count-and-variance", "bin-locations-and-layout",
+                              "putaway-picking-and-accuracy", "grn-and-supplier-receipts",
+                              "warehouse-sop-and-shrinkage"],
+    "billing-support": ["failed-payments-and-dunning", "card-update-and-payment-methods",
+                        "chargebacks-and-disputes", "refunds-and-adjustments",
+                        "billing-queries-and-invoice-mismatch"],
+    "contract-negotiator": ["redline-playbook", "negotiation-plan-and-tradeables",
+                            "risk-flagging-and-escalation", "vendor-and-msa-terms",
+                            "counterparty-and-communication"],
 }
 
 HANDOFF = re.compile(r"\((?:use|see) ([a-z][a-z0-9]+(?:-[a-z0-9]+)+)\)")

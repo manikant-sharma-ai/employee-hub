@@ -2,6 +2,87 @@
 
 One dated block per drop. What shipped, and why it is shaped that way.
 
+## 2026-11-16 - daily drop, second run: five employees (v1.15.0)
+
+**The mix this drop: two revenue-facing, two operations, one founder-leverage.** This is the follow-on batch the
+05:15 drop of the same date promoted, and it is the first batch written against the v2 drop contract rather than the
+2026-11-01 one. `warehouse-coordinator` (#71) and `billing-support` (#54) are the operations pair, both already
+named by shipped skills - `inventory-planner` sends a stock-count discrepancy to the first, `collections-agent` and
+`returns-manager` both send a failed card, a chargeback and a refund to the second. `onboarding-specialist` (#50)
+and `youtube-strategist` (#139) are the revenue pair: one owns the thirty days where a signed deal becomes a
+customer, one owns the channel where the buying happens. `contract-negotiator` (#82) is the founder-leverage slot,
+already named by `legal-drafter` for the redlines it refuses to write. No role was returned to the queue and no
+skill failed the gate, so all five shipped.
+
+- **`onboarding-specialist`** (`skills/onboarding-specialist`, v1.0.0, L2/revenue) - the revenue half of a deal
+  that closed, and the first employee in the hub whose subject is the customer's first thirty days. The boundary
+  with the two nearest shipped skills is account against pattern against relationship: `customer-success` owns the
+  named account and its renewal, `churn-analyst` owns the cohort read on why first-month customers leave, and this
+  role owns the plan, the chase and the handover for the customers currently in flight. It also had to be separated
+  from `hiring-manager` on the word "onboarding", which is employee onboarding there and customer onboarding here -
+  its triggers avoid the hiring language entirely. Four choices carry it. The activation event is named in one
+  sentence before anything else, because two definitions of "live" is how an onboarding looks finished while a
+  customer looks unused. Time to first value is a median and a worst case with the count that never got there,
+  never an average, since the average is exactly the number that hides the stuck account. The customer's own
+  dependencies - their data, their approval, their IT - are dated lines on our plan, because most slips are theirs
+  and naming them early is the difference between a delay and a dispute. And day thirty is a handover with a
+  written pack, not a hand-off. It never sends, never promises a feature date and never names a customer in a note.
+- **`youtube-strategist`** (`skills/youtube-strategist`, v1.0.0, L2/revenue) - the channel employee, and the one
+  this drop could most easily have duplicated. `video-editor` owns the cut, `social-media-manager` owns the
+  calendar and the replies, `graphic-designer` owns the artwork, `seo-specialist` owns web search and
+  `performance-ads-buyer` owns paid. This role owns the decision before all five: what to make, what to call it,
+  what the thumbnail promises and why the last one failed. Four choices shape it. The audit names a failure per
+  video - `packaging`, `hook`, `body` or `fine` - because "views are down" is four different fixes and the order
+  matters: a hook fix on a packaging problem wastes a reshoot. Click-through is judged against the channel's own
+  median from the same export, never against a famous channel, and the median moves only when the channel does.
+  Titles are capped at 60 characters with the promise in the first three words, since the mobile feed truncates the
+  clever part. And cadence is a capacity decision with a written busy-week fallback, because a plan that assumes a
+  quiet month stops in month two. It never publishes, never edits, never invents a metric and never promises an
+  algorithm outcome.
+- **`warehouse-coordinator`** (`skills/warehouse-coordinator`, v1.0.0, L2/operations) - the physical half of
+  `inventory-planner`'s job, and the destination that role has named since 10 November. The split is count against
+  policy: the planner decides how much to hold, this role proves what is actually in the building. Three choices
+  carry it. The variance is priced in rupees at cost and classed by value, because a report ordered by unit
+  variance buries the missing motor under a hundred missing bolts. The recount comes before the adjustment, blind
+  and by a second person, because a count that cannot be reproduced is a guess with a signature on it. And the four
+  causes are separated - paperwork, misplacement, damage, unexplained - since a warehouse that files all of them
+  under "shrinkage" never fixes any of them, and only the last one is worth a security conversation. It proposes
+  adjustments and never posts them, never books a courier, never sets a reorder point and never names a person in a
+  variance report.
+- **`billing-support`** (`skills/billing-support`, v1.0.0, L2/operations) - the payment that failed, and the one
+  collision this drop had to settle in writing. `collections-agent` owns a B2B invoice owed by a business that has
+  the goods; this role owns a card, a mandate, a chargeback or a refund on a subscription. `returns-manager` owns
+  the return that precedes a refund; `finance-ops` and `bookkeeper` own the invoice and the posting. Four choices
+  shape it. The gateway failure code is read before a sentence is written, because "insufficient funds" and "card
+  expired" need different sentences and a generic "payment failed" produces a support call instead of a fix. Our
+  own errors - a double capture, a broken retry configuration, an authentication bug - are admitted in the first
+  line, before any explanation of what the customer did. The ladder has dates and a stated suspension rung with the
+  grace period written down as policy, since a suspension that stops a customer's work on day three costs more than
+  the invoice. And a refund is reported in one of five states - requested, approved, initiated, settled, rejected -
+  because "processed" is the word that turns a billing query into a complaint. It never moves money, never posts to
+  the books and never states a refund is complete without a gateway reference.
+- **`contract-negotiator`** (`skills/contract-negotiator`, v1.0.0, L1/founder-leverage) - the founder-leverage
+  slot, and the employee `legal-drafter` has named for the redlines it will not write. The split is drafting against
+  negotiating: the drafter produces the document, this role scores the paper that comes back. Four choices carry
+  it. Every clause is scored against a written playbook - `ok`, `negotiate`, `escalate`, `unreadable` - because a
+  position invented while reading the document collapses on the call, and an unrecognised clause type is
+  `unreadable` rather than quietly `ok`. Every concession is priced and traded, never given, since a ladder without
+  trades is a discount schedule. The walk-away is decided in writing before the call, because it cannot be decided
+  well while the deal is being lost. And four categories of question are escalated by name - lawyer, insurer,
+  founder, counterparty authority - with the clause, the exposure and the decision needed, so that "legal review
+  needed" never appears in the brief. It gives no legal opinion, drafts no contract, and never sends a redline.
+
+**The gate changed with this drop, and that is part of the drop.** `scripts/validate_repo_v2.py` was added and
+`--strict` is now the pass condition: the v1 checks are unchanged and still run for every employee, and a second
+layer applies the v2 contract only to registry entries marked `standard_revision: v2`. A rule written today cannot
+retroactively fail a skill written three weeks ago, so pre-v2 employees are reported in a separate advisory block
+that `--strict` does not fail on - and that block currently lists 30 employees whose frontmatter descriptions run
+over the new 1024-character cap. They are a known debt with a date on it, not a silent exemption. All five of this
+drop's skills are under the cap, carry five references, a deterministic script with a passing `--self-test` (17, 19,
+24, 21 and 25 checks), one asset template, `evals.json` with the five required cases, and a `notes.seed/` that is
+schema only: every line is a heading, a schema comment or a placeholder, so nothing in this batch claims an
+experience it has not had. The gate result is 0 errors, and 25 of 25 eval cases resolve against the shipped text.
+
 ## 2026-11-16 - daily drop: five employees (v1.14.0)
 
 **The mix this drop: two revenue-facing, two operations, one founder-leverage.** All five were already on `next`,

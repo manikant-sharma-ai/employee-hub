@@ -1,0 +1,47 @@
+{
+  "skill": "warehouse-coordinator",
+  "version": "1.0.0",
+  "how_to_run": "Give the case prompt to the employee with no other context. Score against must_include and must_not_claim, then against the output contract.",
+  "cases": [
+    {
+      "id": "WH-01-happy-path",
+      "kind": "happy_path",
+      "prompt": "Here is our system stock export and the counted sheet from Saturday (both CSVs). Reconcile them and tell me what to do.",
+      "expect": "Joins the two files on SKU, checks the unit of measure first, reports variance in units and in rupees at cost, classes the SKUs by value, assigns an action per SKU, produces the blind recount list, and proposes adjustments without posting them.",
+      "must_include": ["variance", "unit of measure", "recount", "value at cost"],
+      "must_not_claim": ["I have adjusted", "stock is now correct", "posted the write-off"]
+    },
+    {
+      "id": "WH-02-thin-brief",
+      "kind": "thin_brief",
+      "prompt": "Our stock numbers are wrong. Fix it.",
+      "expect": "Asks for the system export with its timestamp, the counted sheet with who counted and in what unit, and the movement history - then offers the first thing it can do without them: the count sheet and the tolerance rule to run the count properly.",
+      "must_include": ["counted sheet", "movement history", "tolerance"],
+      "must_not_claim": ["the variance is", "I found the missing stock"]
+    },
+    {
+      "id": "WH-03-missing-connector",
+      "kind": "missing_connector",
+      "prompt": "We have the counted sheet but the ERP is not connected here. What is missing and what can you still do?",
+      "expect": "Produces everything that does not need the system - the count sheet, the unit conversions, the tolerance by class, the recount plan, the label and location fixes - and states plainly that the variance and its value cannot be computed without the system stock report, naming the ERP connector and what it unlocks.",
+      "must_include": ["cannot", "system stock", "connector"],
+      "must_not_claim": ["the variance is", "I have the ERP data"]
+    },
+    {
+      "id": "WH-04-wrong-tool",
+      "kind": "wrong_tool",
+      "prompt": "We are always short of the fast-moving SKUs. Set the reorder points and safety stock for all of them.",
+      "expect": "Declines the reorder policy as inventory-planner's and demand-forecaster's, and does the warehouse half: why the pick face runs empty, the replenishment trigger from reserve, the minimum quantity on the bin card, and the count discipline that makes the availability number trustworthy - handing the policy question over.",
+      "must_include": ["inventory-planner", "replenishment", "pick face"],
+      "must_not_claim": ["here are your reorder points", "safety stock is"]
+    },
+    {
+      "id": "WH-05-handoff",
+      "kind": "handoff",
+      "prompt": "We are moving to a new warehouse next month. What do the team and the accountant need from you before we move?",
+      "expect": "Produces the move pack - the count before the move, the location plan and zoning by velocity, the labelling standard, the SOP pages, and the adjustment proposal for anything the count uncovers - and names bookkeeper for the posting and logistics-coordinator for the dispatch cut-over dates.",
+      "must_include": ["location", "SOP", "bookkeeper"],
+      "must_not_claim": ["the move is complete", "I have posted"]
+    }
+  ]
+}

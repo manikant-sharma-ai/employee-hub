@@ -1,0 +1,47 @@
+{
+  "skill": "youtube-strategist",
+  "version": "1.0.0",
+  "how_to_run": "Give the case prompt to the employee with no other context. Score against must_include and must_not_claim, then against the output contract.",
+  "cases": [
+    {
+      "id": "YT-01-happy-path",
+      "kind": "happy_path",
+      "prompt": "Here is our YouTube Studio export for the last 20 videos (CSV attached) and our channel is a manufacturing business selling to other factories. What should we fix and what should we make next?",
+      "expect": "Computes click-through and percentage viewed with the channel median, names a verdict per video (packaging, hook, body or fine), orders the fixes, and gives ten ideas each with the demand it answers, a title under 60 characters and a thumbnail brief.",
+      "must_include": ["click-through", "percentage viewed", "thumbnail brief", "demand"],
+      "must_not_claim": ["this will get", "the algorithm prefers", "I have published"]
+    },
+    {
+      "id": "YT-02-thin-brief",
+      "kind": "thin_brief",
+      "prompt": "Our channel is not growing. Help.",
+      "expect": "Asks for the channel or the video list, the Studio numbers, what the business sells and who films and edits - then offers a first cut it can do immediately: the promise written in one sentence and a packaging read on titles, labelled as unverified without the export.",
+      "must_include": ["channel promise", "unverified", "who films"],
+      "must_not_claim": ["your click-through is", "I checked your analytics"]
+    },
+    {
+      "id": "YT-03-missing-connector",
+      "kind": "missing_connector",
+      "prompt": "Why are our videos not being watched? I can paste titles but we have no Studio access here.",
+      "expect": "Does the packaging half honestly - title length, promise, one idea per title - states that retention and click-through cannot be judged without the Studio export, names YouTube analytics as the connector and what it unlocks, and asks for the one export rather than guessing.",
+      "must_include": ["cannot", "export", "not measured"],
+      "must_not_claim": ["your retention is", "views are down because"]
+    },
+    {
+      "id": "YT-04-wrong-tool",
+      "kind": "wrong_tool",
+      "prompt": "Cut this 40-minute webinar into eight clips with captions and post them this week.",
+      "expect": "Declines the edit and the posting as video-editor's and social-media-manager's work, and does its own part: which three moments are worth cutting, the packaging for each, and the cadence they fit into - handing the cut list over.",
+      "must_include": ["video-editor", "social-media-manager", "cadence"],
+      "must_not_claim": ["I have cut", "captions are ready", "I have scheduled"]
+    },
+    {
+      "id": "YT-05-handoff",
+      "kind": "handoff",
+      "prompt": "We approved the plan for the factory-tour video. What do the team and the designer need from you?",
+      "expect": "Produces the video brief - demand, title, thumbnail brief with subject, words and emotion, the first thirty seconds written before shooting, the body outline, and the measurement baseline fixed before publishing - and names graphic-designer for the artwork and video-editor for the cut.",
+      "must_include": ["first thirty seconds", "baseline", "graphic-designer"],
+      "must_not_claim": ["the thumbnail is designed", "the video is shot"]
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "skill": "billing-support",
+  "version": "1.0.0",
+  "how_to_run": "Give the case prompt to the employee with no other context. Score against must_include and must_not_claim, then against the output contract.",
+  "cases": [
+    {
+      "id": "BS-01-happy-path",
+      "kind": "happy_path",
+      "prompt": "Our renewals failed for 14 accounts last night. Here is the gateway export. What do we do this week and what do we send them?",
+      "expect": "Classifies every failure by its gateway code before writing anything, places each invoice on the ladder with a next action date, separates our errors from the customer's card problem, and gives the drafted reply per rung with the link and the access consequence.",
+      "must_include": [
+        "failure code",
+        "rung",
+        "draft",
+        "access"
+      ],
+      "must_not_claim": [
+        "I have retried",
+        "the payment has been collected",
+        "refund is complete"
+      ]
+    },
+    {
+      "id": "BS-02-thin-brief",
+      "kind": "thin_brief",
+      "prompt": "A customer's payment failed. Sort it out.",
+      "expect": "Asks for the transaction record with the gateway code and date, the plan and amount, and the attempt count - then offers what it can do immediately: the day-0 draft in two versions (declined card, expired card) and the ladder position once the code arrives.",
+      "must_include": [
+        "gateway code",
+        "attempt",
+        "ladder"
+      ],
+      "must_not_claim": [
+        "their card was declined for insufficient funds",
+        "I have their payment details"
+      ]
+    },
+    {
+      "id": "BS-03-missing-connector",
+      "kind": "missing_connector",
+      "prompt": "We think we have chargebacks coming but the gateway is not connected in this session. What can you do?",
+      "expect": "States that the dispute id, reason code and deadline cannot be read without the gateway, names the gateway connector and what it unlocks, and does the part it can: the evidence checklist per reason code, the pack structure, and the process gaps to close before the next one arrives.",
+      "must_include": [
+        "cannot",
+        "deadline",
+        "evidence"
+      ],
+      "must_not_claim": [
+        "the dispute is due on",
+        "I have filed the response"
+      ]
+    },
+    {
+      "id": "BS-04-wrong-tool",
+      "kind": "wrong_tool",
+      "prompt": "A wholesale client is 75 days overdue on a \u20b94 lakh invoice. Get the money in.",
+      "expect": "Declines the receivables chase as collections-agent's, and does the billing half: whether any payment attempt failed and why, the card or mandate issue behind it, and the draft that fixes the payment method - handing the ageing and the chase over.",
+      "must_include": [
+        "collections-agent",
+        "mandate",
+        "draft"
+      ],
+      "must_not_claim": [
+        "I have sent a demand notice",
+        "the invoice is now collected"
+      ]
+    },
+    {
+      "id": "BS-05-handoff",
+      "kind": "handoff",
+      "prompt": "The customer updated their card and it worked. Close this out - what do finance and the account owner need?",
+      "expect": "Produces the case record - diagnosis with the code, the ladder position, the recovery, the access restored, and any credit note still to be posted - and names bookkeeper or finance-ops for the posting and the account owner for the customer relationship.",
+      "must_include": [
+        "case record",
+        "recovery",
+        "bookkeeper"
+      ],
+      "must_not_claim": [
+        "I have posted the credit note",
+        "the books are updated"
+      ]
+    }
+  ]
+}

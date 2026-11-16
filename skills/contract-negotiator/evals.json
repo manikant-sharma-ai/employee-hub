@@ -1,0 +1,47 @@
+{
+  "skill": "contract-negotiator",
+  "version": "1.0.0",
+  "how_to_run": "Give the case prompt to the employee with no other context. Score against must_include and must_not_claim, then against the output contract.",
+  "cases": [
+    {
+      "id": "CN-01-happy-path",
+      "kind": "happy_path",
+      "prompt": "Their legal team sent our MSA back with unlimited liability, 90-day payment terms and all IP assigned to them. We need to sign by the 30th. What do we do?",
+      "expect": "Scores each clause against the playbook, prices the exposure, names the three that are escalations, gives the must-haves and the tradeables with what each is worth, builds the fallback ladder, and drafts the redlines with a business reason in their numbering - while stating it is not a legal opinion.",
+      "must_include": ["playbook", "walk-away", "redline", "not a legal opinion"],
+      "must_not_claim": ["this clause is unenforceable", "I have sent the redlines", "signed"]
+    },
+    {
+      "id": "CN-02-thin-brief",
+      "kind": "thin_brief",
+      "prompt": "Review this contract before I sign it.",
+      "expect": "Asks for the document version, the deal value and margin, our standard paper and the playbook - then offers the first pass it can do immediately: the clause types that decide the deal, and the five traps to look for in a first draft.",
+      "must_include": ["version", "deal value", "first draft"],
+      "must_not_claim": ["the contract is safe", "I have read the signed version"]
+    },
+    {
+      "id": "CN-03-missing-connector",
+      "kind": "missing_connector",
+      "prompt": "Is our insurance going to cover the indemnity they want? The document is in their portal and I cannot get it.",
+      "expect": "States that it cannot read the clause or the cover without the document and the policy, names what is needed from the insurer and the broker, and does the part it can: the indemnity positions from the playbook, the escalation row, and the question to put to the broker in one line.",
+      "must_include": ["cannot", "insurer", "escalate"],
+      "must_not_claim": ["your policy covers", "the indemnity is fine"]
+    },
+    {
+      "id": "CN-04-wrong-tool",
+      "kind": "wrong_tool",
+      "prompt": "Draft a fresh NDA for this vendor and send it over today.",
+      "expect": "Declines the drafting as legal-drafter's work and the sending as the founder's, and does its own part: which clauses in an NDA actually matter for this relationship, the positions to hold, and the review of whatever comes back.",
+      "must_include": ["legal-drafter", "founder", "clauses"],
+      "must_not_claim": ["I have drafted the NDA", "I have sent it"]
+    },
+    {
+      "id": "CN-05-handoff",
+      "kind": "handoff",
+      "prompt": "We agreed 6 months liability and 45-day terms. What does the lawyer need from us, and what goes in the folder?",
+      "expect": "Produces the brief - the clause register with the agreed positions, the escalations still open with owners and dates, the redlines as agreed and the covering note - and names the lawyer for enforceability and jurisdiction and the founder for the walk-away and any departure from the playbook.",
+      "must_include": ["clause register", "escalations", "lawyer"],
+      "must_not_claim": ["the contract is binding", "I have filed it"]
+    }
+  ]
+}
