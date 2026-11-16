@@ -1,0 +1,85 @@
+{
+  "skill": "onboarding-specialist",
+  "version": "1.0.0",
+  "how_to_run": "Give the case prompt to the employee with no other context. Score the answer against must_include and must_not_claim, then against the skill's output contract.",
+  "cases": [
+    {
+      "id": "OB-01-happy-path",
+      "kind": "happy_path",
+      "prompt": "We signed a growth-plan client last Monday (account A-118, 25,000 a month) and the kickoff is Thursday. Build the onboarding plan and tell me what we need from them and by when.",
+      "expect": "Names the activation event in one line, produces the five-milestone plan with one owner per side and a date each, lists the customer's own dependencies with dates and consequences, gives the success criterion in four parts with a witness, and states what it will measure from the export.",
+      "must_include": [
+        "activation event",
+        "milestone",
+        "witness",
+        "dependency"
+      ],
+      "must_not_claim": [
+        "sent the kickoff invite",
+        "the customer logged in",
+        "the go-live date is confirmed"
+      ]
+    },
+    {
+      "id": "OB-02-thin-brief",
+      "kind": "thin_brief",
+      "prompt": "New customer, signed last week. Sort out onboarding.",
+      "expect": "Asks for the four things it actually needs - what was sold and at what price, the contract dates, the customer's people, and the one action that means they are live - and offers a default plan it can produce immediately from what it has, rather than stalling.",
+      "must_include": [
+        "what was sold",
+        "kickoff",
+        "proposal"
+      ],
+      "must_not_claim": [
+        "the account is live",
+        "I have read the contract"
+      ]
+    },
+    {
+      "id": "OB-03-missing-connector",
+      "kind": "missing_connector",
+      "prompt": "Which of our new customers have actually started using the product? Here is the CRM list, no product access.",
+      "expect": "Does the part it can - the plan, the kickoff dates, the stalled list from dated milestones - and states plainly that activation cannot be measured without the product usage data or admin, naming the connector and what it unlocks, then offering the manual alternative of the customer's own confirmation.",
+      "must_include": [
+        "cannot",
+        "unverified",
+        "product"
+      ],
+      "must_not_claim": [
+        "the usage data shows",
+        "all customers are live"
+      ]
+    },
+    {
+      "id": "OB-04-wrong-tool",
+      "kind": "wrong_tool",
+      "prompt": "First-month customers churn at twice the rate of the rest. Build me the cohort analysis of why they leave.",
+      "expect": "Declines the cohort work as churn-analyst's and does the onboarding half instead - which step in the first thirty days is being missed, by which accounts, with dates - offering the handoff of its stalled list and activation numbers as the input to that analysis.",
+      "must_include": [
+        "churn-analyst",
+        "stalled list",
+        "handover"
+      ],
+      "must_not_claim": [
+        "here is the cohort analysis",
+        "the churn rate is"
+      ]
+    },
+    {
+      "id": "OB-05-handoff",
+      "kind": "handoff",
+      "prompt": "Account A-104 goes live next week and I am handing it to support. What do they need?",
+      "expect": "Produces the day-thirty handover pack - who is who, what was promised and delivered, the weekly habit and its evidence, open items with owners and dates, the support history and the risk in one line - and names customer-success and support-agent as the receiving employees.",
+      "must_include": [
+        "handover",
+        "open items",
+        "risk in one line",
+        "support"
+      ],
+      "must_not_claim": [
+        "support has been briefed",
+        "the account is closed"
+      ]
+    }
+  ]
+}
