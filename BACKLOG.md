@@ -55,11 +55,11 @@ Nothing is removed without a note on why. A role that cannot clear the quality b
 | 47 | `newsletter-editor` | Issue curation, editing, send-time and open-rate discipline | queued |
 | 48 | `customer-success` | Health scoring, QBR prep, renewal and expansion plays | shipped 2026-11-07 |
 | 49 | `churn-analyst` | Cancellation reasons, cohort analysis, save-play recommendations | shipped 2026-11-16 |
-| 50 | `onboarding-specialist` | First-30-days journeys, activation milestones, nudge sequences | next |
+| 50 | `onboarding-specialist` | First-30-days journeys, activation milestones, nudge sequences | shipped 2026-11-16 |
 | 51 | `escalation-manager` | Triage rules, severity levels, who to wake and when | queued |
 | 52 | `knowledge-base-writer` | Help articles from real tickets, written so customers stop asking | shipped 2026-11-07 |
 | 53 | `helpdesk-trainer` | Agent training material, reply libraries, quality rubric | queued |
-| 54 | `billing-support` | Invoice queries, failed payments, dunning and refund handling | next |
+| 54 | `billing-support` | Invoice queries, failed payments, dunning and refund handling | shipped 2026-11-16 |
 | 55 | `collections-agent` | Receivables follow-up, ageing buckets, escalation ladder | shipped 2026-11-07 |
 | 56 | `credit-analyst` | Customer credit checks, limits, exposure review | queued |
 | 57 | `treasury-ops` | Cash position, runway, payment scheduling, FX exposure | shipped 2026-11-13 |
@@ -76,7 +76,7 @@ Nothing is removed without a note on why. A role that cannot clear the quality b
 | 68 | `vendor-payment-tracker` | Due dates, ageing, disputes, payment run prep | queued |
 | 69 | `inventory-planner` | Stock cover, reorder points, dead-stock identification | shipped 2026-11-10 |
 | 70 | `demand-forecaster` | Seasonality, baseline and promo uplift, forecast accuracy review | shipped 2026-11-16 |
-| 71 | `warehouse-coordinator` | Pick-pack-ship coordination, stock counts, discrepancy handling | next |
+| 71 | `warehouse-coordinator` | Pick-pack-ship coordination, stock counts, discrepancy handling | shipped 2026-11-16 |
 | 72 | `logistics-coordinator` | Carrier selection, rate comparison, delivery exception handling | shipped 2026-11-16 |
 | 73 | `returns-manager` | Return reasons, refund policy application, reverse logistics | shipped 2026-11-13 |
 | 74 | `catalog-manager` | Product data, attributes, images, variants and taxonomy | queued |
@@ -87,7 +87,7 @@ Nothing is removed without a note on why. A role that cannot clear the quality b
 | 79 | `quality-inspector` | Inspection checklists, AQL sampling, defect classification | queued |
 | 80 | `supplier-scout` | Sourcing shortlists, capability checks, sample coordination | queued |
 | 81 | `sourcing-agent` | Cost breakdowns, MOQ negotiation, lead-time planning | queued |
-| 82 | `contract-negotiator` | Term comparison, redline notes, risk summary before signature | next |
+| 82 | `contract-negotiator` | Term comparison, redline notes, risk summary before signature | shipped 2026-11-16 |
 | 83 | `rfq-manager` | RFQ packs, quote comparison, award recommendation | queued |
 | 84 | `facilities-manager` | Vendor SLAs, maintenance schedules, incident handling | queued |
 | 85 | `travel-planner` | Itineraries, visa and document checks, cost policy | queued |
@@ -144,7 +144,7 @@ Nothing is removed without a note on why. A role that cannot clear the quality b
 | 136 | `seo-technical` | Crawl, index, speed and structured-data fixes | queued |
 | 137 | `link-builder` | Outreach for citations and partnerships, with quality filters | queued |
 | 138 | `app-store-optimiser` | Store listing, screenshots, keyword and rating strategy | queued |
-| 139 | `youtube-strategist` | Channel positioning, titles, thumbnails brief, retention fixes | next |
+| 139 | `youtube-strategist` | Channel positioning, titles, thumbnails brief, retention fixes | shipped 2026-11-16 |
 | 140 | `scriptwriter` | Scripts for ads, explainers and reels with hook and payoff | queued |
 | 141 | `lead-qualifier` | Scores inbound leads against an ICP and routes them | shipped 2026-11-15 |
 | 142 | `crm-hygienist` | Dedupe, field standards, pipeline cleanup, stage definitions | queued |
@@ -369,6 +369,31 @@ Kept so that a later drop does not have to re-derive why the order moved.
   founder-leverage slot, already named by `legal-drafter` for the redlines it refuses to write. `newsletter-editor`
   (#47) stays queued: `email-marketer` owns the newsletter open rate and the two would fight over one request.
   `crm-hygienist` (#142) and `decision-logger` (#146) stay queued on the 13 November reasoning.
+
+- **2026-11-16 - the five on `next` shipped in the day's second run, and the mix held with no skip.**
+  `onboarding-specialist` (#50) and `youtube-strategist` (#139) are the revenue pair, `warehouse-coordinator` (#71)
+  and `billing-support` (#54) are the operations pair, and `contract-negotiator` (#82) is the founder-leverage slot.
+  Between them they close five live pointers carried by shipped skills - `inventory-planner` naming a stock-count
+  discrepancy, `collections-agent` and `returns-manager` naming a failed card and a refund, `legal-drafter` naming
+  the redlines it will not write, and `follow-up-sequencer` naming the term negotiation that follows a verbal yes.
+  No role was returned to the queue; the queue still holds 77 roles and the next drop promotes from it.
+- **2026-11-16 - `onboarding-specialist` (#50) had to be split from `hiring-manager` on the word "onboarding".**
+  Employee onboarding, the first week and the 30-60-90 stay with `hiring-manager`; this role owns the customer's
+  first thirty days after a signature. Its triggers avoid the hiring language entirely, and the handover is written
+  both ways. It is also separated from `churn-analyst` on account against pattern: that role counts cohorts, this
+  one runs the plan for the accounts currently in flight.
+- **2026-11-16 - `billing-support` (#54) shipped on the boundary written on 7 November, unchanged.** A failed card
+  retry, a mandate failure, a chargeback or a refund on a subscription is this role's; a B2B invoice owed by a
+  business that has received the goods stays with `collections-agent`. `returns-manager` keeps the return that
+  precedes a refund, and `bookkeeper` posts whatever the refund becomes in the books.
+- **2026-11-16 - `youtube-strategist` (#139) is bounded on four sides by shipped employees.** The cut is
+  `video-editor`'s, the calendar and the replies are `social-media-manager`'s, the artwork is `graphic-designer`'s,
+  web search is `seo-specialist`'s and paid is `performance-ads-buyer`'s. What is left is the decision before all
+  five: what to make, what to call it, what the thumbnail promises, and why the last one failed.
+- **2026-11-16 - `warehouse-coordinator` (#71) and `contract-negotiator` (#82) arrived as destinations, not
+  collisions.** Both were already named in shipped skills' descriptions and trigger tests, so shipping them closed
+  a promise rather than creating a duplicate. Neither needed an edit to a shipped description, which is the first
+  drop since 10 November that did not.
 
 
 ## The five-a-day mix

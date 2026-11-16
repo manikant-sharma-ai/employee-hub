@@ -1,7 +1,7 @@
 {
  "name": "employee-hub",
  "display_name": "Employee Hub",
- "version": "1.14.0",
+ "version": "1.15.0",
  "updated": "2026-11-16",
  "cadence": "5 employees daily at 06:00 IST",
  "standard": "core/employee-standard.md",
@@ -2773,6 +2773,640 @@
     "a suspected leak and no plan for the first 24 hours",
     "a privacy policy that does not match the practice"
    ]
+  },
+  {
+   "name": "onboarding-specialist",
+   "version": "1.0.0",
+   "added": "2026-11-16",
+   "standard_revision": "v2",
+   "level": "L2",
+   "category": "revenue",
+   "status": "probation",
+   "reliability": "unverified",
+   "probation": {
+    "since": "2026-11-16",
+    "exit_criteria": "Ten real onboarding plans graded: median time to first value reported with its base, the stalled list correct, and three day-thirty handovers accepted by the receiving employee without a question. Then status moves to stable and reliability to measured."
+   },
+   "path": "skills/onboarding-specialist",
+   "tagline": "The customer onboarding employee - the first thirty days done properly: the kickoff that fixes success in numbers, the activation path with an owner and a date per step, time to first value measured rather than assumed, the stalled list with an unblock, and the day-thirty handover.",
+   "skills_inside": [
+    "kickoff-and-success-criteria",
+    "activation-path-and-milestones",
+    "onboarding-sequence-and-comms",
+    "stalled-accounts-and-unblocking",
+    "handover-and-thirty-day-review"
+   ],
+   "tools_required": [
+    "the CRM (HubSpot, Zoho CRM) for the deal, the contacts and what was promised",
+    "the calendar (Google Calendar, Outlook) for the kickoff and the milestone dates",
+    "email (Gmail, Outlook) to draft the welcome, the agenda, the recap and the chase",
+    "a tracker (Google Tasks, Asana, Jira or a Google Sheet) for one row per milestone",
+    "the product admin or usage data, without which activation is a claim rather than a measurement"
+   ],
+   "connectors": [
+    {
+     "name": "CRM (HubSpot, Zoho CRM)",
+     "availability": "core",
+     "unlocks": "the deal, the contacts and the promises made in the sales conversation",
+     "fallback": "the proposal, the quote and the signed contract, pasted or attached"
+    },
+    {
+     "name": "Calendar (Google Calendar, Outlook)",
+     "availability": "core",
+     "unlocks": "kickoff and milestone dates, and the check-ins that hold them",
+     "fallback": "the dates written in the plan, with the owner chasing them by hand"
+    },
+    {
+     "name": "Email (Gmail, Outlook)",
+     "availability": "recommended",
+     "unlocks": "drafting the welcome, the recap and the chase from the real thread",
+     "fallback": "message text the owner copies into their own client"
+    },
+    {
+     "name": "Product admin or usage export",
+     "availability": "optional",
+     "unlocks": "measuring activation instead of taking the customer's word for it",
+     "fallback": "the customer's written confirmation, labelled unverified"
+    },
+    {
+     "name": "Docs (Google Docs, Word, Notion)",
+     "availability": "optional",
+     "unlocks": "the plan and the handover pack as documents the customer keeps",
+     "fallback": "the markdown asset template in this skill"
+    }
+   ],
+   "permissions": {
+    "read": [
+     "CRM records and deals",
+     "calendar",
+     "email threads",
+     "product usage exports"
+    ],
+    "draft": [
+     "welcome, agenda, recap and chase messages",
+     "the onboarding plan",
+     "the day-thirty handover"
+    ],
+    "send": [],
+    "spend": "none",
+    "approval_required_for": [
+     "sending any message to a customer",
+     "promising a go-live date",
+     "any scope or price change"
+    ]
+   },
+   "cost": {
+    "class": "low",
+    "minutes_per_task": 12,
+    "paid_api": "none",
+    "note": "one model pass over a CRM export and the notes; no paid third-party API"
+   },
+   "follows_standard": true,
+   "keeps_notes": true,
+   "tracks_performance": true,
+   "evals": {
+    "cases": 5,
+    "kinds": [
+     "happy_path",
+     "thin_brief",
+     "missing_connector",
+     "wrong_tool",
+     "handoff"
+    ]
+   },
+   "scripts": [
+    {
+     "name": "scripts/activation_report.py",
+     "self_test": "--self-test"
+    }
+   ],
+   "assets": [
+    "assets/onboarding-plan.md"
+   ],
+   "outputs": [
+    "the activation event in one line, and who confirmed it",
+    "the milestone plan with one owner per side and one date per step",
+    "time to first value as a median and a worst case, with the base",
+    "the stalled list ordered by value at risk, with the unblock and the next check date",
+    "the drafts for the next seven days",
+    "what could not be verified"
+   ],
+   "best_for": [
+    "a customer who signed and then went quiet",
+    "go-live that slips every time and nobody knows which step",
+    "deciding what a new customer must do in week one",
+    "handing an account to support without losing the story"
+   ]
+  },
+  {
+   "name": "youtube-strategist",
+   "version": "1.0.0",
+   "added": "2026-11-16",
+   "standard_revision": "v2",
+   "level": "L2",
+   "category": "revenue",
+   "status": "probation",
+   "reliability": "unverified",
+   "probation": {
+    "since": "2026-11-16",
+    "exit_criteria": "Three monthly reads where click-through and percentage viewed are computed from the export rather than estimated, ten videos packaged and published against the plan, and one packaging test recorded with its verdict. Then status moves to stable and reliability to measured."
+   },
+   "path": "skills/youtube-strategist",
+   "tagline": "The YouTube employee - what the channel makes and how it is packaged: the channel promise, ten ideas chosen from search and browse demand, titles under 60 characters with a thumbnail brief, the retention read that separates a packaging failure from a hook failure, and a cadence the team can hold.",
+   "skills_inside": [
+    "channel-position-and-audience",
+    "packaging-titles-and-thumbnails",
+    "retention-and-watch-time",
+    "search-and-suggested-traffic",
+    "shorts-longform-and-cadence"
+   ],
+   "tools_required": [
+    "YouTube channel and Studio access for the video list and the analytics",
+    "Google Sheets or Excel for the video log and the read-out",
+    "Google Trends or a keyword tool for demand on a topic",
+    "Canva or Figma for the thumbnail brief that graphic-designer renders",
+    "site or store analytics (GA4, Shopify) to see whether a view becomes an enquiry"
+   ],
+   "connectors": [
+    {
+     "name": "YouTube (channel and Studio)",
+     "availability": "core",
+     "unlocks": "the video list, impressions, click-through, retention and traffic sources",
+     "fallback": "the Studio CSV export pasted or attached, with the date it was pulled"
+    },
+    {
+     "name": "Google Sheets",
+     "availability": "recommended",
+     "unlocks": "the video log, the packaging tests and the monthly read-out",
+     "fallback": "the markdown brief in this skill, one file per video"
+    },
+    {
+     "name": "Google Trends or a keyword tool",
+     "availability": "optional",
+     "unlocks": "whether anybody searches the topic, and its seasonality",
+     "fallback": "YouTube's own search suggestions, read by hand"
+    },
+    {
+     "name": "GA4 or Shopify analytics",
+     "availability": "optional",
+     "unlocks": "the enquiry or order count behind the views",
+     "fallback": "the enquiry count from the owner, labelled as self-reported"
+    },
+    {
+     "name": "Canva or Figma",
+     "availability": "rare",
+     "unlocks": "rendering the thumbnail brief",
+     "fallback": "the brief handed to graphic-designer as text"
+    }
+   ],
+   "permissions": {
+    "read": [
+     "the channel and its analytics",
+     "site or store analytics",
+     "keyword sources"
+    ],
+    "draft": [
+     "titles",
+     "thumbnail briefs",
+     "the video plan and briefs",
+     "the monthly read-out"
+    ],
+    "send": [],
+    "spend": "none",
+    "approval_required_for": [
+     "publishing or scheduling any video",
+     "spending on production",
+     "any claim about an algorithm outcome"
+    ]
+   },
+   "cost": {
+    "class": "low",
+    "minutes_per_task": 15,
+    "paid_api": "none",
+    "note": "one model pass over a Studio export; a keyword tool subscription is optional"
+   },
+   "follows_standard": true,
+   "keeps_notes": true,
+   "tracks_performance": true,
+   "evals": {
+    "cases": 5,
+    "kinds": [
+     "happy_path",
+     "thin_brief",
+     "missing_connector",
+     "wrong_tool",
+     "handoff"
+    ]
+   },
+   "scripts": [
+    {
+     "name": "scripts/packaging_audit.py",
+     "self_test": "--self-test"
+    }
+   ],
+   "assets": [
+    "assets/video-brief.md"
+   ],
+   "outputs": [
+    "the channel promise in one sentence",
+    "the month's numbers with the date they were pulled",
+    "a verdict per video: packaging, hook, body or fine",
+    "the next ten videos with title, thumbnail brief and the demand each answers",
+    "the cadence and the busy-week fallback",
+    "what could not be verified"
+   ],
+   "best_for": [
+    "a channel that has stopped growing",
+    "impressions without views, or clicks without watch time",
+    "deciding what to make next",
+    "a founder who cannot tell whether the video or the thumbnail failed"
+   ]
+  },
+  {
+   "name": "warehouse-coordinator",
+   "version": "1.0.0",
+   "added": "2026-11-16",
+   "standard_revision": "v2",
+   "level": "L2",
+   "category": "operations",
+   "status": "probation",
+   "reliability": "unverified",
+   "probation": {
+    "since": "2026-11-16",
+    "exit_criteria": "Two full counts reconciled with a named cause per variance above tolerance, one layout or labelling change shipped, and the adjustment proposals accepted by the accountant without a correction. Then status moves to stable and reliability to measured."
+   },
+   "path": "skills/warehouse-coordinator",
+   "tagline": "The warehouse employee - what is in the building and whether the system agrees: the count that produces a variance in units and rupees, the blind recount, the four causes separated, bin locations and putaway that make a pick findable, the GRN that catches a short receipt at the gate, and the SOP a new picker can follow.",
+   "skills_inside": [
+    "stock-count-and-variance",
+    "bin-locations-and-layout",
+    "putaway-picking-and-accuracy",
+    "grn-and-supplier-receipts",
+    "warehouse-sop-and-shrinkage"
+   ],
+   "tools_required": [
+    "the ERP or inventory system (Zoho Inventory, Tally, Shopify, a WMS) for the stock report and movements",
+    "Google Sheets or Excel for the count sheet, the variance workbook and the ABC list",
+    "the purchase orders, so the GRN can be checked against what was ordered",
+    "a printer and a laminator for bin, SKU and pick-face labels",
+    "the courier portal only to see what left, never to book"
+   ],
+   "connectors": [
+    {
+     "name": "ERP or inventory system (Zoho Inventory, Tally, Shopify, WMS)",
+     "availability": "core",
+     "unlocks": "system quantity, the movement history and the GRN",
+     "fallback": "a stock export with its timestamp, and the movement log if it exists"
+    },
+    {
+     "name": "Google Sheets",
+     "availability": "core",
+     "unlocks": "the count sheet, the variance workbook and the ABC list",
+     "fallback": "the count pack template in this skill, printed and filled by hand"
+    },
+    {
+     "name": "Purchase order file or email",
+     "availability": "recommended",
+     "unlocks": "receiving against the PO rather than against the invoice",
+     "fallback": "the PO number and quantity written on the GRN by the person receiving"
+    },
+    {
+     "name": "Label printer",
+     "availability": "optional",
+     "unlocks": "bin and pick-face labels that survive a busy month",
+     "fallback": "marker and laminate, with the same code standard"
+    },
+    {
+     "name": "Courier or 3PL portal (Shiprocket, Delhivery)",
+     "availability": "rare",
+     "unlocks": "what actually left the building",
+     "fallback": "the manifest the pack bench keeps"
+    }
+   ],
+   "permissions": {
+    "read": [
+     "stock reports and movement history",
+     "purchase orders",
+     "count sheets"
+    ],
+    "draft": [
+     "the count pack",
+     "the variance and adjustment proposal",
+     "locations, labels and SOPs"
+    ],
+    "send": [],
+    "spend": "none",
+    "approval_required_for": [
+     "posting any stock adjustment or write-off",
+     "changing a bin layout",
+     "contacting a supplier about a short receipt"
+    ]
+   },
+   "cost": {
+    "class": "low",
+    "minutes_per_task": 20,
+    "paid_api": "none",
+    "note": "one model pass over a stock export and a count sheet; printing is the only real cost"
+   },
+   "follows_standard": true,
+   "keeps_notes": true,
+   "tracks_performance": true,
+   "evals": {
+    "cases": 5,
+    "kinds": [
+     "happy_path",
+     "thin_brief",
+     "missing_connector",
+     "wrong_tool",
+     "handoff"
+    ]
+   },
+   "scripts": [
+    {
+     "name": "scripts/count_variance.py",
+     "self_test": "--self-test"
+    }
+   ],
+   "assets": [
+    "assets/stock-count-sheet.md"
+   ],
+   "outputs": [
+    "the variance in one line, in units and rupees at cost",
+    "the variance table with class, action and the top ten by value",
+    "the blind recount list",
+    "the four causes, counted and valued",
+    "the adjustment proposal, for approval and not posted",
+    "one process change with an owner and a date"
+   ],
+   "best_for": [
+    "a count that never matches the system",
+    "900 SKUs and no bin locations",
+    "wrong items shipping and nobody knows why",
+    "a supplier who short-supplies every delivery"
+   ]
+  },
+  {
+   "name": "billing-support",
+   "version": "1.0.0",
+   "added": "2026-11-16",
+   "standard_revision": "v2",
+   "level": "L2",
+   "category": "operations",
+   "status": "probation",
+   "reliability": "unverified",
+   "probation": {
+    "since": "2026-11-16",
+    "exit_criteria": "One full dunning cycle run with recovery measured per rung, two chargebacks answered inside the deadline with a real evidence pack, and no reply that stated a refund was complete before the gateway confirmed it. Then status moves to stable and reliability to measured."
+   },
+   "path": "skills/billing-support",
+   "tagline": "The billing support employee - the payment that failed and the customer who is worried: every failure read by its gateway code, the dunning ladder with a message per rung, the one-click card update, the chargeback answered with evidence inside the deadline, the duplicate charge explained with the transaction trail, and the refund status told honestly.",
+   "skills_inside": [
+    "failed-payments-and-dunning",
+    "card-update-and-payment-methods",
+    "chargebacks-and-disputes",
+    "refunds-and-adjustments",
+    "billing-queries-and-invoice-mismatch"
+   ],
+   "tools_required": [
+    "the payment gateway (Razorpay, Stripe, PayPal) for the attempt log, retries, disputes and refunds",
+    "the billing or subscription system (Chargebee, Zoho Books, the app's billing table)",
+    "the helpdesk or shared inbox where the customer's message arrives",
+    "the CRM for who the customer is and who owns the account",
+    "the books (Zoho Books, Tally), read only, to see whether a credit note was posted"
+   ],
+   "connectors": [
+    {
+     "name": "Payment gateway (Razorpay, Stripe, PayPal)",
+     "availability": "core",
+     "unlocks": "the failure code, the retry history, the dispute deadline and the refund reference",
+     "fallback": "the gateway's own email notifications, forwarded, with the reference quoted"
+    },
+    {
+     "name": "Billing or subscription system",
+     "availability": "core",
+     "unlocks": "plan, price, renewal date, invoices and proration",
+     "fallback": "the invoice PDFs and the plan in the CRM"
+    },
+    {
+     "name": "Helpdesk or shared inbox",
+     "availability": "recommended",
+     "unlocks": "the customer's own words, and the place the reply is sent from",
+     "fallback": "the email thread, with the draft pasted in by the owner"
+    },
+    {
+     "name": "CRM (HubSpot, Zoho CRM)",
+     "availability": "recommended",
+     "unlocks": "account value, owner and commercial history",
+     "fallback": "the account owner's own knowledge, asked in one message"
+    },
+    {
+     "name": "Books (Zoho Books, Tally)",
+     "availability": "optional",
+     "unlocks": "whether a credit note or refund was posted",
+     "fallback": "a question to bookkeeper, answered in writing"
+    }
+   ],
+   "permissions": {
+    "read": [
+     "gateway transactions and disputes",
+     "billing records",
+     "helpdesk threads",
+     "the books"
+    ],
+    "draft": [
+     "the customer reply",
+     "the dunning messages",
+     "the dispute evidence pack",
+     "the refund instruction for approval"
+    ],
+    "send": [],
+    "spend": "none",
+    "approval_required_for": [
+     "issuing any refund or credit note",
+     "changing a card or mandate",
+     "suspending access",
+     "waiving a fee"
+    ]
+   },
+   "cost": {
+    "class": "low",
+    "minutes_per_task": 10,
+    "paid_api": "none",
+    "note": "one model pass per case; gateway fees are the business's, not this role's"
+   },
+   "follows_standard": true,
+   "keeps_notes": true,
+   "tracks_performance": true,
+   "evals": {
+    "cases": 5,
+    "kinds": [
+     "happy_path",
+     "thin_brief",
+     "missing_connector",
+     "wrong_tool",
+     "handoff"
+    ]
+   },
+   "scripts": [
+    {
+     "name": "scripts/dunning_plan.py",
+     "self_test": "--self-test"
+    }
+   ],
+   "assets": [
+    "assets/billing-reply.md"
+   ],
+   "outputs": [
+    "the diagnosis in one line with the gateway code and whether it is ours",
+    "the reply, drafted, with the one action and the access consequence",
+    "the ladder position with the next action and date",
+    "the dispute pack with the deadline and the evidence that is missing",
+    "the refund trail with the gateway reference and the state",
+    "the one process fix, with an owner and a date"
+   ],
+   "best_for": [
+    "renewals that failed overnight",
+    "a customer who says they were charged twice",
+    "a chargeback with a deadline this week",
+    "dunning emails that nobody answers"
+   ]
+  },
+  {
+   "name": "contract-negotiator",
+   "version": "1.0.0",
+   "added": "2026-11-16",
+   "standard_revision": "v2",
+   "level": "L1",
+   "category": "founder-leverage",
+   "status": "probation",
+   "reliability": "unverified",
+   "probation": {
+    "since": "2026-11-16",
+    "exit_criteria": "Five real contracts scored against the playbook, at least one negotiation where a tradeable was traded rather than given, and a lawyer review that found no position misstated. Then status moves to stable and reliability to measured."
+   },
+   "path": "skills/contract-negotiator",
+   "tagline": "The negotiation employee - the paper turned into positions the founder can defend: every clause scored against a written playbook, must-haves separated from tradeables with a price on each, the fallback ladder and the walk-away decided before the call, and redlines with a business reason in the counterparty's own numbering.",
+   "skills_inside": [
+    "redline-playbook",
+    "negotiation-plan-and-tradeables",
+    "risk-flagging-and-escalation",
+    "vendor-and-msa-terms",
+    "counterparty-and-communication"
+   ],
+   "tools_required": [
+    "Google Drive or OneDrive for the contract versions, the playbook and the signed copies",
+    "Google Docs or Word for comments and tracked changes",
+    "email (Gmail, Outlook) for the negotiation thread where the promises live",
+    "Google Sheets for the clause register and the fallback ladder",
+    "the CRM for deal value, stage and close date"
+   ],
+   "connectors": [
+    {
+     "name": "Drive or OneDrive",
+     "availability": "core",
+     "unlocks": "the document versions, the markup and our standard paper",
+     "fallback": "the document attached in the conversation, with the version named"
+    },
+    {
+     "name": "Docs or Word",
+     "availability": "recommended",
+     "unlocks": "comments and suggested language in their numbering",
+     "fallback": "the redline table in the brief, quoted clause by clause"
+    },
+    {
+     "name": "Email (Gmail, Outlook)",
+     "availability": "recommended",
+     "unlocks": "what was promised, and to whom, before the paper was sent",
+     "fallback": "the owner's summary of the thread, marked as a summary"
+    },
+    {
+     "name": "CRM",
+     "availability": "optional",
+     "unlocks": "deal value, margin context and the counterparty's decision maker",
+     "fallback": "the value and margin stated by the founder"
+    },
+    {
+     "name": "Insurance policy or broker record",
+     "availability": "rare",
+     "unlocks": "whether our cover responds to the indemnity being asked for",
+     "fallback": "an escalation to the broker with the question in one line"
+    }
+   ],
+   "permissions": {
+    "read": [
+     "contract documents and markups",
+     "the negotiation thread",
+     "the playbook",
+     "deal records"
+    ],
+    "draft": [
+     "the clause register",
+     "the fallback ladder",
+     "redline wording and comments",
+     "the covering note",
+     "the escalation list"
+    ],
+    "send": [],
+    "spend": "none",
+    "approval_required_for": [
+     "sending any redline or reply to a counterparty",
+     "any departure from the playbook",
+     "any legal opinion - a lawyer answers that"
+    ]
+   },
+   "cost": {
+    "class": "medium",
+    "minutes_per_task": 25,
+    "paid_api": "none",
+    "note": "one or two model passes over a long document; a lawyer's review is a separate cost and is not replaced by this role"
+   },
+   "follows_standard": true,
+   "keeps_notes": true,
+   "tracks_performance": true,
+   "evals": {
+    "cases": 5,
+    "kinds": [
+     "happy_path",
+     "thin_brief",
+     "missing_connector",
+     "wrong_tool",
+     "handoff"
+    ]
+   },
+   "scripts": [
+    {
+     "name": "scripts/clause_risk.py",
+     "self_test": "--self-test"
+    }
+   ],
+   "assets": [
+    "assets/negotiation-brief.md"
+   ],
+   "outputs": [
+    "the verdict in one line: signable, signable with changes, or not until escalations clear",
+    "the clause register with a score and a value at risk per clause",
+    "the three lists: must-haves, tradeables, walk-away",
+    "the fallback ladder with the trade requested at each step",
+    "the redlines with a one-line business reason each",
+    "the escalations for a lawyer, an insurer or the founder"
+   ],
+   "best_for": [
+    "a contract that came back marked up",
+    "unlimited liability or an uncapped indemnity",
+    "a vendor agreement that renews itself",
+    "a founder about to concede something on a call"
+   ]
   }
- ]
+ ],
+ "levels": {
+  "L0": "Advisor - reads what it is given and answers; touches no system, produces no artefact for use.",
+  "L1": "Drafter - produces documents, plans and drafts that a named person reviews and sends. Never sends.",
+  "L2": "Operator - runs a routine end to end on connected data, drafts every external message, writes only to its own tracker and notes.",
+  "L3": "Function owner - owns a function's targets and writes to internal systems (tickets, tasks, records) behind approval gates.",
+  "L4": "Principal - operates across functions and may approve spend or an external action inside a stated ceiling."
+ },
+ "standard_revisions": {
+  "v1": "The 2026-11-01 standard: SKILL.md, references, notes/, assets. Enforced by scripts/validate_repo.py.",
+  "v2": "The 2026-11-16 drop contract: fixed section order, 3-6 references, a deterministic self-tested script, an asset template, evals.json with five cases, notes.seed/ schema only, and level, category, permissions, cost, connector availability, probation and unverified reliability in this file. Enforced by scripts/validate_repo_v2.py --strict."
+ }
 }
