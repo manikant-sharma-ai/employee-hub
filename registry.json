@@ -1,8 +1,8 @@
 {
  "name": "employee-hub",
  "display_name": "Employee Hub",
- "version": "1.14.0",
- "updated": "2026-11-16",
+ "version": "1.15.0",
+ "updated": "2026-11-18",
  "cadence": "5 employees daily at 06:00 IST",
  "standard": "core/employee-standard.md",
  "obligations": [
@@ -2772,6 +2772,213 @@
     "vendors with no data agreement",
     "a suspected leak and no plan for the first 24 hours",
     "a privacy policy that does not match the practice"
+   ]
+  },
+  {
+   "name": "onboarding-specialist",
+   "version": "1.0.0",
+   "added": "2026-11-18",
+   "status": "stable",
+   "path": "skills/onboarding-specialist",
+   "tagline": "The customer onboarding employee - the first thirty days: an activation milestone chosen from customers who stayed, the journey from paid to first value, nudges triggered on behaviour, the drop-off read in rupees, and a day-30 handover with an activation score.",
+   "skills_inside": [
+    "activation-milestones",
+    "journey-and-touchpoints",
+    "nudge-sequences",
+    "time-to-value-and-dropoff",
+    "handover-to-success"
+   ],
+   "tools_required": [
+    "the CRM (HubSpot, Zoho CRM, Pipedrive)",
+    "the product's event or usage data, or an export of it",
+    "the billing system for the payment date, plan and price (Razorpay, Stripe, Zoho Books)",
+    "the email or WhatsApp tool for the nudge sequence",
+    "the helpdesk for the first two weeks of tickets (Freshdesk, Zoho Desk)",
+    "a calendar and the shared drive for kickoff calls and the handover note"
+   ],
+   "follows_standard": true,
+   "keeps_notes": true,
+   "tracks_performance": true,
+   "outputs": [
+    "the activation milestone in one line, with the threshold, the window and the retention gap it was chosen on",
+    "the thirty-day journey with a trigger, channel, owner, ask and stop rule per step",
+    "the nudge set with trigger, channel, stop rule and what it is measured against",
+    "the funnel by step, cut by signup week, plan, channel and kickoff call",
+    "the cost of the drop in rupees of retained revenue at stake",
+    "the one fix this month with its owner, cost and target number",
+    "the day-30 handover block with the activation score and the open risks",
+    "what could not be verified"
+   ],
+   "best_for": [
+    "customers who pay and never start using the product",
+    "an activation rate nobody can explain",
+    "writing the welcome and nudge messages for new customers",
+    "deciding which new accounts deserve a human kickoff call"
+   ]
+  },
+  {
+   "name": "youtube-strategist",
+   "version": "1.0.0",
+   "added": "2026-11-18",
+   "status": "stable",
+   "path": "skills/youtube-strategist",
+   "tagline": "The YouTube channel employee - the promise to a named viewer, title and thumbnail decided as one pair before production, the brief the editor and designer build from, retention diagnosis from the curve, and a library that makes videos feed each other.",
+   "skills_inside": [
+    "channel-positioning",
+    "titles-and-thumbnails",
+    "retention-and-analytics",
+    "series-and-library",
+    "search-and-discovery"
+   ],
+   "tools_required": [
+    "YouTube Studio access or an analytics export - the only place the retention curve lives",
+    "a spreadsheet for the video log and the packaging test table",
+    "the shared drive for footage, thumbnails, briefs and version history",
+    "Google Trends and YouTube search suggestions for topic demand",
+    "a design tool for handover to graphic-designer (not to design in)",
+    "competitor analytics (vidIQ, TubeBuddy) and A/B thumbnail testing - helpful, not required"
+   ],
+   "follows_standard": true,
+   "keeps_notes": true,
+   "tracks_performance": true,
+   "outputs": [
+    "the diagnosis in one line - impressions, click-through rate or retention, with the figure and the traffic source",
+    "the channel promise in one sentence, with the named viewer and the refusals",
+    "the packaging - title and thumbnail direction, with the reason each earns a click",
+    "the brief - first thirty seconds second by second, three beats, length and prohibitions",
+    "the library placement - series, playlist, end screen and the older video that should point here",
+    "the one change for next month with the number it should move",
+    "what could not be tested"
+   ],
+   "best_for": [
+    "a channel with views and no subscribers",
+    "titles and thumbnails for the next video",
+    "a video that lost the viewer in the first thirty seconds",
+    "deciding between Shorts and long form for a business channel"
+   ]
+  },
+  {
+   "name": "billing-support",
+   "version": "1.0.0",
+   "added": "2026-11-18",
+   "status": "stable",
+   "path": "skills/billing-support",
+   "tagline": "The billing helpdesk employee - failed cards, UPI mandates and NACH debits with a retry calendar, the dunning ladder that asks before it cuts, invoice queries answered with the right instrument, refunds and credit notes that reach the books, and a daily money queue.",
+   "skills_inside": [
+    "failed-payments-and-retries",
+    "invoice-queries-and-gst",
+    "refunds-and-credit-notes",
+    "dunning-sequences",
+    "dispute-triage-and-ledger"
+   ],
+   "tools_required": [
+    "the payment gateway (Razorpay, Stripe, PayU, Cashfree) - failure reasons, retries, mandates, refunds",
+    "the subscription or billing system (Chargebee, Razorpay subscriptions, Zoho Billing)",
+    "the accounting system for invoices and credit notes (Zoho Books, Tally, QuickBooks)",
+    "the helpdesk or shared inbox (Freshdesk, Zoho Desk, Gmail)",
+    "a spreadsheet for the daily money queue and the failure-reason table",
+    "the GST portal or the CA's working file for corrections"
+   ],
+   "follows_standard": true,
+   "keeps_notes": true,
+   "tracks_performance": true,
+   "outputs": [
+    "the answer to the customer, ready to send, with the reference number",
+    "the instrument - correction, credit note, refund to source, retry or pause - with the reason",
+    "the amount and the date the money lands",
+    "the ledger line for bookkeeper to match",
+    "the queue status - closed, waiting on the customer, waiting on the gateway or bank",
+    "the pattern when this is the third instance this month",
+    "what could not be verified"
+   ],
+   "best_for": [
+    "subscription renewals failing silently",
+    "a customer disputing a charge",
+    "fixing a GST invoice that went out wrong",
+    "refunds and credit notes that never reach the books"
+   ]
+  },
+  {
+   "name": "warehouse-coordinator",
+   "version": "1.0.0",
+   "added": "2026-11-18",
+   "status": "stable",
+   "path": "skills/warehouse-coordinator",
+   "tagline": "The warehouse employee - the day planned backwards from the collection time, ABC cycle counts with blind sheets and set thresholds, every discrepancy traced to one of four causes, slotting that shortens the walk, and a handover counted in front of the courier.",
+   "skills_inside": [
+    "pick-pack-ship",
+    "stock-counts",
+    "discrepancies",
+    "locations-and-layout",
+    "dock-and-handover"
+   ],
+   "tools_required": [
+    "a WMS or the stock module of the ERP (Zoho Inventory, Unicommerce, Shopify with an app)",
+    "the order channels and their service levels (Shopify, Amazon, Flipkart, IndiaMART)",
+    "a scanner and a label printer",
+    "a spreadsheet for count sheets, the variance log and the daily dispatch sheet",
+    "the courier's manifest or pickup app",
+    "a weighing scale - the last cheap check before a box closes"
+   ],
+   "follows_standard": true,
+   "keeps_notes": true,
+   "tracks_performance": true,
+   "outputs": [
+    "the day in one line - due, shipped, short, and what will not make the cut-off",
+    "the dispatch plan by wave, zone, picker and handover time",
+    "the short list with the cause and the promise at risk",
+    "the count result - variances, rupee value, causes, what is still open",
+    "the exception list with an owner and a 24-hour clock",
+    "the one change this week and the number it should move",
+    "what could not be verified"
+   ],
+   "best_for": [
+    "orders that miss the cut-off most days",
+    "the system and the shelf disagreeing on stock",
+    "short picks and mis-ships that keep repeating",
+    "a stock-count programme that does not stop the warehouse"
+   ]
+  },
+  {
+   "name": "contract-negotiator",
+   "version": "1.0.0",
+   "added": "2026-11-18",
+   "status": "stable",
+   "path": "skills/contract-negotiator",
+   "tagline": "The terms employee - every clause compared against a written standard position, the risk priced in rupees and months, a redline in replacement wording with a fallback for each, a fallback ladder agreed before the call, and an obligations register for the day after signature.",
+   "skills_inside": [
+    "standard-positions",
+    "redlining",
+    "risk-in-money",
+    "negotiation-prep",
+    "after-signature"
+   ],
+   "tools_required": [
+    "the contract document with tracked changes or comments available (PDF, DOCX, Google Docs)",
+    "a clause library or the last signed contracts for the standard positions",
+    "the e-signature or document tool for version control (DocuSign, Zoho Sign, Google Docs)",
+    "a spreadsheet or the CRM for the obligations register and renewal calendar",
+    "the calendar, for notice windows as events with owners",
+    "a lawyer on call for anything outside the ordinary"
+   ],
+   "follows_standard": true,
+   "keeps_notes": true,
+   "tracks_performance": true,
+   "outputs": [
+    "the decision in one line - sign, sign with three changes, or do not sign",
+    "the clause table with the standard, the document, the deviation, the cost and the ask",
+    "the risk in money with the largest single exposure and its share of contract value",
+    "the redline in replacement wording, with a fallback per clause",
+    "the fallback ladder - must-have, trade, walk-away",
+    "the one-page negotiation sheet with the order of asks",
+    "the obligations register with owners and calendar events",
+    "the clauses that need a lawyer, and what could not be verified"
+   ],
+   "best_for": [
+    "a vendor MSA or order form before signature",
+    "a client's paper that came back with edits",
+    "pricing an unlimited liability or an indemnity in rupees",
+    "a renewal that is about to auto-commit the business"
    ]
   }
  ]

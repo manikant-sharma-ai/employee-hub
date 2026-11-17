@@ -2,6 +2,76 @@
 
 One dated block per drop. What shipped, and why it is shaped that way.
 
+## 2026-11-18 - daily drop: five employees (v1.15.0)
+
+**The mix this drop: two revenue-facing, two operations, one founder-leverage.** All five were already on `next`,
+promoted on 16 November for this mix, so nothing was skipped for the balance and no role was returned to the queue
+after writing. What shaped the batch is that the hub could win a customer and could not start one, could publish a
+video and could not get it watched, could chase an unpaid invoice and could not fix a failed card, could ship a
+parcel and could not count what was in the building, and had nothing to say when a contract arrived. Five gaps, all
+of them things a founder does personally in the week the business is growing.
+
+- **`onboarding-specialist`** (`skills/onboarding-specialist`, v1.0.0) - the first revenue role, and the gap between
+  two shipped employees that neither could close: `customer-success` starts at day 30 and `churn-analyst` explains
+  the exit afterwards, so nobody owned the thirty days in which both outcomes are decided. The boundary is the
+  customer's first month against the account relationship, and against `hiring-manager` on the word "onboarding",
+  which means an employee there and a paying customer here. Four choices carry it. The activation milestone is
+  chosen by comparing week-one behaviour between customers who stayed three months and customers who did not, with
+  the rejected alternatives written down, because a milestone picked in a workshop measures the demo rather than the
+  usage. Nudges are checked at send time rather than scheduled, since the one email that tells a customer to do
+  what they did yesterday costs more trust than the whole sequence earns. Time to value is reported as median and
+  p90 and never as a mean, because the tail is where the churn is and one slow enterprise account hides it. And the
+  journey is sized to the kickoff calls the team can actually run, because a plan that assumes a human for every
+  account produces a silent second tier nobody calls. It drafts messages and names the sender; it never contacts a
+  customer itself and never changes the product or the price to fix a drop-off.
+- **`youtube-strategist`** (`skills/youtube-strategist`, v1.0.0) - the second revenue role, and the channel the hub
+  could produce for but not grow. `video-editor` makes the cut, `graphic-designer` makes the file,
+  `social-media-manager` posts it, and none of them decides what the video is for or why anyone would click. Four
+  choices carry it. The diagnosis runs impressions, then click-through rate, then the retention curve, in that
+  order, because content advice given to a packaging problem costs a month and teaches nothing. Title and thumbnail
+  are decided as one pair before production, the thumbnail carrying the situation and the title the specific
+  promise, since a title written after the edit describes the video instead of selling it. The first thirty seconds
+  are briefed second by second and contain nothing before the click is confirmed - no logo, no greeting, no sponsor
+  read - because that is where most business videos lose the viewer. And the read is against the channel's own
+  28-day baseline and its own traffic source, since a search video's CTR and a browse video's CTR are not
+  comparable and benchmarking a small channel against a large one measures the wrong thing. It never uploads,
+  never edits, and never promises a growth number.
+- **`billing-support`** (`skills/billing-support`, v1.0.0) - the first operations role, and the one three shipped
+  skills have been naming since 7 November: `collections-agent` for a failed card or a refund, `returns-manager` for
+  a chargeback, `support-agent` for a billing complaint. The boundary is involuntary against agreed: this role owns
+  the payment that failed on its own and the document that came out wrong, `collections-agent` owns the B2B invoice
+  the customer agreed to pay in 30 days. Four choices carry it. Failures are classified before they are retried,
+  because a do-not-honour card retried four times recovers nothing and gets the merchant account flagged, and the
+  retry calendar for the retryable reasons is timed to the Indian salary cycle rather than to a fixed hour. Pre-
+  dunning sits in front of the ladder, since a card-expiry message 30 days early removes the failure instead of
+  chasing it. Every query is answered with the correct instrument - amendment, credit note or supplementary
+  invoice - because a duplicate invoice number is a GST problem and not a formatting one, and the tax treatment is
+  prepared as a question for the CA rather than answered here. And the ladder pauses at day 14 and cancels only
+  after one human attempt, because a paused account with a saved card comes back and a cancelled one costs the
+  acquisition cost again. It never takes a card number in a thread and never refunds a charge it has not
+  investigated.
+- **`warehouse-coordinator`** (`skills/warehouse-coordinator`, v1.0.0) - the second operations role, and the one
+  `inventory-planner` has named for a stock-count discrepancy since 10 November. The split is the shelf against the
+  policy: the planner decides how much to hold, this role knows what is actually there. Four choices carry it. The
+  day is built backwards from each channel's collection time, with two waves, because a plan that starts from the
+  pick list discovers the cut-off at 4pm. Every parcel gets three checks - scan, count, weigh - and weight is the
+  last cheap chance to catch a wrong box before it becomes a reverse pickup and a review. Counts are blind, on an
+  ABC calendar, with thresholds set before the count, because a sheet with the expected quantity on it is a
+  confirmation exercise and a threshold that moves afterwards is a negotiation. And no variance closes as
+  "shrinkage": it is a pick error, a receipt error, an unrecorded movement or a system error, or it stays open,
+  since a unit-of-measure mistake explains more "theft" than theft does. It never adjusts stock to make the number
+  match, never promises a delivery date and never chooses a courier.
+- **`contract-negotiator`** (`skills/contract-negotiator`, v1.0.0) - the founder-leverage role, and the redlines
+  `legal-drafter` has explicitly refused to write since 3 November. The split is the paper against the person: the
+  drafter produces the document, this role reads someone else's, prices it and proposes the words that fix it.
+  Four choices carry it. Every deviation is converted into rupees or months, because a founder in a hurry can weigh
+  ₹18 lakh against ₹2 lakh and cannot weigh "unfavourable" against "acceptable". The redline is written as
+  replacement wording with the fallback offered in the same comment, which is what turns a demand into a
+  negotiation and saves a round trip. The walk-away is decided with the founder before the call and written into a
+  three-level ladder per clause, because an improvised walk-away is a bluff and gets called. And non-negotiable
+  paper is identified in the first ten minutes and routed to the exception approval rather than redlined for a
+  week. It gives no legal opinion, signs nothing, and puts no counterparty name, value or term in the repo.
+
 ## 2026-11-16 - daily drop: five employees (v1.14.0)
 
 **The mix this drop: two revenue-facing, two operations, one founder-leverage.** All five were already on `next`,
