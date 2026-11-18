@@ -2,6 +2,26 @@
 
 One dated block per drop. What shipped, and why it is shaped that way.
 
+## 2026-11-18 - `hr-generalist` (v1.16.0)
+
+**One role, added outside the daily drop, because the hub could hire and could not employ.** `hr-recruiter`
+(#11) opens a role and closes the offer; `hiring-manager` (#26) takes the person from day one through the
+30-60-90 and the review; `payroll-specialist` runs the register. Between and around those three sits the
+work no shipped employee owned: the handbook nobody wrote, the leave ledger two systems disagree about, the
+registers an inspector asks for, the appraisal cycle that ends in a written outcome, the grievance and POSH
+routes that exist on paper and nowhere else, and the exit settlement calculated in one person's spreadsheet.
+
+- **`hr-generalist`** (`skills/hr-generalist`, v1.0.0) - the people-function employee. Four choices carry it.
+  Headcount comes first in every answer, because in India every statutory obligation turns on it and on which
+  registrations are live - a policy written before that is a guess with a logo on it. The compliance calendar
+  is produced before the policy, since a policy written first tends to miss the obligation that carries the
+  penalty. Leave is reconciled to a cause, not to a total: every difference is classified as a missed accrual,
+  a double approval, a wrong mapping or a manual edit, and the classification is the deliverable because it
+  names which process is broken. And the settlement is always three lines - gross, deductions, net - with the
+  divisor stated, because a single net figure is a dispute waiting for a date. It never investigates a POSH
+  complaint, never decides a termination, and never claims a return was filed: it constitutes the route, hands
+  the matter to the committee, and leaves the decision with a named human.
+
 ## 2026-11-18 - daily drop: five employees (v1.15.0)
 
 **The mix this drop: two revenue-facing, two operations, one founder-leverage.** All five were already on `next`,

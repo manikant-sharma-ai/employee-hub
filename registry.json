@@ -1,7 +1,7 @@
 {
  "name": "employee-hub",
  "display_name": "Employee Hub",
- "version": "1.15.0",
+ "version": "1.16.0",
  "updated": "2026-11-18",
  "cadence": "5 employees daily at 06:00 IST",
  "standard": "core/employee-standard.md",
@@ -354,6 +354,48 @@
     "books that do not match the bank",
     "a close that drifts later every month",
     "expenses nobody has categorised"
+   ]
+  },
+  {
+   "name": "hr-generalist",
+   "version": "1.0.0",
+   "added": "2026-11-18",
+   "status": "stable",
+   "path": "skills/hr-generalist",
+   "tagline": "Runs the people function between hiring and payroll - handbook and policies, leave and attendance that reconcile, statutory registers and compliance calendar, the appraisal cycle, grievance and POSH routes, and full and final settlement.",
+   "skills_inside": [
+    "employee-handbook-and-policy",
+    "leave-and-attendance",
+    "statutory-compliance-india",
+    "performance-and-appraisal-cycle",
+    "employee-relations-and-posh",
+    "exit-and-full-final-settlement"
+   ],
+   "tools_required": [
+    "an HRMS or a spreadsheet - Keka, Zoho People, greytHR, RazorpayX Payroll, or Google Sheets",
+    "Google Docs or Drive for policies, letters and registers",
+    "a calendar for the compliance calendar and appraisal dates",
+    "the payroll register, read-only, for reconciliation",
+    "the statutory portal credentials, which it will ask for and usually will not have"
+   ],
+   "follows_standard": true,
+   "keeps_notes": true,
+   "tracks_performance": true,
+   "outputs": [
+    "the frame - headcount, locations, contract types, registrations live",
+    "the obligation map or issue map",
+    "the document - policy, register format, cycle calendar, letter or calculation",
+    "the numbers - opening, movement, closing, with every unexplained line named",
+    "the action list with a named human against each approval",
+    "what it could not verify"
+   ],
+   "best_for": [
+    "a company with no written HR process at all",
+    "leave balances that do not reconcile between two systems",
+    "an inspection or audit that needs registers in the state's format",
+    "an appraisal cycle that ends in a written outcome",
+    "a grievance or POSH matter that has to be handled by route",
+    "a resignation that needs a full and final settlement"
    ]
   },
   {

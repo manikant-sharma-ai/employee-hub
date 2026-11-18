@@ -157,6 +157,7 @@ Nothing is removed without a note on why. A role that cannot clear the quality b
 | 149 | `warranty-claims` | Claim intake, eligibility checks, replacement and refund tracking | queued |
 | 150 | `field-sales-manager` | Beat plans, visit logs, territory review and target tracking | shipped 2026-11-15 |
 | 151 | `employee-hub-router` | The hire desk - which employee owns the job, what to hand over, which connector is missing | shipped 2026-11-03 |
+| 152 | `hr-generalist` | Handbook and policy, leave and attendance, statutory registers and calendar, appraisal cycle, grievance and POSH routes, full and final settlement | shipped 2026-11-18 |
 
 ## Queue notes
 
